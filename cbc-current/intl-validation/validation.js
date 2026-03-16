@@ -15,6 +15,7 @@ const dictionary = [
   {
     key: "Name cannot contain numbers",
     dict: {
+      en: "Name cannot contain numbers",
       es: "El nombre no puede contener números",
       fr: "Le nom ne peut pas contenir des chiffres",
       ru: "Имя не может содержать цифры",
@@ -26,6 +27,7 @@ const dictionary = [
   {
     key: "Name is required",
     dict: {
+      en: "Name is required",
       es: "Se requiere el nombre",
       fr: "Le nom est requis",
       ru: "Укажите имя",
@@ -37,6 +39,7 @@ const dictionary = [
   {
     key: "Name is too short",
     dict: {
+      en: "Name is too short",
       es: "El nombre es muy corto",
       fr: "Le nom est trop court",
       ru: "Имя слишком короткое",
@@ -48,6 +51,7 @@ const dictionary = [
   {
     key: "Name is too long",
     dict: {
+      en: "Name is too long",
       es: "El nombre es demasiado largo",
       fr: "Le nom est trop long",
       ru: "Имя слишком длинное",
@@ -59,6 +63,7 @@ const dictionary = [
   {
     key: "Surname cannot contain numbers",
     dict: {
+      en: "Surname cannot contain numbers",
       es: "El apellido no puede contener números",
       fr: "Le nom de famille ne peut pas contenir des chiffres",
       ru: "Фамилия не может содержать цифры",
@@ -70,6 +75,7 @@ const dictionary = [
   {
     key: "Surname is required",
     dict: {
+      en: "Surname is required",
       es: "Se requiere el apellido",
       fr: "Le nom de famille est requis",
       ru: "Укажите фамилию",
@@ -81,6 +87,7 @@ const dictionary = [
   {
     key: "Surname is too short",
     dict: {
+      en: "Surname is too short",
       es: "El apellido es muy corto",
       fr: "Le nom de famille est trop court",
       ru: "Фамилия слишком короткая",
@@ -92,6 +99,7 @@ const dictionary = [
   {
     key: "Surname is too long",
     dict: {
+      en: "Surname is too long",
       es: "El apellido es demasiado largo",
       fr: "Le nom de famille est trop long",
       ru: "Фамилия слишком длинная",
@@ -103,6 +111,7 @@ const dictionary = [
   {
     key: "Phone is required",
     dict: {
+      en: "Phone is required",
       es: "Teléfono requerido",
       fr: "Téléphone requis",
       ru: "Телефон обязателен",
@@ -114,6 +123,7 @@ const dictionary = [
   {
     key: "Phone is invalid",
     dict: {
+      en: "Phone is invalid",
       es: "Número de teléfono incorrecto",
       fr: "Mauvais numéro de téléphone",
       ru: "Неверный номер телефона",
@@ -125,6 +135,7 @@ const dictionary = [
   {
     key: "Email is required",
     dict: {
+      en: "Email is required",
       es: "Correo electrónico requerido",
       fr: "E-mail requis",
       ru: "E-mail обязателен",
@@ -136,6 +147,7 @@ const dictionary = [
   {
     key: "Email is invalid",
     dict: {
+      en: "Email is invalid",
       es: "Correo electrónico inválido",
       fr: "E-mail invalide",
       ru: "Некорректный e-mail",
@@ -146,7 +158,7 @@ const dictionary = [
   },
 ];
 
-// * Supported es, fr, ru, it, rs
+// * Supported en, es, fr, ru, it, rs
 const lang = "en";
 
 document.addEventListener("DOMContentLoaded", () => {

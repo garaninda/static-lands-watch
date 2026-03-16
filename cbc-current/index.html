@@ -18,6 +18,43 @@
     <link rel="stylesheet" href="./intl-validation/just-validate.css" />
 
     <link rel="stylesheet" type="text/css" href="css/bundle-listen.css" />
+    <style type="text/css">
+                        @keyframes rf-spin {
+                          100% {
+                            transform: rotate(360deg);
+                          }
+                        }
+                        .rf-form__loader {
+                          position: absolute;
+                          z-index: 999;
+                          top: 0;
+                          left: 0;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          flex-direction: column;
+                          width: 100%;
+                          height: 100%;
+                          border-radius: inherit;
+                          background: rgba(255, 255, 255, 0.8);
+                        }
+
+                        .rf-form__loader::before {
+                          content: "";
+                          display: block;
+                          width: 46px;
+                          height: 46px;
+                          margin-bottom: 16px;
+                          border-radius: 50%;
+                          border: 5px solid #fff;
+                          border-top-color: rgb(255, 255, 255);
+                          border-right-color: rgb(255, 255, 255);
+                          border-bottom-color: rgb(255, 255, 255);
+                          border-left-color: rgb(255, 255, 255);
+                          border-color: currentColor transparent currentColor transparent;
+                          animation: rf-spin 1.2s linear infinite;
+                        }
+                      </style>
     <style>
       body {
         scroll-behavior: smooth;
@@ -1485,8 +1522,18 @@
         renderProgress();
       })();
     </script>
+    <script type="text/javascript">
+                        function closePopup() {
+                          $("#overlay").remove();
+                          $("#duplicate-email-popup").remove();
+
+                          $('button[type="submit"]').attr("disabled", false);
+
+                          document.querySelector(".rf-form__loader").style.display = "none";
+                        }
+                      </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="./intl-validation/validation.min.js"></script>
+    <script type="module" src="./intl-validation/validation.js"></script>
     
   </body>
 </html>
