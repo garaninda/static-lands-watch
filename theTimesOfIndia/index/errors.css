@@ -1,0 +1,130 @@
+/* ==========================================================================
+ Author's custom styles
+ ========================================================================== */
+
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css";
+
+
+
+
+.iti__flag {
+    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/img/flags.png");
+}
+
+
+
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .iti__flag {
+        background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/img/flags@2x.png");
+    }
+}
+
+
+
+
+.iti {
+    width: 100% !important;
+}
+
+
+
+
+.iti__country-list {
+    max-width: 320px;
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+
+
+
+.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+    z-index: 99;
+}
+
+
+
+
+.iti--separate-dial-code .iti__selected-dial-code {
+    font-size: 14px;
+}
+
+
+
+
+input {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+
+.is-error {
+    border: 1px solid #ff0000 !important;
+}
+
+
+
+
+.error-message {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -60px !important;
+    left: 0 !important;
+    right: 0 !important;
+    font-size: 10px !important;
+    line-height: 1;
+    color: #FFFFFF;
+    text-align: left !important;
+    padding: 2px 6px 3px;
+    background: #FF003C !important;
+    border-radius: 4px;
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+
+
+
+.error-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff0000;
+    padding: 12px 16px;
+    background: #ffffff;
+    -moz-transform: translateY(-105%);
+    -webkit-transform: translateY(-105%);
+    -o-transform: translateY(-105%);
+    -ms-transform: translateY(-105%);
+    transform: translateY(-105%);
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+.error-message {
+    position: relative;
+    bottom: -3px;
+    transform: translateY(0%);
+}
+
+

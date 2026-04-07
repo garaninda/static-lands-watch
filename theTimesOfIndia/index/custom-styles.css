@@ -1,0 +1,2222 @@
+.Mivr2.qjl1u .YZQav .w4nQT {
+    position: static;
+}
+
+
+ .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag, .iti--separate-dial-code .iti__selected-flag, .iti__country.iti__highlight {
+     background-color: rgba(0, 0, 0, .05)
+ }
+
+.iti--separate-dial-code .iti__selected-dial-code, .iti__arrow {
+    margin-left: 6px
+}
+
+.iti--allow-dropdown .iti__flag-container:hover, .iti--container:hover {
+    cursor: pointer
+}
+
+.iti {
+    position: relative;
+    display: inline-block
+}
+
+.iti * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+.iti__hide {
+    display: none
+}
+
+.iti__v-hide {
+    visibility: hidden
+}
+
+.iti input, .iti input[type=tel], .iti input[type=text] {
+    position: relative;
+    z-index: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-right: 36px;
+    margin-right: 0
+}
+
+.iti__flag-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 1px
+}
+
+.iti__selected-flag {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 6px 0 8px
+}
+
+.iti__arrow {
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555
+}
+
+.iti__arrow--up {
+    border-top: none;
+    border-bottom: 4px solid #555
+}
+
+.iti__country-list {
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 0 -1px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    max-height: 200px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+.iti__country-list--dropup {
+    bottom: 100%;
+    margin-bottom: -1px
+}
+
+@media (max-width: 500px) {
+    .iti__country-list {
+        white-space: normal
+    }
+}
+
+.iti__flag-box {
+    display: inline-block;
+    width: 20px
+}
+
+.iti__divider {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc
+}
+
+.iti__country {
+    padding: 5px 10px;
+    outline: 0
+}
+
+.iti__dial-code {
+    color: #999
+}
+
+.iti__country-name, .iti__dial-code, .iti__flag-box {
+    vertical-align: middle
+}
+
+.iti__country-name, .iti__flag-box {
+    margin-right: 6px
+}
+
+.iti--allow-dropdown input, .iti--allow-dropdown input[type=tel], .iti--allow-dropdown input[type=text], .iti--separate-dial-code input, .iti--separate-dial-code input[type=tel], .iti--separate-dial-code input[type=text] {
+    padding-right: 6px;
+    margin-left: 0
+}
+
+.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+    right: auto;
+    left: 0
+}
+
+.iti--allow-dropdown input[disabled] + .iti__flag-container:hover .iti__selected-flag, .iti--allow-dropdown input[readonly] + .iti__flag-container:hover .iti__selected-flag, .iti__flag.iti__np {
+    background-color: transparent
+}
+
+.iti--allow-dropdown input[disabled] + .iti__flag-container:hover, .iti--allow-dropdown input[readonly] + .iti__flag-container:hover {
+    cursor: default
+}
+
+.iti--container {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    z-index: 1060;
+    padding: 1px
+}
+
+.iti-mobile .iti--container {
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    position: fixed
+}
+
+.iti-mobile .iti__country-list {
+    max-height: 100%;
+    width: 100%
+}
+
+.iti-mobile .iti__country {
+    padding: 10px;
+    line-height: 1.5em
+}
+
+.iti__flag {
+    width: 20px;
+    height: 15px;
+    box-shadow: 0 0 1px 0 #888;
+    background-image: url("../intl-validation/img/flags.png");
+    background-repeat: no-repeat;
+    background-color: #dbdbdb;
+    background-position: 20px 0
+}
+
+.iti__flag.iti__be, .iti__flag.iti__ne {
+    width: 18px
+}
+
+.iti__flag.iti__ch {
+    width: 15px
+}
+
+.iti__flag.iti__ac {
+    height: 10px;
+    background-position: 0 0
+}
+
+.iti__flag.iti__ad {
+    height: 14px;
+    background-position: -22px 0
+}
+
+.iti__flag.iti__ae {
+    height: 10px;
+    background-position: -44px 0
+}
+
+.iti__flag.iti__af {
+    height: 14px;
+    background-position: -66px 0
+}
+
+.iti__flag.iti__ag {
+    height: 14px;
+    background-position: -88px 0
+}
+
+.iti__flag.iti__ai {
+    height: 10px;
+    background-position: -110px 0
+}
+
+.iti__flag.iti__al {
+    height: 15px;
+    background-position: -132px 0
+}
+
+.iti__flag.iti__am {
+    height: 10px;
+    background-position: -154px 0
+}
+
+.iti__flag.iti__ao {
+    height: 14px;
+    background-position: -176px 0
+}
+
+.iti__flag.iti__aq {
+    height: 14px;
+    background-position: -198px 0
+}
+
+.iti__flag.iti__ar {
+    height: 13px;
+    background-position: -220px 0
+}
+
+.iti__flag.iti__as {
+    height: 10px;
+    background-position: -242px 0
+}
+
+.iti__flag.iti__at {
+    height: 14px;
+    background-position: -264px 0
+}
+
+.iti__flag.iti__au {
+    height: 10px;
+    background-position: -286px 0
+}
+
+.iti__flag.iti__aw {
+    height: 14px;
+    background-position: -308px 0
+}
+
+.iti__flag.iti__ax {
+    height: 13px;
+    background-position: -330px 0
+}
+
+.iti__flag.iti__az {
+    height: 10px;
+    background-position: -352px 0
+}
+
+.iti__flag.iti__ba {
+    height: 10px;
+    background-position: -374px 0
+}
+
+.iti__flag.iti__bb {
+    height: 14px;
+    background-position: -396px 0
+}
+
+.iti__flag.iti__bd {
+    height: 12px;
+    background-position: -418px 0
+}
+
+.iti__flag.iti__be {
+    height: 15px;
+    background-position: -440px 0
+}
+
+.iti__flag.iti__bf {
+    height: 14px;
+    background-position: -460px 0
+}
+
+.iti__flag.iti__bg {
+    height: 12px;
+    background-position: -482px 0
+}
+
+.iti__flag.iti__bh {
+    height: 12px;
+    background-position: -504px 0
+}
+
+.iti__flag.iti__bi {
+    height: 12px;
+    background-position: -526px 0
+}
+
+.iti__flag.iti__bj {
+    height: 14px;
+    background-position: -548px 0
+}
+
+.iti__flag.iti__bl {
+    height: 14px;
+    background-position: -570px 0
+}
+
+.iti__flag.iti__bm {
+    height: 10px;
+    background-position: -592px 0
+}
+
+.iti__flag.iti__bn {
+    height: 10px;
+    background-position: -614px 0
+}
+
+.iti__flag.iti__bo {
+    height: 14px;
+    background-position: -636px 0
+}
+
+.iti__flag.iti__bq {
+    height: 14px;
+    background-position: -658px 0
+}
+
+.iti__flag.iti__br {
+    height: 14px;
+    background-position: -680px 0
+}
+
+.iti__flag.iti__bs {
+    height: 10px;
+    background-position: -702px 0
+}
+
+.iti__flag.iti__bt {
+    height: 14px;
+    background-position: -724px 0
+}
+
+.iti__flag.iti__bv {
+    height: 15px;
+    background-position: -746px 0
+}
+
+.iti__flag.iti__bw {
+    height: 14px;
+    background-position: -768px 0
+}
+
+.iti__flag.iti__by {
+    height: 10px;
+    background-position: -790px 0
+}
+
+.iti__flag.iti__bz {
+    height: 14px;
+    background-position: -812px 0
+}
+
+.iti__flag.iti__ca {
+    height: 10px;
+    background-position: -834px 0
+}
+
+.iti__flag.iti__cc {
+    height: 10px;
+    background-position: -856px 0
+}
+
+.iti__flag.iti__cd {
+    height: 15px;
+    background-position: -878px 0
+}
+
+.iti__flag.iti__cf {
+    height: 14px;
+    background-position: -900px 0
+}
+
+.iti__flag.iti__cg {
+    height: 14px;
+    background-position: -922px 0
+}
+
+.iti__flag.iti__ch {
+    height: 15px;
+    background-position: -944px 0
+}
+
+.iti__flag.iti__ci {
+    height: 14px;
+    background-position: -961px 0
+}
+
+.iti__flag.iti__ck {
+    height: 10px;
+    background-position: -983px 0
+}
+
+.iti__flag.iti__cl {
+    height: 14px;
+    background-position: -1005px 0
+}
+
+.iti__flag.iti__cm {
+    height: 14px;
+    background-position: -1027px 0
+}
+
+.iti__flag.iti__cn {
+    height: 14px;
+    background-position: -1049px 0
+}
+
+.iti__flag.iti__co {
+    height: 14px;
+    background-position: -1071px 0
+}
+
+.iti__flag.iti__cp {
+    height: 14px;
+    background-position: -1093px 0
+}
+
+.iti__flag.iti__cr {
+    height: 12px;
+    background-position: -1115px 0
+}
+
+.iti__flag.iti__cu {
+    height: 10px;
+    background-position: -1137px 0
+}
+
+.iti__flag.iti__cv {
+    height: 12px;
+    background-position: -1159px 0
+}
+
+.iti__flag.iti__cw {
+    height: 14px;
+    background-position: -1181px 0
+}
+
+.iti__flag.iti__cx {
+    height: 10px;
+    background-position: -1203px 0
+}
+
+.iti__flag.iti__cy {
+    height: 14px;
+    background-position: -1225px 0
+}
+
+.iti__flag.iti__cz {
+    height: 14px;
+    background-position: -1247px 0
+}
+
+.iti__flag.iti__de {
+    height: 12px;
+    background-position: -1269px 0
+}
+
+.iti__flag.iti__dg {
+    height: 10px;
+    background-position: -1291px 0
+}
+
+.iti__flag.iti__dj {
+    height: 14px;
+    background-position: -1313px 0
+}
+
+.iti__flag.iti__dk {
+    height: 15px;
+    background-position: -1335px 0
+}
+
+.iti__flag.iti__dm {
+    height: 10px;
+    background-position: -1357px 0
+}
+
+.iti__flag.iti__do {
+    height: 14px;
+    background-position: -1379px 0
+}
+
+.iti__flag.iti__dz {
+    height: 14px;
+    background-position: -1401px 0
+}
+
+.iti__flag.iti__ea {
+    height: 14px;
+    background-position: -1423px 0
+}
+
+.iti__flag.iti__ec {
+    height: 14px;
+    background-position: -1445px 0
+}
+
+.iti__flag.iti__ee {
+    height: 13px;
+    background-position: -1467px 0
+}
+
+.iti__flag.iti__eg {
+    height: 14px;
+    background-position: -1489px 0
+}
+
+.iti__flag.iti__eh {
+    height: 10px;
+    background-position: -1511px 0
+}
+
+.iti__flag.iti__er {
+    height: 10px;
+    background-position: -1533px 0
+}
+
+.iti__flag.iti__es {
+    height: 14px;
+    background-position: -1555px 0
+}
+
+.iti__flag.iti__et {
+    height: 10px;
+    background-position: -1577px 0
+}
+
+.iti__flag.iti__eu {
+    height: 14px;
+    background-position: -1599px 0
+}
+
+.iti__flag.iti__fi {
+    height: 12px;
+    background-position: -1621px 0
+}
+
+.iti__flag.iti__fj {
+    height: 10px;
+    background-position: -1643px 0
+}
+
+.iti__flag.iti__fk {
+    height: 10px;
+    background-position: -1665px 0
+}
+
+.iti__flag.iti__fm {
+    height: 11px;
+    background-position: -1687px 0
+}
+
+.iti__flag.iti__fo {
+    height: 15px;
+    background-position: -1709px 0
+}
+
+.iti__flag.iti__fr {
+    height: 14px;
+    background-position: -1731px 0
+}
+
+.iti__flag.iti__ga {
+    height: 15px;
+    background-position: -1753px 0
+}
+
+.iti__flag.iti__gb {
+    height: 10px;
+    background-position: -1775px 0
+}
+
+.iti__flag.iti__gd {
+    height: 12px;
+    background-position: -1797px 0
+}
+
+.iti__flag.iti__ge {
+    height: 14px;
+    background-position: -1819px 0
+}
+
+.iti__flag.iti__gf {
+    height: 14px;
+    background-position: -1841px 0
+}
+
+.iti__flag.iti__gg {
+    height: 14px;
+    background-position: -1863px 0
+}
+
+.iti__flag.iti__gh {
+    height: 14px;
+    background-position: -1885px 0
+}
+
+.iti__flag.iti__gi {
+    height: 10px;
+    background-position: -1907px 0
+}
+
+.iti__flag.iti__gl {
+    height: 14px;
+    background-position: -1929px 0
+}
+
+.iti__flag.iti__gm {
+    height: 14px;
+    background-position: -1951px 0
+}
+
+.iti__flag.iti__gn {
+    height: 14px;
+    background-position: -1973px 0
+}
+
+.iti__flag.iti__gp {
+    height: 14px;
+    background-position: -1995px 0
+}
+
+.iti__flag.iti__gq {
+    height: 14px;
+    background-position: -2017px 0
+}
+
+.iti__flag.iti__gr {
+    height: 14px;
+    background-position: -2039px 0
+}
+
+.iti__flag.iti__gs {
+    height: 10px;
+    background-position: -2061px 0
+}
+
+.iti__flag.iti__gt {
+    height: 13px;
+    background-position: -2083px 0
+}
+
+.iti__flag.iti__gu {
+    height: 11px;
+    background-position: -2105px 0
+}
+
+.iti__flag.iti__gw {
+    height: 10px;
+    background-position: -2127px 0
+}
+
+.iti__flag.iti__gy {
+    height: 12px;
+    background-position: -2149px 0
+}
+
+.iti__flag.iti__hk {
+    height: 14px;
+    background-position: -2171px 0
+}
+
+.iti__flag.iti__hm {
+    height: 10px;
+    background-position: -2193px 0
+}
+
+.iti__flag.iti__hn {
+    height: 10px;
+    background-position: -2215px 0
+}
+
+.iti__flag.iti__hr {
+    height: 10px;
+    background-position: -2237px 0
+}
+
+.iti__flag.iti__ht {
+    height: 12px;
+    background-position: -2259px 0
+}
+
+.iti__flag.iti__hu {
+    height: 10px;
+    background-position: -2281px 0
+}
+
+.iti__flag.iti__ic {
+    height: 14px;
+    background-position: -2303px 0
+}
+
+.iti__flag.iti__id {
+    height: 14px;
+    background-position: -2325px 0
+}
+
+.iti__flag.iti__ie {
+    height: 10px;
+    background-position: -2347px 0
+}
+
+.iti__flag.iti__il {
+    height: 15px;
+    background-position: -2369px 0
+}
+
+.iti__flag.iti__im {
+    height: 10px;
+    background-position: -2391px 0
+}
+
+.iti__flag.iti__in {
+    height: 14px;
+    background-position: -2413px 0
+}
+
+.iti__flag.iti__io {
+    height: 10px;
+    background-position: -2435px 0
+}
+
+.iti__flag.iti__iq {
+    height: 14px;
+    background-position: -2457px 0
+}
+
+.iti__flag.iti__ir {
+    height: 12px;
+    background-position: -2479px 0
+}
+
+.iti__flag.iti__is {
+    height: 15px;
+    background-position: -2501px 0
+}
+
+.iti__flag.iti__it {
+    height: 14px;
+    background-position: -2523px 0
+}
+
+.iti__flag.iti__je {
+    height: 12px;
+    background-position: -2545px 0
+}
+
+.iti__flag.iti__jm {
+    height: 10px;
+    background-position: -2567px 0
+}
+
+.iti__flag.iti__jo {
+    height: 10px;
+    background-position: -2589px 0
+}
+
+.iti__flag.iti__jp {
+    height: 14px;
+    background-position: -2611px 0
+}
+
+.iti__flag.iti__ke {
+    height: 14px;
+    background-position: -2633px 0
+}
+
+.iti__flag.iti__kg {
+    height: 12px;
+    background-position: -2655px 0
+}
+
+.iti__flag.iti__kh {
+    height: 13px;
+    background-position: -2677px 0
+}
+
+.iti__flag.iti__ki {
+    height: 10px;
+    background-position: -2699px 0
+}
+
+.iti__flag.iti__km {
+    height: 12px;
+    background-position: -2721px 0
+}
+
+.iti__flag.iti__kn {
+    height: 14px;
+    background-position: -2743px 0
+}
+
+.iti__flag.iti__kp {
+    height: 10px;
+    background-position: -2765px 0
+}
+
+.iti__flag.iti__kr {
+    height: 14px;
+    background-position: -2787px 0
+}
+
+.iti__flag.iti__kw {
+    height: 10px;
+    background-position: -2809px 0
+}
+
+.iti__flag.iti__ky {
+    height: 10px;
+    background-position: -2831px 0
+}
+
+.iti__flag.iti__kz {
+    height: 10px;
+    background-position: -2853px 0
+}
+
+.iti__flag.iti__la {
+    height: 14px;
+    background-position: -2875px 0
+}
+
+.iti__flag.iti__lb {
+    height: 14px;
+    background-position: -2897px 0
+}
+
+.iti__flag.iti__lc {
+    height: 10px;
+    background-position: -2919px 0
+}
+
+.iti__flag.iti__li {
+    height: 12px;
+    background-position: -2941px 0
+}
+
+.iti__flag.iti__lk {
+    height: 10px;
+    background-position: -2963px 0
+}
+
+.iti__flag.iti__lr {
+    height: 11px;
+    background-position: -2985px 0
+}
+
+.iti__flag.iti__ls {
+    height: 14px;
+    background-position: -3007px 0
+}
+
+.iti__flag.iti__lt {
+    height: 12px;
+    background-position: -3029px 0
+}
+
+.iti__flag.iti__lu {
+    height: 12px;
+    background-position: -3051px 0
+}
+
+.iti__flag.iti__lv {
+    height: 10px;
+    background-position: -3073px 0
+}
+
+.iti__flag.iti__ly {
+    height: 10px;
+    background-position: -3095px 0
+}
+
+.iti__flag.iti__ma {
+    height: 14px;
+    background-position: -3117px 0
+}
+
+.iti__flag.iti__mc {
+    width: 19px;
+    height: 15px;
+    background-position: -3139px 0
+}
+
+.iti__flag.iti__md {
+    height: 10px;
+    background-position: -3160px 0
+}
+
+.iti__flag.iti__me {
+    height: 10px;
+    background-position: -3182px 0
+}
+
+.iti__flag.iti__mf {
+    height: 14px;
+    background-position: -3204px 0
+}
+
+.iti__flag.iti__mg {
+    height: 14px;
+    background-position: -3226px 0
+}
+
+.iti__flag.iti__mh {
+    height: 11px;
+    background-position: -3248px 0
+}
+
+.iti__flag.iti__mk {
+    height: 10px;
+    background-position: -3270px 0
+}
+
+.iti__flag.iti__ml {
+    height: 14px;
+    background-position: -3292px 0
+}
+
+.iti__flag.iti__mm {
+    height: 14px;
+    background-position: -3314px 0
+}
+
+.iti__flag.iti__mn {
+    height: 10px;
+    background-position: -3336px 0
+}
+
+.iti__flag.iti__mo {
+    height: 14px;
+    background-position: -3358px 0
+}
+
+.iti__flag.iti__mp {
+    height: 10px;
+    background-position: -3380px 0
+}
+
+.iti__flag.iti__mq {
+    height: 14px;
+    background-position: -3402px 0
+}
+
+.iti__flag.iti__mr {
+    height: 14px;
+    background-position: -3424px 0
+}
+
+.iti__flag.iti__ms {
+    height: 10px;
+    background-position: -3446px 0
+}
+
+.iti__flag.iti__mt {
+    height: 14px;
+    background-position: -3468px 0
+}
+
+.iti__flag.iti__mu {
+    height: 14px;
+    background-position: -3490px 0
+}
+
+.iti__flag.iti__mv {
+    height: 14px;
+    background-position: -3512px 0
+}
+
+.iti__flag.iti__mw {
+    height: 14px;
+    background-position: -3534px 0
+}
+
+.iti__flag.iti__mx {
+    height: 12px;
+    background-position: -3556px 0
+}
+
+.iti__flag.iti__my {
+    height: 10px;
+    background-position: -3578px 0
+}
+
+.iti__flag.iti__mz {
+    height: 14px;
+    background-position: -3600px 0
+}
+
+.iti__flag.iti__na {
+    height: 14px;
+    background-position: -3622px 0
+}
+
+.iti__flag.iti__nc {
+    height: 10px;
+    background-position: -3644px 0
+}
+
+.iti__flag.iti__ne {
+    height: 15px;
+    background-position: -3666px 0
+}
+
+.iti__flag.iti__nf {
+    height: 10px;
+    background-position: -3686px 0
+}
+
+.iti__flag.iti__ng {
+    height: 10px;
+    background-position: -3708px 0
+}
+
+.iti__flag.iti__ni {
+    height: 12px;
+    background-position: -3730px 0
+}
+
+.iti__flag.iti__nl {
+    height: 14px;
+    background-position: -3752px 0
+}
+
+.iti__flag.iti__no {
+    height: 15px;
+    background-position: -3774px 0
+}
+
+.iti__flag.iti__np {
+    width: 13px;
+    height: 15px;
+    background-position: -3796px 0
+}
+
+.iti__flag.iti__nr {
+    height: 10px;
+    background-position: -3811px 0
+}
+
+.iti__flag.iti__nu {
+    height: 10px;
+    background-position: -3833px 0
+}
+
+.iti__flag.iti__nz {
+    height: 10px;
+    background-position: -3855px 0
+}
+
+.iti__flag.iti__om {
+    height: 10px;
+    background-position: -3877px 0
+}
+
+.iti__flag.iti__pa {
+    height: 14px;
+    background-position: -3899px 0
+}
+
+.iti__flag.iti__pe {
+    height: 14px;
+    background-position: -3921px 0
+}
+
+.iti__flag.iti__pf {
+    height: 14px;
+    background-position: -3943px 0
+}
+
+.iti__flag.iti__pg {
+    height: 15px;
+    background-position: -3965px 0
+}
+
+.iti__flag.iti__ph {
+    height: 10px;
+    background-position: -3987px 0
+}
+
+.iti__flag.iti__pk {
+    height: 14px;
+    background-position: -4009px 0
+}
+
+.iti__flag.iti__pl {
+    height: 13px;
+    background-position: -4031px 0
+}
+
+.iti__flag.iti__pm {
+    height: 14px;
+    background-position: -4053px 0
+}
+
+.iti__flag.iti__pn {
+    height: 10px;
+    background-position: -4075px 0
+}
+
+.iti__flag.iti__pr {
+    height: 14px;
+    background-position: -4097px 0
+}
+
+.iti__flag.iti__ps {
+    height: 10px;
+    background-position: -4119px 0
+}
+
+.iti__flag.iti__pt {
+    height: 14px;
+    background-position: -4141px 0
+}
+
+.iti__flag.iti__pw {
+    height: 13px;
+    background-position: -4163px 0
+}
+
+.iti__flag.iti__py {
+    height: 11px;
+    background-position: -4185px 0
+}
+
+.iti__flag.iti__qa {
+    height: 8px;
+    background-position: -4207px 0
+}
+
+.iti__flag.iti__re {
+    height: 14px;
+    background-position: -4229px 0
+}
+
+.iti__flag.iti__ro {
+    height: 14px;
+    background-position: -4251px 0
+}
+
+.iti__flag.iti__rs {
+    height: 14px;
+    background-position: -4273px 0
+}
+
+.iti__flag.iti__ru {
+    height: 14px;
+    background-position: -4295px 0
+}
+
+.iti__flag.iti__rw {
+    height: 14px;
+    background-position: -4317px 0
+}
+
+.iti__flag.iti__sa {
+    height: 14px;
+    background-position: -4339px 0
+}
+
+.iti__flag.iti__sb {
+    height: 10px;
+    background-position: -4361px 0
+}
+
+.iti__flag.iti__sc {
+    height: 10px;
+    background-position: -4383px 0
+}
+
+.iti__flag.iti__sd {
+    height: 10px;
+    background-position: -4405px 0
+}
+
+.iti__flag.iti__se {
+    height: 13px;
+    background-position: -4427px 0
+}
+
+.iti__flag.iti__sg {
+    height: 14px;
+    background-position: -4449px 0
+}
+
+.iti__flag.iti__sh {
+    height: 10px;
+    background-position: -4471px 0
+}
+
+.iti__flag.iti__si {
+    height: 10px;
+    background-position: -4493px 0
+}
+
+.iti__flag.iti__sj {
+    height: 15px;
+    background-position: -4515px 0
+}
+
+.iti__flag.iti__sk {
+    height: 14px;
+    background-position: -4537px 0
+}
+
+.iti__flag.iti__sl {
+    height: 14px;
+    background-position: -4559px 0
+}
+
+.iti__flag.iti__sm {
+    height: 15px;
+    background-position: -4581px 0
+}
+
+.iti__flag.iti__sn {
+    height: 14px;
+    background-position: -4603px 0
+}
+
+.iti__flag.iti__so {
+    height: 14px;
+    background-position: -4625px 0
+}
+
+.iti__flag.iti__sr {
+    height: 14px;
+    background-position: -4647px 0
+}
+
+.iti__flag.iti__ss {
+    height: 10px;
+    background-position: -4669px 0
+}
+
+.iti__flag.iti__st {
+    height: 10px;
+    background-position: -4691px 0
+}
+
+.iti__flag.iti__sv {
+    height: 12px;
+    background-position: -4713px 0
+}
+
+.iti__flag.iti__sx {
+    height: 14px;
+    background-position: -4735px 0
+}
+
+.iti__flag.iti__sy {
+    height: 14px;
+    background-position: -4757px 0
+}
+
+.iti__flag.iti__sz {
+    height: 14px;
+    background-position: -4779px 0
+}
+
+.iti__flag.iti__ta {
+    height: 10px;
+    background-position: -4801px 0
+}
+
+.iti__flag.iti__tc {
+    height: 10px;
+    background-position: -4823px 0
+}
+
+.iti__flag.iti__td {
+    height: 14px;
+    background-position: -4845px 0
+}
+
+.iti__flag.iti__tf {
+    height: 14px;
+    background-position: -4867px 0
+}
+
+.iti__flag.iti__tg {
+    height: 13px;
+    background-position: -4889px 0
+}
+
+.iti__flag.iti__th {
+    height: 14px;
+    background-position: -4911px 0
+}
+
+.iti__flag.iti__tj {
+    height: 10px;
+    background-position: -4933px 0
+}
+
+.iti__flag.iti__tk {
+    height: 10px;
+    background-position: -4955px 0
+}
+
+.iti__flag.iti__tl {
+    height: 10px;
+    background-position: -4977px 0
+}
+
+.iti__flag.iti__tm {
+    height: 14px;
+    background-position: -4999px 0
+}
+
+.iti__flag.iti__tn {
+    height: 14px;
+    background-position: -5021px 0
+}
+
+.iti__flag.iti__to {
+    height: 10px;
+    background-position: -5043px 0
+}
+
+.iti__flag.iti__tr {
+    height: 14px;
+    background-position: -5065px 0
+}
+
+.iti__flag.iti__tt {
+    height: 12px;
+    background-position: -5087px 0
+}
+
+.iti__flag.iti__tv {
+    height: 10px;
+    background-position: -5109px 0
+}
+
+.iti__flag.iti__tw {
+    height: 14px;
+    background-position: -5131px 0
+}
+
+.iti__flag.iti__tz {
+    height: 14px;
+    background-position: -5153px 0
+}
+
+.iti__flag.iti__ua {
+    height: 14px;
+    background-position: -5175px 0
+}
+
+.iti__flag.iti__ug {
+    height: 14px;
+    background-position: -5197px 0
+}
+
+.iti__flag.iti__um {
+    height: 11px;
+    background-position: -5219px 0
+}
+
+.iti__flag.iti__un {
+    height: 14px;
+    background-position: -5241px 0
+}
+
+.iti__flag.iti__us {
+    height: 11px;
+    background-position: -5263px 0
+}
+
+.iti__flag.iti__uy {
+    height: 14px;
+    background-position: -5285px 0
+}
+
+.iti__flag.iti__uz {
+    height: 10px;
+    background-position: -5307px 0
+}
+
+.iti__flag.iti__va {
+    width: 15px;
+    height: 15px;
+    background-position: -5329px 0
+}
+
+.iti__flag.iti__vc {
+    height: 14px;
+    background-position: -5346px 0
+}
+
+.iti__flag.iti__ve {
+    height: 14px;
+    background-position: -5368px 0
+}
+
+.iti__flag.iti__vg {
+    height: 10px;
+    background-position: -5390px 0
+}
+
+.iti__flag.iti__vi {
+    height: 14px;
+    background-position: -5412px 0
+}
+
+.iti__flag.iti__vn {
+    height: 14px;
+    background-position: -5434px 0
+}
+
+.iti__flag.iti__vu {
+    height: 12px;
+    background-position: -5456px 0
+}
+
+.iti__flag.iti__wf {
+    height: 14px;
+    background-position: -5478px 0
+}
+
+.iti__flag.iti__ws {
+    height: 10px;
+    background-position: -5500px 0
+}
+
+.iti__flag.iti__xk {
+    height: 15px;
+    background-position: -5522px 0
+}
+
+.iti__flag.iti__ye {
+    height: 14px;
+    background-position: -5544px 0
+}
+
+.iti__flag.iti__yt {
+    height: 14px;
+    background-position: -5566px 0
+}
+
+.iti__flag.iti__za {
+    height: 14px;
+    background-position: -5588px 0
+}
+
+.iti__flag.iti__zm {
+    height: 14px;
+    background-position: -5610px 0
+}
+
+.iti__flag.iti__zw {
+    height: 10px;
+    background-position: -5632px 0
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+    .iti__flag {
+        background-size: 5652px 15px;
+        background-image: url("../intl-validation/img/flags@2x.png")
+    }
+}
+
+.register-form {
+    padding: 30px 20px;
+    max-width: 500px;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 10px auto;
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75)
+}
+
+.form-input-main {
+    margin-bottom: 10px
+}
+
+.form-input-main input, .form-input-main select {
+    font-family: "Rethink Sans", Verdana, sans-serif;
+    height: 44px;
+    width: 100%;
+    padding-left: 10px;
+    background: 0 0;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .75);
+    margin: 5px 0;
+    outline: 0
+}
+
+.form-input-main select {
+    margin: 0;
+    width: 100%
+}
+
+.form-input-main input::placeholder, .form-input-main select::placeholder {
+    color: rgba(0, 0, 0, .87)
+}
+
+button[name=submitBtn] {
+    width: 100%;
+    background: #4caf50;
+    border-radius: 71px;
+    font-family: "Rethink Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 100%;
+    color: #fff;
+    border: none;
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+    font-weight: 700;
+    padding: 15px
+}
+
+.form-footer-text, .form-header-text {
+    color: #fff;
+    font-size: 14px;
+    text-align: center
+}
+
+.form-header-text {
+    margin-bottom: 20px
+}
+
+.form-footer-text {
+    margin-top: 20px
+}
+
+.form-input-main label[for=nationality] {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fff
+}
+
+.form-input-main label[for=policy2], .form-input-main label[for=policy] {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 14px;
+    color: #fff
+}
+
+.form-input-main label[for=age2], .form-input-main label[for=age] {
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    color: #fff
+}
+
+.form-input-main input[name=policy2], .form-input-main input[name=policy] {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0
+}
+
+.iti--allow-dropdown input, .iti--allow-dropdown input[type=tel], .iti--allow-dropdown input[type=text], .iti--separate-dial-code input, .iti--separate-dial-code input[type=tel], .iti--separate-dial-code input[type=text] {
+    width: 100%;
+    padding-left: 105px !important
+}
+
+.iti {
+    width: 100% !important
+}
+
+.form-input option, .iti__country {
+    color: #000 !important
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+input[type=number] {
+    -moz-appearance: textfield
+}
+
+@media screen and (max-width: 768px) {
+    button[name=submitBtn] {
+        width: 100%
+    }
+}
+
+.valid {
+    background-color: rgba(0, 255, 0, .6) !important;
+    color: #fff
+}
+
+.invalid {
+    background-color: rgba(255, 0, 0, .6) !important;
+    color: #fff
+}
+
+.iti__arrow, .iti__selected-dial-code {
+    color: #000 !important;
+    border-top-color: #000 !important
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin: 20px 0
+}
+
+.info-box input {
+    margin-right: 15px
+}
+
+.info-box span {
+    display: inline-block;
+    margin-bottom: 15px
+}
+
+input[name="first_name"], input[name="last_name"], input[name="email"], input[name="phone_raw"], input[name="phone"] {
+    color: #000
+}
+
+.step-list {
+}
+
+.step-list li {
+    margin-bottom: 10px;
+}
+
+.rev {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rev__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rev__item-img img {
+    max-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.rev__item-name {
+    font-weight: bold;
+    font-family: Helvetica Bold, Arial;
+    font-size: 18px;
+}
+
+.rev__item-text {
+    font-size: 18px;
+}
+
+.rev__item {
+    padding: 10px;
+    /*background: #e9e9e9;*/
+    border-radius: 15px;
+    border: 2px solid #000;
+}
+
+.steps-widget-section .steps-widget .steps-widget-item {
+    opacity: 1;
+}
+
+.inputbox {
+    width: 100%;
+    margin: 12px 0;
+}
+
+.inputbox input {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+    .OtxlN {
+        display: flow-root;
+    }
+    .OtxlN .f2VrG {
+         border-right: 0px solid #ccc;
+    }
+}
+
+@media (760px <= width <= 825px) {
+    .sDvqk {
+        height: 23px;
+        left: 50%;
+        margin: 16px 0;
+        position: absolute;
+        transform: translateX(-70%);
+        width: 205px;
+    }
+    .Mivr2.ZwGeW .w4nQT .EV3DB.Kikxk+.K8FEs {
+        display: none;
+    }
+
+}
+
+@media (825px <= width <= 915px) {
+    .Mivr2.ZwGeW .w4nQT .EV3DB.Kikxk+.K8FEs {
+        display: none;
+    }
+}
+
+@media (825px <= width <= 1024px) {
+    .cCU6C {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+    ._AmfD {
+        margin-top: 110px;
+    }
+    .slick-prev {
+        display: none !important;
+    }
+}
+
+@media (max-width: 825px) {
+    .cCU6C .okf2Z {
+        width: 100%;
+    }
+}
+
+@media (760px <= width <= 824px) {
+    body {
+        padding: 0 10px 0 10px;
+    }
+}
+
+@media (825px <= width <= 999px) {
+    .xciRh .rwKrk {
+        margin: 0 25px 0 0;
+        top: -10px;
+    }
+}
+
+/* Sticky sidebar for PC */
+@media (min-width: 826px) {
+    .eTaBv.article_rhs ._AmfD {
+        position: sticky;
+        top: 100px;
+    }
+}
+
+body,
+button,
+input,
+select,
+textarea,
+#app,
+.nonAppView {
+    font-family: "Rethink Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+}
+
+.sidebar-form-wrapper {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    min-width: 320px;
+}
+
+.sidebar-form-wrapper h5 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+.sidebar-form-wrapper .form-box {
+    width: 100%;
+}
+
+.sidebar-form-wrapper .inputbox {
+    margin: 10px 0;
+}
+
+.sidebar-form-wrapper .inputbox input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.sidebar-form-wrapper .custom_btn {
+    width: 100%;
+    padding: 14px;
+    background: #e03f3f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sidebar-form-wrapper .custom_btn:hover {
+    background: #c73636;
+}
+
+/* Mobile form after image */
+.mobile-form-wrapper {
+    display: none;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 15px;
+    padding: 25px 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.mobile-form-wrapper h5 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mobile-form-wrapper .form-box {
+    width: 100%;
+}
+
+.mobile-form-wrapper .inputbox {
+    margin: 12px 0;
+}
+
+.mobile-form-wrapper .inputbox input {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.95);
+    color: #333;
+}
+
+.mobile-form-wrapper .inputbox input::placeholder {
+    color: #888;
+}
+
+.mobile-form-wrapper .inputbox input:focus {
+    outline: none;
+    border-color: #e03f3f;
+    box-shadow: 0 0 0 2px rgba(224,63,63,0.2);
+}
+
+.mobile-form-wrapper .button-box {
+    margin-top: 15px;
+}
+
+.mobile-form-wrapper .custom_btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #e03f3f 0%, #c73636 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.mobile-form-wrapper .custom_btn:hover {
+    background: linear-gradient(135deg, #c73636 0%, #a32d2d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(224,63,63,0.4);
+}
+
+/* intlTelInput styles for mobile form */
+.mobile-form-wrapper .iti {
+    width: 100% !important;
+}
+
+.mobile-form-wrapper .iti input {
+    width: 100% !important;
+    padding-left: 90px !important;
+}
+
+/* Show/hide forms based on screen size */
+@media (min-width: 826px) {
+    .sidebar-form-wrapper {
+        display: block;
+    }
+    .mobile-form-wrapper {
+        display: none !important;
+    }
+    /* Hide original form location on PC */
+    .original-form-location {
+        display: none;
+    }
+}
+
+@media (max-width: 825px) {
+    .sidebar-form-wrapper {
+        display: none !important;
+    }
+    .mobile-form-wrapper {
+        display: block;
+    }
+    /* Hide original form location on mobile */
+    .original-form-location {
+        display: none;
+    }
+    .eTaBv.article_rhs {
+        display: none;
+    }
+}
+
+/* Form under video */
+.article-video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    background: #000;
+}
+
+.video-form-wrapper {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 15px;
+    padding: 25px 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Inline article trend-strip styles moved out of head */
+.xciRh {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0;
+    min-height: 28px;
+}
+
+.xciRh .rwKrk {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #595959;
+    background-clip: padding-box;
+    border-radius: 4px;
+    color: var(--white-color);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    padding: 4px 8px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.xciRh .rwKrk:before {
+    background: url(https://static.toiimg.com/photo/100496804.cms) no-repeat;
+    content: "";
+    width: 8px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+.xciRh .rwKrk:after {
+    background: #595959;
+    border: none;
+    border-radius: 6px 6px 7px 0;
+    content: "";
+    display: block;
+    height: 21.5px;
+    left: calc(100% - 11px);
+    position: absolute;
+    top: 1.5px;
+    transform: rotate(45deg);
+    transform-origin: center;
+    width: 20px;
+    z-index: -1;
+}
+
+.trending_sliderContent {
+    border: none;
+}
+
+.trending_sliderContent .slick-slider {
+    padding-right: 60px;
+}
+
+.trending_sliderContent .c5HdF {
+    display: flex !important;
+    align-items: center;
+    margin-right: 12px;
+    padding-bottom: 2px;
+}
+
+.trending_sliderContent span {
+    color: var(--primary-dark-color);
+    display: inline-block;
+}
+
+.trending_sliderContent .FANDV {
+    background: #ececec;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex: 0 0 auto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    order: 1;
+    padding: 3px 12px 4px;
+}
+
+.trending_sliderContent .FANDV a {
+    color: var(--primary-dark-color);
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait),
+screen and (min-width: 999px) {
+    .trending_sliderContent {
+        height: 28px;
+        line-height: 28px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .trending_sliderContent .slick-list {
+        margin: 0 0 0 16px;
+        padding-bottom: 2px;
+    }
+
+    .trending_sliderContent .slick-arrow {
+        background: #f6f6f6 !important;
+        height: 24px;
+        margin-left: auto;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        top: 2px;
+        width: 24px;
+        z-index: 1;
+    }
+
+    .trending_sliderContent .slick-arrow.slick-next,
+    .trending_sliderContent .slick-arrow.slick-prev {
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border-radius: 8px 0 0 8px;
+        transform: unset;
+    }
+
+    .trending_sliderContent .slick-arrow.slick-next:after,
+    .trending_sliderContent .slick-arrow.slick-next:before,
+    .trending_sliderContent .slick-arrow.slick-prev:after,
+    .trending_sliderContent .slick-arrow.slick-prev:before {
+        content: "" !important;
+        height: 2px;
+        left: 5px;
+        position: absolute;
+        transition: all 0.5s;
+    }
+
+    .trending_sliderContent .slick-arrow.slick-next:before,
+    .trending_sliderContent .slick-arrow.slick-prev:before {
+        display: none;
+    }
+
+    .trending_sliderContent .slick-arrow.slick-next:after,
+    .trending_sliderContent .slick-arrow.slick-prev:after {
+        border: solid var(--primary-dark-color);
+        border-width: 1.5px 0 0 1.5px;
+        height: 7px;
+        transform: rotate(-45deg);
+        width: 8px;
+    }
+
+    .trending_sliderContent .slick-arrow.slick-prev {
+        right: 23px !important;
+    }
+
+    .trending_sliderContent .slick-arrow.slick-prev:after {
+        left: 8px;
+        top: 8px;
+    }
+
+    .trending_sliderContent .slick-arrow.slick-next {
+        border-radius: 0 8px 8px 0;
+        right: 0;
+    }
+
+    .trending_sliderContent .slick-arrow.slick-next:after {
+        left: 5px;
+        top: 8px;
+        transform: rotate(135deg);
+    }
+}
+
+@media (max-width: 767px) {
+    .trending_sliderContent .slick-slider {
+        padding-right: 0;
+    }
+}
+
+.video-form-wrapper h5 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.video-form-wrapper .form-box {
+    width: 100%;
+}
+
+.video-form-wrapper .inputbox {
+    margin: 12px 0;
+}
+
+.video-form-wrapper .inputbox input {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.95);
+    color: #333;
+}
+
+.video-form-wrapper .inputbox input::placeholder {
+    color: #888;
+}
+
+.video-form-wrapper .inputbox input:focus {
+    outline: none;
+    border-color: #e03f3f;
+    box-shadow: 0 0 0 2px rgba(224,63,63,0.2);
+}
+
+.video-form-wrapper .button-box {
+    margin-top: 15px;
+}
+
+.video-form-wrapper .custom_btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #e03f3f 0%, #c73636 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.video-form-wrapper .custom_btn:hover {
+    background: linear-gradient(135deg, #c73636 0%, #a32d2d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(224,63,63,0.4);
+}
+
+/* intlTelInput styles for video form */
+.video-form-wrapper .iti {
+    width: 100% !important;
+}
+
+.video-form-wrapper .iti input {
+    width: 100% !important;
+    padding-left: 90px !important;
+}
