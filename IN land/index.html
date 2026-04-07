@@ -1,0 +1,710 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Investment Platform - Smart Investing with Artificial Intelligence</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./offer_index/styles.css" />
+    <link rel="stylesheet" href="./offer_index/widgetform.css" />
+    <link rel="stylesheet" href="./intl-validation/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="./intl-validation/just-validate.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="#" class="logo">
+          <div style="display: flex; justify-content: center; align-items: center; gap: 10px">
+            <img src="./offer_index/logo.webp" style="width: 35px; height: 30px" />
+            <div>Profit Storm</div>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="#howitworks">
+            How it works
+          </a>
+          <a href="#howtostart">
+            How to start
+          </a>
+          <a href="#security">
+            Security
+          </a>
+          <a href="#regulatory">
+            Regulatory
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" style="background-image: url(&quot;./offer_index/bg.jpg&quot;); background-size: 1200px">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text" style="backdrop-filter: blur(10px); padding: 20px 30px; border-radius: 15px; -webkit-backdrop-filter: blur(10px)">
+            <h1 style="color: white">Earn up to ₹2,05,000 per day with AI-powered trading – starting from just ₹23,000!</h1>
+            <p style="color: white">Smarter Investing with AI-Powered Technology</p>
+            <div class="hero-highlights" style="color: white">
+              <div class="hero-highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                  <path
+                    d="M480-80 120-280v-400l360-200 360 200v400L480-80ZM364-590q23-24 53-37t63-13q33 0 63 13t53 37l120-67-236-131-236 131 120 67Zm76 396v-131q-54-14-87-57t-33-98q0-11 1-20.5t4-19.5l-125-70v263l240 133Zm40-206q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm40 206 240-133v-263l-125 70q3 10 4 19.5t1 20.5q0 55-33 98t-87 57v131Z"></path>
+                </svg>
+                <b>Simple:</b>
+                No experience needed
+              </div>
+              <div class="hero-highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                  <path
+                    d="M420-360h120l-23-129q20-10 31.5-29t11.5-42q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 23 11.5 42t31.5 29l-23 129Zm60 280q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"></path>
+                </svg>
+                <b>Safe:</b>
+                100% secure & private
+              </div>
+              <div class="hero-highlight-item">
+                <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                  <path
+                    d="M200-280v-280h80v280h-80Zm240 0v-280h80v280h-80ZM80-640v-80l400-200 400 200v80H80Zm179-80h442L480-830 259-720ZM80-120v-80h482q2 21 5 40.5t9 39.5H80Zm600-310v-130h80v90l-80 40ZM800 0q-69-17-114.5-79.5T640-218v-102l160-80 160 80v102q0 76-45.5 138.5T800 0Zm-29-120 139-138-42-42-97 95-39-39-42 43 81 81ZM259-720h442-442Z"></path>
+                </svg>
+                <b>Legit:</b>
+                Backed by government compliance
+              </div>
+            </div>
+          </div>
+          <div class="registration-form" id="regFormDiv">
+            <h2>Create Your Account with Profit Storm</h2>
+            <div class="form-widget" style="box-shadow: none">
+              <form class="flex-column registrationForm" action="" method="post" id="reg-form">
+                <div class="form-group">
+                  <input placeholder="First Name" name="firstname" required="" type="text" class="regFormFirstName" data-input="firstname" data-valid="false" id="form-first_name" />
+                  <label>First Name</label>
+                </div>
+                <div class="form-group">
+                  <input placeholder="Last Name" name="lastname" required="" type="text" class="regFormLastNname" data-input="lastname" data-valid="false" id="form-last_name" />
+                  <label>Last Name</label>
+                </div>
+                <div class="form-group form-group__emailValid">
+                  <input placeholder="Email" name="email" required="" type="email" data-input="email" class="regFormEmail" data-valid="false" id="form-email" />
+                  <label>Email</label>
+                </div>
+                <div class="form-group reg-phone">
+                  <input placeholder="Phone" name="phone" required="" type="tel" class="regFormPhoneNumber" data-input="phone" data-valid="false" id="form-phone_number" inputmode="tel" autocomplete="off" />
+                  <label>Phone</label>
+                </div>
+                <button class="zoom regFormButton btn-primary" type="submit">Register now</button>
+              </form>
+            </div>
+            <div class="urgency-note" style="font-size: 14px">
+              Registration closes in
+              <span id="minutes" style="padding: 1px 4px; background-color: rgb(74, 33, 97); color: white; border-radius: 4px; transform: scale(1)" data-seconds="963">16:03</span>
+              minutes or when the last
+              <span id="spots" style="padding: 1px 4px; background-color: rgb(74, 33, 97); color: white; border-radius: 4px; transform: scale(1)">181</span>
+              spots are filled. After this round, the minimum investment may rise to ₹42,000.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faces" style="padding: 10px; margin: auto; text-align: center">
+      <div class="container" style="padding: 20px 0">
+        <h2>
+          <span class="gradient">
+            <b>Profit Storm</b>
+            uses Artificial Intelligence and State-Of-The-Art algorithms to identify and execute only profitable trades
+          </span>
+        </h2>
+      </div>
+    </section>
+
+    <section class="features" id="features" style="padding-top: 36px; background: linear-gradient(135deg, #000b35 0%, #4a2161 100%)">
+      <div class="container">
+        <h2 style="color: white">Why choose Profit Storm</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <img src="./offer_index/ai.jpg" alt="AI Icon" style="width: auto; height: 120px; border-radius: 30px" />
+            <h3>AI-Powered Analysis</h3>
+            <p>
+              Advanced algorithms analyze market trends and provide personalized investment recommendations.
+              <b>Earn effortlessly with fully automated AI trading.</b>
+            </p>
+          </div>
+          <div class="feature-card">
+            <img src="./offer_index/lock.jpg" alt="Security Icon" style="width: auto; height: 120px; border-radius: 30px" />
+            <h3>Secure & Reliable</h3>
+            <p>
+              Bank-level security measures to protect your investments and personal information.
+              <b>Your investment is insured and fully refundable.</b>
+            </p>
+          </div>
+          <div class="feature-card">
+            <img src="./offer_index/diversity.jpg" alt="Diversity Icon" style="width: auto; height: 120px; border-radius: 30px" />
+            <h3>Diverse Investment Options</h3>
+            <p>
+              Access to traditional stocks, cryptocurrencies, and derivative instruments.
+              <b>This helps diversify and minimize your risk.</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" style="padding-top: 36px">
+      <div class="container">
+        <h2>Beginners stories</h2>
+        <div style="text-align: center; color: gray">They started without any experience and already got their profit. You can too!</div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div style="text-align: center; padding-bottom: 20px; font-size: 20px">
+              <span class="profit-badge" style="background-color: #3ea57c; color: white; padding: 5px 10px; border-radius: 5px; font-weight: 600">+₹5,00,000 in one week</span>
+            </div>
+            <div class="testimonial-content">
+              <img src="./offer_index/rahul.jpg" alt="Rahul Sharma" style="width: 300px; border-radius: 300px" />
+              <p class="testimonial-text">
+                "The AI-based recommendations have noticeably improved the performance of my investment portfolio - the growth has exceeded my expectations. I earned over ₹5,00,000 in my first week—AI is truly game-changing! The Profit
+                Storm platform's security system inspires confidence and I am calm about my funds."
+              </p>
+              <div class="testimonial-author">
+                <h4>Vikram Malhotra</h4>
+                <p>Mumbai, India</p>
+                <div class="rating">★★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div style="text-align: center; padding-bottom: 20px; font-size: 20px">
+              <span class="profit-badge" style="background-color: #3ea57c; color: white; padding: 5px 10px; border-radius: 5px; font-weight: 600">+₹39,00,000 in one month</span>
+            </div>
+            <div class="testimonial-content">
+              <img src="./offer_index/priya.jpg" alt="Priya Patel" style="width: 300px; border-radius: 300px" />
+              <p class="testimonial-text">
+                "I'm a first-time investor, I was surprised that AI already could help people in investing guidance. I started with only ₹10,000, the minimum investment has since increased — which doesn’t surprise me. I made the right
+                decision by trusting Profit Storm. The platform made investing easy and transparent. Profit Storm has helped improve the quality of my life, my children's lives."
+              </p>
+              <div class="testimonial-author">
+                <h4>Ananya Desai</h4>
+                <p>Delhi, India</p>
+                <div class="rating">★★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div style="text-align: center; padding-bottom: 20px; font-size: 20px">
+              <span class="profit-badge" style="background-color: #3ea57c; color: white; padding: 5px 10px; border-radius: 5px; font-weight: 600">+₹40,000 in one day</span>
+            </div>
+            <div class="testimonial-content">
+              <img src="./offer_index/amit.jpg" alt="Amit Kumar" style="width: 300px; border-radius: 300px" />
+              <p class="testimonial-text">
+                "The combination of traditional and crypto investment options, backed by AI analysis, has helped me invest sucessfully. I started from ₹23,000 and doubled my investment in just one day. It's amazing. Of course I continue
+                investing with Profit Storm."
+              </p>
+              <div class="testimonial-author">
+                <h4>Siddharth Nair</h4>
+                <p>Bangalore, India</p>
+                <div class="rating">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary to-form" style="margin-top: 50px">Register and get your profit with AI</button>
+      </div>
+    </section>
+
+    <section id="howitworks" class="trading-demo" style="padding-top: 36px">
+      <div class="container">
+        <h2 style="color: white; margin-bottom: 16px">How it works</h2>
+        <div class="section-glass-note" style="color: rgba(255, 255, 255, 0.921); margin-bottom: 16px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background-color: #ffffff0e; padding: 5px 15px; border-radius: 5px">
+          The secret is built in to the way the exchanges operate. The price of the coins goes up and down based on supply and demand, and the supply and demand for the currencies is different from one exchange to another. Because of this,
+          often there are often large price differences for the same coin across exchanges.
+          <br />
+          <br />
+          <b>AI of Profit Storm platform can instantly react to price differences and quickly make a profitable transaction while you are resting.</b>
+        </div>
+
+        <div class="trading-demo-content">
+          <div class="trading-demo-text">
+            <div class="trading-stats">
+              <div class="stat-item">
+                <span class="stat-number counter" data-target="98">0</span>
+                %
+                <span class="stat-label">Accuracy Rate</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">
+                  <span class="counter" data-target="24">0</span>
+                  /
+                  <span class="counter" data-target="7">0</span>
+                </span>
+                <span class="stat-label">AI Assistants</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number counter" data-target="14">0</span>
+                %
+                <span class="stat-label">Average Daily ROI</span>
+              </div>
+            </div>
+            <div class="trading-features">
+              <div class="trading-feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="m105-399-65-47 200-320 120 140 160-260 120 180 135-214 65 47-198 314-119-179-152 247-121-141-145 233Zm475 159q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29ZM784-80 676-188q-21 14-45.5 21t-50.5 7q-75 0-127.5-52.5T400-340q0-75 52.5-127.5T580-520q75 0 127.5 52.5T760-340q0 26-7 50.5T732-244l108 108-56 56Z"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>Real-time AI Analysis</h3>
+                  <p>Get instant market insights and trading signals powered by advanced AI algorithms. For free.</p>
+                </div>
+              </div>
+              <div class="trading-feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-120v40h400v-40H280Zm0-80h400v-480H280v480Zm0-560h400v-40H280v40Zm0 0v-40 40Zm0 640v40-40Z"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>Mobile-First Experience</h3>
+                  <p>Trade anywhere, anytime with our intuitive mobile app interface. And accessible from any device.</p>
+                </div>
+              </div>
+              <div class="trading-feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>Smart Notifications</h3>
+                  <p>Receive personalized alerts for optimal trading opportunities.</p>
+                </div>
+              </div>
+              <div class="trading-feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M160-360q-50 0-85-35t-35-85q0-50 35-85t85-35v-80q0-33 23.5-56.5T240-760h120q0-50 35-85t85-35q50 0 85 35t35 85h120q33 0 56.5 23.5T800-680v80q50 0 85 35t35 85q0 50-35 85t-85 35v160q0 33-23.5 56.5T720-120H240q-33 0-56.5-23.5T160-200v-160Zm200-80q25 0 42.5-17.5T420-500q0-25-17.5-42.5T360-560q-25 0-42.5 17.5T300-500q0 25 17.5 42.5T360-440Zm240 0q25 0 42.5-17.5T660-500q0-25-17.5-42.5T600-560q-25 0-42.5 17.5T540-500q0 25 17.5 42.5T600-440ZM320-280h320v-80H320v80Zm-80 80h480v-480H240v480Zm240-240Z"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>100% Autonomy trading</h3>
+                  <p>No need to monitor trades—our AI handles it all for you.</p>
+                </div>
+              </div>
+              <div class="trading-feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M480-40q-112 0-206-51T120-227v107H40v-240h240v80h-99q48 72 126.5 116T480-120q75 0 140.5-28.5t114-77q48.5-48.5 77-114T840-480h80q0 91-34.5 171T791-169q-60 60-140 94.5T480-40Zm-36-160v-52q-47-11-76.5-40.5T324-370l66-26q12 41 37.5 61.5T486-314q33 0 56.5-15.5T566-378q0-29-24.5-47T454-466q-59-21-86.5-50T340-592q0-41 28.5-74.5T446-710v-50h70v50q36 3 65.5 29t40.5 61l-64 26q-8-23-26-38.5T482-648q-35 0-53.5 15T410-592q0 26 23 41t83 35q72 26 96 61t24 77q0 29-10 51t-26.5 37.5Q583-274 561-264.5T514-250v50h-70ZM40-480q0-91 34.5-171T169-791q60-60 140-94.5T480-920q112 0 206 51t154 136v-107h80v240H680v-80h99q-48-72-126.5-116T480-840q-75 0-140.5 28.5t-114 77q-48.5 48.5-77 114T120-480H40Z"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  <h3>Integrated with Leading Crypto Exchanges</h3>
+                  <p>
+                    Profit Storm integrated seamlessly with
+                    <b>WazirX, CoinDCX, Binance, ZebPay, KuCoin, NSE, BSE and many more</b>
+                    stocks to give you instant earnings.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="trading-demo-visual">
+            <div class="phone-container">
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div class="trading-chart">
+                    <div class="chart-header">
+                      <h4>Reliance Industries</h4>
+                      <span class="stock-price positive">₹2,450.75</span>
+                    </div>
+                    <div class="chart-content">
+                      <div class="chart-line"></div>
+                      <div class="chart-line"></div>
+                      <div class="chart-line"></div>
+                      <div class="chart-line"></div>
+                      <div class="chart-line"></div>
+                    </div>
+                    <div class="ai-analysis">
+                      <div class="analysis-header">
+                        <span class="ai-icon">🤖</span>
+                        <span>AI Analysis</span>
+                      </div>
+                      <div class="analysis-content">
+                        <p>Strong buy signal detected through technical analysis and market sentiment.</p>
+                        <div class="confidence-meter">
+                          <div class="confidence-bar" data-target-width="85%" style="width: 85%"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary to-form" style="margin-top: 50px">Start investing</button>
+      </div>
+    </section>
+
+    <section class="investment-options" id="investment" style="padding-top: 36px; background-color: white">
+      <div class="container">
+        <h2>Investment Options</h2>
+        <div class="options-grid">
+          <div class="option-card">
+            <h3>Traditional Stocks</h3>
+            <p>Invest in established companies with proven track records.</p>
+          </div>
+          <div class="option-card">
+            <h3>Cryptocurrencies</h3>
+            <p>Access to major cryptocurrencies and emerging digital assets.</p>
+          </div>
+          <div class="option-card">
+            <h3>Derivative Instruments</h3>
+            <p>Sophisticated tools tailored for experienced investors.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-to-start" style="padding-top: 36px" id="howtostart">
+      <div class="container">
+        <h2>How to Start Investing</h2>
+        <div class="steps-container">
+          <div class="steps-info">
+            <div class="investment-highlights">
+              <div class="highlight-card">
+                <div class="highlight-icon">💰</div>
+                <div class="highlight-content">
+                  <h3>Minimum Deposit</h3>
+                  <p class="highlight-value">₹23,000</p>
+                  <p class="highlight-description">Begin your investment journey with a small, insured deposit (risk-free)</p>
+                  <p style="color: gray; font-size: 10px; margin-top: 10px">start investment amount could be increased up to ₹42,000 soon</p>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <div class="highlight-icon">📈</div>
+                <div class="highlight-content">
+                  <h3>Average Monthly Returns</h3>
+                  <p class="highlight-value">420%</p>
+                  <p class="highlight-description">Based on historical performance</p>
+                  <p style="color: gray; font-size: 10px; margin-top: 10px">Returns are increasing as our AI continuously learns from new trades.</p>
+                </div>
+              </div>
+            </div>
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h3>Create Your Account</h3>
+                  <p>Sign up in less than 2 minutes with your basic information</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h3>Complete Verification</h3>
+                  <p>Wait for a call from our manager to confirm your registration</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h3>Make Your First Deposit</h3>
+                  <p>Transfer minimum ₹23,000 to your account</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h3>Start Trading</h3>
+                  <p>Let our AI analyze the market and make smart investment decisions</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h3>Take your first profit</h3>
+                  <p>Earn your first profit — anywhere from ₹23,000 up to ₹2,05,000 in a single day</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="steps-visual">
+            <div class="steps-progress">
+              <div class="progress-line"></div>
+              <div class="progress-dots">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary to-form" style="margin-top: 50px">Go to registration form</button>
+      </div>
+    </section>
+
+    <section class="security-withdrawal" style="padding-top: 36px" id="security">
+      <div class="container">
+        <h2 style="color: white">Security & Withdrawals</h2>
+        <div class="security-grid" style="z-index: 99999">
+          <div class="security-card" style="background-color: white; border-radius: 10px; padding: 40px 40px">
+            <div class="security-icon">
+              🔒
+              <span style="font-size: 28px; font-weight: 600">Bank-Level Security</span>
+            </div>
+
+            <ul class="security-list">
+              <li>256-bit SSL Encryption</li>
+              <li>Multi-Factor Authentication</li>
+              <li>Cold storage for crypto funds</li>
+              <li>Routine security audits for your protection</li>
+            </ul>
+            <div class="security-badge">
+              <span class="badge-icon">✓</span>
+              <span class="badge-text">ISO 27001 Certified</span>
+            </div>
+          </div>
+          <div class="security-card" style="background-color: white; border-radius: 10px; padding: 40px 40px">
+            <div class="security-icon">
+              💳
+              <span style="font-size: 28px; font-weight: 600">Instant Withdrawals</span>
+            </div>
+            <ul class="security-list">
+              <li>24/7 Withdrawal Processing</li>
+              <li>Multiple Payment Methods</li>
+              <li>No Hidden Fees</li>
+              <li>Same-Day Bank Transfers</li>
+            </ul>
+            <div class="security-badge">
+              <span class="badge-icon">⚡</span>
+              <span class="badge-text">Up to 2 Hours Processing</span>
+            </div>
+          </div>
+          <div class="security-card" style="background-color: white; border-radius: 10px; padding: 40px 40px">
+            <div class="security-icon">
+              🛡️
+              <span style="font-size: 28px; font-weight: 600">Fund Protection</span>
+            </div>
+            <ul class="security-list">
+              <li>Segregated Client Accounts</li>
+              <li>Insurance Coverage</li>
+              <li>Regular Account Reconciliation</li>
+              <li>Anti-Fraud Systems</li>
+            </ul>
+            <div class="security-badge">
+              <span class="badge-icon">✅</span>
+              <span class="badge-text">100% Fund Safety</span>
+            </div>
+          </div>
+        </div>
+        <div class="withdrawal-guarantee">
+          <div class="guarantee-content">
+            <h3>Guaranteed Withdrawals</h3>
+            <p>Your funds are always available for withdrawal. We maintain 100% liquidity and process all withdrawal requests within 2 hours during business hours.</p>
+            <div class="guarantee-features">
+              <div class="guarantee-feature">
+                <span class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3ea57c">
+                    <path
+                      d="m226-559 78 33q14-28 29-54t33-52l-56-11-84 84Zm142 83 114 113q42-16 90-49t90-75q70-70 109.5-155.5T806-800q-72-5-158 34.5T492-656q-42 42-75 90t-49 90Zm178-65q-23-23-23-56.5t23-56.5q23-23 57-23t57 23q23 23 23 56.5T660-541q-23 23-57 23t-57-23Zm19 321 84-84-11-56q-26 18-52 32.5T532-299l33 79Zm313-653q19 121-23.5 235.5T708-419l20 99q4 20-2 39t-20 33L538-80l-84-197-171-171-197-84 167-168q14-14 33.5-20t39.5-2l99 20q104-104 218-147t235-24ZM157-321q35-35 85.5-35.5T328-322q35 35 34.5 85.5T327-151q-25 25-83.5 43T82-76q14-103 32-161.5t43-83.5Zm57 56q-10 10-20 36.5T180-175q27-4 53.5-13.5T270-208q12-12 13-29t-11-29q-12-12-29-11.5T214-265Z"></path>
+                  </svg>
+                </span>
+                <span class="feature-text">No Minimum Withdrawal</span>
+              </div>
+              <div class="guarantee-feature">
+                <span class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3ea57c">
+                    <path d="m422-232 207-248H469l29-227-185 267h139l-30 208ZM320-80l40-280H160l360-520h80l-40 320h240L400-80h-80Zm151-390Z"></path>
+                  </svg>
+                </span>
+                <span class="feature-text">Fast Processing</span>
+              </div>
+              <div class="guarantee-feature">
+                <span class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3ea57c">
+                    <path
+                      d="M420-360h120l-23-129q20-10 31.5-29t11.5-42q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 23 11.5 42t31.5 29l-23 129Zm60 280q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"></path>
+                  </svg>
+                </span>
+                <span class="feature-text">Secure Process</span>
+              </div>
+            </div>
+          </div>
+          <div class="guarantee-visual">
+            <div class="withdrawal-steps">
+              <div class="withdrawal-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Request Withdrawal</h4>
+                  <p>Submit withdrawal request through your dashboard</p>
+                </div>
+              </div>
+              <div class="withdrawal-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Verification</h4>
+                  <p>Quick security verification process</p>
+                </div>
+              </div>
+              <div class="withdrawal-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Processing</h4>
+                  <p>Withdrawal processed within 2 hours</p>
+                </div>
+              </div>
+              <div class="withdrawal-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Completion</h4>
+                  <p>Funds credited to your account</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stats-showcase" style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+          <div style="color: white; text-align: center; font-size: 30px; padding: 10px; margin-top: 20px">Daily average withdrawal statistics (last 3 months)</div>
+          <div class="image-caption-card" style="position: relative; display: inline-block">
+            <img decoding="async" fetchpriority="high" loading="eager" src="./offer_index/average.png" style="display: block; width: 100%; height: auto; max-width: 600px" />
+            <div
+              style="
+                position: absolute;
+                top: 12.6%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: rgb(60, 60, 60);
+                font-weight: bold;
+                border-radius: 5px;
+                font-size: min(15px, 3vw);
+                line-height: 15px;
+                max-width: 65%;
+                min-width: 65%;
+              ">
+              <span class="funnel-on-image-1">Profit Storm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="regulatory" style="padding-top: 36px" id="regulatory">
+      <div class="container">
+        <h2>Regulatory Compliance & Certifications</h2>
+        <div class="regulatory-grid">
+          <div class="regulatory-card">
+            <img src="./offer_index/sebi.jpg" alt="SEBI Registration" class="regulatory-logo" />
+            <h3>SEBI Registered</h3>
+            <p>Licensed and regulated by the Securities and Exchange Board of India</p>
+          </div>
+          <div class="regulatory-card">
+            <img src="./offer_index/rbi.png" alt="RBI Compliance" class="regulatory-logo" />
+            <h3>RBI Compliant</h3>
+            <p>Adheres to Reserve Bank of India's financial regulations</p>
+          </div>
+          <div class="regulatory-card">
+            <img src="./offer_index/itd.jpg" alt="GST Registration" class="regulatory-logo" />
+            <h3>IT Department Compliant</h3>
+            <p>Fully compliant with Income Tax regulations</p>
+          </div>
+        </div>
+        <div class="regulatory-info">
+          <p>Our platform is fully compliant with Indian financial regulations and maintains the highest standards of security and transparency.</p>
+          <div class="certificate-frame image-caption-card" style="position: relative; display: inline-block; border: solid 2px #4a2161">
+            <img decoding="async" fetchpriority="high" loading="eager" src="./offer_index/cert.jpg" style="display: block; width: 100%; height: auto; max-width: 400px" />
+            <div
+              style="
+                position: absolute;
+                top: 47.6%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: rgb(60, 60, 60);
+                font-weight: bold;
+                border-radius: 5px;
+                font-size: min(15px, 3vw);
+                line-height: 15px;
+                max-width: 65%;
+                min-width: 65%;
+              ">
+              <span class="funnel-on-image-1">Profit Storm</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary to-form" style="margin-top: 15px">Start Investing Now</button>
+      </div>
+    </section>
+
+    <footer style="padding: 32px 6px">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <div>
+              <div class="footer-brand-row" style="display: flex; justify-content: start; align-items: center; margin-bottom: 10px">
+                <img src="./offer_index/logo.webp" style="width: 35px; margin-right: 5px" />
+                <div style="font-size: 20px; font-weight: 600">Profit Storm</div>
+              </div>
+              <p>Your trusted partner in AI-driven investment solutions.</p>
+            </div>
+          </div>
+          <div>
+            <h3>Quick Links</h3>
+            <ul style="list-style: none">
+              <li>
+                <a href="#howitworks">
+                  How it works
+                </a>
+              </li>
+              <li>
+                <a href="#howtostart">
+                  How to start
+                </a>
+              </li>
+              <li>
+                <a href="#security">
+                  Security
+                </a>
+              </li>
+              <li>
+                <a href="#regulatory">
+                  Regulatory
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact Us</h3>
+            <p style="margin-top: 5px">
+              <b>Address:</b>
+              Vigyan Bhawan Annexe, Maulana Azad Road, New Delhi - 110011, India
+            </p>
+            <p style="margin-top: 5px">
+              <b>Operating hours:</b>
+              Monday - Friday: 9:30 AM - 6:00 PM IST
+            </p>
+            <p style="margin-top: 5px"><b>Contacts data:</b></p>
+            <p>info@investindia.gov.in (General Inquiries)</p>
+            <p>investor.support@investindia.gov.in (Investor Assistance)</p>
+            <p>+91-11-2304-8100 (Main Line)</p>
+            <p>+91-11-2304-8200 (Investor Support)</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-to-form" aria-label="Scroll to registration form">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"></path>
+      </svg>
+    </button>
+    <script src="./offer_index/main.js" defer></script>
+    <script src="./intl-validation/validation.js" defer></script>
+  </body>
+</html>
