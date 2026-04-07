@@ -1,0 +1,201 @@
+/**
+ * Стили для секции «Questions fréquentes» (FAQ)
+ * Блок: #custom-69626604354f5
+ */
+
+@media (min-width: 64em) {
+  #custom-69626604354f5 .fig-wrapper-flex-column {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+#custom-69626604354f5 .fig-wrapper-flex-column__2-of-3 {
+  /* flex: 2 1 auto; */
+}
+
+@media (min-width: 48em) {
+  #custom-69626604354f5 .fig-wrapper-flex-column__2-of-3 {
+    max-width: 100%;
+  }
+}
+
+#custom-69626604354f5 .fig-wrapper-flex-column__2-of-3 > :first-child {
+  border: 0;
+  padding-top: 0;
+}
+
+/* Suggested resources */
+#custom-69626604354f5 .fig-suggested-resources {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 48em) {
+  #custom-69626604354f5 .fig-suggested-resources {
+    max-width: 704px;
+  }
+}
+
+@media (min-width: 64em) {
+  #custom-69626604354f5 .fig-suggested-resources {
+    max-width: 616px;
+  }
+}
+
+#custom-69626604354f5 .fig-suggested-resources__title {
+  color: #1f66ba;
+  font-family: source-sans-pro, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+#custom-69626604354f5 .fig-suggested-resources__title + .fig-ranking-profile-container {
+  border-top: 0;
+}
+
+/* Ranking profile container (FAQ items) */
+#custom-69626604354f5 .fig-ranking-profile-container {
+  border-top: 1px solid #ccc;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  position: relative;
+}
+
+@media (min-width: 48em) {
+  #custom-69626604354f5 .fig-ranking-profile-container {
+    max-width: 704px;
+  }
+}
+
+@media (min-width: 64em) {
+  #custom-69626604354f5 .fig-ranking-profile-container {
+    max-width: 616px;
+  }
+}
+
+#custom-69626604354f5 .fig-wrapper-flex-column__2-of-3 > :not(.fig-related-content) .fig-ranking-profile-container:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* Link (clickable area) */
+#custom-69626604354f5 .fig-ranking-profile-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+
+#custom-69626604354f5 .fig-ranking-profile-small-picture .fig-ranking-profile-link {
+  position: static;
+}
+
+#custom-69626604354f5 .fig-ranking-profile-small-picture .fig-ranking-profile-link:before {
+  content: "";
+  inset: 16px 0;
+  position: absolute;
+  z-index: 5;
+}
+
+#custom-69626604354f5 .fig-wrapper-flex-column__2-of-3 .fig-ranking-profile-small-picture:first-child .fig-ranking-profile-link:before {
+  top: 0;
+}
+
+#custom-69626604354f5 .fig-ranking-profile-container.fig-ranking-profile--suggested.fig-ranking-profile-small-picture:not(:first-child) .fig-ranking-profile-link:before {
+  top: 16px;
+}
+
+/* Headline */
+#custom-69626604354f5 .fig-ranking-profile-headline {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.375;
+}
+
+@media (min-width: 48em) {
+  #custom-69626604354f5 .fig-ranking-profile-headline {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
+
+#custom-69626604354f5 .fig-ranking-profile-small-picture .fig-ranking-profile-headline {
+  float: left;
+  max-width: calc(100% - 136px);
+}
+
+@media (min-width: 48em) {
+  #custom-69626604354f5 .fig-ranking-profile-small-picture .fig-ranking-profile-headline {
+    max-width: calc(100% - 298px);
+  }
+}
+
+@media (min-width: 64em) {
+  #custom-69626604354f5 .fig-ranking-profile-small-picture .fig-ranking-profile-headline {
+    max-width: calc(100% - 240px);
+  }
+}
+
+/* Media (image) */
+#custom-69626604354f5 .fig-ranking-profile-media-small-picture {
+  float: right;
+  font-size: 0;
+  margin-left: 16px;
+  max-width: 120px;
+  width: 100%;
+}
+
+@media (min-width: 48em) and (max-width: 63.99em) {
+  #custom-69626604354f5 .fig-ranking-profile-media-small-picture {
+    max-width: 282px;
+  }
+}
+
+@media (min-width: 64em) {
+  #custom-69626604354f5 .fig-ranking-profile-media-small-picture {
+    max-width: 224px;
+  }
+}
+
+/* Standfirst (answer text) */
+#custom-69626604354f5 .fig-ranking-profile-standfirst {
+  color: #163860;
+  font-size: 0.875rem;
+  line-height: 1.4285714286;
+  margin-top: 4px;
+}
+
+@media (max-width: 47.99em) {
+  #custom-69626604354f5 .fig-ranking-profile-standfirst {
+    display: none;
+  }
+}
+
+#custom-69626604354f5 .fig-ranking-profile-small-picture .fig-ranking-profile-standfirst {
+  clear: left;
+  float: left;
+  max-width: calc(100% - 136px);
+}
+
+@media (min-width: 48em) {
+  #custom-69626604354f5 .fig-ranking-profile-small-picture .fig-ranking-profile-standfirst {
+    max-width: calc(100% - 298px);
+  }
+}
+
+@media (min-width: 64em) {
+  #custom-69626604354f5 .fig-ranking-profile-small-picture .fig-ranking-profile-standfirst {
+    max-width: calc(100% - 240px);
+  }
+}
+
+/* Placeholder for images */
+#custom-69626604354f5 .fig-placeholder--16-9 {
+  aspect-ratio: 16/9;
+}

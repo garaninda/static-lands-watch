@@ -1,0 +1,81 @@
+/*============== FEEDBACK ==============*/
+.feedback {
+	margin-bottom: 20px;
+	padding: 5px 0 12px;
+}
+
+.feedback__header,
+.feedback__body {
+	border-bottom: 1px solid #989898;
+}
+
+.feedback__header {
+	display: flex;
+	align-items: center;
+	padding-bottom: 20px;
+}
+
+.feedback__photo {
+	flex-shrink: 0;
+	width: 130px;
+	height: 130px;
+	margin-right: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.feedback__photo img {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	object-fit: cover;
+}
+
+.feedback .feedback__name {
+	margin: 0;
+	margin-bottom: 5px;
+	font-weight: 700;
+	/* font-size: 1.6rem; */
+}
+
+.feedback .feedback__position {
+	margin: 0;
+	/* font-size: 1.2rem; */
+	color: #787878;
+}
+
+.feedback .feedback__rating {
+	font-size: 1.5rem;
+	color: #d85229;
+}
+
+.feedback__body {
+	padding: 16px 0;
+}
+
+.feedback__body p {
+	margin: 0;
+	font-family: var(--article--fonts-tertiary);
+	/* font-size: 1.375rem; */
+	line-height: 1.5;
+}
+
+.feedback__body p + p {
+	margin-top: 5px;
+}
+
+@media (max-width: 660px) {
+	.feedback {
+		padding: 5px 0 12px;
+	}
+
+	.feedback__header {
+		flex-direction: column;
+		text-align: center;
+		padding: 0 16px 20px;
+	}
+
+	.feedback__photo {
+		margin-right: 0;
+	}
+}
