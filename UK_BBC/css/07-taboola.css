@@ -1,0 +1,19 @@
+.trc_popover.trc_bottom .trc_popover_arrow:after {
+    top: 1px;
+    margin-left: -10px;
+    border-bottom-color: #fff;
+    border-top-width: 0;
+}
+
+.trc_popover .trc_popover_arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid rgba(0, 0, 0, 0);
+}
+
+.trc_popover .trc_popover_arrow:after {
+    border-width: 10px;
+    content: "";
+}

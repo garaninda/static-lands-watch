@@ -1,0 +1,15 @@
+.videoCube:hover .trc_user_exclude_btn,
+.trc_user_excluded.videoCube:hover .trc_exclude_undo_btn {
+    visibility: visible;
+}
+
+.videoCube.trc_user_excluded:hover a .video-label-box .video-title {
+    text-decoration: none;
+}
+
+.videoCube.trc_user_excluded:hover a .video-label-box * {
+    color: #000;
+    overflow: hidden;
+    transition: color 500ms 0s;
+    -webkit-transition: color 500ms 0s;
+}

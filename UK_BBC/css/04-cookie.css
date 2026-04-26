@@ -1,0 +1,26 @@
+#ngasCookiePrompt #cookiePrompt {
+    font-weight: 400;
+    font-size: 0.625rem;
+    font-family: Arial, Helvetica, freesans, sans-serif;
+    line-height: 1;
+}
+
+#ngasCookiePrompt .bbccookies-banner a:hover,
+#ngasCookiePrompt .bbccookies-banner a:focus,
+#ngasCookiePrompt .bbccookies-banner button:hover,
+#ngasCookiePrompt .bbccookies-banner button:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+#ngasCookiePrompt .bbccookies-banner .orb-banner-options a:hover,
+#ngasCookiePrompt .bbccookies-banner .orb-banner-options a:focus,
+#ngasCookiePrompt .bbccookies-banner .orb-banner-options button:hover,
+#ngasCookiePrompt .bbccookies-banner .orb-banner-options button:focus {
+    background-position: 0px -317px;
+}
+
+#ngasCookiePrompt #bbccookies-settings a:focus,
+#ngasCookiePrompt #bbccookies-settings a:hover {
+    background-position: 1px -60px;
+}

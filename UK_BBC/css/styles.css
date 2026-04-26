@@ -1,0 +1,954 @@
+/*! CSS Used from: Embedded */
+.fZzzgq {
+    border-bottom: 1px solid rgb(230, 232, 234);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    line-height: 0;
+    max-width: 100vw;
+    z-index: 3000;
+}
+.fZzzgq * {
+    z-index: 3000;
+}
+@media screen and (max-width: 1007px) {
+    .fZzzgq {
+        border-bottom-width: medium;
+        border-bottom-style: none;
+        border-bottom-color: currentcolor;
+        display: none;
+    }
+}
+.bifeDq {
+    display: inline-block;
+    overflow-x: hidden;
+    white-space: nowrap;
+    margin-bottom: -1px;
+}
+.dGHTDY {
+    list-style-type: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    align-self: center;
+}
+@media screen and (max-width: 1007px) {
+    .dGHTDY {
+        display: none;
+    }
+}
+.bsWWZr {
+    position: relative;
+}
+.imGQtK {
+    position: relative;
+}
+.imGQtK::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background: rgb(230, 232, 234);
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.czTlCi {
+    position: relative;
+    display: block;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 12px 8px;
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0px;
+}
+.czTlCi:hover {
+    background-color: rgb(230, 232, 234);
+}
+.jQdIKm {
+    z-index: 3000;
+    position: sticky;
+    background-color: rgb(255, 255, 255);
+    top: 80px;
+    left: 0px;
+    right: 0px;
+    transform: translateY(0px);
+    transition: transform 0.5s;
+}
+.jQdIKm * {
+    z-index: 3000;
+}
+@media screen and (max-width: 1007px) {
+    .jQdIKm {
+        height: 0px;
+    }
+}
+div,
+a,
+ul,
+li,
+nav,
+section {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+nav,
+section {
+    display: block;
+}
+ul {
+    list-style: none;
+}
+/*! CSS Used fontfaces */
+/* @font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:300;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Lt.woff2) format('woff2');}
+@font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:400;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Rg.woff2) format('woff2');}
+@font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:500;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Md.woff2) format('woff2');}
+@font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:700;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2) format('woff2');}
+@font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:900;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_ExBd.woff2) format('woff2');}
+@font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:300;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_LtIt.woff2) format('woff2');font-style:italic;}
+@font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:400;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_It.woff2) format('woff2');font-style:italic;}
+@font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:500;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_MdIt.woff2) format('woff2');font-style:italic;}
+@font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:700;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_BdIt.woff2) format('woff2');font-style:italic;}
+@font-face{font-family:'BBC Reith Sans';font-display:block;font-weight:900;src:url(https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_ExBdIt.woff2) format('woff2');font-style:italic;}
+@font-face{font-family:BBCReithSans-fallback;size-adjust:103%;ascent-override:normal;src:local('Arial');} */
+/* @font-face{font-family:BBCReithSans-fallback;font-weight:500;size-adjust:96%;ascent-override:normal;src:local('Arial Bold');} */
+
+/* ============================================================
+   Article body — custom subheadings, lists, CTAs, testimonials, FAQ
+   ============================================================ */
+
+article .article-subhead {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: rgb(32, 34, 36);
+    margin: 28px 0 12px 0;
+    letter-spacing: -0.4px;
+}
+
+@media screen and (min-width: 600px) {
+    article .article-subhead {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (min-width: 1008px) {
+    article .article-subhead {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+article .article-lede {
+    font-family: "BBC Reith Serif", BBCReithSerif-fallback, serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgb(32, 34, 36);
+    letter-spacing: -0.4px;
+    margin: 0 0 16px;
+}
+
+@media screen and (max-width: 599px) {
+    article .article-lede {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+article .article-list {
+    margin: 8px 0 20px;
+    padding-left: 24px;
+    color: rgb(32, 34, 36);
+    font-family: "BBC Reith Serif", BBCReithSerif-fallback, serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.36px;
+}
+
+article .article-list li {
+    margin-bottom: 8px;
+    list-style: disc;
+}
+
+article ol.article-list li {
+    list-style: decimal;
+}
+
+@media screen and (max-width: 599px) {
+    article .article-list {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.article-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0 24px;
+}
+
+.article-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.article-cta-primary {
+    background-color: rgb(187, 25, 25);
+    color: rgb(255, 255, 255);
+    border-color: rgb(187, 25, 25);
+}
+
+.article-cta-primary:hover {
+    background-color: rgb(150, 20, 20);
+    border-color: rgb(150, 20, 20);
+}
+
+.article-cta-secondary {
+    background-color: transparent;
+    color: rgb(32, 34, 36);
+    border-color: rgb(32, 34, 36);
+}
+
+.article-cta-secondary:hover {
+    background-color: rgb(32, 34, 36);
+    color: rgb(255, 255, 255);
+}
+
+.article-form {
+    margin: 20px 0 16px;
+    padding: 24px;
+    background: rgb(244, 247, 251);
+    border: 1px solid rgb(218, 224, 232);
+    border-radius: 8px;
+}
+
+.article-form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.article-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.article-form-label {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(70, 78, 92);
+}
+
+.article-form-input {
+    appearance: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid rgb(218, 224, 232);
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(32, 34, 36);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-form-input::placeholder {
+    color: rgb(150, 156, 165);
+}
+
+.article-form-input:hover {
+    border-color: rgb(170, 180, 195);
+}
+
+.article-form-input:focus {
+    outline: none;
+    border-color: rgb(187, 25, 25);
+    box-shadow: 0 0 0 3px rgba(187, 25, 25, 0.15);
+}
+
+.article-form-input:invalid:not(:placeholder-shown) {
+    border-color: rgb(187, 25, 25);
+}
+
+.article-form-submit {
+    width: auto;
+    cursor: pointer;
+    font: inherit;
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px 32px;
+}
+
+@media screen and (max-width: 599px) {
+    .article-form {
+        padding: 18px;
+    }
+
+    .article-form-submit {
+        width: 100%;
+    }
+}
+
+.article-subnote {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-style: italic;
+    color: rgb(105, 109, 113);
+    font-size: 14px;
+    line-height: 20px;
+    margin: -8px 0 16px;
+}
+
+.article-testimonial {
+    border-left: 4px solid rgb(187, 25, 25);
+    padding: 4px 0 4px 16px;
+    margin: 16px 0;
+}
+
+.article-testimonial-name {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(32, 34, 36);
+    margin: 0 0 4px;
+}
+
+.article-testimonial-quote {
+    font-family: "BBC Reith Serif", BBCReithSerif-fallback, serif;
+    font-style: italic;
+    color: rgb(32, 34, 36);
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+}
+
+@media screen and (max-width: 599px) {
+    .article-testimonial-quote {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.article-faq {
+    margin: 20px 0 28px;
+    border-top: 1px solid rgb(218, 224, 232);
+}
+
+.article-faq-item {
+    border-bottom: 1px solid rgb(218, 224, 232);
+    transition: background-color 0.2s ease;
+}
+
+.article-faq-item[open] {
+    background-color: rgb(248, 250, 252);
+}
+
+.article-faq-q {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 48px 18px 4px;
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgb(32, 34, 36);
+    transition: color 0.2s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.article-faq-q::-webkit-details-marker {
+    display: none;
+}
+
+.article-faq-q::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid rgb(32, 34, 36);
+    border-bottom: 2px solid rgb(32, 34, 36);
+    transform: translateY(-75%) rotate(45deg);
+    transition: transform 0.25s ease, border-color 0.2s ease;
+}
+
+.article-faq-item[open] .article-faq-q::after {
+    transform: translateY(-25%) rotate(-135deg);
+    border-color: rgb(187, 25, 25);
+}
+
+.article-faq-q:hover {
+    color: rgb(187, 25, 25);
+}
+
+.article-faq-q:hover::after {
+    border-color: rgb(187, 25, 25);
+}
+
+.article-faq-q:focus-visible {
+    outline: 2px solid rgb(187, 25, 25);
+    outline-offset: -2px;
+}
+
+.article-faq-a {
+    padding: 0 48px 20px 4px;
+    font-family: "BBC Reith Serif", BBCReithSerif-fallback, serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgb(32, 34, 36);
+    letter-spacing: -0.36px;
+    margin: 0;
+}
+
+@media screen and (max-width: 599px) {
+    .article-faq-q {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 40px 16px 4px;
+    }
+
+    .article-faq-a {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0 40px 18px 4px;
+    }
+}
+
+.article-callout {
+    background-color: rgb(245, 245, 245);
+    border-left: 4px solid rgb(32, 34, 36);
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-family: "BBC Reith Serif", BBCReithSerif-fallback, serif;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgb(32, 34, 36);
+}
+
+/* Features grid (after lede) — icons + title + description */
+.article-icon-sprite {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.article-feature-icon,
+.article-pension-card-icon,
+.article-challenges-icon,
+.article-platform-icon,
+.article-dashboard-icon {
+    position: relative;
+}
+
+img.article-icon {
+    display: block;
+    border-radius: 50%;
+}
+
+.article-features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin: 24px 0;
+    padding: 16px 0 8px;
+}
+
+.article-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.article-feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.article-feature-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.article-feature-title {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgb(32, 34, 36);
+    margin: 0 0 8px;
+    letter-spacing: -0.2px;
+}
+
+.article-feature-desc {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(105, 109, 113);
+    margin: 0;
+    max-width: 180px;
+}
+
+@media screen and (max-width: 767px) {
+    .article-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 16px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .article-feature-icon img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .article-feature-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .article-feature-desc {
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+/* Three-column pension breakdown card */
+.article-pension-card {
+    padding: 8px 0 16px;
+    margin: 24px 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    align-items: start;
+}
+
+.article-pension-card-item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.article-pension-card-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-pension-card-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.article-pension-card-title {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgb(32, 34, 36);
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+
+.article-pension-card-desc {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: rgb(70, 75, 82);
+    margin: 0;
+}
+
+.article-pension-card-list {
+    margin: 0;
+    padding-left: 20px;
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: rgb(70, 75, 82);
+}
+
+.article-pension-card-list li {
+    margin-bottom: 6px;
+    list-style: disc;
+}
+
+.article-pension-card-list li:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1007px) {
+    .article-pension-card {
+        gap: 24px;
+    }
+
+    .article-pension-card-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .article-pension-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .article-pension-card-item {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .article-pension-card-icon {
+        justify-content: flex-start;
+    }
+
+    .article-pension-card-icon img {
+        width: 96px;
+        height: 96px;
+    }
+}
+
+/* Financial challenges card — 4 columns with vertical dividers + bottom quote strip */
+.article-challenges-card {
+    padding: 8px 0 0;
+    margin: 24px 0;
+}
+
+.article-challenges-title {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: rgb(32, 34, 36);
+    text-align: center;
+    margin: 0 24px 24px;
+    letter-spacing: -0.2px;
+}
+
+.article-challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0 8px 28px;
+}
+
+.article-challenges-item {
+    text-align: center;
+    padding: 4px 16px;
+    border-right: 1px solid rgba(60, 70, 100, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.article-challenges-item:last-child {
+    border-right: none;
+}
+
+.article-challenges-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-challenges-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+@media screen and (max-width: 599px) {
+    .article-challenges-icon img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.article-challenges-item-title {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(32, 34, 36);
+    margin: 0;
+}
+
+.article-challenges-item-desc {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(70, 78, 92);
+    margin: 0;
+}
+
+.article-challenges-quote {
+    text-align: center;
+    padding: 4px 24px 0;
+    margin-top: 4px;
+    font-family: "BBC Reith Serif", BBCReithSerif-fallback, serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 24px;
+    color: rgb(32, 34, 36);
+}
+
+@media screen and (max-width: 1007px) {
+    .article-challenges-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 0;
+    }
+
+    .article-challenges-item:nth-child(2n) {
+        border-right: none;
+    }
+
+    .article-challenges-item:nth-child(-n+2) {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(60, 70, 100, 0.12);
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .article-challenges-card {
+        padding-top: 24px;
+    }
+
+    .article-challenges-title {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0 16px 20px;
+    }
+
+    .article-challenges-grid {
+        grid-template-columns: 1fr;
+        padding: 0 8px 20px;
+    }
+
+    .article-challenges-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(60, 70, 100, 0.12);
+        padding: 16px 12px;
+    }
+
+    .article-challenges-item:last-child {
+        border-bottom: none;
+    }
+
+    .article-challenges-item:nth-child(-n+2) {
+        padding-bottom: 16px;
+    }
+
+    .article-challenges-quote {
+        font-size: 15px;
+        line-height: 22px;
+        padding: 14px 16px;
+    }
+}
+
+/* Platform card — six circular icons in a row */
+.article-platform-card {
+    padding: 8px 0 12px;
+    margin: 24px 0;
+}
+
+.article-platform-card-title {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: rgb(28, 50, 92);
+    text-align: center;
+    margin: 0 0 28px;
+    letter-spacing: -0.2px;
+}
+
+.article-platform-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.article-platform-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+}
+
+.article-platform-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.article-platform-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.article-platform-item-text {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(70, 78, 92);
+    margin: 0;
+    max-width: 110px;
+}
+
+@media screen and (max-width: 1007px) {
+    .article-platform-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 12px;
+    }
+
+    .article-platform-card-title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .article-platform-card {
+        padding: 24px 12px 20px;
+    }
+
+    .article-platform-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 8px;
+    }
+
+    .article-platform-card-title {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 22px;
+    }
+
+    .article-platform-icon img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* Inline mini-heading inside article — bold sans, smaller than h2 */
+.article-mini-head {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgb(32, 34, 36);
+    margin: 18px 0 10px;
+    letter-spacing: -0.2px;
+}
+
+@media screen and (min-width: 600px) {
+    .article-mini-head {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+/* Dashboard icons — six features, no backgrounds */
+.article-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px 16px;
+    margin: 16px 0 24px;
+}
+
+.article-dashboard-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.article-dashboard-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.article-dashboard-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.article-dashboard-label {
+    font-family: "BBC Reith Sans", BBCReithSans-fallback, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(70, 78, 92);
+    margin: 0;
+    max-width: 110px;
+}
+
+@media screen and (max-width: 1007px) {
+    .article-dashboard-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 12px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .article-dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 8px;
+    }
+
+    .article-dashboard-icon img {
+        width: 64px;
+        height: 64px;
+    }
+}
