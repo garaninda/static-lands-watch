@@ -1,0 +1,11 @@
+@import url("./intl-validation/css/intlTelInput.min.css");
+
+@media print {
+  body {
+    display: none;
+  }
+}
+
+.show-all__content-wrapper p {
+  font-size: 18px;
+}

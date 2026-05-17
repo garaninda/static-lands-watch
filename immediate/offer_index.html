@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./offer_index/logo.svg" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./offer_index/style.css" />
+    <title>Immediate +V4 Intal</title>
+    <link rel="stylesheet" href="./offer_index/all.min.css" referrerpolicy="no-referrer" />
+    <!-- <link type="text/css" rel="stylesheet" href="css/m%3Del_main_css.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+      integrity="sha384-1br6/tPBoNMolOEwjCHo1piHidgKFHw9IxWT8/dLxIO0k/wh6uVc5tUyi6chiBYN"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./offer_index/intl-validation/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="./offer_index/intl-validation/just-validate.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <header>
+      <header>
+        <div class="container">
+          <div class="header-nav">
+            <div class="header-nav__logo">
+              <img src="./offer_index/logo.svg" alt="" />
+              <div>Immediate +V4 Intal</div>
+            </div>
+            <nav>
+              <ul class="nav-list">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Quiénes somos</a></li>
+                <li><a href="">Financiamiento</a></li>
+                <li><a href="">Tipos de cuentas</a></li>
+                <li><a href="">Mercados</a></li>
+                <li><a href="">Términos y condiciones</a></li>
+                <a href="" class="nav-link">Empezar</a>
+              </ul>
+            </nav>
+            <div class="open-menu">
+              <svg width="60" height="35" viewBox="0 0 60 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 10H50M10 17.7586H50M10 25H50" stroke="#FEFEFE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="burger-menu">
+          <ul class="burger-list">
+            <svg width="28" class="close-menu" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.14832 2L14.1483 14M26.1483 26L14.1483 14M14.1483 14L2.14832 26L26.1483 2" stroke="#171717" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <li><a href="">Inicio</a></li>
+            <li>
+              <a
+                href=""
+                onclick="
+                  document.location.hash = 'about';
+                  return false;
+                ">
+                Quiénes somos
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                onclick="
+                  document.location.hash = 'funding';
+                  return false;
+                ">
+                Financiamiento
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                onclick="
+                  document.location.hash = 'account-types';
+                  return false;
+                ">
+                Tipos de cuentas
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                onclick="
+                  document.location.hash = 'markets';
+                  return false;
+                ">
+                Mercados
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                onclick="
+                  document.location.hash = 'terms';
+                  return false;
+                ">
+                Términos y condiciones
+              </a>
+            </li>
+            <li><a href="">Empezar</a></li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <section class="banner" id="home">
+          <div class="container">
+            <div class="banner_content">
+              <div class="banner_info">
+                <h1>
+                  Immediate +V4 Intal está oficialmente
+                  <br />
+                  listo para su activación.
+                </h1>
+                <p>
+                  "El Gobierno de México se enorgullece en anunciar el lanzamiento de Immediate +V4 Intal, una plataforma digital de criptomonedas diseñada para impulsar el crecimiento financiero y llevar al país hacia una nueva era de
+                  innovación tecnológica."
+                </p>
+                <img src="./offer_index/banner-reviews.png" alt="" />
+              </div>
+              <div class="lander-form-wrapper banner-form" id="iframe-scroll">
+                <div class="lander-form-header">¡Transforme su vida AHORA MISMO!</div>
+                <div class="form-places-warning" role="status" aria-live="polite">
+                  Quedan
+                  <span id="places-left">134</span>
+                  lugares
+                </div>
+                <div class="form-widget">
+                  <form class="flex-column registrationForm" action="order.php" method="post" id="reg-form" novalidate>
+                    <div class="form-group">
+                      <input placeholder="Nombre" name="first_name" required type="text" class="regFormFirstName" id="form-first_name" autocomplete="given-name" aria-label="Nombre" />
+                    </div>
+                    <div class="form-group">
+                      <input placeholder="Apellido" name="last_name" required type="text" class="regFormLastNname" id="form-last_name" autocomplete="family-name" aria-label="Apellido" />
+                    </div>
+                    <div class="form-group form-group__emailValid">
+                      <input placeholder="Correo electrónico" name="email" required type="email" class="regFormEmail" id="form-email" autocomplete="email" inputmode="email" aria-label="Correo electrónico" />
+                    </div>
+                    <div class="form-group reg-phone">
+                      <div class="phone-fallback-prefix" aria-hidden="true">
+                        <span class="phone-fallback-prefix__flag"></span>
+                        <span>+52</span>
+                      </div>
+                      <input name="phone_short" required type="tel" class="regFormPhoneNumber" id="form-phone_number" inputmode="tel" autocomplete="tel-national" aria-label="Teléfono" placeholder="222 123 4567" />
+                    </div>
+                    <button class="zoom regFormButton" type="submit">Regístrese ahora</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="info" id="about">
+          <div class="container">
+            <div class="info_calc">
+              <div class="left_calc">
+                <div class="max-calc">
+                  <div id="form3" class="block bg-white text-primary overflow-hidden w-full pt-6 pb-4 px-6 sm:pt-2 sm:px-4 sm:leading-tight conn">
+                    <div class="flex flex-col text-center font-bold mb-4 sm:mb-10 px-5">
+                      <h2 class="calc_title">
+                        Descubra su potencial para alcanzar la riqueza: ¡ahora al alcance de todos en México!
+                        <br />
+                        Rápido, sencillo y centrado en su futuro económico.
+                      </h2>
+                      <div class="calc-selected" aria-live="polite">
+                        <span>Depósito</span>
+                        <strong id="calcDeposit">5,500 MXN</strong>
+                      </div>
+                      <input type="text" class="js-range-slider" name="my_range" value="5500" />
+                      <div class="calc-scale" aria-hidden="true">
+                        <span>5,500</span>
+                        <span>100,000</span>
+                        <span>250,000</span>
+                        <span>500,000+</span>
+                      </div>
+                    </div>
+                    <a class="flex flex-col mb-5 VvV ffddd calc-cta" href="#regform" style="text-align: center; margin-top: 50px">
+                      <span>Sus ingresos diarios estimados:</span>
+                      <strong class="text-2xl text-center font-bold font-ubuntu mt-5 margTop1R fatBLueTExt" id="calcResult">11,430 MXN</strong>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="rigth_info">
+                <div class="info_header">
+                  <img src="./offer_index/info-quote.jpg" alt="" style="width: 100px; height: 80px" />
+                  <div class="info_p">
+                    <h2>Marcelo Ebrard</h2>
+                    <h3>Exsecretario de Relaciones Exteriores de México</h3>
+                  </div>
+                </div>
+                <p>
+                  “Immediate +V4 Intal es más que dinero. Es una oportunidad para que todos los mexicanos participen en el futuro financiero del país. Gracias a la tecnología segura de blockchain y a un concepto innovador, Immediate +V4
+                  Intal ofrece una vía para mejorar el bienestar personal y apoyar el progreso económico de México. Al invertir en este sistema, no solo asegura su estabilidad económica, también forma parte de un movimiento que busca
+                  construir un futuro más próspero para todos. Esta es su oportunidad de alcanzar sus metas y unirse a una comunidad de visionarios.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="adv" id="funding">
+          <div class="container">
+            <div class="adv_content">
+              <div class="adv_text">
+                <h2>Le ayudamos a dar el siguiente paso en su trayectoria financiera</h2>
+                <img src="./offer_index/adv-mobile.jpg" class="adv-mob" alt="" />
+                <div class="adv_item">
+                  <div class="adv_header">
+                    <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_17_189)">
+                        <path d="M18.338 24.2374L22.0252 27.9246L29.3995 20.5501" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <mask id="mask0_17_189" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="47" height="47">
+                          <path d="M0 0H47V47H0V0Z" fill="white"></path>
+                        </mask>
+                        <g mask="url(#mask0_17_189)">
+                          <path
+                            d="M23.5 10.2261C30.8258 10.2261 36.7739 16.1738 36.7739 23.4999C36.7739 30.826 30.8258 36.7737 23.5 36.7737C16.1743 36.7737 10.2262 30.826 10.2262 23.4999C10.2262 16.1738 16.1743 10.2261 23.5 10.2261Z"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                          <path
+                            d="M19.509 4.74342L20.3357 1.60204C21.3688 1.45369 22.4256 1.37695 23.5001 1.37695C24.5745 1.37695 25.6312 1.45369 26.6643 1.60204L27.491 4.74342C29.8235 5.23811 32.0004 6.15755 33.937 7.41746L36.7465 5.77843C37.5821 6.40403 38.3836 7.09691 39.1433 7.85662C39.9028 8.61642 40.5959 9.4179 41.2213 10.2533L39.5828 13.0632C40.8422 14.9995 41.7619 17.1764 42.2567 19.5091L45.3981 20.3357C45.5464 21.3688 45.6231 22.4255 45.6231 23.5C45.6231 24.5745 45.5464 25.6312 45.3981 26.6643L42.2567 27.491C41.7619 29.8238 40.8422 32.0006 39.5828 33.9368L41.2213 36.7467C40.5959 37.5821 39.9028 38.3836 39.1433 39.1434C38.3836 39.9032 37.5821 40.596 36.7465 41.2216L33.937 39.5825C32.0004 40.8424 29.8235 41.762 27.491 42.2566L26.6643 45.398C25.6312 45.5463 24.5745 45.623 23.5001 45.623C22.4256 45.623 21.3688 45.5463 20.3357 45.398L19.509 42.2566C17.1765 41.762 14.9997 40.8424 13.063 39.5825L10.2535 41.2216C9.41796 40.596 8.61639 39.9032 7.85677 39.1434C7.09724 38.3836 6.40409 37.5821 5.77877 36.7467L7.41725 33.9368C6.15779 32.0006 5.23817 29.8236 4.7433 27.491L1.60192 26.6643C1.45376 25.6312 1.37701 24.5745 1.37701 23.5C1.37701 22.4255 1.45376 21.3688 1.60192 20.3357L4.7433 19.5091C5.23817 17.1762 6.15779 14.9995 7.41725 13.0632L5.77877 10.2533C6.40409 9.4179 7.09724 8.61642 7.85677 7.85662C8.61639 7.09691 9.41796 6.40403 10.2535 5.77843L13.063 7.41746C14.9997 6.15764 17.1765 5.23811 19.509 4.74342Z"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </g>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_17_189">
+                          <rect width="47" height="47" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <h3>Plataforma fácil de usar</h3>
+                  </div>
+                  <p>Nuestra plataforma Immediate +V4 Intal es intuitiva y fácil de usar, por lo que le permite operar sin complicaciones ni análisis complejos como los que exigen las herramientas tradicionales.</p>
+                </div>
+                <div class="adv_item">
+                  <div class="adv_header">
+                    <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_17_231)">
+                        <path
+                          d="M35.9535 36.051L29.5001 37.5553C28.5606 37.7744 28.2566 38.9555 28.9633 39.6035L29.9519 40.5096C24.7654 43.9928 17.3719 42.6894 13.8664 37.145C13.2697 36.2027 12.0939 35.8316 11.0702 36.2626C9.78037 36.8062 9.28732 38.3775 10.0317 39.5558C15.1261 47.6271 26.0334 49.3669 33.3613 43.6343L34.479 44.6587C35.1757 45.2974 36.3339 44.9176 36.4727 43.9455C37.4882 36.8385 37.4222 37.3398 37.4222 37.215C37.4222 36.4512 36.7097 35.8746 35.9535 36.051ZM11.2025 38.816C11.0634 38.5959 11.0297 38.3373 11.1082 38.0878C11.3312 37.3774 12.2876 37.2404 12.696 37.8852C14.8901 41.3551 18.737 43.6863 23.1081 43.8318C25.9405 43.9254 28.7195 43.0899 30.999 41.4688L32.325 42.6844C25.6536 47.7353 15.8239 46.1379 11.2025 38.816ZM35.1524 43.3972L30.1613 38.8228L36.0004 37.4617L35.1524 43.3972Z"
+                          fill="black"></path>
+                        <path
+                          d="M11.1516 10.9503L17.6046 9.44601C18.1496 9.31907 18.5301 8.83858 18.5301 8.27812C18.5301 7.94033 18.3924 7.62765 18.1417 7.3978L17.1531 6.49203C22.3464 3.00377 29.7371 4.31868 33.2386 9.85658C34.2821 11.5043 36.7452 11.1521 37.3175 9.32804C37.5169 8.69335 37.4279 8.00703 37.0733 7.44585C31.9926 -0.603189 21.0943 -2.38318 13.7434 3.36701L12.626 2.3429C12.4044 2.13959 12.1179 2.02771 11.8196 2.02771C11.2168 2.02771 10.7173 2.46016 10.6323 3.05576C9.61684 10.1632 9.68282 9.66152 9.68282 9.78666C9.68282 10.5501 10.3953 11.1267 11.1516 10.9503ZM35.9022 8.18524C36.0413 8.40541 36.075 8.66395 35.9965 8.91352C35.7738 9.62387 34.8171 9.76084 34.4087 9.11612C30.4453 2.84778 22.0241 1.32238 16.1061 5.53247L14.78 4.31688C21.4869 -0.760965 31.3034 0.898543 35.9022 8.18524ZM11.9526 3.60403L16.9437 8.17843L11.1042 9.5396L11.9526 3.60403Z"
+                          fill="black"></path>
+                        <path
+                          d="M17.848 31.229C19.9938 29.259 21.2244 26.4578 21.2244 23.5436C21.2244 14.5501 10.4505 9.70564 3.74222 15.8635C-0.478265 19.738 -0.799553 26.3373 3.11255 30.599C7.0035 34.8374 13.6028 35.1261 17.848 31.229ZM4.13271 29.6628C0.750588 25.9791 1.0059 20.2551 4.67883 16.8833C8.3575 13.5066 14.0808 13.7508 17.4579 17.4298C20.8397 21.1135 20.5847 26.8372 16.9118 30.2089C13.2256 33.5928 7.50229 33.3335 4.13271 29.6628Z"
+                          fill="black"></path>
+                        <path
+                          d="M15.3821 17.3991C11.9824 14.8621 7.31409 15.6076 4.79972 18.7592C4.56127 19.0582 4.61039 19.4939 4.90945 19.7323C5.20815 19.9708 5.64346 19.9217 5.88228 19.6226C7.95594 17.0229 11.7849 16.4424 14.5542 18.5089C19.3581 22.0936 16.8609 29.8325 10.7855 29.8325C6.65179 29.8325 3.59884 25.8719 4.74845 21.8268C4.85315 21.4589 4.6398 21.0759 4.27189 20.9712C3.90399 20.8665 3.52139 21.0802 3.41668 21.4482C2.5482 24.5029 3.64079 27.7825 6.20571 29.6966C11.2445 33.4566 18.4652 29.8475 18.4652 23.5412C18.4648 21.2011 17.3891 18.8969 15.3821 17.3991Z"
+                          fill="black"></path>
+                        <path
+                          d="M43.9925 16.4932C40.1227 12.2785 33.5241 11.9461 29.2566 15.8636C25.0361 19.738 24.7148 26.3373 28.6266 30.5991C32.5179 34.8375 39.1168 35.1261 43.3624 31.2291C47.5786 27.3586 47.9085 20.7596 43.9925 16.4932ZM42.4258 30.2089C38.74 33.5928 33.0167 33.3336 29.6468 29.6628C26.265 25.9788 26.5203 20.2551 30.1932 16.8834C33.8744 13.5038 39.5984 13.7544 42.9723 17.4299C46.3555 21.115 46.0977 26.8386 42.4258 30.2089Z"
+                          fill="black"></path>
+                        <path
+                          d="M43.3535 20.5103C43.2022 20.1592 42.7952 19.9972 42.4438 20.1488C42.0927 20.3002 41.9307 20.7079 42.0823 21.0589C43.2065 23.6636 42.4259 26.6671 40.283 28.417C36.0797 31.8489 29.7149 28.664 30.0298 23.1842C30.341 17.8252 36.8256 15.3062 40.6713 19.0204C40.9464 19.2857 41.3845 19.2782 41.6503 19.0032C41.9156 18.7281 41.9081 18.29 41.633 18.0243C36.7976 13.3541 28.6345 16.7742 28.6345 23.5514C28.6345 30.0456 36.1966 33.5407 41.1586 29.4895C43.8243 27.3129 44.7021 23.6353 43.3535 20.5103Z"
+                          fill="black"></path>
+                        <path
+                          d="M5.73273 24.7623C5.73273 25.1446 6.04254 25.4548 6.42514 25.4548H7.50304C8.18721 27.1928 9.77571 28.4141 11.6224 28.4141H12.3933C12.776 28.4141 13.0858 28.104 13.0858 27.7217C13.0858 27.3395 12.776 27.0293 12.3933 27.0293H11.6224C10.542 27.0293 9.58961 26.4021 9.03632 25.4548H10.9135C11.2961 25.4548 11.6059 25.1446 11.6059 24.7623C11.6059 24.3801 11.2961 24.0699 10.9135 24.0699H8.56371C8.54041 23.8989 8.52857 23.7239 8.52857 23.5457C8.52857 23.3675 8.54077 23.1925 8.56371 23.0214H10.9138C11.2961 23.0214 11.6059 22.7113 11.6059 22.329C11.6059 21.9468 11.2961 21.6366 10.9138 21.6366H9.03632C9.58961 20.6892 10.542 20.0621 11.6224 20.0621H12.3933C12.776 20.0621 13.0858 19.7519 13.0858 19.3697C13.0858 18.9874 12.776 18.6772 12.3933 18.6772H11.6224C9.77571 18.6772 8.18721 19.8986 7.50304 21.6366H6.42514C6.04254 21.6366 5.73273 21.9468 5.73273 22.329C5.73273 22.7113 6.04254 23.0214 6.42514 23.0214H7.17027C7.13513 23.3761 7.13513 23.7149 7.17027 24.0699H6.42514C6.0429 24.0699 5.73273 24.3801 5.73273 24.7623Z"
+                          fill="black"></path>
+                        <path
+                          d="M37.4 29.0845C37.779 29.0845 38.087 28.7761 38.087 28.3974V27.5221C38.9068 27.16 39.3392 26.3689 39.3392 25.2279C39.3392 24.4649 39.27 23.6821 38.4894 23.1715C38.9136 22.7957 39.1445 22.1839 39.1445 21.423C39.1445 20.4911 38.7888 19.8607 38.087 19.5477V18.7C38.087 18.321 37.779 18.0129 37.4 18.0129C37.0213 18.0129 36.713 18.3213 36.713 18.7V19.3096C36.6975 19.3092 35.9155 19.3096 35.9001 19.3096V18.7C35.9001 18.321 35.5917 18.0129 35.213 18.0129C34.8344 18.0129 34.526 18.3213 34.526 18.7V19.3096H33.9501C33.5775 19.3096 33.2745 19.6126 33.2745 19.9851C33.2745 20.3581 33.5775 20.6611 33.9501 20.6611H34.1502V26.3901H33.9501C33.5775 26.3901 33.2745 26.6931 33.2745 27.0656C33.2745 27.4386 33.5775 27.7416 33.9501 27.7416H34.526V28.3974C34.526 28.7764 34.8344 29.0845 35.213 29.0845C35.5917 29.0845 35.9001 28.7764 35.9001 28.3974V27.7416H36.713V28.3974C36.713 28.7761 37.0213 29.0845 37.4 29.0845ZM35.5881 20.6607C36.4795 20.655 37.1952 20.6044 37.5058 20.9113C37.641 21.0444 37.7066 21.2545 37.7066 21.5528C37.7066 21.9207 37.6313 22.1728 37.4771 22.3238C37.1572 22.6368 36.4594 22.5612 35.5881 22.5529V20.6607ZM35.5881 26.3897V23.8391H36.7825C37.7281 23.8391 37.9009 24.2888 37.9009 25.1741C37.9009 26.0146 37.556 26.3897 36.7825 26.3897H35.5881Z"
+                          fill="black"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_17_231">
+                          <rect width="47" height="47" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <h3>Operaciones automatizadas</h3>
+                  </div>
+                  <p>Configúrelo y olvídese: los bots de operaciones inteligentes de Immediate +V4 Intal se encargan de todo por usted. Dedique menos tiempo a supervisar los mercados y más tiempo a ganar dinero.</p>
+                </div>
+                <div class="adv_item">
+                  <div class="adv_header">
+                    <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_17_255)">
+                        <path
+                          d="M11.7303 37.6441L7.38575 31.797C6.612 30.5936 7.01855 28.9798 8.28388 28.2318C9.49621 27.5151 11.0494 27.8619 11.7907 29.0148L16.4233 35.3099C17.6061 37.1494 17.8429 39.4405 17.0647 41.5148L15.0117 45.5579H6.68201L8.15016 42.3236L1.37286 33.1953V13.5522H3.10313C5.23282 13.5522 6.95933 15.2787 6.95933 17.4084V30.6202"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-miterlimit="10"></path>
+                        <path
+                          d="M35.2697 37.6441L39.6142 31.797C40.388 30.5936 39.9814 28.9798 38.7161 28.2318C37.5038 27.5151 35.9506 27.8619 35.2092 29.0148L30.5766 35.3099C29.3939 37.1494 29.1571 39.4405 29.9352 41.5148L31.9883 45.5579H40.318L38.8498 42.3236L45.6271 33.1951V13.5522H43.8969C41.7672 13.5522 40.0407 15.2787 40.0407 17.4084V30.6202"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-miterlimit="10"></path>
+                        <path
+                          d="M27.5967 26.5501L23.4303 28.9309L19.2638 26.5501C15.2391 24.2503 12.7553 19.9702 12.7553 15.3348V4.02866L23.4303 1.48071L34.1052 4.02857V15.3348C34.1052 19.9702 31.6214 24.2503 27.5967 26.5501Z"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-miterlimit="10"></path>
+                        <path d="M18.6654 13.8016L21.8587 16.9949L28.7443 10.1094" stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_17_255">
+                          <rect width="47" height="47" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <h3>Entorno de operaciones seguro</h3>
+                  </div>
+                  <p>Nuestra plataforma ha sido desarrollada desde cero para ofrecer la máxima protección a todos los usuarios. Contará con un entorno seguro, estable y confiable donde podrá hacer crecer su capital sin preocupaciones.</p>
+                </div>
+                <div class="adv_item">
+                  <div class="adv_header">
+                    <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_17_310)">
+                        <path
+                          d="M45.647 10.7531L42.7273 10.3258C42.5849 9.96973 42.4424 9.54246 42.3 9.1864L44.0091 6.76519C44.2227 6.48034 44.1515 6.12428 43.9379 5.83943L41.0894 2.99095C40.8758 2.77731 40.4485 2.7061 40.1636 2.91973L37.7424 4.62883C37.3864 4.4864 37.0303 4.27276 36.603 4.20155L36.1046 1.28186C36.0333 0.925795 35.7485 0.712158 35.3924 0.712158H31.4046C31.0485 0.712158 30.7636 0.997007 30.6924 1.28186L30.1939 4.20155C29.8379 4.34398 29.4106 4.4864 29.0546 4.62883L26.6333 2.91973C26.3485 2.7061 25.9924 2.77731 25.7076 2.99095L22.8591 5.83943C22.6455 6.05307 22.5742 6.48034 22.7879 6.76519L24.497 9.1864C24.3546 9.54246 24.1409 9.89852 24.0697 10.3258L21.3636 10.7531C21.0076 10.8243 20.7939 11.1091 20.7939 11.4652V15.4531C20.7939 15.8091 21.0788 16.094 21.3636 16.1652L24.2833 16.6637C24.4258 17.0197 24.5682 17.447 24.7106 17.8031L23.0015 20.2243C22.7879 20.5091 22.8591 20.8652 23.0727 21.15L25.9212 23.9985C26.1349 24.2122 26.5621 24.2834 26.847 24.0697L29.2682 22.3606C29.6242 22.5031 29.9803 22.7167 30.4076 22.7879L30.9061 25.7076C30.9773 26.0637 31.2621 26.2773 31.6182 26.2773H35.6061C35.9621 26.2773 36.247 25.9925 36.3182 25.7076L36.8167 22.7879C37.1727 22.6455 37.6 22.5031 37.9561 22.3606L40.3773 24.0697C40.6621 24.2834 41.0182 24.2122 41.303 23.9985L44.1515 21.15C44.3652 20.9364 44.4364 20.5091 44.2227 20.2243L42.3 17.8031C42.4424 17.447 42.6561 17.0909 42.7273 16.6637L45.647 16.1652C46.003 16.094 46.2167 15.8091 46.2167 15.4531V11.4652C46.2879 11.1091 46.003 10.8243 45.647 10.7531ZM44.8636 14.8834L42.0864 15.3106C41.8015 15.3819 41.5879 15.5243 41.5167 15.8091C41.3743 16.3788 41.0894 16.9485 40.8046 17.447C40.6621 17.6606 40.6621 17.9455 40.8758 18.2303L42.5136 20.5091L40.5197 22.5031L38.2409 20.8652C38.0273 20.7228 37.7424 20.6516 37.4576 20.794C36.9591 21.0788 36.3894 21.2925 35.8197 21.5061C35.5349 21.5773 35.3924 21.7909 35.3212 22.0758L34.8939 24.8531H32.1167L31.6894 22.0758C31.6182 21.7909 31.4758 21.5773 31.1909 21.5061C30.6212 21.3637 30.0515 21.0788 29.553 20.794C29.3394 20.6516 28.9833 20.6516 28.7697 20.8652L26.4909 22.5031L24.497 20.5091L26.1349 18.2303C26.2773 18.0167 26.2773 17.7319 26.2061 17.447C25.9212 16.9485 25.7076 16.3788 25.4939 15.8091C25.4227 15.5243 25.2091 15.3819 24.9242 15.3106L22.147 14.8834V12.1061L24.9242 11.6788C25.2091 11.6076 25.4227 11.4652 25.4939 11.1803C25.6364 10.6106 25.9212 10.0409 26.2061 9.54246C26.3485 9.32882 26.3485 9.04398 26.1349 8.75913L24.497 6.40913L26.4909 4.41519L28.7697 6.05307C28.9833 6.19549 29.2682 6.2667 29.553 6.12428C30.0515 5.83943 30.6212 5.62579 31.1909 5.41216C31.4758 5.34095 31.6182 5.12731 31.6894 4.84246L32.1167 2.06519H34.8939L35.3212 4.84246C35.3924 5.12731 35.5349 5.34095 35.8197 5.41216C36.3894 5.55458 36.9591 5.83943 37.4576 6.12428C37.6712 6.2667 38.0273 6.2667 38.2409 6.05307L40.5197 4.41519L42.5136 6.40913L40.8758 8.68792C40.7333 8.90155 40.7333 9.1864 40.8046 9.47125C41.0894 9.96973 41.303 10.5394 41.5167 11.1091C41.5879 11.394 41.8015 11.5364 42.0864 11.6076L44.8636 12.1061V14.8834Z"
+                          fill="black"></path>
+                        <path
+                          d="M33.5409 7.76221C30.4076 7.76221 27.8439 10.3258 27.8439 13.4592C27.8439 16.5925 30.4076 19.1561 33.5409 19.1561C36.6742 19.1561 39.2379 16.5925 39.2379 13.4592C39.2379 10.3258 36.6742 7.76221 33.5409 7.76221ZM33.5409 17.7319C31.1909 17.7319 29.2682 15.8092 29.2682 13.4592C29.2682 11.1092 31.1909 9.18645 33.5409 9.18645C35.8909 9.18645 37.8136 11.1092 37.8136 13.4592C37.8136 15.8092 35.8909 17.7319 33.5409 17.7319Z"
+                          fill="black"></path>
+                        <path
+                          d="M9.04393 17.2333C5.48332 17.6606 2.49241 20.0106 1.28181 23.4287C0.0712013 26.8469 0.925747 30.5499 3.48938 33.1136C5.19847 34.8227 5.26969 36.603 5.26969 37.3151C4.7712 37.6712 4.41514 38.3121 4.41514 38.953C4.41514 39.7363 4.84241 40.3772 5.41211 40.7333C5.26969 41.0181 5.19847 41.303 5.19847 41.5878C5.19847 42.656 6.05302 43.5818 7.1212 43.5818C7.33484 45.0772 8.61666 46.2166 10.1833 46.2166C11.75 46.2166 13.0318 45.0772 13.2454 43.5818C14.3136 43.5106 15.1682 42.656 15.1682 41.5878C15.1682 41.303 15.097 40.9469 14.9545 40.7333C15.5954 40.3772 15.9515 39.7363 15.9515 38.953C15.9515 38.2409 15.5954 37.6712 15.0257 37.2439C15.097 35.6772 15.6667 34.1818 16.8773 32.8999C19.6545 30.0515 20.2954 25.8499 18.5151 22.2181C16.7348 18.7999 13.103 16.806 9.04393 17.2333ZM8.75908 28.6984L9.54241 29.3393C9.82726 29.553 10.1833 29.553 10.4682 29.3393L11.2515 28.6984L10.6106 37.0303H9.39999L8.75908 28.6984ZM13.8864 38.4545C14.2424 38.4545 14.456 38.7393 14.456 39.0242C14.456 39.309 14.1712 39.5939 13.8864 39.5939C10.6818 39.5939 8.75908 39.5939 6.33787 39.5939C5.98181 39.5939 5.76817 39.309 5.76817 39.0242C5.76817 38.7393 5.98181 38.4545 6.33787 38.4545H13.8864ZM10.1121 44.9348C9.32878 44.9348 8.75908 44.4363 8.54544 43.7242H11.75C11.4651 44.4363 10.8954 44.9348 10.1121 44.9348ZM13.0318 42.2999H7.1212C6.76514 42.2999 6.5515 42.0151 6.5515 41.7303C6.5515 41.3742 6.83635 41.1606 7.1212 41.1606H13.0318C13.3879 41.1606 13.6015 41.4454 13.6015 41.7303C13.6727 42.0151 13.3879 42.2999 13.0318 42.2999ZM15.8091 32.1166C14.4561 33.4696 13.6727 35.1787 13.6015 37.0303H12.0348L12.747 27.1318C12.747 26.8469 12.6045 26.5621 12.3909 26.4196C12.106 26.3484 11.8212 26.3484 11.6076 26.5621L9.96969 27.8439L8.40302 26.4909C8.18938 26.2772 7.90453 26.2772 7.61969 26.4196C7.33484 26.5621 7.19241 26.8469 7.26363 27.1318L7.97575 37.0303H6.62272C6.5515 35.1787 5.83938 33.5409 4.48635 32.1878C2.27878 29.9803 1.56666 26.9181 2.63484 23.9984C3.63181 21.0787 6.19544 19.0848 9.18635 18.7287C13.3167 18.3015 16.0227 20.6515 17.2333 23.0727C18.7288 26.1348 18.1591 29.6954 15.8091 32.1166Z"
+                          fill="black"></path>
+                        <path
+                          d="M36.5319 27.2744C36.1758 27.2032 35.8197 27.488 35.7485 27.8441C35.1076 31.0487 33.2561 33.8971 30.6213 35.8911C28.2713 37.6002 25.494 38.5259 22.5743 38.4547L23.5 37.7426C23.7849 37.529 23.9273 37.1017 23.6425 36.7456C23.4288 36.4608 23.0016 36.3184 22.6455 36.6032L20.1531 38.4547C20.0106 38.5971 19.8682 38.7396 19.8682 38.9532C19.8682 39.1668 19.8682 39.3093 20.0106 39.4517L21.791 41.9441C22.0046 42.229 22.4319 42.3714 22.7879 42.0865C23.0728 41.8729 23.144 41.4456 22.9303 41.0896L22.0758 39.879H22.7167C25.85 39.879 28.9122 38.882 31.4758 36.9593C34.4667 34.7517 36.4606 31.6184 37.1728 27.9865C37.1728 27.7017 36.9591 27.3456 36.5319 27.2744Z"
+                          fill="black"></path>
+                        <path
+                          d="M16.9485 1.0683C16.6637 0.783449 16.2364 0.854661 15.9515 1.13951C15.6667 1.42436 15.7379 1.85163 16.0227 2.13648L17.0197 3.06224C9.68487 3.77436 3.84547 9.82739 3.63184 17.3047H4.34396C4.70002 17.3047 5.05608 17.0198 5.05608 16.6638C5.62578 10.1834 10.753 5.05618 17.0909 4.41527L16.1652 5.48345C15.8803 5.7683 15.9515 6.19557 16.2364 6.48042C16.5212 6.76527 16.9485 6.69405 17.2334 6.40921L19.2985 4.13042C19.4409 3.98799 19.5121 3.77436 19.5121 3.63193C19.5121 3.4183 19.4409 3.27587 19.2985 3.13345L16.9485 1.0683Z"
+                          fill="black"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_17_310">
+                          <rect width="47" height="47" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <h3>Estrategias listas para usar</h3>
+                  </div>
+                  <p>Immediate +V4 Intal ha sido entrenado con protocolos avanzados de intercambio de criptomonedas y ofrece estrategias preconfiguradas y probadas para ayudarle a operar como un profesional.</p>
+                </div>
+                <div class="adv_item">
+                  <div class="adv_header">
+                    <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M23.5258 21.3203C22.6605 21.3203 21.9591 22.0217 21.9591 22.887C21.959 23.5126 22.3267 24.051 22.8568 24.3022V26.2067C22.8568 26.576 23.1562 26.8756 23.5257 26.8756C23.8952 26.8756 24.1946 26.5761 24.1946 26.2067V24.3022C24.7249 24.051 25.0925 23.5126 25.0925 22.887C25.0925 22.0217 24.3911 21.3203 23.5258 21.3203Z"
+                        fill="black"></path>
+                      <path
+                        d="M40.2197 10.2032C37.3401 9.06375 35.0546 6.96509 33.784 4.29398C33.4385 3.56759 32.6916 3.09814 31.8811 3.09814H15.1189C14.3085 3.09814 13.5616 3.5675 13.2161 4.29398C11.9456 6.96509 9.65997 9.06375 6.78039 10.2032C5.97267 10.5228 5.45081 11.2928 5.45081 12.1647V16.2416C5.45081 21.5859 7.00924 26.8653 9.95766 31.5091C12.9347 36.1984 17.2486 40.1173 22.4327 42.842L22.5171 42.8864C22.8249 43.0481 23.1625 43.129 23.5001 43.129C23.8375 43.129 24.1752 43.0481 24.4828 42.8865L24.5675 42.842C29.7516 40.1172 34.0655 36.1984 37.0426 31.5091C39.9909 26.8652 41.5494 21.5859 41.5494 16.2416V12.1647C41.5494 11.2927 41.0273 10.5228 40.2197 10.2032ZM40.2116 16.2417C40.2116 21.3316 38.7252 26.363 35.9132 30.7922C33.0612 35.2843 28.9226 39.0417 23.9453 41.6579L23.8606 41.7023C23.6348 41.8211 23.3653 41.821 23.1395 41.7023L23.0551 41.658C18.0776 39.0418 13.939 35.2844 11.0869 30.7922C8.27484 26.3631 6.78847 21.3316 6.78847 16.2416V12.1647C6.78847 11.8452 6.97849 11.5635 7.27251 11.4472C10.468 10.1828 13.0077 7.84643 14.424 4.86863C14.549 4.60582 14.8217 4.43599 15.1188 4.43599H31.8812C32.1783 4.43599 32.4509 4.60582 32.576 4.86863C33.9924 7.84643 36.5322 10.1828 39.7276 11.4473C40.0216 11.5636 40.2116 11.8453 40.2116 12.1648V16.2417Z"
+                        fill="black"></path>
+                      <path
+                        d="M43.5734 22.5894C43.2131 22.5078 42.8549 22.7339 42.7736 23.0943C40.7364 32.1067 34.532 39.9225 25.7511 44.5378L23.7106 45.6104C23.5788 45.6796 23.4215 45.6796 23.2898 45.6104L21.2492 44.5378C12.4545 39.9153 6.24705 32.0859 4.21843 23.0573C4.13755 22.6969 3.77955 22.4703 3.41924 22.5513C3.05885 22.6323 2.83229 22.9901 2.91326 23.3505C5.02789 32.7626 11.4842 40.9166 20.6268 45.7219L22.6674 46.7944C22.9282 46.9314 23.2141 47 23.5002 47C23.7861 47 24.0723 46.9314 24.333 46.7944L26.3735 45.7218C35.5017 40.924 41.9548 32.7841 44.0785 23.3892C44.1598 23.0289 43.9337 22.6708 43.5734 22.5894Z"
+                        fill="black"></path>
+                      <path
+                        d="M43.2478 7.65375C39.6761 7.27692 36.8676 4.76986 36.4181 1.55715C36.2939 0.669383 35.531 0 34.6435 0H12.3567C11.4693 0 10.7063 0.669383 10.5821 1.55715C10.1325 4.76995 7.32409 7.27692 3.75245 7.65375C2.84743 7.74922 2.16492 8.51379 2.16492 9.43213V16.6147C2.16492 17.6584 2.21899 18.7136 2.32565 19.7511C2.36109 20.0953 2.65153 20.3516 2.99026 20.3516C3.01312 20.3516 3.03625 20.3504 3.05948 20.3481C3.42694 20.3103 3.69425 19.9818 3.65643 19.6143C3.55445 18.6221 3.50267 17.6129 3.50267 16.6147V9.43213C3.50267 9.20401 3.67406 9.00711 3.89281 8.98407C8.07654 8.54271 11.3721 5.56482 11.907 1.74249C11.9399 1.50795 12.1289 1.33776 12.3567 1.33776H34.6434C34.8711 1.33776 35.0603 1.50795 35.0931 1.74249C35.6279 5.56482 38.9235 8.54262 43.1072 8.98407C43.326 9.00711 43.4974 9.20401 43.4974 9.43213V16.6147C43.4974 17.6023 43.4467 18.6011 43.3468 19.5834C43.3095 19.9509 43.5772 20.2791 43.9446 20.3165C44.3119 20.3541 44.6403 20.0862 44.6778 19.7187C44.7823 18.6917 44.8351 17.6474 44.8351 16.6147V9.43213C44.8352 8.51379 44.1528 7.74922 43.2478 7.65375Z"
+                        fill="black"></path>
+                      <path
+                        d="M31.1614 16.6947H30.0615V13.5018C30.0615 9.89796 27.1296 6.96606 23.5257 6.96606C19.9218 6.96606 16.9898 9.89796 16.9898 13.5018V16.6947H15.8901C14.7171 16.6947 13.7628 17.649 13.7628 18.822V28.3991C13.7628 29.5721 14.7171 30.5264 15.8901 30.5264H31.1614C32.3343 30.5264 33.2887 29.5721 33.2887 28.3991V18.822C33.2887 17.649 32.3343 16.6947 31.1614 16.6947ZM18.3277 13.5019C18.3277 10.6357 20.6595 8.30391 23.5258 8.30391C26.392 8.30391 28.7239 10.6357 28.7239 13.5019V16.6948H18.3277V13.5019ZM31.9509 28.3991C31.9509 28.8344 31.5967 29.1886 31.1614 29.1886H15.8901C15.4547 29.1886 15.1006 28.8344 15.1006 28.3991V18.822C15.1006 18.3867 15.4548 18.0325 15.8901 18.0325H31.1614C31.5967 18.0325 31.9509 18.3866 31.9509 18.822V28.3991Z"
+                        fill="black"></path>
+                    </svg>
+                    <h3>Totalmente verificado y protegido por IA</h3>
+                  </div>
+                  <p>
+                    La aplicación Immediate +V4 Intal ha sido sometida a exhaustivas pruebas y auditorías por parte de los mejores expertos en seguridad financiera. Sus fondos están protegidos por nuestro avanzado algoritmo de trading
+                    basado en inteligencia artificial.
+                  </p>
+                </div>
+              </div>
+              <img src="./offer_index/adv-photo.jpg" class="adv-phone-pc" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="tabs">
+          <div class="container">
+            <div class="tabs-container">
+              <div class="tabs">
+                <button class="tab-button active" data-tab="tab1">Interfaz intuitiva y fácil de usar</button>
+                <button class="tab-button" data-tab="tab2">Amplia gama de activos negociables</button>
+                <button class="tab-button" data-tab="tab3">Herramientas y funciones de trading avanzadas</button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-container">
+            <div class="tab-content active" id="tab1">
+              <h3>Interfaz intuitiva y fácil de usar:</h3>
+              <p>
+                Nuestra plataforma cuenta con una interfaz intuitiva y fácil de usar, diseñada para optimizar su experiencia de trading. Con una navegación sencilla y un diseño limpio, puede acceder fácilmente a las herramientas y los datos
+                que necesita para tomar decisiones informadas.
+              </p>
+            </div>
+            <div class="tab-content" id="tab2">
+              <h3>Amplia gama de activos negociables:</h3>
+              <p>
+                Obtenga acceso a una amplia selección de activos negociables, incluidas criptomonedas, divisas, materias primas, índices y más. Explore los mercados globales y diversifique su cartera, todo dentro de una sola plataforma.
+              </p>
+            </div>
+            <div class="tab-content" id="tab3">
+              <h3>Herramientas y funciones de trading avanzadas:</h3>
+              <p>
+                Aproveche nuestras potentes herramientas y funciones diseñadas para mejorar su rendimiento en operaciones. Desde datos de mercado en tiempo real y gráficos personalizables hasta indicadores técnicos y soluciones de gestión
+                de riesgos: todo lo que necesita está aquí.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div class="reviews" style="background-color: white">
+          <div class="container">
+            <div class="review_header">
+              <div class="reviews__navigation">
+                <button class="reviews__prev" disabled="" style="opacity: 0.5">
+                  <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.4829 27.9942C20.8365 28.4185 21.467 28.4758 21.8913 28.1222C22.3156 27.7687 22.3729 27.1381 22.0193 26.7138L20.4829 27.9942ZM14.6219 19.399L13.8537 18.7588C13.5447 19.1297 13.5447 19.6683 13.8537 20.0392L14.6219 19.399ZM22.0193 12.0842C22.3729 11.6599 22.3156 11.0293 21.8913 10.6758C21.467 10.3222 20.8365 10.3795 20.4829 10.8038L22.0193 12.0842ZM22.0193 26.7138L15.3902 18.7588L13.8537 20.0392L20.4829 27.9942L22.0193 26.7138ZM15.3902 20.0392L22.0193 12.0842L20.4829 10.8038L13.8537 18.7588L15.3902 20.0392ZM19 36C9.61116 36 2 28.3888 2 19L0 19C4.58682e-07 29.4934 8.50659 38 19 38L19 36ZM2 19C2 9.61116 9.61116 2 19 2L19 0C8.50659 4.58682e-07 -4.58682e-07 8.50659 0 19L2 19ZM19 2C28.3888 2 36 9.61116 36 19L38 19C38 8.50659 29.4934 -4.58682e-07 19 0L19 2ZM36 19C36 28.3888 28.3888 36 19 36L19 38C29.4934 38 38 29.4934 38 19L36 19Z"
+                      fill="black"></path>
+                  </svg>
+                </button>
+                <button class="reviews__next" style="opacity: 1">
+                  <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.5171 10.0058C17.1635 9.58153 16.533 9.52421 16.1087 9.87777C15.6844 10.2313 15.6271 10.8619 15.9807 11.2862L17.5171 10.0058ZM23.3781 18.601L24.1463 19.2412C24.4553 18.8703 24.4553 18.3317 24.1463 17.9608L23.3781 18.601ZM15.9807 25.9158C15.6271 26.3401 15.6844 26.9707 16.1087 27.3242C16.533 27.6778 17.1635 27.6205 17.5171 27.1962L15.9807 25.9158ZM15.9807 11.2862L22.6098 19.2412L24.1463 17.9608L17.5171 10.0058L15.9807 11.2862ZM22.6098 17.9608L15.9807 25.9158L17.5171 27.1962L24.1463 19.2412L22.6098 17.9608ZM19 2C28.3888 2 36 9.61116 36 19L38 19C38 8.50659 29.4934 -4.58682e-07 19 0L19 2ZM36 19C36 28.3888 28.3888 36 19 36L19 38C29.4934 38 38 29.4934 38 19L36 19ZM19 36C9.61116 36 2 28.3888 2 19L0 19C4.58682e-07 29.4934 8.50659 38 19 38L19 36ZM2 19C2 9.61116 9.61116 2 19 2L19 0C8.50659 4.58682e-07 -4.58682e-07 8.50659 0 19L2 19Z"
+                      fill="black"></path>
+                  </svg>
+                </button>
+              </div>
+              <h2 class="reviews__title">OPINIONES</h2>
+            </div>
+          </div>
+          <div class="reviews__container">
+            <div class="review">
+              <div class="review__stars">★★★★★</div>
+              <p class="review__text">
+                Como agricultor, me enorgullece apoyar Immediate +V4 Intal. Con el respaldo de nuestro Gobierno y de la Secretaría de Hacienda y Crédito Público, este programa representa la unidad y la innovación que contribuyen al
+                desarrollo de las comunidades rurales y urbanas.
+              </p>
+              <div class="review__author">
+                <img src="./offer_index/rev1.png" alt="Eduardo Santos" class="review__avatar" />
+                <div class="review__info">
+                  <p class="review__name">Daniel Solís</p>
+                  <p class="review__details">58 años (Agricultor) ganó 249,675 MXN</p>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__stars">★★★★★</div>
+              <p class="review__text">
+                Llevo más de 20 años trabajando como camionero y he visto cómo la tecnología puede transformar la vida de las personas. Immediate +V4 Intal representa un gran avance para los mexicanos. Gracias al respaldo del Gobierno,
+                invierto con confianza en este proyecto. Es fácil de usar y significa un paso firme hacia el fortalecimiento de México.
+              </p>
+              <div class="review__author">
+                <img src="./offer_index/rev2.png" alt="Ramon Delgado" class="review__avatar" />
+                <div class="review__info">
+                  <p class="review__name">Ramon Delgado</p>
+                  <p class="review__details">50 años (Camionero) ganó 393,592 MXN</p>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__stars">★★★★★</div>
+              <p class="review__text">
+                Como enfermera, valoro la confianza y la fiabilidad, y Immediate +V4 Intal me ofrece ambas. Con el respaldo de la Secretaría de Hacienda y Crédito Público, me transmite seguridad y esperanza en el futuro de México.
+              </p>
+              <div class="review__author">
+                <img src="./offer_index/rev3.png" alt="Isabel Cruz" class="review__avatar" />
+                <div class="review__info">
+                  <p class="review__name">Isabel Cruz</p>
+                  <p class="review__details">45 años (Enfermera) ganó 259,662 MXN</p>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__stars">★★★★★</div>
+              <p class="review__text">
+                La enseñanza es preparación para el futuro, y Immediate +V4 Intal forma parte de ese camino. Ver al gobierno apoyar una iniciativa de criptomonedas liderada por mexicanos es inspirador, y creo que tendrá un impacto positivo
+                en nuestra economía.
+              </p>
+              <div class="review__author">
+                <img src="./offer_index/rev4.png" alt="Angela Navarro" class="review__avatar" />
+                <div class="review__info">
+                  <p class="review__name">Camila Herrera</p>
+                  <p class="review__details">45 años (Docente) ganó 197,260 MXN</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="banner ss second" id="regform">
+          <div class="banner_content second">
+            <div class="lander-form-wrapper" id="iframe-scroll-2">
+              <div class="lander-form-header">¡CAMBIE SU VIDA HOY MISMO!</div>
+              <div class="form-widget">
+                <form class="flex-column registrationForm" action="#" method="post" id="reg-form-2" novalidate>
+                  <div class="form-group">
+                    <input placeholder="Nombre" name="first_name" required type="text" class="regFormFirstName" id="form-first_name-2" autocomplete="given-name" aria-label="Nombre" />
+                  </div>
+                  <div class="form-group">
+                    <input placeholder="Apellido" name="last_name" required type="text" class="regFormLastNname" id="form-last_name-2" autocomplete="family-name" aria-label="Apellido" />
+                  </div>
+                  <div class="form-group form-group__emailValid">
+                    <input placeholder="Correo electrónico" name="email" required type="email" class="regFormEmail" id="form-email-2" autocomplete="email" inputmode="email" aria-label="Correo electrónico" />
+                  </div>
+                  <div class="form-group reg-phone">
+                    <div class="phone-fallback-prefix" aria-hidden="true">
+                      <span class="phone-fallback-prefix__flag"></span>
+                      <span>+52</span>
+                    </div>
+                    <input name="phone_short" required type="tel" class="regFormPhoneNumber" id="form-phone_number-2" inputmode="tel" autocomplete="tel-national" aria-label="Teléfono" placeholder="222 123 4567" />
+                  </div>
+                  <button class="zoom regFormButton" type="submit">Regístrese ahora</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div class="container">
+            <div class="header-nav footer-img">
+              <div class="header-nav__logo">
+                <img src="./offer_index/logo.svg" alt="" />
+                <div>Immediate +V4 Intal</div>
+              </div>
+              <nav>
+                <ul class="nav-list">
+                  <li><a href="">Inicio</a></li>
+                  <li><a href="">Quiénes somos</a></li>
+                  <li><a href="">Financiamiento</a></li>
+                  <li><a href="">Tipos de cuentas</a></li>
+                  <li><a href="">Mercados</a></li>
+                  <li><a href="">Términos y condiciones</a></li>
+                  <a href="" class="nav-link">Empezar</a>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha384-OOQxAlvDeToeGLa7+PiUtbtpQyESK8Ej4fNM8foz5VaMpO8TCp1vbi2HIOIzMurt" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"
+      integrity="sha384-/AX6fHrYAVafqe3PfZYh/72cCU1Ju5U9yctSfrLUlMmBc77i6Q8EO4gJNpQ31m88"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".tab-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const tabsContainer = button.closest(".tabs"); // Use `closest` for robustness
+            const contentContainer = document.querySelector(".tabs-container").nextElementSibling;
+            const tabId = button.dataset.tab;
+
+            tabsContainer.querySelectorAll(".tab-button").forEach((btn) => {
+              btn.classList.remove("active");
+            });
+
+            document.querySelectorAll(".tab-content").forEach((tab) => {
+              tab.classList.remove("active");
+            });
+
+            button.classList.add("active");
+            document.getElementById(tabId).classList.add("active");
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        $(".com__wrapper").slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+        });
+
+        $(() => {
+          const minDeposit = 5500;
+          const minIncome = 11430;
+          const incomeRatio = minIncome / minDeposit;
+          const formatMoney = (value) => Math.round(value).toLocaleString("en-US");
+
+          $(".js-range-slider").ionRangeSlider({
+            skin: "round",
+            grid: false,
+            min: minDeposit,
+            max: 500000,
+            from: minDeposit,
+            from_min: minDeposit,
+            step: 100,
+            prettify_enabled: true,
+            prettify_separator: ",",
+            max_postfix: "+",
+            postfix: " MXN",
+            onStart: (data) => {
+              updateCalcResult(data.from);
+            },
+            onChange: (data) => {
+              updateCalcResult(data.from);
+            },
+          });
+
+          function updateCalcResult(value) {
+            const result = Math.round(value * incomeRatio);
+            $("#calcDeposit").text(formatMoney(value) + " MXN");
+            $("#calcResult").text(formatMoney(result) + " MXN");
+          }
+
+          const s = document.querySelector(".irs");
+
+          s &&
+            s.addEventListener("click", () => {
+              scrolling = false;
+            });
+
+          const placesEl = document.getElementById("places-left");
+          if (placesEl) {
+            let places = parseInt(placesEl.textContent, 10) || 134;
+            setInterval(() => {
+              if (places > 1) {
+                places -= 1;
+                placesEl.textContent = places;
+              }
+            }, 25000);
+          }
+        });
+      });
+      const container = document.querySelector(".reviews__container");
+      const prevButton = document.querySelector(".reviews__prev");
+      const nextButton = document.querySelector(".reviews__next");
+      const slides = container.children;
+
+      let currentIndex = 0;
+      let slidesPerView = 3; // Default for desktop
+
+      // Function to calculate slides per view based on screen width
+      function calculateSlidesPerView() {
+        if (window.innerWidth < 768) {
+          // Mobile breakpoint
+          slidesPerView = 1;
+        } else {
+          slidesPerView = 3;
+        }
+        return slidesPerView;
+      }
+
+      function updateSliderPosition() {
+        const slideWidth = 100 / slidesPerView;
+        container.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+      }
+
+      function updateNavigation() {
+        const maxIndex = slides.length - slidesPerView;
+
+        prevButton.disabled = currentIndex === 0;
+        prevButton.style.opacity = currentIndex === 0 ? "0.5" : "1";
+
+        nextButton.disabled = currentIndex >= maxIndex;
+        nextButton.style.opacity = currentIndex >= maxIndex ? "0.5" : "1";
+      }
+
+      // Event listeners for buttons
+      prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSliderPosition();
+          updateNavigation();
+        }
+      });
+
+      nextButton.addEventListener("click", () => {
+        const maxIndex = slides.length - slidesPerView;
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateSliderPosition();
+          updateNavigation();
+        }
+      });
+
+      // Handle window resize
+      let resizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          const oldSlidesPerView = slidesPerView;
+          const newSlidesPerView = calculateSlidesPerView();
+
+          if (oldSlidesPerView !== newSlidesPerView) {
+            // Adjust currentIndex if needed
+            currentIndex = Math.min(currentIndex, slides.length - newSlidesPerView);
+            updateSliderPosition();
+            updateNavigation();
+          }
+        }, 250);
+      });
+    </script>
+    <link rel="stylesheet" href="./offer_index/widgetform.css" />
+    <script type="module" src="./offer_index/intl-validation/validation.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".reg-phone").forEach((group) => {
+          const syncPhoneState = () => {
+            group.classList.toggle("has-iti", Boolean(group.querySelector(".iti")));
+          };
+          syncPhoneState();
+          new MutationObserver(syncPhoneState).observe(group, { childList: true, subtree: true });
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $("a").click(function (e) {
+        e.preventDefault();
+        var target = $(this).attr("href") === "#regform" ? $("#regform .form-widget") : $(".form-widget").first();
+        var destination = target.offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 800);
+        return false;
+      });
+    </script>
+  </body>
+</html>
