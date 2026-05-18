@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Immediate +V4 Intal" />
+    <meta name="og:description" content="Immediate +V4 Intal" />
+    <meta name="og:title" content="Immediate +V4 Intal" />
+    <meta name="og:image" content="./favicon.ico" />
+    <title>Immediate +V4 Intal</title>
+
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="./images/a6ba13629147.ico" />
+    <link rel="stylesheet" href="./intl-validation/css/intlTelInput.css" />
+    <link rel="stylesheet" href="./intl-validation/just-validate.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="hero__portrait" aria-hidden="true">
+          <img src="./images/1000.webp" alt="" width="120" height="120" />
+        </div>
+        <div class="hero__caption">
+          <p class="hero__name">Claudia Sheinbaum</p>
+          <p class="hero__role">Presidenta de México</p>
+        </div>
+      </header>
+
+      <section class="card card--info" aria-labelledby="ot">
+        <p class="info__text">
+          <strong id="ot">Immediate +V4 Intal está obligado a pagar dividendo a quien se registre antes de fin de mes</strong>
+        </p>
+        <p class="info__caption">Claudia Sheinbaum</p>
+        <div style="position: relative">
+          <img class="info__signature" style="position: absolute; bottom: -40px; left: 0; transform: rotate(-5deg) scale(0.9)" src="./images/signature.svg" alt="Firma de Claudia Sheinbaum" />
+        </div>
+      </section>
+
+      <section class="card card--form" aria-labelledby="form-title">
+        <h2 class="form__title" id="form-title">¡Empiece a ganar invirtiendo en petróleo!</h2>
+        <form action="./thank-you" method="post" novalidate>
+          <label class="field">
+            <span class="field__label">Primer nombre</span>
+            <input type="text" name="first_name" required placeholder="Primer nombre" autocomplete="given-name" />
+          </label>
+          <label class="field">
+            <span class="field__label">Segundo nombre</span>
+            <input type="text" name="last_name" required placeholder="Segundo nombre" autocomplete="family-name" />
+          </label>
+          <label class="field">
+            <span class="field__label">E-mail</span>
+            <input type="email" name="email" required placeholder="ejemplo@correo.com" autocomplete="email" />
+          </label>
+          <label class="field">
+            <span class="field__label">Teléfono</span>
+            <input type="tel" name="phone_short" required placeholder="222 123 4567" autocomplete="tel" inputmode="tel" />
+          </label>
+          <button class="btn-primary" type="submit">Vamos a comenzar</button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 Immediate +V4 Intal</span>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script type="module" src="./intl-validation/validation.js"></script>
+  </body>
+</html>
