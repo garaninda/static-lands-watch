@@ -21,8 +21,7 @@
   </head>
   <body>
     <header>
-      <header>
-        <div class="container">
+      <div class="container">
           <div class="header-nav">
             <div class="header-nav__logo">
               <img src="./offer_index/logo.svg" alt="" />
@@ -156,6 +155,7 @@
         </section>
         <section class="info" id="about">
           <div class="container">
+            <div class="line line-h"></div>
             <div class="info_calc">
               <div class="left_calc">
                 <div class="max-calc">
@@ -490,8 +490,13 @@
         </div>
         <section class="banner ss second" id="regform">
           <div class="banner_content second">
-            <div class="lander-form-wrapper" id="iframe-scroll-2">
+            <div class="lander-form-wrapper banner-form" id="iframe-scroll-2">
               <div class="lander-form-header">¡CAMBIE SU VIDA HOY MISMO!</div>
+              <div class="form-places-warning" role="status" aria-live="polite">
+                Quedan
+                <span id="places-left-2">132</span>
+                lugares
+              </div>
               <div class="form-widget">
                 <form class="flex-column registrationForm" action="#" method="post" id="reg-form-2" novalidate>
                   <div class="form-group">
@@ -538,7 +543,6 @@
           </div>
         </footer>
       </main>
-    </header>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha384-OOQxAlvDeToeGLa7+PiUtbtpQyESK8Ej4fNM8foz5VaMpO8TCp1vbi2HIOIzMurt" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"
