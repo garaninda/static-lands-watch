@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Immediate +V4 Intal" />
+    <meta name="og:description" content="Immediate +V4 Intal" />
+    <meta name="og:title" content="Immediate +V4 Intal" />
+    <meta name="og:image" content="./favicon.ico" />
+    <title>Immediate +V4 Intal</title>
+
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="./images/a6ba13629147.ico" />
+    <link rel="stylesheet" href="./validation/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="hero__portrait" aria-hidden="true">
+          <img src="./images/1000.webp" alt="" width="120" height="120" />
+        </div>
+        <div class="hero__caption">
+          <p class="hero__name">Claudia Sheinbaum</p>
+          <p class="hero__role">Presidenta de México</p>
+        </div>
+      </header>
+
+      <section class="card card--info" aria-labelledby="ot">
+        <p class="info__text">
+          <strong id="ot">Immediate +V4 Intal está obligado a pagar dividendo a quien se registre antes de fin de mes</strong>
+        </p>
+        <p class="info__caption">Claudia Sheinbaum</p>
+        <div style="position: relative">
+          <img class="info__signature" style="position: absolute; bottom: -40px; left: 0; transform: rotate(-5deg) scale(0.9)" src="./images/signature.svg" alt="Firma de Claudia Sheinbaum" />
+        </div>
+      </section>
+
+      <section class="card card--form" aria-labelledby="form-title">
+        <h2 class="form__title" id="form-title">¡Empiece a ganar invirtiendo en petróleo!</h2>
+        <form action="./thank-you" method="post" novalidate>
+          <label class="field">
+            <span class="field__label">Primer nombre</span>
+            <input type="text" name="name" required placeholder="Primer nombre" autocomplete="given-name" />
+          </label>
+          <label class="field">
+            <span class="field__label">Segundo nombre</span>
+            <input type="text" name="lastname" required placeholder="Segundo nombre" autocomplete="family-name" />
+          </label>
+          <label class="field">
+            <span class="field__label">E-mail</span>
+            <input type="email" name="email" required placeholder="ejemplo@correo.com" autocomplete="email" />
+          </label>
+          <label class="field">
+            <span class="field__label">Teléfono</span>
+            <input type="tel" name="phone" required placeholder="+52 222 123 4567" autocomplete="tel" inputmode="tel" />
+          </label>
+          <input type="hidden" name="country" value="MX" />
+          <button class="btn-primary" type="submit">Vamos a comenzar</button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 Immediate +V4 Intal</span>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js@1.11.8/bundle/libphonenumber-max.js"></script>
+    <script src="./validation/validate.cdn.umd.js"></script>
+    <script>
+      (() => {
+        const form = document.querySelector("form");
+        if (!form) return;
+        const tipFor = new Map();
+        const ensureTip = (input) => {
+          let tip = tipFor.get(input);
+          if (!tip) {
+            tip = document.createElement("div");
+            tip.className = "pv-tooltip pv-tooltip--hidden";
+            tip.setAttribute("role", "tooltip");
+            tip.id = `pv-tooltip-custom-${Math.random().toString(36).slice(2, 8)}`;
+            const arrow = document.createElement("div");
+            arrow.className = "pv-tooltip__arrow";
+            tip.appendChild(arrow);
+            document.body.appendChild(tip);
+            tipFor.set(input, tip);
+          }
+          return tip;
+        };
+        const positionTip = (input) => {
+          const tip = tipFor.get(input);
+          if (!tip || tip.classList.contains("pv-tooltip--hidden")) return;
+          const r = input.getBoundingClientRect();
+          tip.style.left = `${r.left + r.width / 2 + window.scrollX}px`;
+          tip.style.top = `${r.top + window.scrollY - 10}px`;
+        };
+        const showError = (input, msg) => {
+          input.setAttribute("data-pv-invalid", "true");
+          input.removeAttribute("data-pv-valid");
+          const tip = ensureTip(input);
+          const arrow = tip.querySelector(".pv-tooltip__arrow");
+          tip.textContent = msg;
+          tip.appendChild(arrow);
+          tip.classList.remove("pv-tooltip--hidden");
+          input.setAttribute("aria-describedby", tip.id);
+          positionTip(input);
+        };
+        const hideError = (input) => {
+          input.removeAttribute("data-pv-invalid");
+          const tip = tipFor.get(input);
+          if (tip) tip.classList.add("pv-tooltip--hidden");
+          input.removeAttribute("aria-describedby");
+        };
+        const reposAll = () => {
+          tipFor.forEach((_, i) => {
+            positionTip(i);
+          });
+        };
+        window.addEventListener("scroll", reposAll, true);
+        window.addEventListener("resize", reposAll);
+
+        const rules = {
+          name: (v) => (v.trim() ? null : "Ingrese su nombre"),
+          lastname: (v) => {
+            v = v.trim();
+            if (!v) return "Ingrese su segundo nombre";
+            if (v.length < 2) return "El segundo nombre es muy corto";
+            if (/\d/.test(v)) return "El nombre no puede contener números";
+            return null;
+          },
+          email: (v) => {
+            v = v.trim();
+            if (!v) return "Ingrese su correo electrónico";
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return "Introduce un correo electrónico válido";
+            return null;
+          },
+          phone: (v) => (v.trim() ? null : "Ingrese su número de teléfono"),
+        };
+
+        const validateField = (input) => {
+          const msg = rules[input.name]?.(input.value);
+          if (msg) {
+            showError(input, msg);
+            return false;
+          }
+          hideError(input);
+          return true;
+        };
+
+        ["lastname", "email"].forEach((name) => {
+          const input = form.querySelector(`[name="${name}"]`);
+          if (!input) return;
+          input.addEventListener("blur", () => {
+            if (input.value.trim()) validateField(input);
+          });
+        });
+
+        Object.keys(rules).forEach((name) => {
+          const input = form.querySelector(`[name="${name}"]`);
+          if (!input) return;
+          input.addEventListener("input", () => {
+            const tip = tipFor.get(input);
+            if (tip && !tip.classList.contains("pv-tooltip--hidden")) hideError(input);
+          });
+        });
+
+        form.addEventListener(
+          "submit",
+          (ev) => {
+            let firstInvalid = null;
+            ["name", "lastname", "email", "phone"].forEach((name) => {
+              const input = form.querySelector(`[name="${name}"]`);
+              if (!input) return;
+              if (!validateField(input) && !firstInvalid) firstInvalid = input;
+            });
+            if (firstInvalid) {
+              ev.preventDefault();
+              ev.stopImmediatePropagation();
+              firstInvalid.focus();
+            }
+          },
+          true,
+        );
+      })();
+
+      Validate.initLeadForms("form", {
+        lang: "es",
+        country: "MX",
+        dedupe: {
+          enabled: true,
+          storage: "localStorage",
+          ttlMs: 24 * 60 * 60 * 1000,
+          keyPrefix: "lead_dedupe_immediate_v4_intal_",
+        },
+      });
+    </script>
+  </body>
+</html>
