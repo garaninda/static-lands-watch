@@ -45,8 +45,21 @@
     }, 15000);
   };
 
+  const scrollToId = (id) => {
+    const target = document.getElementById(id);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   const bindSmoothScroll = () => {
     document.addEventListener('click', (ev) => {
+      // Comments button in the share bar — scroll to comments block
+      const commentsBtn = ev.target.closest?.('[data-action*="goToComments"]');
+      if (commentsBtn) {
+        ev.preventDefault();
+        scrollToId('comments-container');
+        return;
+      }
+
       const a = ev.target.closest?.('a[href^="#"]');
       if (!a) return;
       const href = a.getAttribute('href');
@@ -55,13 +68,8 @@
         ev.preventDefault();
         return;
       }
-      const target = document.getElementById(href.slice(1));
-      if (!target) {
-        ev.preventDefault();
-        return;
-      }
       ev.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      scrollToId(href.slice(1));
     });
   };
 
