@@ -2436,6 +2436,11 @@ input {
   padding: 0;
 }
 
+#iframe-scroll-2,
+#iframe-scroll {
+  scroll-margin-top: 20px;
+}
+
 @media (max-width: 650px) {
   .adv::after,
   .reviews::before {

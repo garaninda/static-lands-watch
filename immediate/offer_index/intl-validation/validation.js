@@ -56,6 +56,50 @@ const dictionary = [
     },
   },
   {
+    key: "Surname cannot contain numbers",
+    dict: {
+      es: "El apellido no debe contener números",
+      fr: "Le nom ne peut pas contenir des chiffres",
+      ru: "Фамилия не может содержать цифры",
+      bg: "Фамилията не може да съдържа цифри",
+      it: "Il cognome non può contenere cifre",
+      rs: "Prezime ne može sadržati brojeve",
+    },
+  },
+  {
+    key: "Surname is required",
+    dict: {
+      es: "Ingrese su apellido",
+      fr: "Le nom est requis",
+      ru: "Укажите фамилию",
+      bg: "Дайте ми фамилия",
+      it: "Dammi un cognome",
+      rs: "Unesite svoje prezime",
+    },
+  },
+  {
+    key: "Surname is too short",
+    dict: {
+      es: "El apellido es demasiado corto",
+      fr: "Le nom est trop court",
+      ru: "Фамилия слишком короткая",
+      bg: "Фамилията е твърде кратка",
+      it: "Il cognome è troppo corto",
+      rs: "Unesite svoje puno prezime",
+    },
+  },
+  {
+    key: "Surname is too long",
+    dict: {
+      es: "El apellido es demasiado largo",
+      fr: "Le nom est trop long",
+      ru: "Фамилия слишком длинная",
+      bg: "Фамилията е твърде дълга",
+      it: "Il cognome è troppo lungo",
+      rs: "Prezime je predugačko",
+    },
+  },
+  {
     key: "Phone is required",
     dict: {
       es: "Ingrese su teléfono",
@@ -130,9 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
       form,
       {
         validateBeforeSubmitting: true,
-        tooltip: {
-          position: "top",
-        },
       },
       dictionary
     );
@@ -181,38 +222,43 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           rule: "customRegexp",
           value: /^[^0-9]+$/g,
-          errorMessage: "Name cannot contain numbers",
+          errorMessage: "Surname cannot contain numbers",
         },
         {
           rule: "required",
-          errorMessage: "Name is required",
+          errorMessage: "Surname is required",
         },
         {
           rule: "minLength",
           value: 3,
-          errorMessage: "Name is too short",
+          errorMessage: "Surname is too short",
         },
         {
           rule: "maxLength",
           value: 25,
-          errorMessage: "Name is too long",
+          errorMessage: "Surname is too long",
         },
       ]);
     }
 
     if (form.querySelector(`input[name="${FIELD_PHONE}"]`)) {
-      validator.addField(form.querySelector(`input[name="${FIELD_PHONE}"]`), [
-        {
-          rule: "required",
-          errorMessage: "Phone is required",
-        },
-        {
-          validator: function (value) {
-            return Boolean(iti.isValidNumber());
+      const phoneInput = form.querySelector(`input[name="${FIELD_PHONE}"]`);
+      validator.addField(
+        phoneInput,
+        [
+          {
+            rule: "required",
+            errorMessage: "Phone is required",
           },
-          errorMessage: "Phone is invalid",
-        },
-      ]);
+          {
+            validator: function (value) {
+              return Boolean(iti.isValidNumber());
+            },
+            errorMessage: "Phone is invalid",
+          },
+        ],
+        { errorsContainer: phoneInput.closest(".form-group") }
+      );
     }
 
     validator.onSuccess((event) => {
