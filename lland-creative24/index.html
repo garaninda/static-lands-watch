@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+
+    <title>Profit Rings</title>
+
+    <link rel="shortcut icon" href="./offer_index/icon_logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./offer_index/style.css" />
+
+    <link rel="stylesheet" media="all" href="./offer_index/main.css" />
+
+    <link rel="stylesheet" href="./validation/style.css" />
+
+    <style>
+      .main-bg {
+        background-image: url("./offer_index/page-bg.svg");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #ff0000; /* Canada flag red — fills sides when image is letterboxed */
+      }
+
+      /* responsive fixes — form scroll on narrow viewports + nicer inputs/buttons */
+      #custom-form {
+        max-height: calc(100dvh - 32px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 480px;
+        box-sizing: border-box;
+      }
+
+      .aio-sdk-form .aio-sdk-input {
+        border-radius: 10px;
+        min-height: 48px;
+      }
+
+      /* Validate's country flag (.pv-flag) sits as absolute inside .pv-phone-wrap,
+         but main.css makes .aio-sdk-input position:relative, which paints the input
+         over the flag. Bump flag above the input. */
+      .pv-phone-wrap .pv-flag {
+        z-index: 2;
+      }
+
+      .aio-sdk-form #buttonSbmt {
+        min-height: 48px;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .answer-btn {
+        min-height: 44px;
+        cursor: pointer;
+      }
+
+      /* tablet — softer chat layout */
+      @media (min-width: 769px) and (max-width: 1199px) {
+        #custom-form {
+          width: 70%;
+          max-width: 520px;
+        }
+        .answer-btn {
+          width: 45%;
+        }
+      }
+
+      /* mobile — full-width form with margin, scrollable */
+      @media (max-width: 768px) {
+        #custom-form {
+          width: calc(100% - 24px);
+          max-width: none;
+          max-height: calc(100dvh - 24px);
+          border-radius: 16px;
+        }
+        .aio-sdk-form {
+          --aio-sdk-form-padding: 20px 18px 16px;
+        }
+        .aio-sdk-form .aio-sdk-input {
+          font-size: 16px; /* prevents iOS zoom-on-focus */
+        }
+      }
+
+      /* ============================================================
+         Chat window — visual polish (brand: Canada red + gold #FFD543)
+         Selectors scoped to #chat-block to win specificity without !important.
+         ============================================================ */
+
+      #chat-block.chat {
+        box-shadow:
+          0 24px 60px -20px rgba(211, 47, 47, 0.45),
+          0 8px 24px rgba(0, 0, 0, 0.18);
+      }
+
+      #chat-block .main-chat {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 250, 240, 0.72) 100%);
+        border: 1px solid rgba(255, 213, 67, 0.45);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+      }
+
+      #chat-block .chat-header {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 253, 245, 0.76) 100%);
+        border-bottom: 2px solid #ffd543;
+        box-shadow: 0 6px 14px -6px rgba(211, 47, 47, 0.25);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        padding: 1.5% 4%;
+      }
+      #chat-block .chat-header::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -4px;
+        height: 2px;
+        background: linear-gradient(90deg, #d32f2f 0%, #d32f2f 25%, #ffd543 25%, #ffd543 75%, #d32f2f 75%, #d32f2f 100%);
+        opacity: 0.7;
+      }
+
+      #chat-block .profile-pic {
+        box-shadow:
+          0 0 0 2px #ffd543,
+          0 0 0 4px rgba(255, 213, 67, 0.25),
+          0 4px 12px rgba(211, 47, 47, 0.18);
+      }
+
+      #chat-block .profile-name {
+        font-weight: 600;
+      }
+
+      #chat-block .status {
+        font-weight: 600;
+      }
+      #chat-block .status:before {
+        animation: pulse-online 2s ease-out infinite;
+      }
+      @keyframes pulse-online {
+        0% {
+          transform: translateY(-50%) scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(-50%) scale(1.15);
+          opacity: 0.85;
+        }
+        100% {
+          transform: translateY(-50%) scale(1);
+          opacity: 1;
+        }
+      }
+
+      #chat-block .left-chat .chat-block {
+        background: linear-gradient(135deg, #ffffff 0%, #fff8e1 100%);
+        border-left: 3px solid #ffd543;
+        box-shadow: 0 4px 12px -4px rgba(211, 47, 47, 0.18);
+        font-weight: 400;
+      }
+
+      #chat-block .right-chat .chat-block {
+        background: linear-gradient(135deg, #f0ebff 0%, #e7e2fc 100%);
+        border-right: 3px solid #d32f2f;
+        box-shadow: 0 4px 12px -4px rgba(96, 53, 155, 0.22);
+        font-weight: 500;
+      }
+
+      #chat-block .horizontal .answer-btn {
+        background: linear-gradient(180deg, #ffe070 0%, #ffd543 100%);
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        box-shadow:
+          0 4px 12px -2px rgba(255, 213, 67, 0.55),
+          0 2px 6px rgba(0, 0, 0, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          background 180ms ease;
+      }
+      #chat-block .horizontal .answer-btn:hover,
+      #chat-block .horizontal .answer-btn:focus-visible {
+        background: linear-gradient(180deg, #ffe98c 0%, #ffd84d 100%);
+        transform: translateY(-2px);
+        box-shadow:
+          0 8px 20px -4px rgba(255, 213, 67, 0.7),
+          0 4px 10px rgba(0, 0, 0, 0.12),
+          inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        outline: none;
+      }
+      #chat-block .horizontal .answer-btn:active {
+        transform: translateY(0);
+        box-shadow:
+          0 2px 6px -1px rgba(255, 213, 67, 0.5),
+          inset 0 2px 4px rgba(0, 0, 0, 0.08);
+      }
+
+      #chat-block .horizontal:before,
+      #chat-block .horizontal:first-of-type:before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='63' viewBox='0 0 14 63' fill='none'%3E%3Cpath d='M1 0.999999L0.999998 31C0.999998 34.3137 3.68629 37 7 37L13 37' stroke='%23FFD543' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-bg full-height">
+      <div class="pattern-bg" style="height: 28vh">
+        <button class="mob_btn" type="submit">
+          <div class="logo">
+            <img src="./offer_index/icon_logo.svg" alt="Profit Rings" class="company-logo" />
+            <h2>Profit Rings</h2>
+          </div>
+        </button>
+
+        <style>
+          .chat {
+            border-radius: 20px;
+          }
+
+          #custom-form {
+            display: none;
+            align-items: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: auto;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow:
+              0 20px 60px -20px rgba(211, 47, 47, 0.45),
+              0 8px 24px rgba(0, 0, 0, 0.18);
+            border-radius: 20px;
+            flex-direction: column;
+          }
+
+          .aio-sdk-form {
+            --aio-sdk-submit-bg: #ffd543 !important;
+            --aio-sdk-submit-padding: 15px 20px;
+            --aio-sdk-submit-border: 4px solid rgba(255, 213, 67, 0.3);
+            --aio-sdk-submit-border-radius: 8px;
+            --aio-sdk-submit-color: #000;
+            --aio-sdk-submit-font-size: var(--aio-sdk-input-font-size);
+          }
+        </style>
+
+        <div class="main-bg chat" id="chat-block">
+          <div class="chat-header">
+            <div class="profile-container">
+              <div class="profile-pic">
+                <img src="./offer_index/avtrf.webp" class="top-avatar" />
+              </div>
+              <div class="profile-info">
+                <p class="profile-name">Martina R.</p>
+                <p class="status">Online</p>
+              </div>
+
+              <div class="logo">
+                <img src="./offer_index/icon_logo.svg" alt="Profit Rings" class="company-logo" />
+                <h2>Profit Rings</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-chat"></div>
+        </div>
+
+        <div id="custom-form" class="custom-form">
+          <div class="form_header">
+            <div class="form_header_container">
+              <div class="form_header_info">Make a difference in your life with</div>
+              <div class="logo">
+                <img src="./offer_index/icon_logo.svg" alt="Profit Rings" class="company-logo" />
+                <h2>Profit Rings</h2>
+              </div>
+            </div>
+          </div>
+          <form class="aio-form aio-sdk-form" id="form" action="" method="post">
+            <div class="aio-sdk-input-container">
+              <input type="text" class="aio-sdk-input" placeholder="First name" name="first_name" required="" />
+            </div>
+            <div class="aio-sdk-input-container">
+              <input type="text" class="aio-sdk-input" placeholder="Last name" name="last_name" required="" />
+            </div>
+            <div class="aio-sdk-input-container">
+              <input type="email" class="aio-sdk-input" placeholder="Email" name="email" required="" />
+            </div>
+            <div class="aio-sdk-input-container">
+              <input type="tel" class="aio-sdk-input" placeholder="712 034 567" name="phone" required="" id="phone" autocomplete="off" />
+            </div>
+
+            <div class="aio-sdk-input-container">
+              <button id="buttonSbmt" type="submit">Join now</button>
+            </div>
+          </form>
+        </div>
+
+        <style>
+          .main-chat {
+            padding: 13% 8% 8% 8%;
+          }
+
+          html,
+          body {
+            overflow-y: hidden;
+            overflow-x: hidden;
+          }
+
+          .top-avatar,
+          .profile-pic {
+            border-radius: 50%;
+          }
+
+          @keyframes slideInAfter {
+            from {
+              transform: translateX(100%);
+              /* Начальная позиция за пределами экрана справа */
+            }
+
+            to {
+              transform: translate(0);
+              /* Конечная позиция */
+            }
+          }
+
+          .mob_btn {
+            backdrop-filter: blur(10px) !important;
+
+            background-color: rgba(255, 255, 255, 0.5);
+            /* полупрозрачный белый фон */
+          }
+
+          .mob_btn .logo h2 {
+            color: #000;
+          }
+
+          @media (max-width: 1400px) {
+            .answer-btn {
+              width: 35%;
+            }
+
+            .horizontal:before {
+              display: none !important;
+            }
+
+            .chat {
+              width: 100%;
+              height: 85%;
+              top: auto;
+              bottom: 0;
+              transform: translate(-50%, 0);
+            }
+
+            .chat .logo {
+              display: none !important;
+            }
+
+            .horizontal {
+              flex-direction: column;
+            }
+
+            .mob_btn {
+              display: flex;
+              padding: 12px 48px;
+              border-radius: 40px;
+              border: 2px solid rgba(255, 255, 255, 0.7);
+              background: rgba(255, 255, 255, 0.6);
+              backdrop-filter: blur(3px);
+              margin: 0 auto;
+              margin-top: 0rem;
+              transform: translateY(4rem);
+            }
+
+            .mob_btn img {
+              display: flex;
+              height: 21px;
+              justify-content: center;
+              align-items: center;
+              gap: 8px;
+              flex-shrink: 0;
+              align-self: stretch;
+            }
+
+            .mob_btn .logo {
+              display: flex;
+            }
+
+            .mob_btn .logo h2 {
+              font-size: 1.2rem;
+              padding: 0;
+              margin: 0;
+              color: #000 !important;
+            }
+
+            .mob_btn {
+              backdrop-filter: blur(10px) !important;
+              background-color: rgba(255, 255, 255, 0.5);
+              /* полупрозрачный белый фон */
+            }
+
+            .pattern-bg {
+              height: 100dvh;
+            }
+
+            .rf-image {
+              display: none;
+            }
+
+            .chat {
+              border-radius: 36px 36px 0 0;
+            }
+          }
+
+          @media (max-width: 1000px) {
+            .logo img {
+              width: 39px;
+            }
+
+            #custom-form {
+              width: 90%;
+              height: auto;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .pattern-bg {
+              height: 100dvh;
+            }
+
+            .answer-btn {
+              width: 96%;
+              border-radius: 8px;
+              border: 4px solid rgb(248, 236, 196);
+              background: #ffd543;
+            }
+
+            .main-chat {
+              padding: 19% 8% 8% 8%;
+            }
+
+            .full-height {
+              height: calc(100dvh - env(safe-area-inset-bottom));
+              box-sizing: border-box;
+              padding-bottom: env(safe-area-inset-bottom);
+              background-size: 100% auto;
+              background-position: center top;
+              background-color: #ff0000;
+            }
+
+            .mob_btn {
+              display: flex;
+              padding: 12px 48px;
+              border-radius: 40px;
+              border: 2px solid rgba(255, 255, 255, 0.7);
+              background: rgba(255, 255, 255, 0.6);
+              backdrop-filter: blur(3px);
+              margin: 0 auto;
+              margin-top: 0rem;
+              transform: translateY(4rem);
+            }
+
+            .mob_btn img {
+              display: flex;
+              height: 21px;
+              justify-content: center;
+              align-items: center;
+              gap: 8px;
+              flex-shrink: 0;
+              align-self: stretch;
+            }
+
+            .mob_btn .logo {
+              display: flex;
+            }
+
+            .mob_btn .logo h2 {
+              font-size: 1.2rem;
+              padding: 0;
+              margin: 0;
+            }
+
+            .chat {
+              height: 82%;
+            }
+
+            .profile-info {
+              flex-grow: 1;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+
+            .profile-name {
+              color: var(--ios-status-bar-status-bar-text-color, #000);
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 100%;
+            }
+
+            .top-avatar,
+            .profile-pic {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+
+            .left-chat .chat-block,
+            .right-chat .chat-block {
+              color: #222;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%;
+            }
+
+            .horizontal:before {
+              top: 0;
+              left: 0;
+              position: absolute;
+            }
+          }
+        </style>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        startChat();
+        handlePatternBg();
+      });
+
+      function handlePatternBg() {
+        const patternBg = document.querySelector(".pattern-bg");
+        const customForm = document.getElementById("custom-form");
+        const mobBtn = document.querySelector(".mob_btn");
+
+        if (window.innerWidth < 768 && patternBg) {
+          patternBg.style.height = "28vh";
+        }
+
+        const observer = new MutationObserver(() => {
+          if (customForm && window.getComputedStyle(customForm).display !== "none") {
+            patternBg.style.height = "100vh";
+
+            if (mobBtn) {
+              mobBtn.style.display = "none";
+            }
+          } else {
+            patternBg.style.height = "28vh";
+
+            if (mobBtn) {
+              mobBtn.style.display = "flex";
+            }
+          }
+        });
+
+        observer.observe(customForm, {
+          attributes: true,
+          attributeFilter: ["style"],
+        });
+      }
+
+      function startChat() {
+        const lastMessage = document.querySelector(".main-chat");
+        let counter = 0;
+        let questionCounter = 0;
+        let waiting = false;
+
+        const contentArray = [
+          "Hello, my name is Mirta! I am your personal manager for the Profit Rings.",
+          "Congratulations! Now you have the unique opportunity to profit from shares of top Canada (CAX) and international companies, earning from $3,000 in your very first weeks!",
+          "Please answer a few quick questions so I can set up your account and help you get started:",
+        ];
+
+        const questions = [
+          "Are you a Canada citizen or permanent resident?",
+          "Do you currently reside in Canada?",
+          "How old are you?",
+          "Do you have any dependents or children under 18?",
+          "Do you have an account with a major Canada bank (e.g., RBC, TD, BMO, Scotiabank) to receive your dividends?",
+          "What is your current employment status?",
+        ];
+
+        const answers = [["YES", "NO"], ["YES", "NO"], ["18-24", "25-40", "40-55", "55+"], ["YES", "NO"], ["YES", "NO"], ["Full time / Part-time employee", "Self-employed / Business owner", "Looking for work", "Retired"], null];
+
+        function createDivWithInterval() {
+          if (counter < 3) {
+            const newMessage = document.createElement("div");
+            newMessage.className = "left-chat";
+            newMessage.innerHTML = '<div class="chat-block">' + contentArray[counter] + "</div>";
+            lastMessage.appendChild(newMessage);
+            lastMessage.scrollTop = lastMessage.scrollHeight;
+            counter++;
+          } else {
+            clearInterval(intervalId);
+            postQuestion(questions[questionCounter], answers[questionCounter], "horizontal", questionCounter);
+            waiting = true;
+          }
+        }
+
+        const intervalId = setInterval(createDivWithInterval, 1000);
+
+        function sendMessage(type, content) {
+          let rotation = "horizontal";
+          if (questionCounter === 0 || questionCounter === 4) {
+            rotation = "horizontal";
+          }
+
+          if (type === "button") {
+            const newMessage = document.createElement("div");
+            newMessage.className = "right-chat";
+            newMessage.innerHTML = `<div class="chat-block">${content}</div><input type="hidden" name="${questions[questionCounter]}" value="${content}">`;
+            lastMessage.appendChild(newMessage);
+            lastMessage.scrollTop = lastMessage.scrollHeight;
+
+            document.querySelectorAll(".answer-btn-" + questionCounter).forEach((item) => item.parentElement.remove());
+
+            const horizontalElement = lastMessage.querySelector(".horizontal");
+            if (horizontalElement) {
+              horizontalElement.remove();
+            }
+
+            if (waiting) {
+              setTimeout(() => {
+                questionCounter++;
+                postQuestion(questions[questionCounter], answers[questionCounter], "horizontal", questionCounter);
+              }, 500);
+              waiting = false;
+            }
+          } else {
+            postQuestion(questions[questionCounter], answers[questionCounter], rotation, questionCounter);
+          }
+        }
+
+        function postQuestion(question, answers, rotation) {
+          const newMessage = document.createElement("div");
+          newMessage.className = "left-chat message-index-" + questionCounter;
+          newMessage.innerHTML = '<div class="chat-block">' + question + "</div>";
+          lastMessage.appendChild(newMessage);
+
+          if (!lastMessage.querySelector(".horizontal") && answers) {
+            const horizontalElement = document.createElement("div");
+            horizontalElement.style.display = "flex";
+            lastMessage.appendChild(horizontalElement);
+          }
+
+          if (answers) {
+            const newButtons = document.createElement("div");
+            newButtons.className = rotation;
+
+            answers.forEach((item) => {
+              const button = document.createElement("button");
+              button.type = "button";
+              button.className = "answer-btn answer-btn-" + questionCounter;
+              button.innerHTML = item;
+              newButtons.appendChild(button);
+
+              button.addEventListener("click", () => {
+                waiting = true;
+                sendMessage("button", item);
+                document.querySelectorAll(".answer-btn-" + questionCounter).forEach((btn) => (btn.disabled = true));
+              });
+            });
+
+            lastMessage.appendChild(newButtons);
+          } else {
+            document.querySelector(".chat").style.display = "none";
+            const customForm = document.getElementById("custom-form");
+
+            if (customForm) {
+              customForm.style.display = "flex";
+              customForm.style.position = "absolute";
+            }
+          }
+
+          lastMessage.scrollTop = lastMessage.scrollHeight;
+        }
+      }
+    </script>
+
+    <script>
+      // Универсальная функция для плавной прокрутки к форме
+      document.addEventListener("DOMContentLoaded", () => {
+        // Находим все ссылки, которые ведут к форме
+        const links = document.querySelectorAll('a[href="#"]');
+        const form = document.getElementById("form");
+
+        if (form) {
+          links.forEach((link) => {
+            link.addEventListener("click", (e) => {
+              e.preventDefault(); // Отменяем стандартное поведение ссылки
+
+              // Плавная прокрутка к форме
+              form.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "nearest",
+              });
+            });
+          });
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js@1.13.3/bundle/libphonenumber-max.js"></script>
+    <script src="./validation/validate.cdn.umd.js"></script>
+    <script>
+      Validate.initLeadForms("form", {
+        lang: "en",
+        country: "CA",
+        nameInput: '[name="first_name"]',
+        fields: "auto",
+        flagIndicator: true,
+      });
+    </script>
+  </body>
+</html>
