@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profit Rings — AI-Powered Trading Platform</title>
+  <meta name="description" content="Profit Rings Platform helps you capitalize on market opportunities in real-time with AI precision." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="stylesheet" href="validate/style.css" />
+</head>
+<body class="bg-bg-primary text-text-primary font-body antialiased">
+
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-bg-primary/80 border-b border-border">
+    <div class="mx-auto max-w-6xl px-5 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="images/logo-256.png" alt="Profit Rings" class="h-14 md:h-16 lg:h-20 w-auto logo-glow" />
+        <span class="hidden sm:inline font-display font-bold text-lg tracking-tight">Profit Rings</span>
+      </a>
+
+      <nav id="nav-links" class="hidden md:flex items-center gap-7 font-display text-xs font-semibold tracking-widest uppercase text-text-secondary">
+        <a href="index.html" class="text-accent">Home</a>
+        <a href="about.html" class="hover:text-accent transition-colors">About Us</a>
+        <a href="usdt.html" class="hover:text-accent transition-colors">USDT</a>
+        <a href="sign-in.html" class="hover:text-accent transition-colors">Login</a>
+      </nav>
+
+      <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 text-text-primary" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-border bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 py-4 flex flex-col gap-3 font-display text-sm font-semibold uppercase tracking-widest text-text-secondary">
+        <a href="index.html" class="text-accent">Home</a>
+        <a href="about.html" class="hover:text-accent">About Us</a>
+        <a href="usdt.html" class="hover:text-accent">USDT</a>
+        <a href="sign-in.html" class="hover:text-accent">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="relative">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+      </div>
+      <div class="relative mx-auto max-w-6xl px-5 lg:px-8 pt-12 pb-20 lg:pt-20 lg:pb-28">
+        <div class="grid lg:grid-cols-[1fr_440px] gap-12 lg:gap-16 items-start">
+          <div>
+            <span class="badge badge-pulse mb-6">
+              AI-Powered Trading
+            </span>
+            <h1 class="hero-title">
+              <span class="word-1">Profit</span>
+              <span class="word-2">Rings</span>
+            </h1>
+            <p class="text-lg text-text-secondary leading-relaxed max-w-xl mb-8">
+              Profit Rings Platform is designed to help you capitalize on market opportunities in real-time, leveraging the precision and simplicity of AI. Speed and precision are vital in crypto scalping, and there's no better place to feel in control than on Profit Rings.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-6 text-sm text-text-secondary">
+              <div class="flex items-center gap-2">
+                <div class="flex gap-0.5 text-secondary">
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                </div>
+                <span><span class="font-semibold text-text-primary">4.7</span> · trusted by traders worldwide</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="registration-form-hero" class="card lg:sticky lg:top-24" style="box-shadow: var(--shadow-glow);">
+            <h3 class="text-center text-xl font-bold mb-5">Join Profit Rings</h3>
+            <form class="lead-form" data-source="home" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" class="form-input" name="first_name" placeholder="First Name" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-input" name="last_name" placeholder="Last Name" required autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-input" name="email" placeholder="Email" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-input" name="phone" placeholder="Phone" required autocomplete="tel" />
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block btn-pulse mt-2">
+                <span>Sign Up Now</span>
+              </button>
+              <p class="text-text-muted text-center mt-4" style="font-size:11px;line-height:1.5;">
+                Disclaimer: Profit Rings connects traders with brokers offering trading in crypto and other markets. Trading involves significant risks. We recommend legit and regulated firms, but the choice is yours.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-4 reveal">Profit Rings Features</h2>
+        <p class="text-lg text-text-secondary text-center max-w-2xl mx-auto mb-12 reveal reveal-delay-1">
+          Profit Rings Platform makes a difference where it matters by delivering on its big promises.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path><path d="M4 2C2.8 3.7 2 5.7 2 8"></path><path d="M22 8c0-2.3-.8-4.3-2-6"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Real-Time Trading Alerts</h3>
+            <p class="text-text-secondary leading-relaxed">
+              The platform sends instant alerts when tracking momentum shifts, volume spikes, or key breakouts via notifications or mobile alerts. Crypto scalpers can leverage this feature to cut through the noise and focus on the real actions where the money is.
+            </p>
+          </div>
+
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Smart Auto-Trading</h3>
+            <p class="text-text-secondary leading-relaxed">
+              Set your risk levels, strategy preferences, and asset pairs and let the platform do the heavy lifting. It executes actions based on pure logic and a proper assessment of patterns to guarantee profit even as the market throws curveballs.
+            </p>
+          </div>
+
+          <div class="card reveal reveal-delay-3">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Safe and Reliable</h3>
+            <p class="text-text-secondary leading-relaxed">
+              Profit Rings uses top-tier encryption and collaborates exclusively with verified brokers. These robust security features ensure your funds and data are secure and protected during periods of high traffic and volatile market swings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="mx-auto max-w-3xl px-5 lg:px-8 py-20 lg:py-24 text-center">
+        <h2 class="section-heading section-heading-accent mb-5 reveal">Join the Automated Trading Solution</h2>
+        <p class="text-lg text-text-secondary leading-relaxed mb-8 reveal reveal-delay-1">
+          Traders using Profit Rings have confirmed that this platform enables quicker decision-making and enhances trade consistency. Emotional trading can be a significant hindrance to making profits — Profit Rings runs strategies without hesitation or bias.
+        </p>
+        <a href="#registration-form-hero" class="btn btn-primary btn-lg reveal reveal-delay-2">Register Securely</a>
+      </div>
+    </section>
+
+    <section id="ai-trading" class="bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-12 reveal">AI-Powered Trading</h2>
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div class="reveal space-y-5 text-text-secondary leading-relaxed">
+            <p class="text-lg text-text-secondary leading-loose">
+              The platform has an advanced AI engine trained on massive datasets from cryptocurrency, forex, and traditional markets. The AI scans live feeds, analyzes volatility, and tracks shifts in volume.
+            </p>
+            <p>
+              This platform's AI automatically fine-tunes strategies based on your preferences. It achieves that by learning from every cycle and adjusting execution for better precision the next time around.
+            </p>
+            <p>
+              Profit Rings' AI-powered trading beats the lag and keeps you ahead of the curve. It doesn't just react to the market, but it anticipates it.
+            </p>
+          </div>
+          <div class="reveal reveal-delay-2 space-y-5">
+            <div class="card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Innovation Technology</h3>
+              <p class="text-text-secondary leading-relaxed">
+                Its hybrid technology stack combines real-time market scanning, predictive modeling, and adaptive trade logic into a single seamless engine. The platform's interface offers a clutter-free layout with drag-and-drop window control, custom themes, and multi-chart views.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Updated Platform Edition</h3>
+              <p class="text-text-secondary leading-relaxed">
+                The latest edition features faster load times, an improved AI core, tighter broker integrations, new risk management presets, and enhanced alert precision to the microsecond level.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-4 reveal">How It Works</h2>
+        <p class="text-lg text-text-secondary text-center max-w-2xl mx-auto mb-14 reveal reveal-delay-1">
+          Getting started with Profit Rings is quick and easy with no confusing setups or technical deep dives.
+        </p>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div class="step reveal reveal-delay-1" data-step="1">
+            <h3 class="text-xl font-bold mb-3 mt-2">Create Your Account</h3>
+            <p class="text-text-secondary leading-relaxed">
+              Use your basic details to set up a Profit Rings account. The details include your name, email, and phone number. No long forms or unnecessary hoops.
+            </p>
+          </div>
+          <div class="step reveal reveal-delay-2" data-step="2">
+            <h3 class="text-xl font-bold mb-3 mt-2">Connect With a Broker</h3>
+            <p class="text-text-secondary leading-relaxed">
+              Once you register, you will be connected with a trusted and regulated broker based on your region. Fund your wallet with the required minimum and activate your account.
+            </p>
+          </div>
+          <div class="step reveal reveal-delay-3" data-step="3">
+            <h3 class="text-xl font-bold mb-3 mt-2">Choose Your Trading Mode</h3>
+            <p class="text-text-secondary leading-relaxed">
+              Choose between smart auto-trading and manual alerts. You control your risk settings, asset pairs, and trading style. Profit Rings handles monitoring, execution, and alerting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mobile-trading" class="bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="reveal">
+            <span class="badge mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+              Mobile Ready
+            </span>
+            <h2 class="section-heading section-heading-accent mb-5">Mobile Trading</h2>
+            <p class="text-lg text-text-secondary leading-relaxed mb-4">
+              Markets don't wait until you turn on your PC. With mobile trading, you can be assured of always being on the charts, scalping, and making a profit on the go.
+            </p>
+            <p class="text-text-secondary leading-relaxed">
+              You receive instant push notifications for market moves, review performance metrics in real-time, and adjust your strategy on the fly. The experience is just as excellent as with the desktop — fast, intuitive, and clutter-free.
+            </p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Easy-to-use for Beginners</h3>
+              <p class="text-text-secondary leading-relaxed mb-5">
+                The platform meets you where you are if you're still learning the basics. Profit Rings doesn't just ease you into the crypto scalping game but also walks with you as you make trades and hone your skills. The alerts show you exactly when and where to act.
+              </p>
+              <a href="#registration-form-hero" class="btn btn-outline">Start Trading Today</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="mx-auto max-w-3xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-12 reveal">Frequently Asked Questions</h2>
+        <div class="faq-list" id="faq-list">
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the Profit Rings Platform?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Profit Rings is an AI-powered auto-trading platform. It combines machine-learning-backed strategies with real-time alerts. Designed for crypto scalpers and traders of all levels, it is ideal for both beginners and seasoned crypto scalpers and traders.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is Profit Rings Safe?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Profit Rings enables safe trading and is a secure platform. It utilizes SSL encryption and secure authentication to ensure secure online transactions. The platform also allows partnerships with regulated brokers to help protect your data and funds.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-3">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is Profit Rings Legit?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Profit Rings operates legally and legitimately in most regions. However, it does not operate in the USA and Germany due to local regulations. The system thrives on transparency and accountability, adhering to regional compliance standards.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-4">
+            <button class="faq-question" aria-expanded="false">
+              <span>What Makes Profit Rings Better than Others?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Profit Rings combines deep AI-driven pattern recognition with real-time data and granular trade logic. It ensures speed, clarity, and precision in a way that most others don't. The platform is specifically designed to cater to scalpers rather than general-purpose bot users.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-5">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is Profit Rings free?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Signing up for Profit Rings is free, but you'll need to fund your broker wallet to activate trading. There are no hidden fees or monthly subscriptions when using the platform.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-5">
+            <button class="faq-question" aria-expanded="false">
+              <span>How to Create and Confirm an Account?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Click "Register" and enter your name, email address, and phone number. You'll receive a confirmation link and need to verify your email. Complete the setup of your account before selecting a broker based on your region, and then fund it. Choose your preferred mode (either alerts or auto-trading), set your preferences, and your trading journey begins.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights" class="bg-bg-secondary">
+      <div class="mx-auto max-w-5xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-12 reveal">Key Highlights</h2>
+        <div class="card reveal p-0 overflow-hidden">
+          <table class="highlights-table">
+            <tbody>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path></svg>
+                  AI-Driven Precision
+                </th>
+                <td>Advanced machine learning analyzes market conditions including volume spikes, volatility shifts, and micro-trends for ultra-precise signals or automated execution.</td>
+              </tr>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                  Multi-Exchange Coverage
+                </th>
+                <td>Access a wide array of top exchanges through the platform's powerful screener, ensuring you don't miss any opportunities for arbitrage setups.</td>
+              </tr>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><line x1="10" x2="14" y1="2" y2="2"></line><line x1="12" x2="15" y1="14" y2="11"></line><circle cx="12" cy="14" r="8"></circle></svg>
+                  Real-Time Execution
+                </th>
+                <td>Speed, precision, and execution based on your strategy thresholds. React in seconds rather than minutes and catch price moves while they're fresh.</td>
+              </tr>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><circle cx="12" cy="12" r="3"></circle><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path></svg>
+                  Tweak Your Strategy
+                </th>
+                <td>Effortlessly change your risk level, asset pairs, or trade frequency. The platform learns your preferences and continuously tunes itself.</td>
+              </tr>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+                  Performance Dashboards
+                </th>
+                <td>Track trades, review setups, and analyze results by strategy or timeframe to refine and improve profitability over time.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="mx-auto max-w-3xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-5 reveal">Brief Overview</h2>
+        <p class="text-lg text-text-secondary text-center leading-relaxed reveal reveal-delay-1">
+          At its core, Profit Rings is a next-generation crypto trading terminal designed for crypto scalpers and traders, where speed, clarity, and precision matter. The platform utilizes live order book heatmaps and tracks liquidity across exchanges like Bybit and Binance. It merges adaptive AI automation with cinematic visual tools for sharper visibility and quicker, smarter execution.
+        </p>
+        <hr class="divider-gradient reveal" />
+        <h2 class="section-heading section-heading-accent text-center mb-5 reveal">Conclusion</h2>
+        <p class="text-center text-text-secondary leading-relaxed mb-4 reveal reveal-delay-1">
+          Profit Rings is made to support traders at different experience levels. The design and features make it easy for anyone to start trading crypto. For beginners, it gives you everything you need to get started. And for experts, the custom settings allow you to personalize your strategies even further.
+        </p>
+        <p class="text-center text-text-muted leading-relaxed reveal reveal-delay-2">
+          It's important to note that there are risks in crypto trading, but with the right tools, proper planning, and smart decision-making, you can reduce those risks and increase your chances of success.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-border bg-bg-secondary">
+    <div class="mx-auto max-w-6xl px-5 lg:px-8 py-12">
+      <div class="flex items-center gap-3 justify-center mb-6">
+        <img src="images/logo-256.png" alt="Profit Rings" class="h-9 w-auto" />
+        <span class="font-display font-bold text-lg">Profit Rings</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 font-display text-xs font-semibold uppercase tracking-widest text-text-secondary mb-8">
+        <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="hover:text-accent transition-colors">About Us</a>
+        <a href="sign-in.html" class="hover:text-accent transition-colors">Login</a>
+        <a href="usdt.html" class="hover:text-accent transition-colors">USDT</a>
+        <a href="terms.html" class="hover:text-accent transition-colors">Terms &amp; Conditions</a>
+        <a href="privacy.html" class="hover:text-accent transition-colors">Privacy Policy</a>
+      </div>
+      <p class="text-text-muted text-center text-sm leading-relaxed max-w-4xl mx-auto">
+        Trading with Profit Rings involves financial risk that may result in loss of capital. Therefore, you should conduct thorough research to understand how markets work or consult a licensed professional. This platform doesn't offer financial or investment advice. However, it advocates for responsible crypto trading. Note that this platform isn't available in the USA or Germany. By using Profit Rings, you agree to all terms, risks, and regional restrictions applicable to your use of the service.
+      </p>
+      <p class="text-text-muted/60 text-center text-sm mt-5">© 2026 Profit Rings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="mobile-cta" class="mobile-cta">
+    <a href="#registration-form-hero" class="btn btn-primary btn-lg btn-pulse">Sign Up Now</a>
+  </div>
+
+  <script src="js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js@1/bundle/libphonenumber-max.js" defer></script>
+  <script src="validate/validate.cdn.umd.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.Validate || typeof Validate.initLeadForms !== 'function') return;
+      Validate.initLeadForms('form.lead-form', {
+        lang: 'en',
+        country: 'CA',
+        nameInput: 'input[name="first_name"]',
+        fields: ['surname', 'email'],
+        flagIndicator: true,
+        onSubmit: function (ctx) {
+          var form = ctx.form;
+          var btn = form.querySelector('button[type="submit"]');
+          if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '<span>Submitted &#10003;</span>';
+            btn.style.background = 'var(--color-success)';
+          }
+          form.reset();
+          return Promise.resolve();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

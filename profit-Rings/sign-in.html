@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — Profit Rings</title>
+  <meta name="description" content="Access your Profit Rings trading dashboard. Monitor your positions, adjust your strategies, and stay connected to the markets 24/7." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="stylesheet" href="validate/style.css" />
+</head>
+<body class="bg-bg-primary text-text-primary font-body antialiased">
+
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-bg-primary/80 border-b border-border">
+    <div class="mx-auto max-w-6xl px-5 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo-256.png" alt="Profit Rings" class="h-14 md:h-16 lg:h-20 w-auto logo-glow" />
+        <span class="hidden sm:inline font-display font-bold text-lg tracking-tight">Profit Rings</span>
+      </a>
+      <nav id="nav-links" class="hidden md:flex items-center gap-7 font-display text-xs font-semibold tracking-widest uppercase text-text-secondary">
+        <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="hover:text-accent transition-colors">About Us</a>
+        <a href="usdt.html" class="hover:text-accent transition-colors">USDT</a>
+        <a href="sign-in.html" class="text-accent">Login</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 text-text-primary" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-border bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 py-4 flex flex-col gap-3 font-display text-sm font-semibold uppercase tracking-widest text-text-secondary">
+        <a href="index.html" class="hover:text-accent">Home</a>
+        <a href="about.html" class="hover:text-accent">About Us</a>
+        <a href="usdt.html" class="hover:text-accent">USDT</a>
+        <a href="sign-in.html" class="text-accent">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="relative">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+      </div>
+      <div class="relative mx-auto max-w-3xl px-5 lg:px-8 pt-16 pb-14 lg:pt-20 lg:pb-20 text-center">
+        <span class="badge mb-6">Secure Access</span>
+        <h1 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight mb-5">
+          Login to <span class="section-heading-accent">Profit Rings</span>
+        </h1>
+        <p class="text-lg text-text-secondary leading-relaxed">
+          Access your Profit Rings trading dashboard. Monitor your positions, adjust your strategies, and stay connected to the markets 24/7.
+        </p>
+      </div>
+    </section>
+
+    <section id="sign-in" class="bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-4 reveal">How to Sign In</h2>
+        <p class="text-lg text-text-secondary text-center max-w-2xl mx-auto mb-14 reveal reveal-delay-1">
+          Accessing your account is straightforward. Follow these simple steps to get back to your trading dashboard.
+        </p>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div class="step reveal reveal-delay-1" data-step="1">
+            <h3 class="text-xl font-bold mb-3 mt-2">Visit the Platform</h3>
+            <p class="text-text-secondary leading-relaxed">Navigate to the Profit Rings login page. You can access it from any device — desktop, tablet, or mobile. The interface is optimized for all screen sizes.</p>
+          </div>
+          <div class="step reveal reveal-delay-2" data-step="2">
+            <h3 class="text-xl font-bold mb-3 mt-2">Enter Your Credentials</h3>
+            <p class="text-text-secondary leading-relaxed">Use the email address and password you set during registration. If you've forgotten your password, use the recovery option to reset it securely.</p>
+          </div>
+          <div class="step reveal reveal-delay-3" data-step="3">
+            <h3 class="text-xl font-bold mb-3 mt-2">Access Your Dashboard</h3>
+            <p class="text-text-secondary leading-relaxed">Once authenticated, you'll land directly on your personalized trading dashboard. All your settings, strategies, and performance data are right where you left them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="enrollment">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div class="reveal">
+            <h2 class="section-heading section-heading-accent mb-5">New to Profit Rings?</h2>
+            <p class="text-lg text-text-secondary leading-relaxed mb-4">
+              If you don't have an account yet, getting started takes just a few minutes. Fill out the registration form and you'll be connected with a broker matched to your region.
+            </p>
+            <p class="text-text-secondary leading-relaxed mb-8">
+              No lengthy forms or complicated verification processes. Just your basic details — name, email, and phone number. Start exploring the platform right after registration.
+            </p>
+            <div class="card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Quick Enrollment</h3>
+              <p class="text-text-secondary leading-relaxed">The entire enrollment process takes less than 2 minutes. Once registered, you'll receive an email confirmation and immediate access to the platform.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="card" id="registration-form-login" style="box-shadow: var(--shadow-glow);">
+              <h3 class="text-center text-xl font-bold mb-5">Join Profit Rings</h3>
+              <form class="lead-form" data-source="login" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="text" class="form-input" name="first_name" placeholder="First Name" required autocomplete="given-name" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-input" name="last_name" placeholder="Last Name" required autocomplete="family-name" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-input" name="email" placeholder="Email" required autocomplete="email" />
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-input" name="phone" placeholder="Phone" required autocomplete="tel" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block btn-pulse mt-2">
+                  <span>Sign Up Now</span>
+                </button>
+                <p class="text-text-muted text-center mt-4" style="font-size:11px;line-height:1.5;">
+                  Disclaimer: Profit Rings connects traders with brokers offering trading in crypto and other markets. Trading involves significant risks. We recommend legit and regulated firms, but the choice is yours.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="security" class="bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-4 reveal">Security First</h2>
+        <p class="text-lg text-text-secondary text-center max-w-2xl mx-auto mb-12 reveal reveal-delay-1">
+          Your account security is a top priority. Profit Rings employs multiple layers of protection to keep your data and funds safe.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Encrypted Connections</h3>
+            <p class="text-text-secondary leading-relaxed">All data transmitted between your browser and Profit Rings servers is encrypted using industry-standard TLS protocols. Your credentials and trading data are always protected in transit.</p>
+          </div>
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path><path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path><path d="M2 12a10 10 0 0 1 18-6"></path><path d="M2 16h.01"></path><path d="M21.8 16c.2-2 .131-5.354 0-6"></path><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path><path d="M8.65 22c.21-.66.45-1.32.57-2"></path><path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Secure Authentication</h3>
+            <p class="text-text-secondary leading-relaxed">Advanced authentication mechanisms protect your account from unauthorized access. Session management ensures your account stays secure even on shared devices.</p>
+          </div>
+          <div class="card reveal reveal-delay-3">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path><path d="m2 2 20 20"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Privacy Protected</h3>
+            <p class="text-text-secondary leading-relaxed">Your personal information is never shared with third parties without consent. Profit Rings follows strict data handling practices to ensure your privacy is always maintained.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="account-features">
+      <div class="mx-auto max-w-5xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-12 reveal">Your Account Includes</h2>
+        <div class="card reveal p-0 overflow-hidden">
+          <table class="highlights-table">
+            <tbody>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>
+                  Personal Dashboard
+                </th>
+                <td>A customizable trading dashboard with real-time market data, position tracking, and performance analytics tailored to your preferences.</td>
+              </tr>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+                  Custom Alerts
+                </th>
+                <td>Configure personalized alerts for price movements, volume changes, and strategy triggers. Get notified instantly via push or email.</td>
+              </tr>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>
+                  Trade History
+                </th>
+                <td>Complete transaction history with detailed analytics. Review past trades, identify patterns, and refine your strategy over time.</td>
+              </tr>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><circle cx="12" cy="12" r="3"></circle><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path></svg>
+                  Strategy Settings
+                </th>
+                <td>Fine-tune your trading parameters including risk tolerance, asset pairs, timeframes, and execution preferences.</td>
+              </tr>
+              <tr>
+                <th>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:8px;color:var(--color-accent);"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path><circle cx="12" cy="12" r="4"></circle></svg>
+                  Priority Support
+                </th>
+                <td>Registered users get access to dedicated support channels for faster response times and personalized assistance.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-bg-secondary">
+      <div class="mx-auto max-w-3xl px-5 lg:px-8 py-20 lg:py-24 text-center">
+        <h2 class="section-heading section-heading-accent mb-5 reveal">Don't Have an Account Yet?</h2>
+        <p class="text-lg text-text-secondary leading-relaxed mb-8 reveal reveal-delay-1">
+          Creating an account is free and takes less than 2 minutes. Start your trading journey with Profit Rings today.
+        </p>
+        <a href="#registration-form-login" class="btn btn-primary btn-lg btn-pulse reveal reveal-delay-2">Register Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-border bg-bg-secondary">
+    <div class="mx-auto max-w-6xl px-5 lg:px-8 py-12">
+      <div class="flex items-center gap-3 justify-center mb-6">
+        <img src="images/logo-256.png" alt="Profit Rings" class="h-9 w-auto" />
+        <span class="font-display font-bold text-lg">Profit Rings</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 font-display text-xs font-semibold uppercase tracking-widest text-text-secondary mb-8">
+        <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="hover:text-accent transition-colors">About Us</a>
+        <a href="sign-in.html" class="hover:text-accent transition-colors">Login</a>
+        <a href="usdt.html" class="hover:text-accent transition-colors">USDT</a>
+        <a href="terms.html" class="hover:text-accent transition-colors">Terms &amp; Conditions</a>
+        <a href="privacy.html" class="hover:text-accent transition-colors">Privacy Policy</a>
+      </div>
+      <p class="text-text-muted text-center text-sm leading-relaxed max-w-4xl mx-auto">
+        Trading with Profit Rings involves financial risk that may result in loss of capital. Therefore, you should conduct thorough research to understand how markets work or consult a licensed professional. This platform doesn't offer financial or investment advice. However, it advocates for responsible crypto trading. Note that this platform isn't available in the USA or Germany. By using Profit Rings, you agree to all terms, risks, and regional restrictions applicable to your use of the service.
+      </p>
+      <p class="text-text-muted/60 text-center text-sm mt-5">© 2026 Profit Rings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js@1/bundle/libphonenumber-max.js" defer></script>
+  <script src="validate/validate.cdn.umd.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.Validate || typeof Validate.initLeadForms !== 'function') return;
+      Validate.initLeadForms('form.lead-form', {
+        lang: 'en',
+        country: 'CA',
+        nameInput: 'input[name="first_name"]',
+        fields: ['surname', 'email'],
+        flagIndicator: true,
+        onSubmit: function (ctx) {
+          var form = ctx.form;
+          var btn = form.querySelector('button[type="submit"]');
+          if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '<span>Submitted &#10003;</span>';
+            btn.style.background = 'var(--color-success)';
+          }
+          form.reset();
+          return Promise.resolve();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

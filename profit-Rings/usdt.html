@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USDT AI Trading — Profit Rings</title>
+  <meta name="description" content="Trade USDT pairs with precision using Profit Rings' AI-driven tools. High liquidity, reduced volatility, scalping-optimized." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="stylesheet" href="validate/style.css" />
+</head>
+<body class="bg-bg-primary text-text-primary font-body antialiased">
+
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-bg-primary/80 border-b border-border">
+    <div class="mx-auto max-w-6xl px-5 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo-256.png" alt="Profit Rings" class="h-14 md:h-16 lg:h-20 w-auto logo-glow" />
+        <span class="hidden sm:inline font-display font-bold text-lg tracking-tight">Profit Rings</span>
+      </a>
+      <nav id="nav-links" class="hidden md:flex items-center gap-7 font-display text-xs font-semibold tracking-widest uppercase text-text-secondary">
+        <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="hover:text-accent transition-colors">About Us</a>
+        <a href="usdt.html" class="text-accent">USDT</a>
+        <a href="sign-in.html" class="hover:text-accent transition-colors">Login</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 text-text-primary" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-border bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 py-4 flex flex-col gap-3 font-display text-sm font-semibold uppercase tracking-widest text-text-secondary">
+        <a href="index.html" class="hover:text-accent">Home</a>
+        <a href="about.html" class="hover:text-accent">About Us</a>
+        <a href="usdt.html" class="text-accent">USDT</a>
+        <a href="sign-in.html" class="hover:text-accent">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="relative">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+      </div>
+      <div class="relative mx-auto max-w-6xl px-5 lg:px-8 pt-12 pb-20 lg:pt-20 lg:pb-28">
+        <div class="grid lg:grid-cols-[1fr_440px] gap-12 lg:gap-16 items-start">
+          <div>
+            <span class="badge badge-pulse mb-6">USDT Trading</span>
+            <h1 class="hero-title">
+              <span class="word-1">USDT AI</span>
+              <span class="word-2">Trading</span>
+            </h1>
+            <p class="text-lg text-text-secondary leading-relaxed max-w-xl mb-8">
+              Trade USDT pairs with precision using Profit Rings' AI-driven tools. The stablecoin market offers unique opportunities for scalpers, and our platform is optimized to help you capture every one of them.
+            </p>
+          </div>
+
+          <div id="registration-form-usdt" class="card lg:sticky lg:top-24" style="box-shadow: var(--shadow-glow);">
+            <h3 class="text-center text-xl font-bold mb-5">Join Profit Rings</h3>
+            <form class="lead-form" data-source="usdt" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" class="form-input" name="first_name" placeholder="First Name" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-input" name="last_name" placeholder="Last Name" required autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-input" name="email" placeholder="Email" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-input" name="phone" placeholder="Phone" required autocomplete="tel" />
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block btn-pulse mt-2">
+                <span>Sign Up Now</span>
+              </button>
+              <p class="text-text-muted text-center mt-4" style="font-size:11px;line-height:1.5;">
+                Disclaimer: Profit Rings connects traders with brokers offering trading in crypto and other markets. Trading involves significant risks. We recommend legit and regulated firms, but the choice is yours.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-is-usdt" class="bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-12 reveal">What is USDT Trading?</h2>
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div class="reveal space-y-5 text-text-secondary leading-relaxed">
+            <p class="text-lg leading-loose">
+              USDT (Tether) is the most widely used stablecoin in cryptocurrency markets. It's pegged to the US dollar, providing a stable base for trading pairs across major exchanges.
+            </p>
+            <p>
+              Trading USDT pairs means you're trading cryptocurrencies against a stable value. This reduces one layer of volatility and lets you focus on the asset's actual price movements rather than currency fluctuations.
+            </p>
+            <p>
+              Profit Rings' AI is specifically trained on USDT pair dynamics, understanding the unique liquidity patterns and spread behavior that define this market.
+            </p>
+          </div>
+          <div class="reveal reveal-delay-2 space-y-5">
+            <div class="card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Stable Base Currency</h3>
+              <p class="text-text-secondary leading-relaxed">USDT's dollar peg provides a reliable reference point for all your trades. Calculate profits and losses in real dollar terms without the confusion of fluctuating base currencies.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">High Liquidity</h3>
+              <p class="text-text-secondary leading-relaxed">USDT pairs consistently rank among the highest volume pairs on every major exchange. This means tighter spreads, faster fills, and more opportunities for scalpers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="guide">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-4 reveal">USDT Trading Guide</h2>
+        <p class="text-lg text-text-secondary text-center max-w-2xl mx-auto mb-14 reveal reveal-delay-1">
+          Follow this step-by-step guide to start trading USDT pairs on Profit Rings.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div class="step reveal reveal-delay-1" data-step="1">
+            <h3 class="text-lg font-bold mb-3 mt-2">Fund Your Account</h3>
+            <p class="text-text-secondary leading-relaxed">Deposit the required minimum through your connected broker. USDT deposits are processed quickly, giving you immediate access to start trading.</p>
+          </div>
+          <div class="step reveal reveal-delay-2" data-step="2">
+            <h3 class="text-lg font-bold mb-3 mt-2">Select Your Pairs</h3>
+            <p class="text-text-secondary leading-relaxed">Choose from a wide range of USDT trading pairs: BTC/USDT, ETH/USDT, SOL/USDT, and many more. The platform provides AI-generated rankings.</p>
+          </div>
+          <div class="step reveal reveal-delay-3" data-step="3">
+            <h3 class="text-lg font-bold mb-3 mt-2">Configure Your Strategy</h3>
+            <p class="text-text-secondary leading-relaxed">Set your risk parameters, entry/exit rules, and position sizes. The AI will use these as guardrails while scanning for optimal trade setups.</p>
+          </div>
+          <div class="step reveal reveal-delay-4" data-step="4">
+            <h3 class="text-lg font-bold mb-3 mt-2">Monitor and Optimize</h3>
+            <p class="text-text-secondary leading-relaxed">Track your trades through the performance dashboard. The AI continuously learns from market conditions and your preferences, refining its approach.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="bg-bg-secondary">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-12 reveal">USDT Trading Advantages</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Reduced Volatility Risk</h3>
+            <p class="text-text-secondary leading-relaxed">Trading against a stablecoin eliminates the risk of your base currency losing value. Your unrealized profits maintain their dollar-equivalent worth.</p>
+          </div>
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="m7 22-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Seamless Pair Switching</h3>
+            <p class="text-text-secondary leading-relaxed">Move between different crypto assets without converting back to fiat. USDT acts as your universal trading currency across all supported pairs.</p>
+          </div>
+          <div class="card reveal reveal-delay-3">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Clear P&amp;L Tracking</h3>
+            <p class="text-text-secondary leading-relaxed">Since USDT mirrors the US dollar, your profit and loss calculations are straightforward. No need for complex currency conversion math.</p>
+          </div>
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Global Accessibility</h3>
+            <p class="text-text-secondary leading-relaxed">USDT is available on virtually every cryptocurrency exchange worldwide. Trade the same pairs across platforms with consistent pricing.</p>
+          </div>
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">24/7 Market Access</h3>
+            <p class="text-text-secondary leading-relaxed">Unlike traditional markets, USDT pairs trade around the clock. Profit Rings' AI monitors and trades for you even while you sleep.</p>
+          </div>
+          <div class="card reveal reveal-delay-3">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Scalping-Optimized</h3>
+            <p class="text-text-secondary leading-relaxed">High liquidity and tight spreads in USDT pairs make them ideal for scalping strategies. Quick entries and exits with minimal slippage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blueprint">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8 py-20 lg:py-24">
+        <h2 class="section-heading section-heading-accent text-center mb-12 reveal">AI Trading Blueprint</h2>
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div class="reveal space-y-6">
+            <p class="text-lg text-text-secondary leading-loose">
+              The Profit Rings AI uses a multi-layered approach to USDT trading that combines technical analysis, sentiment analysis, and liquidity mapping.
+            </p>
+            <div class="card">
+              <h3 class="text-xl font-bold mb-3">How the AI Analyzes USDT Pairs</h3>
+              <p class="text-text-secondary leading-relaxed">
+                The system processes order book data in real-time, identifying support and resistance zones based on actual market depth. It correlates these with historical patterns and current momentum to predict short-term price movements with high accuracy.
+              </p>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2 space-y-5">
+            <div class="card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Market Scanning</h3>
+              <p class="text-text-secondary leading-relaxed">Continuous scanning across multiple exchanges to identify price discrepancies, volume surges, and breakout patterns in USDT pairs.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Pattern Recognition</h3>
+              <p class="text-text-secondary leading-relaxed">Machine learning models trained on millions of historical trades to recognize profitable setups before they fully develop.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" x2="18" y1="12" y2="12"></line><line x1="6" x2="2" y1="12" y2="12"></line><line x1="12" x2="12" y1="6" y2="2"></line><line x1="12" x2="12" y1="22" y2="18"></line></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Precision Execution</h3>
+              <p class="text-text-secondary leading-relaxed">Automated order placement with optimal timing, size, and price levels calculated by the AI in real-time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-bg-secondary">
+      <div class="mx-auto max-w-3xl px-5 lg:px-8 py-20 lg:py-24 text-center">
+        <h2 class="section-heading section-heading-accent mb-5 reveal">Start Trading USDT Today</h2>
+        <p class="text-lg text-text-secondary leading-relaxed mb-8 reveal reveal-delay-1">
+          Don't miss out on the opportunities in the USDT market. Register now and let Profit Rings' AI work for you.
+        </p>
+        <a href="#registration-form-usdt" class="btn btn-primary btn-lg btn-pulse reveal reveal-delay-2">Register &amp; Start Trading</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-border bg-bg-secondary">
+    <div class="mx-auto max-w-6xl px-5 lg:px-8 py-12">
+      <div class="flex items-center gap-3 justify-center mb-6">
+        <img src="images/logo-256.png" alt="Profit Rings" class="h-9 w-auto" />
+        <span class="font-display font-bold text-lg">Profit Rings</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 font-display text-xs font-semibold uppercase tracking-widest text-text-secondary mb-8">
+        <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="hover:text-accent transition-colors">About Us</a>
+        <a href="sign-in.html" class="hover:text-accent transition-colors">Login</a>
+        <a href="usdt.html" class="hover:text-accent transition-colors">USDT</a>
+        <a href="terms.html" class="hover:text-accent transition-colors">Terms &amp; Conditions</a>
+        <a href="privacy.html" class="hover:text-accent transition-colors">Privacy Policy</a>
+      </div>
+      <p class="text-text-muted text-center text-sm leading-relaxed max-w-4xl mx-auto">
+        Trading with Profit Rings involves financial risk that may result in loss of capital. Therefore, you should conduct thorough research to understand how markets work or consult a licensed professional. This platform doesn't offer financial or investment advice. However, it advocates for responsible crypto trading. Note that this platform isn't available in the USA or Germany. By using Profit Rings, you agree to all terms, risks, and regional restrictions applicable to your use of the service.
+      </p>
+      <p class="text-text-muted/60 text-center text-sm mt-5">© 2026 Profit Rings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js@1/bundle/libphonenumber-max.js" defer></script>
+  <script src="validate/validate.cdn.umd.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.Validate || typeof Validate.initLeadForms !== 'function') return;
+      Validate.initLeadForms('form.lead-form', {
+        lang: 'en',
+        country: 'CA',
+        nameInput: 'input[name="first_name"]',
+        fields: ['surname', 'email'],
+        flagIndicator: true,
+        onSubmit: function (ctx) {
+          var form = ctx.form;
+          var btn = form.querySelector('button[type="submit"]');
+          if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '<span>Submitted &#10003;</span>';
+            btn.style.background = 'var(--color-success)';
+          }
+          form.reset();
+          return Promise.resolve();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
