@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profit Rings</title>
+    <link rel="icon" href="./offer_index/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="./offer_index/fonts.css" />
+    <link rel="stylesheet" href="./offer_index/tailwind.css" />
+    <link rel="stylesheet" href="./offer_index/styles.css" />
+    <link rel="stylesheet" href="./offer_index/simplebar.min.css" />
+    <link rel="stylesheet" href="./validation/style.css" />
+    <style>
+      #floatingButton {
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        display: none;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .floatingButton {
+        --tw-text-opacity: 1;
+        font-family: "Encode Sans Expanded", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 900;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+        background-color: rgb(247 158 27 / var(--tw-bg-opacity));
+        position: relative;
+        z-index: auto;
+        display: block;
+        width: 100%;
+        padding: 5px;
+        margin: 0 auto;
+        transition: 0.3s;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none !important;
+      }
+
+      .floatingButton:hover {
+        --tw-brightness: brightness(1.05);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+      }
+    </style>
+  </head>
+
+  <body class="overflow-x-hidden">
+    <header class="header-new flex flex-col">
+      <nav class="nav py-1 lg:py-5 border-b border-b-white/10">
+        <div class="relative max-w-8xl px-4 mx-auto pt-8 lg:pt-0 flex items-center justify-center lg:justify-between">
+          <a class="logo flex items-center gap-3" href="#form">
+            <img src="./offer_index/logo.svg" alt="" />
+            <div class="uppercase text-white">Profit Rings</div>
+          </a>
+          <div class="absolute -top-1 left-0 w-full lg:w-auto lg:static px-5 py-1 lg:py-2 bg-primary-main lg:rounded-md text-white font-bold text-sm lg:text-base text-center">
+            Spots remaining
+            <strong class="text-base lg:text-lg font-black" data-slot-count="">38</strong>
+          </div>
+        </div>
+      </nav>
+      <div class="relative w-full max-w-8xl px-4 mx-auto z-10 flex-grow flex flex-col">
+        <div class="header-lines flex flex-col flex-grow">
+          <div class="flex flex-col lg:flex-row flex-grow">
+            <div class="w-full lg:w-1/2 my-6 text-center lg:text-left lg:self-center">
+              <div class="text-3xl xl:text-5xl xl:leading-tight font-alt font-black text-white">You can earn</div>
+              <div class="text-4xl xl:text-6xl xl:leading-tight font-alt font-black text-primary-bright">$1100 PER DAY</div>
+              <div class="flex items-center justify-center lg:justify-start">
+                <div class="my-2 text-base xl:text-2xl font-alt font-black text-white text-left">
+                  by using trading platform
+                  <br />
+                  Profit Rings
+                </div>
+                <div class="ml-4 p-1.5 rounded-full bg-primary-darker flex gap-1 items-center">
+                  <img class="w-7 h-7 lg:w-9 lg:h-9" src="./offer_index/btc.svg" alt="" />
+                  <img class="w-7 h-7 lg:w-9 lg:h-9" src="./offer_index/usdt.svg" alt="" />
+                  <img class="w-7 h-7 lg:w-9 lg:h-9" src="./offer_index/binance.svg" alt="" />
+                  <img class="mx-2" src="./offer_index/header-arrow.svg" alt="" />
+                </div>
+              </div>
+              <div class="my-5 lg:my-10 text-base md:text-lg font-semibold text-white/80">
+                Canada registrations are now open
+                <br />
+              </div>
+              <div class="flex items-center justify-center lg:justify-start gap-2 xl:gap-5">
+                <div class="flex">
+                  <img class="relative w-11 h-11 rounded-full border border-primary-dark z-[3]" src="./offer_index/header-avatar-1.webp" srcset="./offer_index/header-avatar-1.webp 1x, ./offer_index/header-avatar-1_2x.webp 2x" alt="" />
+                  <img
+                    class="relative w-11 h-11 -ml-3 rounded-full border border-primary-dark z-[2]"
+                    src="./offer_index/header-avatar-2.webp"
+                    srcset="./offer_index/header-avatar-2.webp 1x, ./offer_index/header-avatar-2_2x.webp 2x"
+                    alt="" />
+                  <img
+                    class="relative w-11 h-11 -ml-3 rounded-full border border-primary-dark z-[1]"
+                    src="./offer_index/header-avatar-3.webp"
+                    srcset="./offer_index/header-avatar-3.webp 1x, ./offer_index/header-avatar-3_2x.webp 2x"
+                    alt="" />
+                </div>
+                <div class="text-left text-xs sm:text-base">
+                  <div class="text-white">
+                    <span class="text-white/80">4.7 stars out of more than</span>
+                    <span class="font-bold">2,780 users</span>
+                  </div>
+                  <img class="h-5" src="./offer_index/stars.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="header-mobile pt-12 mx-auto lg:ml-auto lg:mr-0 w-full max-w-[420px] lg:max-w-[490px] flex flex-col items-center">
+              <img class="w-12" src="./offer_index/logo.svg" alt="" />
+              <div style="text-align: center; font-size: 1.2rem" class="mt-1 text-2xl font-black text-white font-alt">Register now!</div>
+
+              <!--                  <style>-->
+              <!--     @media (min-resolution: 2x) {-->
+              <!--    .iti__flag {-->
+              <!--        background-image: url(flags@2x.png) !important;-->
+              <!--    }-->
+              <!--}-->
+              <!--    </style>-->
+
+              <form id="form" class="rf-form js-rf-form" method="post" action="">
+                <div class="rf-form__header"></div>
+
+                <div class="rf-form__content">
+                  <div class="rf-form-field">
+                    <input class="rf-form-input" type="text" id="first_name" name="first_name" placeholder="Enter first name" autocomplete="given-name" />
+                    <small class="rf-form-field__error js-first-name-error" style="color: red"></small>
+                  </div>
+
+                  <div class="rf-form-field">
+                    <input class="rf-form-input" type="text" name="last_name" id="last_name" placeholder="Enter last name" autocomplete="family-name" />
+                    <small class="rf-form-field__error js-last-name-error" style="color: red"></small>
+                  </div>
+
+                  <div class="rf-form-field">
+                    <input class="rf-form-input" type="email" name="sendingmail" placeholder="Enter e-mail" autocomplete="email" />
+                  </div>
+
+                  <div class="rf-form-field">
+                    <input class="rf-form-input" type="tel" name="phone" id="phone" placeholder="Enter phone number" autocomplete="tel" />
+                  </div>
+
+                  <div class="my-5">
+                    <button class="w-full h-12 border-0 rounded-md text-white font-black font-alt cursor-pointer bg-primary-bright active:brightness-95 hover:brightness-105" type="submit" id="buttonSbmt">Register</button>
+                  </div>
+                </div>
+              </form>
+              <div class="h-26 flex payment-methods">
+                <img src="./offer_index/payment.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+        <div class="mb-4 md:mb-16 flex flex-col md:flex-row border border-primary-dark/10 rounded-xl">
+          <div class="md:order-2 md:w-1/3 lg:w-auto md:-mr-px flex-shrink-0 md:translate-y-8">
+            <img class="w-full block rounded-t-xl md:rounded-br-xl" src="./offer_index/person-1.webp" srcset="./offer_index/person-1.webp 1x, ./offer_index/person-1_2x.webp 2x" alt="" />
+          </div>
+          <div class="flex-grow p-4 sm:p-7">
+            <div class="flex items-center">
+              <img class="w-12 sm:w-auto mr-4 sm:mr-6" src="./offer_index/quote.svg" alt="" />
+              <div>
+                <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt">Ryan Reynolds</div>
+                <div class="text-sm uppercase font-bold text-primary-medium">Actor and entrepreneur</div>
+              </div>
+            </div>
+            <div class="mt-4 sm:mt-7 text-primary-medium lg:text-lg">
+              You know, I’ve always appreciated smart and unconventional solutions—whether in movies, business, or even in the world of finance. Recently, I came across Profit Rings, which is powered by artificial intelligence, and decided
+              to try it myself. The results? They truly impressed me. This crypto platform leverages AI to analyze the market, predict trends, and execute successful trades. If you want to step into the world of cryptocurrencies and passive
+              income with confidence and success, take advantage of this opportunity."
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row border border-primary-dark/10 rounded-xl md:rounded-bl-none">
+          <div class="md:w-1/3 lg:w-auto md:-ml-px flex-shrink-0 md:-translate-y-8">
+            <img class="w-full block rounded-t-xl md:rounded-br-xl" src="./offer_index/person-2.webp" srcset="./offer_index/person-2.webp 1x, ./offer_index/person-2_2x.webp 2x" alt="" />
+          </div>
+          <div class="flex-grow p-4 sm:p-7">
+            <div class="flex items-center">
+              <img class="w-12 sm:w-auto mr-4 sm:mr-6" src="./offer_index/quote.svg" alt="" />
+              <div>
+                <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt">Jim Pattison</div>
+                <div class="text-sm uppercase font-bold text-primary-medium">Business magnate and philanthropist</div>
+              </div>
+            </div>
+            <div class="mt-4 sm:mt-7 text-primary-medium lg:text-lg">
+              "Throughout my career, I have always strived to find innovations that truly work. I decided to try Profit Rings, and the results exceeded all expectations. The innovations it offers are the future of finance. If you’re looking
+              for a reliable way to start earning in cryptocurrency, I strongly recommend using this platform. It truly delivers on its promises!"
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+        <div class="mb-7 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-7 lg:items-center">
+          <div class="lg:col-span-2">
+            <div class="mb-2 text-sm uppercase font-black text-primary-medium">01 // Trade Algorithms</div>
+            <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt">Profit Rings uses Artificial Intelligence and State-of-the-art Algorithms to Identify Only Profitable Trades</div>
+          </div>
+          <a href="#form">
+            <div class="lg:flex lg:justify-end text-primary-medium">
+              <button type="button" class="h-12 px-4 sm:px-6 border-0 rounded-md text-white font-black font-alt cursor-pointer bg-primary-bright active:brightness-95 hover:brightness-105 text-sm sm:text-base whitespace-nowrap">
+                CLAIM your spot TODAY
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="phones-bg rounded-xl">
+          <div class="relative phones-lines pb-64 lg:pb-0 mb-24">
+            <div class="py-7 px-2.5 sm:py-10 lg:p-14 xl:px-20 xl:py-24 flex flex-col md:flex-row md:justify-between md:gap-2.5">
+              <div class="mb-2.5 md:mb-0 min-w-[300px] flex flex-col md:flex-grow lg:flex-grow-0 gap-2.5">
+                <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                  <img class="w-9 h-9 mr-4" src="./offer_index/btc.svg" alt="" />
+                  <div class="mr-auto">
+                    <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">BTC</div>
+                    <div class="text-white/40 leading-4">Bitcoin</div>
+                  </div>
+                  <div class="text-[#75C22B] text-lg font-black">+$63,108.00</div>
+                </div>
+                <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                  <img class="w-9 h-9 mr-4" src="./offer_index/eth.svg" alt="" />
+                  <div class="mr-auto">
+                    <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">ETH</div>
+                    <div class="text-white/40 leading-4">Ethereum</div>
+                  </div>
+                  <div class="text-[#75C22B] text-lg font-black">+$3,240.28</div>
+                </div>
+                <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                  <img class="w-9 h-9 mr-4" src="./offer_index/ltc.svg" alt="" />
+                  <div class="mr-auto">
+                    <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">LTC</div>
+                    <div class="text-white/40 leading-4">Litecoin</div>
+                  </div>
+                  <div class="text-[#75C22B] text-lg font-black">+$78.35</div>
+                </div>
+              </div>
+              <div class="min-w-[300px] flex flex-col md:flex-grow lg:flex-grow-0 gap-2.5">
+                <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                  <img class="w-9 h-9 mr-4" src="./offer_index/btc.svg" alt="" />
+                  <div class="mr-auto">
+                    <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">BTC</div>
+                    <div class="text-white/40 leading-4">Bitcoin</div>
+                  </div>
+                  <div class="text-[#75C22B] text-lg font-black">+$63,108.00</div>
+                </div>
+                <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                  <img class="w-9 h-9 mr-4" src="./offer_index/eth.svg" alt="" />
+                  <div class="mr-auto">
+                    <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">ETH</div>
+                    <div class="text-white/40 leading-4">Ethereum</div>
+                  </div>
+                  <div class="text-[#75C22B] text-lg font-black">+$3,240.28</div>
+                </div>
+                <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                  <img class="w-9 h-9 mr-4" src="./offer_index/ltc.svg" alt="" />
+                  <div class="mr-auto">
+                    <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">LTC</div>
+                    <div class="text-white/40 leading-4">Litecoin</div>
+                  </div>
+                  <div class="text-[#75C22B] text-lg font-black">+$78.35</div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="absolute left-1/2 bottom-0 lg:bottom-1/2 -translate-x-1/2 translate-y-[20%] lg:translate-y-1/2 w-72 xl:w-auto"
+              src="./offer_index/phones.webp"
+              srcset="./offer_index/phones.webp 1x, ./offer_index/phones_2x.webp 2x"
+              alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+        <div class="mb-7 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-7 lg:items-center">
+          <div class="lg:col-span-2">
+            <div class="mb-2 text-sm uppercase font-black text-primary-medium">02 // Satisfied customers</div>
+            <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt">Complete beginners are making immediate earnings and now with our help you can too!</div>
+          </div>
+          <div class="lg:text-lg text-primary-medium">The Profit Rings software is programmed to trade only when it knows it will make an immediate profit</div>
+        </div>
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-7">
+          <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+            <img class="h-5" src="./offer_index/stars.svg" alt="" />
+            <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">
+              I just want to say a great big Thank you because Profit Rings definity has really turned my life around. In a matter of weeks, I’ve been able to quit my job!
+            </div>
+            <div class="flex items-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                <img class="block w-full h-full object-cover rounded-full" src="./offer_index/user-1.webp" srcset="./offer_index/user-1.webp 1x, ./offer_index/user-1_2x.webp 2x" alt="" />
+              </div>
+              <div>
+                <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Jonathan Mulberry</div>
+                <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">$5,977</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+            <img class="h-5" src="./offer_index/stars.svg" alt="" />
+            <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">
+              Man, this thing actually works! It’s amazing really. I’ve only used it for a couple of weeks and I’ve already made more money from it than I do busting my butt off at work for months!
+            </div>
+            <div class="flex items-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                <img class="block w-full h-full object-cover rounded-full" src="./offer_index/user-2.webp" srcset="./offer_index/user-2.webp 1x, ./offer_index/user-2_2x.webp 2x" alt="" />
+              </div>
+              <div>
+                <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Delilah Adams</div>
+                <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">$11,369</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+            <img class="h-5" src="./offer_index/stars.svg" alt="" />
+            <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">
+              I received my notice two weeks ago. With no alternatives I thought my life would be over. Now I'm making about $13,261.42 every week! And for the first time in 2 months I'm not in the dark. Thanks Edwin!
+            </div>
+            <div class="flex items-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                <img class="block w-full h-full object-cover rounded-full" src="./offer_index/user-3.webp" srcset="./offer_index/user-3.webp 1x, ./offer_index/user-3_2x.webp 2x" alt="" />
+              </div>
+              <div>
+                <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Simon Horsham</div>
+                <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">$33,426</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-bg">
+        <div class="py-7 lg:py-12 w-full max-w-8xl px-4 mx-auto">
+          <div class="mb-2 text-sm uppercase font-black text-[#7389a3]">03 // Our advantages</div>
+          <div class="mb-7 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-7 lg:items-center">
+            <div class="lg:col-span-2">
+              <div class="text-white text-xl lg:text-2xl font-black font-alt">Register today to gain immediate access to this revolutionary software</div>
+            </div>
+            <div class="lg:text-lg text-[#7389a3]">Profit Rings, Instant Earnings</div>
+          </div>
+          <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-7">
+            <div class="border-l border-l-white/10 border-b border-b-white/10 p-4 sm:p-7 !pr-0">
+              <div class="mb-4 sm:mb-7 sm:max-w-60 text-white sm:text-lg font-black font-alt">Simple & Easy To Use</div>
+              <div class="flex items-start">
+                <img class="w-16 h-16 sm:w-20 sm:h-20 mr-4 sm:mr-7" src="./offer_index/pros-1.svg" alt="" />
+                <div class="text-white">Profit Rings installs in seconds on any computer or mobile device. PC, MAC, Android, IOS and more</div>
+              </div>
+            </div>
+            <div class="border-l border-l-white/10 border-b border-b-white/10 p-4 sm:p-7 !pr-0">
+              <div class="mb-4 sm:mb-7 sm:max-w-60 text-white sm:text-lg font-black font-alt">Trusted Performance</div>
+              <div class="flex items-start">
+                <img class="w-16 h-16 sm:w-20 sm:h-20 mr-4 sm:mr-7" src="./offer_index/pros-2.svg" alt="" />
+                <div class="text-white">Fully automated performance instantly scans all the major exchanges. Zero Risk, Immediate Reward</div>
+              </div>
+            </div>
+            <div class="border-l border-l-white/10 border-b border-b-white/10 p-4 sm:p-7 !pr-0">
+              <div class="mb-4 sm:mb-7 sm:max-w-60 text-white sm:text-lg font-black font-alt">Secure & Private</div>
+              <div class="flex items-start">
+                <img class="w-16 h-16 sm:w-20 sm:h-20 mr-4 sm:mr-7" src="./offer_index/pros-3.svg" alt="" />
+                <div class="text-white">By Using Blockchain technology we deliver 98.9% success rate to all members of our private group</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-7 bg-primary-main text-white text-xl lg:text-2xl font-black font-alt text-center">
+        <div class="w-full max-w-8xl px-4 mx-auto">
+          Income from
+          <span class="text-[#93FF09]">$159</span>
+          per hour
+        </div>
+      </div>
+      <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-7">
+          <div class="relative">
+            <img class="w-full h-full rounded-xl" src="./offer_index/info.webp" srcset="./offer_index/info.webp 1x, ./offer_index/info_2x.webp 2x" alt="" />
+          </div>
+          <div class="lg:col-span-2">
+            <div class="mb-2 text-sm uppercase font-black text-primary-medium">04 // About us</div>
+            <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt">Profit Rings is now working with all major crypto currency exchanges</div>
+            <div class="my-4 lg:my-7 text-primary-medium lg:text-lg">
+              The secret is built in to the way the exchanges operate. The price of the coins goes up and down based on supply and demand, and the supply and demand for the currencies is different from one exchange to another. Because of
+              this, often there are HUGE price differences in the same coin on different exchanges. Profit Rings integrates seamlessly with Coinbase, Binance, Kraken, Poloniex, Bittrex and many more, providing you with immediate access and
+              instant earnings.
+            </div>
+            <div class="flex flex-col sm:flex-row items-center lg:-translate-x-1/3">
+              <div class="p-4 sm:px-8 sm:py-6 rounded-xl bg-primary-light/90 flex items-center gap-2 sm:gap-2.5">
+                <div class="max-w-12">
+                  <img class="block" src="./offer_index/coinbase.svg" alt="" />
+                </div>
+                <div class="max-w-12">
+                  <img class="block" src="./offer_index/kraken.svg" alt="" />
+                </div>
+                <div class="max-w-12">
+                  <img class="block" src="./offer_index/binance.svg" alt="" />
+                </div>
+                <div class="max-w-12">
+                  <img class="block" src="./offer_index/polonex.svg" alt="" />
+                </div>
+                <div class="max-w-12">
+                  <img class="block" src="./offer_index/bittrex.svg" alt="" />
+                </div>
+                <div class="sm:ml-4">
+                  <img class="max-w-12 sm:max-w-none block rotate-90 sm:rotate-0" src="./offer_index/info-arrow.svg" alt="" />
+                </div>
+              </div>
+              <a href="#form">
+                <button class="h-12 mt-4 sm:mt-0 px-4 sm:px-6 sm:ml-7 border-0 rounded-md text-white font-black font-alt cursor-pointer bg-primary-bright active:brightness-95 hover:brightness-105 text-sm sm:text-base whitespace-nowrap">
+                  CLAIM your spot TODAY
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary-dark">
+        <div class="py-7 lg:py-12 w-full max-w-8xl px-4 mx-auto">
+          <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-7">
+            <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+              <img class="h-5" src="./offer_index/stars.svg" alt="" />
+              <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">I am so speechless. I’ve never seen numbers like this before. Thank You Profit Rings.</div>
+              <div class="flex items-center">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                  <img class="block w-full h-full object-cover rounded-full" src="./offer_index/user-4.webp" srcset="./offer_index/user-4.webp 1x, ./offer_index/user-4_2x.webp 2x" alt="" />
+                </div>
+                <div>
+                  <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Owen Spencer</div>
+                  <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">$7,899</div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+              <img class="h-5" src="./offer_index/stars.svg" alt="" />
+              <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">I can’t get over it. Like $43,568 in just 30 days. I am so grateful.</div>
+              <div class="flex items-center">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                  <img class="block w-full h-full object-cover rounded-full" src="./offer_index/user-5.webp" srcset="./offer_index/user-5.webp 1x, ./offer_index/user-5_2x.webp 2x" alt="" />
+                </div>
+                <div>
+                  <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Lewis Tucker</div>
+                  <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">$12,896</div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+              <img class="h-5" src="./offer_index/stars.svg" alt="" />
+              <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">My trading account now has $231,952 in it. Can you believe it!</div>
+              <div class="flex items-center">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                  <img class="block w-full h-full object-cover rounded-full" src="./offer_index/user-6.webp" srcset="./offer_index/user-6.webp 1x, ./offer_index/user-6_2x.webp 2x" alt="" />
+                </div>
+                <div>
+                  <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Georgina Barry</div>
+                  <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">$231,952</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary-light">
+        <div class="py-7 w-full max-w-8xl px-4 mx-auto">
+          <div class="flex flex-col lg:flex-row lg:items-center">
+            <div class="lg:w-1/3 mb-4 lg:mb-0 flex items-center flex-shrink-0">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                <img class="block w-full h-full object-cover rounded-full" src="./offer_index/Joanne.webp" srcset="./offer_index/Joanne.webp 1x, ./offer_index/Joanne.webp 2x" alt="" />
+              </div>
+              <div>
+                <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Joanne Bowyer</div>
+                <img class="h-5" src="./offer_index/stars.svg" alt="" />
+                <div class="mt-2 flex gap-2">
+                  <a class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95" href="#form">
+                    <i class="icon-like mr-1"></i>
+                    Like
+                  </a>
+                  <a class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95" href="#form">
+                    <i class="icon-comment mr-1"></i>
+                    Comment
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow text-primary-medium">
+              I have never traded before, but the Profit Rings makes it so easy. I never thought I would say this since the crypto world can be so complicated… but you do make it so easy to earn unimaginable amounts!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white">
+        <div class="py-7 w-full max-w-8xl px-4 mx-auto">
+          <div class="flex flex-col lg:flex-row lg:items-center">
+            <div class="lg:w-1/3 mb-4 lg:mb-0 flex items-center flex-shrink-0">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                <img class="block w-full h-full object-cover rounded-full" src="./offer_index/Rudy.webp" srcset="./offer_index/Rudy.webp 1x, ./offer_index/Rudy.webp 2x" alt="" />
+              </div>
+              <div>
+                <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Rudy Perkins</div>
+                <img class="h-5" src="./offer_index/stars.svg" alt="" />
+                <div class="mt-2 flex gap-2">
+                  <a class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95" href="#form">
+                    <i class="icon-like mr-1"></i>
+                    Like
+                  </a>
+                  <a class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95" href="#form">
+                    <i class="icon-comment mr-1"></i>
+                    Comment
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow text-primary-medium">This is exactly what I've been waiting for! Your educational support and high profiting system has got me hooked for life! Thank you so much.</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary-light">
+        <div class="py-7 w-full max-w-8xl px-4 mx-auto">
+          <div class="flex flex-col lg:flex-row lg:items-center">
+            <div class="lg:w-1/3 mb-4 lg:mb-0 flex items-center flex-shrink-0">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                <img class="block w-full h-full object-cover rounded-full" src="./offer_index/Clark.webp" srcset="./offer_index/Clark.webp 1x, ./offer_index/Clark.webp 2x" alt="" />
+              </div>
+              <div>
+                <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Clark Ross</div>
+                <img class="h-5" src="./offer_index/stars.svg" alt="" />
+                <div class="mt-2 flex gap-2">
+                  <a class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95" href="#form">
+                    <i class="icon-like mr-1"></i>
+                    Like
+                  </a>
+                  <a class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95" href="#form">
+                    <i class="icon-comment mr-1"></i>
+                    Comment
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow text-primary-medium">On my first day, I’ve made over C$900 so I can truly say… Finally, I found something that delivers great results!</div>
+          </div>
+        </div>
+      </div>
+      <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+        <div class="p-7 rounded-xl bg-primary-main text-white text-xl lg:text-2xl font-black font-alt text-center">
+          During the last 5 minutes,
+          <strong data-slot-count2="">8</strong>
+          people have registered
+        </div>
+      </div>
+      <div class="bg-primary-light">
+        <div class="w-full max-w-8xl lg:px-4 mx-auto flex flex-col lg:flex-row lg:items-center">
+          <div class="relative w-full pt-[56.25%] lg:pt-0 lg:w-96 lg:min-h-[454px] flex-shrink-0">
+            <img class="absolute top-0 right-0 w-full h-full object-cover lg:w-auto lg:max-w-none" src="./offer_index/bottom.webp" srcset="./offer_index/bottom.webp 1x, ./offer_index/bottom_2x.webp 2x" alt="" />
+          </div>
+          <div class="px-4 lg:px-12 py-4 text-center lg:text-left">
+            <div class="text-2xl md:text-4xl font-black text-primary-darker font-alt">Check your earnings in 2 weeks and be surprised!</div>
+            <div class="mt-4 text-2xl md:text-4xl font-light font-alt text-primary-medium">Don't miss your chance!</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer pt-5 lg:pt-7 bg-primary-dark text-white">
+      <div class="w-full max-w-8xl mx-auto px-3 md:px-6">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div class="flex flex-col lg:flex-row items-center">
+            <a class="logo flex items-center gap-3" href="#form">
+              <img src="./offer_index/logo.svg" alt="" />
+              <div class="uppercase text-white">Profit Rings</div>
+            </a>
+            <span class="lg:pl-5 lg:ml-5 lg:border-l lg:border-l-white/10">It’s easy when you know how</span>
+          </div>
+          <div class="w-full md:w-auto mt-4 md:mt-0 mx-4 md:order-2 flex flex-wrap items-center justify-center gap-y-1 gap-5 lg:gap-10">
+            <a class="text-white hover:text-primary" href="#form">Privacy Policy</a>
+            <a class="text-white hover:text-primary" href="#form">Terms</a>
+            <a class="text-white hover:text-primary" href="#form">Report Abuse/Spam</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full max-w-8xl mx-auto px-3 md:px-6 text-center md:text-left text-muted text-xs text-white/30">
+        <div class="my-5">
+          IMPORTANT: Earnings and Legal Disclaimers Earnings and income representations made by immediatedefiniinfo, (collectively “This Website”) only used as aspirational examples of your earnings potential. The success of those in the
+          testimonials and other examples are exceptional results and therefore are not intended as a guarantee that you or others will achieve the same results. Individual results will vary and are entirely dependent on your use of
+          immediatedefiniinfo. This Website is not responsible for your actions. You bear sole responsibility for your actions and decisions when using products and services and therefore you should always exercise caution and due
+          diligence. You agree that this Website is not liable to you in any way for the results of using our services. See our Website terms of use for our full disclaimer of liability and other restrictions. Trading can generate notable
+          benefits, however, it also involves the risk of partial/full loss of the invested capital, therefore, you should consider whether you can afford to invest. © 2024 USA REGULATION NOTICE: Trading Forex, CFDs and Cryptocurrencies is
+          not regulated within the United States. Invest in Crypto is not supervised or regulated by any financial agencies nor US agencies. Any unregulated trading activity by U.S. residents is considered unlawful. This Website does not
+          accept customers located within the United States or holding an American citizenship. This Website is not responsible for actions of customers located within the United States or holding an American citizenship. Customers located
+          within the United States or holding an American citizenship bear sole responsibility for their actions and decisions when using products and services of this Website. In any and all circumstances the choice to use the Website, the
+          Service and/or the Software is under full responsibility of User, who should comply with the current legislation.
+        </div>
+      </div>
+      <div class="border-t border-t-white/10">
+        <div class="w-full max-w-8xl mx-auto px-3 md:px-6">
+          <div class="pt-5 flex flex-col md:flex-row items-center justify-center text-center text-sm">
+            <div class="mb-5" style="padding-bottom: 50px">
+              Copyrights © 2026 All Rights Reserved by
+              <a class="text-white hover:text-primary" href="#form">Profit Rings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="floatingButton">
+      <a href="#form" class="floatingButton">Register</a>
+    </div>
+
+    <script src="./offer_index/jquery-3.7.1.min.js"></script>
+    <script>
+      var $page = $("html, body");
+      $('a[href*="#"]').click(function () {
+        $page.animate(
+          {
+            scrollTop: $($.attr(this, "href")).offset().top,
+          },
+          400,
+        );
+        return false;
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js@1.13.3/bundle/libphonenumber-max.js"></script>
+    <script src="./validation/validate.cdn.umd.js"></script>
+    <script>
+      Validate.initLeadForms("#form", {
+        lang: "en",
+        country: "CA",
+        nameInput: '[name="first_name"]',
+        fields: "auto",
+        flagIndicator: true,
+      });
+    </script>
+  </body>
+</html>

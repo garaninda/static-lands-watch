@@ -1,0 +1,16 @@
+.presentation-mail{width:100%;border:1px solid #ccc;box-shadow:1px;padding-bottom:8px;border-radius:5px;max-height:300px;overflow-y:scroll;position:absolute;z-index:1000;background:#fff}
+.mail-ext{padding:10px !important;cursor:pointer;font-size: 16px; text-align: left;}
+.mail-ext:hover{background:#f5f5f5}
+.presentation-mail{max-width: 300px; color:#000}
+#country-listbox li{
+    font-size: 16px;
+    list-style: none;
+    margin-left: inherit;
+    line-height: inherit;
+    margin-bottom: inherit;
+}
+#country-listbox li::before{
+    content: none;
+}
+
+.hide{display: none;}
