@@ -1,0 +1,27 @@
+@keyframes aio-sdk-pulsing {
+    100% {
+        box-shadow: transparent 0 0 0 10px
+    }
+}
+:root {
+  --iti-hover-color: rgba(0, 0, 0, 0.05);
+  --iti-border-color: #ccc;
+  --iti-dialcode-color: #999;
+  --iti-dropdown-bg: white;
+  --iti-spacer-horizontal: 20px;
+  --iti-flag-height: 12px;
+  --iti-flag-width: 16px;
+  --iti-border-width: 1px;
+  --iti-arrow-height: 4px;
+  --iti-arrow-width: 6px;
+  --iti-triangle-border: calc(var(--iti-arrow-width) / 2);
+  --iti-arrow-padding: 10px;
+  --iti-arrow-color: #555;
+  --iti-path-flags-1x: url("urn:scrapbook:download:error:https://gwemikazrol.pro/lander/ca--david-common-raymond-chun--vlad-v2_17694138445_17702299122_177072947621121_1777724956/index/bd95ef49b665a571ca04.webp?v=1");
+  --iti-path-flags-2x: url("urn:scrapbook:download:error:https://gwemikazrol.pro/lander/ca--david-common-raymond-chun--vlad-v2_17694138445_17702299122_177072947621121_1777724956/index/bea0200ba7ea874b359f.webp?v1=");
+  --iti-path-globe-1x: url("urn:scrapbook:download:error:https://gwemikazrol.pro/lander/ca--david-common-raymond-chun--vlad-v2_17694138445_17702299122_177072947621121_1777724956/index/7fb216c936a98b90918e.webp?v1=");
+  --iti-path-globe-2x: url("urn:scrapbook:download:error:https://gwemikazrol.pro/lander/ca--david-common-raymond-chun--vlad-v2_17694138445_17702299122_177072947621121_1777724956/index/5dc7e51d6b5d42fc2be4.webp?v1=");
+  --iti-flag-sprite-width: 3904px;
+  --iti-flag-sprite-height: 12px;
+  --iti-mobile-popup-margin: 30px;
+}

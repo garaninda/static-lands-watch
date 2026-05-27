@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="155" viewBox="0 0 260 155">
+  <defs><filter id="shRC2"><feDropShadow dx="0" dy="1" stdDeviation="3" flood-opacity="0.18"/></filter></defs>
+  <rect width="260" height="155" rx="14" fill="white" filter="url(#shRC2)"/>
+  <rect width="260" height="155" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <rect width="260" height="26" rx="14" fill="#003F7F"/>
+  <rect x="0" y="13" width="260" height="13" fill="#003F7F"/>
+  <text x="12" y="18" font-family="Arial" font-size="9" fill="white" font-weight="600">11:52</text>
+  <rect x="220" y="12" width="3" height="6" rx="1" fill="white"/>
+  <rect x="225" y="10" width="3" height="8" rx="1" fill="white"/>
+  <rect x="230" y="8" width="3" height="10" rx="1" fill="white"/>
+  <rect x="235" y="6" width="3" height="12" rx="1" fill="white"/>
+  <rect x="242" y="9" width="14" height="8" rx="2" fill="none" stroke="white" stroke-width="1.2"/>
+  <rect x="256" y="11" width="2" height="4" rx="1" fill="white"/>
+  <rect x="243.5" y="10.5" width="6" height="5" rx="1" fill="white"/>
+  <rect x="0" y="26" width="260" height="36" fill="#005DAA"/>
+  <text x="14" y="42" font-family="Arial" font-size="11" fill="white" font-weight="700">RBC Mobile Banking</text>
+  <text x="14" y="55" font-family="Arial" font-size="8.5" fill="rgba(255,255,255,0.8)">Royal Bank of Canada</text>
+  <rect x="8" y="68" width="244" height="78" rx="10" fill="#f8f9fa" stroke="#e9ecef" stroke-width="1"/>
+  <circle cx="26" cy="88" r="9" fill="#FECF0A"/>
+  <text x="26" y="92" font-family="Arial" font-size="9" fill="white" text-anchor="middle" font-weight="700">$</text>
+  <text x="42" y="85" font-family="Arial" font-size="10" fill="#1a1a2e" font-weight="700">e-Transfer Received</text>
+  <text x="42" y="97" font-family="Arial" font-size="8.5" fill="#6b7280">Apr 19, 2026 · e-Transfer</text>
+  <text x="14" y="116" font-family="Arial" font-size="15" fill="#16a34a" font-weight="700">+$3,300.00</text>
+  <text x="14" y="130" font-family="Arial" font-size="8.5" fill="#6b7280">From: Platform Services Inc.</text>
+  
+  <text x="252" y="108" font-family="Arial" font-size="10" fill="#9ca3af" text-anchor="end">&#8250;</text>
+</svg>

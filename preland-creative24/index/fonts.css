@@ -1,0 +1,91 @@
+/*! CSS Used fontfaces */
+@font-face {
+  font-family: "SuisseIntl";
+  src: url(https://www.tvo.org/static/media/SuisseIntl-Light.e4e3fa22.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src: url(https://www.tvo.org/static/media/SuisseIntl-LightItalic.229cd782.woff) format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src: url(https://www.tvo.org/static/media/SuisseIntl-Regular.008d5433.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src:
+    url(https://www.tvo.org/static/media/SuisseIntl-RegularItalic.ceb001f0.eot) format("embedded-opentype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-RegularItalic.2e9671fb.woff) format("woff"),
+    url(https://www.tvo.org/static/media/SuisseIntl-RegularItalic.e7d7808c.ttf) format("truetype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-RegularItalic.1365e3c3.svg) format("svg");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src:
+    url(https://www.tvo.org/static/media/SuisseIntl-Medium.0e6d5020.eot) format("embedded-opentype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-Medium.f86c20b2.woff) format("woff"),
+    url(https://www.tvo.org/static/media/SuisseIntl-Medium.08e55661.ttf) format("truetype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-Medium.03a51b83.svg) format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src:
+    url(https://www.tvo.org/static/media/SuisseIntl-MediumItalic.2f42a1a2.eot) format("embedded-opentype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-MediumItalic.54f6e114.woff) format("woff"),
+    url(https://www.tvo.org/static/media/SuisseIntl-MediumItalic.8d83236f.ttf) format("truetype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-MediumItalic.1794c2d9.svg) format("svg");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src: url(./fonts/SuisseIntl-SemiBold.f73f089c.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src:
+    url(https://www.tvo.org/static/media/SuisseIntl-SemiboldItalic.fdaa960f.eot) format("embedded-opentype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-SemiboldItalic.96ee48fa.woff) format("woff"),
+    url(https://www.tvo.org/static/media/SuisseIntl-SemiboldItalic.819434c2.ttf) format("truetype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-SemiboldItalic.41399e30.svg) format("svg");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src: url(./fonts/SuisseIntl-Bold.9cbf35e3.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl";
+  src:
+    url(https://www.tvo.org/static/media/SuisseIntl-BoldItalic.31b15f1f.eot) format("embedded-opentype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-BoldItalic.9fedc4ec.woff) format("woff"),
+    url(https://www.tvo.org/static/media/SuisseIntl-BoldItalic.de608dae.ttf) format("truetype"),
+    url(https://www.tvo.org/static/media/SuisseIntl-BoldItalic.f57810cf.svg) format("svg");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
