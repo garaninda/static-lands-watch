@@ -1,0 +1,139 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.10/css/intlTelInput.css");
+@media print {
+    body {
+        display: none!important;
+    }
+}
+:root{
+    --mainColor: #000000;
+    --text: #fff;
+    --input-color: #000;
+    --valid-input-color: #000;
+}
+
+#Hear-from-You {
+    border: 2px solid var(--mainColor);
+    border-radius: 16px;
+    max-width: 560px;
+    margin: 0 auto;
+    font-family: ABCSans;
+    box-shadow: 0px 0px 20px var(--mainColor);
+    background: #fff;
+}
+
+.Hear-from-You-Form {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    box-sizing: border-box;
+}
+
+.Hear-from-You-Title {
+    text-align: center;
+    padding: 15px 15px;
+    font-size: 30px;
+    background: var(--mainColor);
+    color: var(--text);
+    text-transform: uppercase;
+    margin: 20px 15px 30px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+@media(max-width: 767px){
+    .Hear-from-You-Title {
+        font-size: 24px;
+    }
+}
+
+#Hear-from-You input {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border: 1px solid var(--mainColor);
+    border-radius: 4px;
+    color: var(--input-color);
+    line-height: 1;
+    background: #f7f7f7;
+    box-shadow: 3px 3px 6px #00000030;
+    font-family: ABCSans;
+    background: #fff;
+}
+#Hear-from-You input:focus{
+    outline: 1px solid var(--mainColor);
+}
+
+.Hear-from-You-Btn {
+    background: var(--mainColor);
+    color: var(--text);
+    width: 100%;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-family: ABCSans;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 20px var(--mainColor);
+    margin-top: 15px;
+}
+
+input.error {
+    margin-bottom: 5px!important;
+    background: #ff000020!important;
+    position: relative;
+    color: var(--valid-input-color)!important;
+}
+
+input.error::placeholder{
+    color: #000;
+}
+
+label.error {
+    font-family: ABCSans;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.phone + label.error{
+    margin: 5px 0 0!important;
+}
+
+input.valid {
+    background: #00ef0030!important;
+    color: var(--valid-input-color)!important;
+}
+
+.iti--separate-dial-code {
+    padding: 0!important;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.iti__selected-country{
+    padding-right: 13px;
+    background: #e1e1e1!important;
+    border-radius: 4px 0 0 3px;
+    height: 42px!important;
+}
+.iti__selected-dial-code{
+    color: #000;
+}
+
+.iti__country-container {
+    pointer-events: none;
+}
+.iti {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.iti__arrow {
+    display: none;
+}
