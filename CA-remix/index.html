@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wealthsimple Invest – AI-Powered Financial Platform</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        color: #1a1a1a;
+        background: #fff;
+      }
+      .lp {
+        width: 100%;
+      }
+
+      /* NAV */
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #e8e8e8;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .logo {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+      }
+      .logo span {
+        color: #1d9e75;
+      }
+      .nav-btn {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 8px 18px;
+        background: #1d9e75;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .nav-btn:hover {
+        background: #0f6e56;
+      }
+
+      /* PROMO BAR */
+      .promo-bar {
+        background: #e1f5ee;
+        padding: 10px 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .promo-text {
+        font-size: 13px;
+        font-weight: 600;
+        color: #085041;
+      }
+      .promo-badge {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 12px;
+        background: #1d9e75;
+        color: #fff;
+        border-radius: 8px;
+        white-space: nowrap;
+      }
+
+      /* HERO */
+      .hero {
+        padding: 3.5rem 1.5rem 3rem;
+        background: #fff;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .hero-eyebrow {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: #1d9e75;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      .hero-headline {
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        margin-bottom: 1.25rem;
+        max-width: 560px;
+      }
+      .hero-headline em {
+        font-style: italic;
+        color: #1d9e75;
+      }
+      .hero-sub {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        max-width: 480px;
+        margin-bottom: 1.5rem;
+      }
+      .sp-bar {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+      .sp-item {
+        padding: 10px 14px;
+        background: #f5f5f3;
+        border-radius: 8px;
+      }
+      .sp-num {
+        font-size: 17px;
+        font-weight: 600;
+        color: #1d9e75;
+      }
+      .sp-label {
+        font-size: 12px;
+        color: #777;
+        line-height: 1.3;
+      }
+      .hero-form {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 0.75rem;
+      }
+      .hero-form input {
+        flex: 1;
+        min-width: 200px;
+        font-size: 15px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        color: #1a1a1a;
+      }
+      .hero-form input:focus {
+        outline: none;
+        border-color: #1d9e75;
+      }
+      .hero-form button {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 12px 24px;
+        background: #1d9e75;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .hero-form button:hover {
+        background: #0f6e56;
+      }
+      .hero-note {
+        font-size: 13px;
+        color: #777;
+      }
+      .trust-row {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: #777;
+      }
+      .trust-item svg {
+        color: #1d9e75;
+        flex-shrink: 0;
+      }
+
+      /* SECTIONS */
+      .section {
+        padding: 3rem 1.5rem;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .sec-bg {
+        background: #f9f9f7;
+      }
+      .sec-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 0.75rem;
+      }
+      .sec-headline {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: -0.3px;
+        margin-bottom: 1rem;
+      }
+      .sec-body {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.7;
+        max-width: 580px;
+      }
+
+      /* INFOGRAPHIC */
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      .info-card {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+        padding: 1.25rem;
+        text-align: center;
+      }
+      .info-icon {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+      .info-num {
+        font-size: 24px;
+        font-weight: 700;
+        color: #a32d2d;
+        margin-bottom: 4px;
+      }
+      .info-label {
+        font-size: 13px;
+        color: #777;
+        line-height: 1.4;
+      }
+      .info-big {
+        background: #fcebeb;
+        border: 1px solid #f09595;
+        border-radius: 12px;
+        padding: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .info-big-num {
+        font-size: 36px;
+        font-weight: 700;
+        color: #a32d2d;
+        white-space: nowrap;
+      }
+      .info-big-text {
+        font-size: 14px;
+        color: #791f1f;
+        line-height: 1.5;
+      }
+
+      /* BREAK BOX */
+      .break-box {
+        margin-top: 1.5rem;
+        padding: 1.25rem 1.5rem;
+        background: #e1f5ee;
+        border-radius: 12px;
+        font-size: 15px;
+        color: #085041;
+        line-height: 1.6;
+      }
+
+      /* STEPS */
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+      .step {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        padding: 1.25rem;
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+      }
+      .step-num {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #e1f5ee;
+        color: #0f6e56;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+      .step-title {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .step-desc {
+        font-size: 14px;
+        color: #777;
+        line-height: 1.5;
+      }
+
+      /* TESTIMONIALS */
+      .testimonials {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+      }
+      .testimonial {
+        padding: 1.5rem;
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+      }
+      .t-text {
+        font-size: 15px;
+        font-style: italic;
+        line-height: 1.7;
+        color: #1a1a1a;
+        margin-bottom: 1.25rem;
+      }
+      .t-text p {
+        margin-bottom: 0.75rem;
+      }
+      .t-text p:last-child {
+        margin-bottom: 0;
+      }
+      .t-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 1rem;
+        border-top: 1px solid #e8e8e8;
+      }
+      .t-avatar {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #e1f5ee;
+        color: #0f6e56;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+      .t-name {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .t-role {
+        font-size: 13px;
+        color: #777;
+      }
+
+      /* BONUS */
+      .bonus-box {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+        padding: 1.5rem;
+      }
+      .bonus-sub {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+      .bonus-steps {
+        display: flex;
+        flex-direction: column;
+      }
+      .bonus-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0.875rem 0;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .bonus-step:last-child {
+        border-bottom: none;
+      }
+      .b-badge {
+        font-size: 11px;
+        font-weight: 600;
+        padding: 3px 8px;
+        border-radius: 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .b-req {
+        background: #e1f5ee;
+        color: #085041;
+      }
+      .b-act {
+        background: #e6f1fb;
+        color: #0c447c;
+      }
+      .b-step-text {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .b-amount {
+        font-size: 13px;
+        font-weight: 600;
+        color: #1d9e75;
+        margin-top: 2px;
+      }
+      .b-deadline {
+        margin-top: 1.25rem;
+        font-size: 13px;
+        color: #999;
+        text-align: center;
+      }
+
+      /* FAQ */
+      .faq {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+      }
+      .faq-item {
+        padding: 1.25rem 0;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .faq-item:last-child {
+        border-bottom: none;
+      }
+      .faq-q {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .faq-a {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.7;
+      }
+      .faq-pill {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-size: 13px;
+        font-weight: 600;
+        color: #085041;
+        background: #e1f5ee;
+        padding: 4px 10px;
+        border-radius: 8px;
+      }
+
+      /* FINAL CTA */
+      .final-cta {
+        padding: 3.5rem 1.5rem;
+        text-align: center;
+        background: #f9f9f7;
+      }
+      .final-headline {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.3px;
+      }
+      .final-sub {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+      .final-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 440px;
+        margin: 0 auto 0.75rem;
+        text-align: left;
+      }
+      .final-form .ff-row {
+        display: flex;
+        gap: 10px;
+      }
+      .final-form .ff-row input {
+        flex: 1;
+        min-width: 0;
+      }
+      .final-form input {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        color: #1a1a1a;
+      }
+      .final-form input:focus {
+        outline: none;
+        border-color: #1d9e75;
+      }
+      .final-form button {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 13px 24px;
+        margin-top: 4px;
+        background: #1d9e75;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .final-form button:hover {
+        background: #0f6e56;
+      }
+      @media (max-width: 460px) {
+        .final-form .ff-row {
+          flex-direction: column;
+        }
+      }
+      .final-note {
+        font-size: 12px;
+        color: #999;
+        max-width: 480px;
+        margin: 0 auto;
+        line-height: 1.5;
+      }
+
+      /* FOOTER */
+      .footer {
+        padding: 1.5rem;
+        border-top: 1px solid #e8e8e8;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .footer-logo {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .footer-logo span {
+        color: #1d9e75;
+      }
+      .footer-links {
+        display: flex;
+        gap: 1rem;
+      }
+      .footer-links a {
+        font-size: 12px;
+        color: #999;
+        text-decoration: none;
+      }
+      .footer-links a:hover {
+        color: #1d9e75;
+      }
+
+      @media (max-width: 600px) {
+        .hero-headline {
+          font-size: 26px;
+        }
+        .sec-headline {
+          font-size: 20px;
+        }
+        .final-headline {
+          font-size: 22px;
+        }
+        .sp-bar {
+          gap: 0.75rem;
+        }
+        .sp-item {
+          padding: 8px 12px;
+        }
+      }
+
+      /* ===== MOTION LAYER ===== */
+      /* Ambient wash behind hero – subtle brand glow */
+      .hero {
+        position: relative;
+        overflow: hidden;
+      }
+      .hero > * {
+        position: relative;
+        z-index: 1;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -30%;
+        right: -15%;
+        width: 520px;
+        height: 520px;
+        background: radial-gradient(circle, rgba(29, 158, 117, 0.1) 0%, rgba(29, 158, 117, 0) 70%);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Nav reacts to scroll */
+      .nav {
+        transition: box-shadow 0.3s ease;
+      }
+      .nav.scrolled {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Hover physics */
+      .info-card,
+      .step,
+      .testimonial {
+        transition:
+          transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.4s ease,
+          border-color 0.4s ease;
+      }
+      .info-card:hover,
+      .step:hover,
+      .testimonial:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+        border-color: #cfe9df;
+      }
+      .nav-btn,
+      .hero-form button,
+      .final-form button {
+        transition:
+          background 0.25s ease,
+          transform 0.2s ease,
+          box-shadow 0.25s ease;
+      }
+      .nav-btn:hover,
+      .hero-form button:hover,
+      .final-form button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px rgba(29, 158, 117, 0.32);
+      }
+      .step-num,
+      .t-avatar {
+        transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .step:hover .step-num,
+      .testimonial:hover .t-avatar {
+        transform: scale(1.08);
+      }
+
+      /* Scrub word reveal */
+      #solutionText .w {
+        display: inline-block;
+        will-change: opacity;
+      }
+
+      /* Anti-flash: hide reveal targets ONLY when JS + motion are active */
+      html.gsap-on .hero-eyebrow,
+      html.gsap-on .hero-headline,
+      html.gsap-on .hero-sub,
+      html.gsap-on .sp-item,
+      html.gsap-on .hero-form,
+      html.gsap-on .hero-note,
+      html.gsap-on .trust-row,
+      html.gsap-on .sec-label,
+      html.gsap-on .sec-headline,
+      html.gsap-on .break-box,
+      html.gsap-on .info-card,
+      html.gsap-on .info-big,
+      html.gsap-on .step,
+      html.gsap-on .testimonial,
+      html.gsap-on .bonus-box,
+      html.gsap-on .faq-item,
+      html.gsap-on .final-headline,
+      html.gsap-on .final-sub,
+      html.gsap-on .final-form,
+      html.gsap-on .final-note {
+        opacity: 0;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .info-card,
+        .step,
+        .testimonial,
+        .step-num,
+        .t-avatar,
+        .nav-btn,
+        .hero-form button,
+        .final-form button {
+          transition: none;
+        }
+      }
+
+      /* ===== FULL-BLEED BANDS: backgrounds span the viewport, content stays ~780px centered ===== */
+      .nav,
+      .promo-bar,
+      .hero,
+      .section,
+      .final-cta,
+      .footer {
+        padding-inline: max(1.5rem, calc(50% - 390px));
+      }
+      /* nav as anchor-button keeps button look */
+      a.nav-btn {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+      }
+    </style>
+    <link rel="stylesheet" href="./validation/style.css" />
+    <script src="./js/motion-gate.js"></script>
+  </head>
+  <body>
+    <div class="lp">
+      <nav class="nav">
+        <div class="logo">
+          Wealthsimple
+          <span>Invest</span>
+        </div>
+        <a href="#join" class="nav-btn">Book a Free Call</a>
+      </nav>
+
+      <div class="promo-bar">
+        <div class="promo-text">🎁 New members get up to $500 CAD bonus – offer ends <span class="today">July 15</span></div>
+        <div class="promo-badge">Use code: WEALTH500</div>
+      </div>
+
+      <section class="hero">
+        <div class="hero-eyebrow">AI-powered financial platform · Canada</div>
+        <h1 class="hero-headline">
+          One unexpected bill shouldn't derail your whole month.
+          <br />
+          <em>But for most Canadians, it does.</em>
+        </h1>
+        <p class="hero-sub">Wealthsimple Invest helps everyday Canadians build extra income using AI – no financial experience needed, no second job.</p>
+        <div class="sp-bar">
+          <div class="sp-item">
+            <div class="sp-num" data-count="10000" data-suffix="+" data-sep="1">10,000+</div>
+            <div class="sp-label">
+              Canadians on
+              <br />
+              the platform
+            </div>
+          </div>
+          <div class="sp-item">
+            <div class="sp-num" data-count="100" data-prefix="$" data-suffix="+">$100+</div>
+            <div class="sp-label">
+              Avg. extra income
+              <br />
+              per month*
+            </div>
+          </div>
+          <div class="sp-item">
+            <div class="sp-num">4.8 / 5</div>
+            <div class="sp-label">
+              Average rating
+              <br />
+              from users
+            </div>
+          </div>
+          <div class="sp-item">
+            <div class="sp-num">Free</div>
+            <div class="sp-label">
+              Start with a
+              <br />
+              personal broker
+            </div>
+          </div>
+        </div>
+        <p class="hero-note">👤 No call centres. No sales scripts. Just a real person.</p>
+        <div class="trust-row">
+          <div class="trust-item">✅ Regulated in Canada</div>
+          <div class="trust-item">🔒 Your funds stay yours</div>
+          <div class="trust-item">📞 Real human support</div>
+        </div>
+      </section>
+
+      <section class="section sec-bg">
+        <div class="sec-label">Why Canadians are looking for alternatives</div>
+        <h2 class="sec-headline">The cost of living isn't slowing down.</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">🛒</div>
+            <div class="info-num" data-count="27" data-prefix="+" data-suffix="%">+27%</div>
+            <div class="info-label">Grocery prices vs 5 years ago</div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🏠</div>
+            <div class="info-num" data-count="48" data-prefix="+" data-suffix="%">+48%</div>
+            <div class="info-label">Average rent increase since 2019</div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">⛽</div>
+            <div class="info-num" data-count="31" data-prefix="+" data-suffix="%">+31%</div>
+            <div class="info-label">Fuel costs vs 5 years ago</div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📈</div>
+            <div class="info-num" data-count="2.1" data-decimals="1" data-prefix="+" data-suffix="%">+2.1%</div>
+            <div class="info-label">Avg. wage growth per year</div>
+          </div>
+        </div>
+        <div class="info-big">
+          <div class="info-big-num">1 in 4</div>
+          <div class="info-big-text">
+            Canadian households report difficulty covering basic monthly expenses – even with a full-time income.
+            <br />
+            <span style="font-size: 12px; opacity: 0.7">* Statistics Canada, 2025</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sec-label">The solution</div>
+        <h2 class="sec-headline">There's a different way. And it doesn't require a finance degree.</h2>
+        <p class="sec-body" id="solutionText">
+          Wealthsimple Invest was built for people who are busy living real life – not watching stock charts. The platform analyzes the market automatically and works in the background, so your money has the chance to grow while you're on
+          the road, at the job site, or at home with your family.
+        </p>
+        <div class="break-box">
+          <strong>This is not trading. This is not crypto.</strong>
+          <br />
+          It's a tool designed for steady, quiet growth – for ordinary Canadians.
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sec-label">How it works</div>
+        <h2 class="sec-headline">Getting started takes less time than your coffee break.</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <div class="step-title">A personal broker calls you back</div>
+              <div class="step-desc">Leave your number. Your dedicated specialist calls at a time that works for you.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <div class="step-title">See the platform in action</div>
+              <div class="step-desc">A real specialist walks you through exactly how it works – live, in plain English.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <div class="step-title">Decide if it's right for you</div>
+              <div class="step-desc">No obligation. You choose if and when you want to start.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sec-bg">
+        <div class="sec-label">Real Canadians</div>
+        <h2 class="sec-headline">The biggest change isn't just financial. It's peace of mind.</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            <div class="t-text">
+              <p>
+                "I've been driving long haul for 19 years. Alberta to BC, sometimes down to the States. Good money, but it disappears fast – fuel, maintenance, the mortgage, kids' stuff. My buddy Dave told me about Wealthsimple Invest at a
+                truck stop outside of Red Deer. I was skeptical. Called anyway.
+              </p>
+              <p>
+                Guy on the phone didn't try to sell me anything. Walked me through the whole thing in about 15 minutes. I started with $300. Four months later I've got a cushion for the first time since 2019. Last month the transmission
+                went on my truck and I didn't have to panic."
+              </p>
+            </div>
+            <div class="t-author">
+              <div class="t-avatar">MT</div>
+              <div>
+                <div class="t-name">Mike T.</div>
+                <div class="t-role">Long haul driver, Red Deer AB</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="t-text">
+              <p>"My pension is $1,840 a month. That used to be enough. Now it isn't.</p>
+              <p>
+                My daughter helped me get on the call – she was more nervous about it than I was, honestly. The specialist was patient. He explained everything twice without making me feel stupid. I started with $200. I'm not getting rich.
+                But I stopped dipping into my savings every month, and that was the whole point."
+              </p>
+            </div>
+            <div class="t-author">
+              <div class="t-avatar">CB</div>
+              <div>
+                <div class="t-name">Carol B.</div>
+                <div class="t-role">Retired nurse, Hamilton ON</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="t-text">
+              <p>"I do roofing. Seasonal work – good summers, slow winters. Every year around November I start stressing about making it to March.</p>
+              <p>Wealthsimple Invest doesn't fix the seasonality but it helps. I've got something working in the background now even when I'm not on a job. First winter in four years I didn't have to borrow from my brother."</p>
+            </div>
+            <div class="t-author">
+              <div class="t-avatar">TS</div>
+              <div>
+                <div class="t-name">Terry S.</div>
+                <div class="t-role">Roofer, Sudbury ON</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sec-bg">
+        <div class="sec-label">Limited offer</div>
+        <h2 class="sec-headline">Build your $500 welcome bonus.</h2>
+        <div class="bonus-box">
+          <div class="bonus-sub">Book your demo call and start earning your bonus. Offer ends <span class="today">July 15</span> – use code WEALTH500.</div>
+          <div class="bonus-steps">
+            <div class="bonus-step">
+              <div class="b-badge b-req">Required</div>
+              <div>
+                <div class="b-step-text">Book and complete your free demo call</div>
+                <div class="b-amount">Unlocks your account + $100</div>
+              </div>
+            </div>
+            <div class="bonus-step">
+              <div class="b-badge b-act">Action</div>
+              <div>
+                <div class="b-step-text">Make your first deposit</div>
+                <div class="b-amount">+$150 bonus</div>
+              </div>
+            </div>
+            <div class="bonus-step">
+              <div class="b-badge b-act">Action</div>
+              <div>
+                <div class="b-step-text">Set up a recurring monthly contribution</div>
+                <div class="b-amount">+$250 bonus</div>
+              </div>
+            </div>
+          </div>
+          <div class="b-deadline">⏰ Offer ends <span class="today-y">July 15, 2026</span>. Terms apply.</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sec-label">Your questions</div>
+        <h2 class="sec-headline">Honest answers to what you're probably thinking.</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">Is this safe?</div>
+            <div class="faq-a">Wealthsimple Invest operates within Canada's regulated financial framework. Your funds are held in your name, not ours. We don't have access to move or withdraw your money without your instruction.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Can I withdraw my money whenever I want?</div>
+            <div class="faq-a">
+              Yes – your funds are yours at all times. You can request a withdrawal whenever you choose, with no penalties and no waiting period. There's no lock-in.
+              <div class="faq-pill">🔓 No lock-in. Withdraw anytime.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">What if I change my mind after signing up?</div>
+            <div class="faq-a">No problem. There are no exit fees, no cancellation penalties, and no awkward conversations. You decide to stop – you stop. Your remaining balance is returned to you in full.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">I tried something similar before and lost money. How is this different?</div>
+            <div class="faq-a">
+              We hear this a lot, and it's a fair concern. Most platforms that promise fast returns put your capital at high risk to deliver them. Wealthsimple Invest is built around steady, conservative growth – not big swings. Your
+              personal broker will walk you through exactly how the platform manages risk before you put in a single dollar.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">I'm in my 60s – is it too late to start?</div>
+            <div class="faq-a">
+              Not at all. Many of our most satisfied users started after 60. The platform is designed for people who want steady extra income – not a 30-year growth strategy. Your broker will tailor a starting plan that fits your timeline
+              and your goals.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">How will I know my money is actually working?</div>
+            <div class="faq-a">
+              You get a personal dashboard that shows your balance, activity, and performance in plain numbers – updated in real time. No confusing charts, no financial jargon. Your broker also checks in with you regularly so you're never
+              left wondering.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Do I need to manage the platform myself, or does my broker handle it?</div>
+            <div class="faq-a">
+              Your broker handles the setup and guides you through everything. Once you're running, the platform works automatically. You don't need to log in every day or make any decisions – but you can always check in whenever you want.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Do I need a lot of money to start?</div>
+            <div class="faq-a">No. The demo call will walk you through realistic starting points based on your situation – not a one-size-fits-all number. Many users start small and add more when they're comfortable.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">What if I'm not good with technology?</div>
+            <div class="faq-a">If you can use a smartphone, you can use Wealthsimple Invest. Your personal broker helps you with the setup and stays available for questions. You're never on your own.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Is the demo call a sales pitch?</div>
+            <div class="faq-a">It's a conversation. A real specialist explains how the platform works and answers your questions honestly – including whether it's actually a good fit for your situation. You decide what happens next.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="join">
+        <h2 class="final-headline">
+          You've worked hard enough.
+          <br />
+          Let's see if Wealthsimple Invest can work for you.
+        </h2>
+        <p class="final-sub">
+          Book a free 10-minute demo call. No pressure. No commitment. Just clarity.
+          <br />
+          Plus – get up to $500 CAD when you join before <span class="today">July 15</span>.
+        </p>
+        <form id="form" class="final-form" action="#" method="post">
+          <input type="hidden" name="country" value="CA" />
+          <div class="ff-row">
+            <input type="text" name="first_name" placeholder="First name" autocomplete="given-name" />
+            <input type="text" name="last_name" placeholder="Last name" autocomplete="family-name" />
+          </div>
+          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" />
+          <input type="email" name="email" placeholder="Email address" autocomplete="email" />
+          <button type="submit">Book My Free Call</button>
+        </form>
+        <p class="final-note">* Average income figures based on user-reported data. Individual results vary. Terms and conditions apply.</p>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-logo">
+          Wealthsimple
+          <span>Invest</span>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" onerror="document.documentElement.classList.remove('gsap-on')"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" onerror="document.documentElement.classList.remove('gsap-on')"></script>
+    <script src="./js/main.js"></script>
+
+    <!-- Lead-form validation (phone-validation lib) – Canada, flag in phone input -->
+    <script src="./validation/validate.umd.js"></script>
+    <script>
+      Validate.initLeadForms("form", {
+        lang: "en",
+        country: "CA",
+        flagIndicator: true, // флаг Канады в инпуте телефона
+        nameInput: '[name="first_name"]', // первичное поле имени (в форме нет name="name")
+        phoneInput: '[name="phone"]',
+        fields: {
+          // surname находит input по name="last_name", email — по name="email" (через alias-карту библиотеки)
+          surname: { required: true, noDigits: true },
+          email: { required: true },
+        },
+        dedupe: {
+          enabled: true,
+          storage: "localStorage",
+          ttlMs: 24 * 60 * 60 * 1000, // антидубль по номеру на 24 часа
+          keyPrefix: "ws_invest_lead_",
+        },
+      });
+    </script>
+  </body>
+</html>
