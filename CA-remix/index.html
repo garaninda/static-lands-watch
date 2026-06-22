@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wealthsimple Invest – AI-Powered Financial Platform</title>
+    <title>Questrade – AI-Powered Financial Platform</title>
     <style>
       * {
         box-sizing: border-box;
@@ -32,30 +32,38 @@
         z-index: 10;
       }
       .logo {
+        display: flex;
+        align-items: center;
+        gap: 9px;
         font-size: 18px;
         font-weight: 600;
         letter-spacing: -0.3px;
       }
+      .logo-mark {
+        height: 26px;
+        width: auto;
+        display: block;
+      }
       .logo span {
-        color: #1d9e75;
+        color: #346023;
       }
       .nav-btn {
         font-size: 13px;
         font-weight: 600;
         padding: 8px 18px;
-        background: #1d9e75;
+        background: #346023;
         color: #fff;
         border: none;
         border-radius: 8px;
         cursor: pointer;
       }
       .nav-btn:hover {
-        background: #0f6e56;
+        background: #264a18;
       }
 
       /* PROMO BAR */
       .promo-bar {
-        background: #e1f5ee;
+        background: #e9f4dc;
         padding: 10px 1.5rem;
         display: flex;
         align-items: center;
@@ -66,14 +74,14 @@
       .promo-text {
         font-size: 13px;
         font-weight: 600;
-        color: #085041;
+        color: #346023;
       }
       .promo-badge {
         font-size: 12px;
         font-weight: 600;
         padding: 4px 12px;
-        background: #1d9e75;
-        color: #fff;
+        background: #c4ffb1;
+        color: #346023;
         border-radius: 8px;
         white-space: nowrap;
       }
@@ -83,12 +91,46 @@
         padding: 3.5rem 1.5rem 3rem;
         background: #fff;
         border-bottom: 1px solid #e8e8e8;
+        min-height: 480px;
+      }
+      .hero-copy {
+        max-width: 52%;
+      }
+      /* broker portrait as a back-layer, pinned to the bottom of the section */
+      .hero .hero-visual {
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        right: max(1.5rem, calc(50% - 390px));
+        height: clamp(360px, 42vw, 460px);
+        display: flex;
+        align-items: flex-end;
+        pointer-events: none;
+      }
+      /* soft brand glow grounding the portrait so it doesn't float on white */
+      .hero .hero-visual::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: -16%;
+        right: -16%;
+        bottom: -4%;
+        height: 68%;
+        background: radial-gradient(closest-side at 50% 100%, rgba(52, 96, 35, 0.13), rgba(52, 96, 35, 0));
+        pointer-events: none;
+      }
+      .hero-img {
+        display: block;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        object-position: bottom;
       }
       .hero-eyebrow {
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 0.08em;
-        color: #1d9e75;
+        color: #346023;
         text-transform: uppercase;
         margin-bottom: 1rem;
       }
@@ -102,7 +144,7 @@
       }
       .hero-headline em {
         font-style: italic;
-        color: #1d9e75;
+        color: #346023;
       }
       .hero-sub {
         font-size: 16px;
@@ -112,20 +154,21 @@
         margin-bottom: 1.5rem;
       }
       .sp-bar {
-        display: flex;
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
         margin-bottom: 2rem;
-        flex-wrap: wrap;
+        max-width: 380px;
       }
       .sp-item {
         padding: 10px 14px;
-        background: #f5f5f3;
+        background: #f1f3ec;
         border-radius: 8px;
       }
       .sp-num {
         font-size: 17px;
         font-weight: 600;
-        color: #1d9e75;
+        color: #346023;
       }
       .sp-label {
         font-size: 12px;
@@ -149,13 +192,13 @@
       }
       .hero-form input:focus {
         outline: none;
-        border-color: #1d9e75;
+        border-color: #346023;
       }
       .hero-form button {
         font-size: 15px;
         font-weight: 600;
         padding: 12px 24px;
-        background: #1d9e75;
+        background: #346023;
         color: #fff;
         border: none;
         border-radius: 8px;
@@ -163,7 +206,7 @@
         white-space: nowrap;
       }
       .hero-form button:hover {
-        background: #0f6e56;
+        background: #264a18;
       }
       .hero-note {
         font-size: 13px;
@@ -183,7 +226,7 @@
         color: #777;
       }
       .trust-item svg {
-        color: #1d9e75;
+        color: #346023;
         flex-shrink: 0;
       }
 
@@ -193,7 +236,7 @@
         border-bottom: 1px solid #e8e8e8;
       }
       .sec-bg {
-        background: #f9f9f7;
+        background: #f1f3ec;
       }
       .sec-label {
         font-size: 11px;
@@ -267,14 +310,166 @@
         line-height: 1.5;
       }
 
+      /* COST-OF-LIVING CHARTS */
+      .chart-rows {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+      .chart-card {
+        display: flex;
+        align-items: center;
+        gap: 2.25rem;
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-radius: 16px;
+        padding: 1.5rem 1.85rem;
+        --tone: #a32d2d;
+        --tone-soft: rgba(163, 45, 45, 0.13);
+      }
+      .chart-card:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .chart-card[data-tone="wage"] {
+        --tone: #346023;
+        --tone-soft: rgba(52, 96, 35, 0.13);
+      }
+      .chart-media {
+        flex: 1.55 1 0;
+        min-width: 0;
+      }
+      .chart-info {
+        flex: 1 1 0;
+        min-width: 0;
+      }
+      .chart-head {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 0.55rem;
+      }
+      .chart-icon {
+        font-size: 22px;
+        line-height: 1;
+      }
+      .chart-title {
+        font-size: 17px;
+        font-weight: 600;
+        color: #333;
+        letter-spacing: -0.2px;
+      }
+      .chart-plot {
+        width: 100%;
+      }
+      .chart-plot svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+      }
+      .cl-grid {
+        stroke: #ecebe6;
+        stroke-width: 1;
+      }
+      .cl-area {
+        fill: var(--tone-soft);
+        opacity: 0;
+      }
+      .cl-line {
+        fill: none;
+        stroke: var(--tone);
+        stroke-width: 2.4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .cl-dot {
+        fill: #fff;
+        stroke: var(--tone);
+        stroke-width: 2;
+        opacity: 0;
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: scale(0.3);
+        transition:
+          opacity 0.25s ease,
+          transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .cl-dot.cl-end {
+        fill: var(--tone);
+      }
+      .cl-dot.on {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .cl-vlabel {
+        fill: var(--tone);
+        font-size: 8px;
+        font-weight: 600;
+        text-anchor: middle;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .cl-vlabel.on {
+        opacity: 1;
+      }
+      .cl-xlabel {
+        fill: #8c8b82;
+        font-size: 8px;
+        text-anchor: middle;
+      }
+      .chart-foot {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 0.6rem;
+      }
+      .chart-num {
+        font-size: 40px;
+        font-weight: 800;
+        color: var(--tone);
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: -1px;
+      }
+      .chart-sub {
+        font-size: 13px;
+        color: #888;
+        line-height: 1.2;
+      }
+      .chart-desc {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.55;
+        margin: 0;
+      }
+      .chart-caption {
+        font-size: 13px;
+        color: #777;
+        margin: -0.25rem 0 1.25rem;
+      }
+      @media (max-width: 640px) {
+        .chart-card,
+        .chart-card:nth-child(even) {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 1.1rem;
+          padding: 1.25rem;
+        }
+        .chart-num {
+          font-size: 34px;
+        }
+      }
+
       /* BREAK BOX */
       .break-box {
         margin-top: 1.5rem;
         padding: 1.25rem 1.5rem;
-        background: #e1f5ee;
+        background: #e9f4dc;
         border-radius: 12px;
         font-size: 15px;
-        color: #085041;
+        color: #346023;
         line-height: 1.6;
       }
 
@@ -298,8 +493,8 @@
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        background: #e1f5ee;
-        color: #0f6e56;
+        background: #e9f4dc;
+        color: #264a18;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -355,8 +550,8 @@
         width: 38px;
         height: 38px;
         border-radius: 50%;
-        background: #e1f5ee;
-        color: #0f6e56;
+        background: #e9f4dc;
+        color: #264a18;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -410,8 +605,8 @@
         margin-top: 2px;
       }
       .b-req {
-        background: #e1f5ee;
-        color: #085041;
+        background: #e9f4dc;
+        color: #346023;
       }
       .b-act {
         background: #e6f1fb;
@@ -424,7 +619,7 @@
       .b-amount {
         font-size: 13px;
         font-weight: 600;
-        color: #1d9e75;
+        color: #346023;
         margin-top: 2px;
       }
       .b-deadline {
@@ -434,45 +629,140 @@
         text-align: center;
       }
 
-      /* FAQ */
+      /* FAQ – accordion */
       .faq {
         display: flex;
         flex-direction: column;
         margin-top: 1.5rem;
       }
       .faq-item {
-        padding: 1.25rem 0;
         border-bottom: 1px solid #e8e8e8;
       }
       .faq-item:last-child {
         border-bottom: none;
       }
       .faq-q {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 1.3rem 0;
+        margin: 0;
         font-size: 15px;
         font-weight: 600;
-        margin-bottom: 0.5rem;
+        line-height: 1.45;
+        color: #1a1a1a;
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.3s ease;
+      }
+      .faq-q:hover,
+      .faq-item.open > .faq-q {
+        color: #346023;
+      }
+      .faq-q:focus-visible {
+        outline: 2px solid #346023;
+        outline-offset: 4px;
+        border-radius: 6px;
+      }
+      /* circular plus -> minus chip */
+      .faq-icon {
+        flex: 0 0 28px;
+        width: 28px;
+        height: 28px;
+        margin-left: auto;
+        position: relative;
+        border-radius: 50%;
+        border: 1px solid #dcdcdc;
+        background: #fff;
+        transition:
+          transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          background 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .faq-icon::before,
+      .faq-icon::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 2px;
+        border-radius: 2px;
+        background: #222;
+        transform: translate(-50%, -50%);
+        transition:
+          transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          background 0.3s ease;
+      }
+      .faq-icon::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+      .faq-item.open .faq-icon {
+        background: #346023;
+        border-color: #346023;
+        transform: rotate(180deg);
+      }
+      .faq-item.open .faq-icon::before,
+      .faq-item.open .faq-icon::after {
+        background: #fff;
+      }
+      .faq-item.open .faq-icon::after {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      /* collapsible answer (grid 0fr -> 1fr animates to natural height) */
+      .faq-a-wrap {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .faq-item.open .faq-a-wrap {
+        grid-template-rows: 1fr;
       }
       .faq-a {
+        overflow: hidden;
+        min-height: 0;
+        padding-bottom: 0;
         font-size: 14px;
         color: #555;
         line-height: 1.7;
+        opacity: 0;
+        transform: translateY(-4px);
+        transition:
+          opacity 0.3s ease 0.06s,
+          transform 0.3s ease 0.06s,
+          padding-bottom 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .faq-item.open .faq-a {
+        padding-bottom: 1.3rem;
+        opacity: 1;
+        transform: none;
       }
       .faq-pill {
         display: inline-block;
         margin-top: 0.5rem;
         font-size: 13px;
         font-weight: 600;
-        color: #085041;
-        background: #e1f5ee;
+        color: #346023;
+        background: #e9f4dc;
         padding: 4px 10px;
         border-radius: 8px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .faq-a-wrap,
+        .faq-a,
+        .faq-icon,
+        .faq-icon::before,
+        .faq-icon::after {
+          transition: none;
+        }
       }
 
       /* FINAL CTA */
       .final-cta {
         padding: 3.5rem 1.5rem;
         text-align: center;
-        background: #f9f9f7;
+        background: #f1f3ec;
       }
       .final-headline {
         font-size: 26px;
@@ -513,21 +803,21 @@
       }
       .final-form input:focus {
         outline: none;
-        border-color: #1d9e75;
+        border-color: #346023;
       }
       .final-form button {
         font-size: 15px;
         font-weight: 600;
         padding: 13px 24px;
         margin-top: 4px;
-        background: #1d9e75;
+        background: #346023;
         color: #fff;
         border: none;
         border-radius: 8px;
         cursor: pointer;
       }
       .final-form button:hover {
-        background: #0f6e56;
+        background: #264a18;
       }
       @media (max-width: 460px) {
         .final-form .ff-row {
@@ -553,11 +843,19 @@
         gap: 0.5rem;
       }
       .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 7px;
         font-size: 14px;
         font-weight: 600;
       }
+      .footer-logo-mark {
+        height: 20px;
+        width: auto;
+        display: block;
+      }
       .footer-logo span {
-        color: #1d9e75;
+        color: #346023;
       }
       .footer-links {
         display: flex;
@@ -569,7 +867,53 @@
         text-decoration: none;
       }
       .footer-links a:hover {
-        color: #1d9e75;
+        color: #346023;
+      }
+
+      @media (max-width: 760px) {
+        .hero {
+          text-align: center;
+          padding-bottom: 0;
+          min-height: 0;
+        }
+        .hero-copy {
+          max-width: none;
+        }
+        .hero-headline,
+        .hero-sub {
+          max-width: none;
+          margin-inline: auto;
+        }
+        .sp-bar {
+          margin-inline: auto;
+        }
+        .trust-row {
+          justify-content: center;
+        }
+        /* portrait flows below the copy, centered, flush with the section bottom */
+        .hero .hero-visual {
+          position: relative;
+          right: auto;
+          display: block;
+          text-align: center;
+          transform: none;
+          height: auto;
+          margin: 1.75rem auto 0;
+        }
+        .hero-img {
+          margin-inline: auto;
+        }
+        .hero .hero-visual::after {
+          left: 50%;
+          right: auto;
+          width: 80%;
+          transform: translateX(-50%);
+          height: 60%;
+        }
+        .hero-img {
+          height: auto;
+          width: min(240px, 64%);
+        }
       }
 
       @media (max-width: 600px) {
@@ -607,7 +951,7 @@
         right: -15%;
         width: 520px;
         height: 520px;
-        background: radial-gradient(circle, rgba(29, 158, 117, 0.1) 0%, rgba(29, 158, 117, 0) 70%);
+        background: radial-gradient(circle, rgba(52, 96, 35, 0.1) 0%, rgba(52, 96, 35, 0) 70%);
         pointer-events: none;
         z-index: 0;
       }
@@ -622,6 +966,7 @@
 
       /* Hover physics */
       .info-card,
+      .chart-card,
       .step,
       .testimonial {
         transition:
@@ -630,11 +975,12 @@
           border-color 0.4s ease;
       }
       .info-card:hover,
+      .chart-card:hover,
       .step:hover,
       .testimonial:hover {
         transform: translateY(-4px);
         box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
-        border-color: #cfe9df;
+        border-color: #d3e7bf;
       }
       .nav-btn,
       .hero-form button,
@@ -648,7 +994,7 @@
       .hero-form button:hover,
       .final-form button:hover {
         transform: translateY(-1px);
-        box-shadow: 0 8px 20px rgba(29, 158, 117, 0.32);
+        box-shadow: 0 8px 20px rgba(52, 96, 35, 0.32);
       }
       .step-num,
       .t-avatar {
@@ -673,10 +1019,12 @@
       html.gsap-on .hero-form,
       html.gsap-on .hero-note,
       html.gsap-on .trust-row,
+      html.gsap-on .hero-visual,
       html.gsap-on .sec-label,
       html.gsap-on .sec-headline,
       html.gsap-on .break-box,
       html.gsap-on .info-card,
+      html.gsap-on .chart-card,
       html.gsap-on .info-big,
       html.gsap-on .step,
       html.gsap-on .testimonial,
@@ -691,13 +1039,16 @@
 
       @media (prefers-reduced-motion: reduce) {
         .info-card,
+        .chart-card,
         .step,
         .testimonial,
         .step-num,
         .t-avatar,
         .nav-btn,
         .hero-form button,
-        .final-form button {
+        .final-form button,
+        .cl-dot,
+        .cl-vlabel {
           transition: none;
         }
       }
@@ -725,91 +1076,136 @@
     <div class="lp">
       <nav class="nav">
         <div class="logo">
-          Wealthsimple
-          <span>Invest</span>
+          <img class="logo-mark" src="./img/logo.png" alt="Questrade logo" width="26" height="26" />
+          <span>Questrade</span>
         </div>
         <a href="#join" class="nav-btn">Book a Free Call</a>
       </nav>
 
       <div class="promo-bar">
-        <div class="promo-text">🎁 New members get up to $500 CAD bonus – offer ends <span class="today">July 15</span></div>
+        <div class="promo-text">
+          🎁 New members get up to $500 CAD bonus – offer ends
+          <span class="today"></span>
+        </div>
         <div class="promo-badge">Use code: WEALTH500</div>
       </div>
 
       <section class="hero">
-        <div class="hero-eyebrow">AI-powered financial platform · Canada</div>
-        <h1 class="hero-headline">
-          One unexpected bill shouldn't derail your whole month.
-          <br />
-          <em>But for most Canadians, it does.</em>
-        </h1>
-        <p class="hero-sub">Wealthsimple Invest helps everyday Canadians build extra income using AI – no financial experience needed, no second job.</p>
-        <div class="sp-bar">
-          <div class="sp-item">
-            <div class="sp-num" data-count="10000" data-suffix="+" data-sep="1">10,000+</div>
-            <div class="sp-label">
-              Canadians on
-              <br />
-              the platform
+        <div class="hero-copy">
+          <div class="hero-eyebrow">AI-powered financial platform · Canada</div>
+          <h1 class="hero-headline">
+            One unexpected bill shouldn't derail your whole month
+            <br />
+            <em>But for most Canadians, it does</em>
+          </h1>
+          <p class="hero-sub">Questrade helps everyday Canadians build extra income using AI – no financial experience needed, no second job.</p>
+          <div class="sp-bar">
+            <div class="sp-item">
+              <div class="sp-num" data-count="10000" data-suffix="+" data-sep="1">10,000+</div>
+              <div class="sp-label">
+                Canadians on
+                <br />
+                the platform
+              </div>
+            </div>
+            <div class="sp-item">
+              <div class="sp-num" data-count="100" data-prefix="$" data-suffix="+">$100+</div>
+              <div class="sp-label">
+                Avg. extra income
+                <br />
+                per month*
+              </div>
+            </div>
+            <div class="sp-item">
+              <div class="sp-num">4.8 / 5</div>
+              <div class="sp-label">
+                Average rating
+                <br />
+                from users
+              </div>
+            </div>
+            <div class="sp-item">
+              <div class="sp-num">Free</div>
+              <div class="sp-label">
+                Start with a
+                <br />
+                personal broker
+              </div>
             </div>
           </div>
-          <div class="sp-item">
-            <div class="sp-num" data-count="100" data-prefix="$" data-suffix="+">$100+</div>
-            <div class="sp-label">
-              Avg. extra income
-              <br />
-              per month*
-            </div>
-          </div>
-          <div class="sp-item">
-            <div class="sp-num">4.8 / 5</div>
-            <div class="sp-label">
-              Average rating
-              <br />
-              from users
-            </div>
-          </div>
-          <div class="sp-item">
-            <div class="sp-num">Free</div>
-            <div class="sp-label">
-              Start with a
-              <br />
-              personal broker
-            </div>
+          <p class="hero-note">👤 No call centres. No sales scripts. Just a real person.</p>
+          <div class="trust-row">
+            <div class="trust-item">✅ Regulated in Canada</div>
+            <div class="trust-item">🔒 Your funds stay yours</div>
+            <div class="trust-item">📞 Real human support</div>
           </div>
         </div>
-        <p class="hero-note">👤 No call centres. No sales scripts. Just a real person.</p>
-        <div class="trust-row">
-          <div class="trust-item">✅ Regulated in Canada</div>
-          <div class="trust-item">🔒 Your funds stay yours</div>
-          <div class="trust-item">📞 Real human support</div>
+        <div class="hero-visual" aria-hidden="true">
+          <img class="hero-img" src="./img/hero-img2.webp" alt="" width="1122" height="1402" loading="eager" decoding="async" fetchpriority="high" />
         </div>
       </section>
 
       <section class="section sec-bg">
-        <div class="sec-label">Why Canadians are looking for alternatives</div>
-        <h2 class="sec-headline">The cost of living isn't slowing down.</h2>
-        <div class="info-grid">
-          <div class="info-card">
-            <div class="info-icon">🛒</div>
-            <div class="info-num" data-count="27" data-prefix="+" data-suffix="%">+27%</div>
-            <div class="info-label">Grocery prices vs 5 years ago</div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">🏠</div>
-            <div class="info-num" data-count="48" data-prefix="+" data-suffix="%">+48%</div>
-            <div class="info-label">Average rent increase since 2019</div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">⛽</div>
-            <div class="info-num" data-count="31" data-prefix="+" data-suffix="%">+31%</div>
-            <div class="info-label">Fuel costs vs 5 years ago</div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">📈</div>
-            <div class="info-num" data-count="2.1" data-decimals="1" data-prefix="+" data-suffix="%">+2.1%</div>
-            <div class="info-label">Avg. wage growth per year</div>
-          </div>
+        <div class="sec-label">The squeeze is real</div>
+        <h2 class="sec-headline">The cost of living keeps climbing — and your income hasn't kept up</h2>
+        <p class="chart-caption">Five years of change across what Canadians spend on most. Watch how fast prices have moved since 2020.</p>
+        <div class="chart-rows">
+          <figure class="chart-card" data-chart data-tone="cost" data-years="2020,2021,2022,2023,2024,2025" data-values="0,4,9,15,21,27">
+            <div class="chart-media"><div class="chart-plot"></div></div>
+            <figcaption class="chart-info">
+              <div class="chart-head">
+                <span class="chart-icon" aria-hidden="true">🛒</span>
+                <span class="chart-title">Grocery prices</span>
+              </div>
+              <div class="chart-foot">
+                <span class="chart-num" data-val="27" data-dec="0" data-pre="+" data-suf="%">+27%</span>
+                <span class="chart-sub">vs 2020</span>
+              </div>
+              <p class="chart-desc">The same weekly cart now costs over a quarter more than it did in 2020 — and the climb hasn't stopped.</p>
+            </figcaption>
+          </figure>
+          <figure class="chart-card" data-chart data-tone="cost" data-years="2020,2021,2022,2023,2024,2025" data-values="0,8,18,29,39,48">
+            <div class="chart-media"><div class="chart-plot"></div></div>
+            <figcaption class="chart-info">
+              <div class="chart-head">
+                <span class="chart-icon" aria-hidden="true">🏠</span>
+                <span class="chart-title">Average rent</span>
+              </div>
+              <div class="chart-foot">
+                <span class="chart-num" data-val="48" data-dec="0" data-pre="+" data-suf="%">+48%</span>
+                <span class="chart-sub">vs 2020</span>
+              </div>
+              <p class="chart-desc">Housing is the sharpest squeeze of all — average rents have jumped nearly half in just five years.</p>
+            </figcaption>
+          </figure>
+          <figure class="chart-card" data-chart data-tone="cost" data-years="2020,2021,2022,2023,2024,2025" data-values="0,6,13,9,22,31">
+            <div class="chart-media"><div class="chart-plot"></div></div>
+            <figcaption class="chart-info">
+              <div class="chart-head">
+                <span class="chart-icon" aria-hidden="true">⛽</span>
+                <span class="chart-title">Fuel costs</span>
+              </div>
+              <div class="chart-foot">
+                <span class="chart-num" data-val="31" data-dec="0" data-pre="+" data-suf="%">+31%</span>
+                <span class="chart-sub">vs 2020</span>
+              </div>
+              <p class="chart-desc">Filling the tank runs about a third higher than in 2020 — with sharp swings along the way.</p>
+            </figcaption>
+          </figure>
+          <figure class="chart-card" data-chart data-tone="wage" data-years="2020,2021,2022,2023,2024,2025" data-values="0,2,4,6,8,10">
+            <div class="chart-media"><div class="chart-plot"></div></div>
+            <figcaption class="chart-info">
+              <div class="chart-head">
+                <span class="chart-icon" aria-hidden="true">💸</span>
+                <span class="chart-title">Avg. wage growth</span>
+              </div>
+              <div class="chart-foot">
+                <span class="chart-num" data-val="10" data-dec="0" data-pre="+" data-suf="%">+10%</span>
+                <span class="chart-sub">~2.1% / yr</span>
+              </div>
+              <p class="chart-desc">Meanwhile paycheques have barely moved — roughly 2.1% a year, nowhere near enough to keep pace.</p>
+            </figcaption>
+          </figure>
         </div>
         <div class="info-big">
           <div class="info-big-num">1 in 4</div>
@@ -822,11 +1218,10 @@
       </section>
 
       <section class="section">
-        <div class="sec-label">The solution</div>
-        <h2 class="sec-headline">There's a different way. And it doesn't require a finance degree.</h2>
+        <h2 class="sec-headline">There's a different way. And it doesn't require a finance degree</h2>
         <p class="sec-body" id="solutionText">
-          Wealthsimple Invest was built for people who are busy living real life – not watching stock charts. The platform analyzes the market automatically and works in the background, so your money has the chance to grow while you're on
-          the road, at the job site, or at home with your family.
+          Questrade was built for people who are busy living real life – not watching stock charts. The platform analyzes the market automatically and works in the background, so your money has the chance to grow while you're on the road,
+          at the job site, or at home with your family.
         </p>
         <div class="break-box">
           <strong>This is not trading. This is not crypto.</strong>
@@ -836,8 +1231,7 @@
       </section>
 
       <section class="section">
-        <div class="sec-label">How it works</div>
-        <h2 class="sec-headline">Getting started takes less time than your coffee break.</h2>
+        <h2 class="sec-headline">Getting started takes less time than your coffee break</h2>
         <div class="steps">
           <div class="step">
             <div class="step-num">1</div>
@@ -864,14 +1258,13 @@
       </section>
 
       <section class="section sec-bg">
-        <div class="sec-label">Real Canadians</div>
-        <h2 class="sec-headline">The biggest change isn't just financial. It's peace of mind.</h2>
+        <h2 class="sec-headline">The biggest change isn't just financial. It's peace of mind</h2>
         <div class="testimonials">
           <div class="testimonial">
             <div class="t-text">
               <p>
-                "I've been driving long haul for 19 years. Alberta to BC, sometimes down to the States. Good money, but it disappears fast – fuel, maintenance, the mortgage, kids' stuff. My buddy Dave told me about Wealthsimple Invest at a
-                truck stop outside of Red Deer. I was skeptical. Called anyway.
+                "I've been driving long haul for 19 years. Alberta to BC, sometimes down to the States. Good money, but it disappears fast – fuel, maintenance, the mortgage, kids' stuff. My buddy Dave told me about Questrade at a truck stop
+                outside of Red Deer. I was skeptical. Called anyway.
               </p>
               <p>
                 Guy on the phone didn't try to sell me anything. Walked me through the whole thing in about 15 minutes. I started with $300. Four months later I've got a cushion for the first time since 2019. Last month the transmission
@@ -905,7 +1298,7 @@
           <div class="testimonial">
             <div class="t-text">
               <p>"I do roofing. Seasonal work – good summers, slow winters. Every year around November I start stressing about making it to March.</p>
-              <p>Wealthsimple Invest doesn't fix the seasonality but it helps. I've got something working in the background now even when I'm not on a job. First winter in four years I didn't have to borrow from my brother."</p>
+              <p>Questrade doesn't fix the seasonality but it helps. I've got something working in the background now even when I'm not on a job. First winter in four years I didn't have to borrow from my brother."</p>
             </div>
             <div class="t-author">
               <div class="t-avatar">TS</div>
@@ -919,10 +1312,13 @@
       </section>
 
       <section class="section sec-bg">
-        <div class="sec-label">Limited offer</div>
-        <h2 class="sec-headline">Build your $500 welcome bonus.</h2>
+        <h2 class="sec-headline">Build your $500 welcome bonus</h2>
         <div class="bonus-box">
-          <div class="bonus-sub">Book your demo call and start earning your bonus. Offer ends <span class="today">July 15</span> – use code WEALTH500.</div>
+          <div class="bonus-sub">
+            Book your demo call and start earning your bonus. Offer ends
+            <span class="today"></span>
+            – use code WEALTH500.
+          </div>
           <div class="bonus-steps">
             <div class="bonus-step">
               <div class="b-badge b-req">Required</div>
@@ -946,7 +1342,11 @@
               </div>
             </div>
           </div>
-          <div class="b-deadline">⏰ Offer ends <span class="today-y">July 15, 2026</span>. Terms apply.</div>
+          <div class="b-deadline">
+            ⏰ Offer ends
+            <span class="today-y">July 15, 2026</span>
+            . Terms apply.
+          </div>
         </div>
       </section>
 
@@ -956,7 +1356,7 @@
         <div class="faq">
           <div class="faq-item">
             <div class="faq-q">Is this safe?</div>
-            <div class="faq-a">Wealthsimple Invest operates within Canada's regulated financial framework. Your funds are held in your name, not ours. We don't have access to move or withdraw your money without your instruction.</div>
+            <div class="faq-a">Questrade operates within Canada's regulated financial framework. Your funds are held in your name, not ours. We don't have access to move or withdraw your money without your instruction.</div>
           </div>
           <div class="faq-item">
             <div class="faq-q">Can I withdraw my money whenever I want?</div>
@@ -972,8 +1372,8 @@
           <div class="faq-item">
             <div class="faq-q">I tried something similar before and lost money. How is this different?</div>
             <div class="faq-a">
-              We hear this a lot, and it's a fair concern. Most platforms that promise fast returns put your capital at high risk to deliver them. Wealthsimple Invest is built around steady, conservative growth – not big swings. Your
-              personal broker will walk you through exactly how the platform manages risk before you put in a single dollar.
+              We hear this a lot, and it's a fair concern. Most platforms that promise fast returns put your capital at high risk to deliver them. Questrade is built around steady, conservative growth – not big swings. Your personal broker
+              will walk you through exactly how the platform manages risk before you put in a single dollar.
             </div>
           </div>
           <div class="faq-item">
@@ -1002,7 +1402,7 @@
           </div>
           <div class="faq-item">
             <div class="faq-q">What if I'm not good with technology?</div>
-            <div class="faq-a">If you can use a smartphone, you can use Wealthsimple Invest. Your personal broker helps you with the setup and stays available for questions. You're never on your own.</div>
+            <div class="faq-a">If you can use a smartphone, you can use Questrade. Your personal broker helps you with the setup and stays available for questions. You're never on your own.</div>
           </div>
           <div class="faq-item">
             <div class="faq-q">Is the demo call a sales pitch?</div>
@@ -1015,12 +1415,14 @@
         <h2 class="final-headline">
           You've worked hard enough.
           <br />
-          Let's see if Wealthsimple Invest can work for you.
+          Let's see if Questrade can work for you
         </h2>
         <p class="final-sub">
           Book a free 10-minute demo call. No pressure. No commitment. Just clarity.
           <br />
-          Plus – get up to $500 CAD when you join before <span class="today">July 15</span>.
+          Plus – get up to $500 CAD when you join before
+          <span class="today">July 15</span>
+          .
         </p>
         <form id="form" class="final-form" action="#" method="post">
           <input type="hidden" name="country" value="CA" />
@@ -1037,8 +1439,8 @@
 
       <footer class="footer">
         <div class="footer-logo">
-          Wealthsimple
-          <span>Invest</span>
+          <img class="footer-logo-mark" src="./img/logo.png" alt="Questrade logo" width="20" height="20" />
+          <span>Questrade</span>
         </div>
         <div class="footer-links">
           <a href="#">Privacy Policy</a>
