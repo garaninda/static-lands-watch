@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title data-rh="true">Substack</title>
+    <meta data-rh="true" name="theme-color" content="#ffffff" />
+    <meta data-rh="true" name="theme-color" content="#16171d" />
+    <meta data-rh="true" property="og:type" content="article" />
+    <meta data-rh="true" property="og:title" content="Substack" />
+    <meta data-rh="true" name="twitter:title" content="Substack" />
+    <meta data-rh="true" name="description" content="The app for independent voices" />
+    <meta data-rh="true" property="og:description" content="The app for independent voices" />
+    <meta data-rh="true" name="twitter:description" content="The app for independent voices" />
+    <meta data-rh="true" name="twitter:card" content="summary" />
+    <meta data-rh="true" property="og:image:width" content="400" />
+    <meta data-rh="true" property="og:image:height" content="400" />
+
+    <style>
+      @layer legacy, tailwind, pencraftReset, pencraft;
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/382.a1caea12.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/30558.a34cf0d2.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/14528.e847d0fe.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/82434.316c9bf7.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/44567.d4e38e8b.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/23300.e5f982d9.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/92427.1c329e5d.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/reader2ReactRouter.4479fc06.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/23300.e5f982d9.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/23794.96d2c90f.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/44567.d4e38e8b.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/82434.316c9bf7.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/14528.e847d0fe.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover" />
+    <meta name="author" content="Substack" />
+    <meta property="og:url" content="https://substack.com/" />
+
+    <link rel="shortcut icon" href="icons/favicon.ico" sizes="32x32" />
+
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <style>
+      /* Cahuenga */
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: normal;
+        font-weight: 300;
+        src:
+          local("Cahuenga Light"),
+          local("Cahuenga-Light"),
+          url(fonts/Cahuenga-Light.woff2) format("woff2");
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: italic;
+        font-weight: 300;
+        src:
+          local("Cahuenga Light Italic"),
+          local("Cahuenga-Light-Italic"),
+          url(fonts/Cahuenga-LightItalic.woff2) format("woff2");
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: normal;
+        font-weight: 400;
+        src:
+          local("Cahuenga Regular"),
+          local("Cahuenga-Regular"),
+          url(fonts/Cahuenga-Regular.woff2) format("woff2");
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: italic;
+        font-weight: 400;
+        src:
+          local("Cahuenga Italic"),
+          local("Cahuenga-Italic"),
+          url(fonts/Cahuenga-Italic.woff2) format("woff2");
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: normal;
+        font-weight: 500;
+        src:
+          local("Cahuenga SemiBold"),
+          local("Cahuenga-SemiBold"),
+          url(fonts/Cahuenga-SemiBold.woff2) format("woff2");
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: italic;
+        font-weight: 500;
+        src:
+          local("Cahuenga SemiBold Italic"),
+          local("Cahuenga-SemiBold-Italic"),
+          url(fonts/Cahuenga-SemiBoldItalic.woff2) format("woff2");
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: normal;
+        font-weight: 600;
+        src:
+          local("Cahuenga Bold"),
+          local("Cahuenga-Bold"),
+          url(fonts/Cahuenga-Bold.woff2) format("woff2");
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: italic;
+        font-weight: 600;
+        src:
+          local("Cahuenga Bold Italic"),
+          local("Cahuenga-Bold-Italic"),
+          url(fonts/Cahuenga-BoldItalic.woff2) format("woff2");
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: normal;
+        font-weight: 700;
+        src:
+          local("Cahuenga ExtraBold"),
+          local("Cahuenga-ExtraBold"),
+          url(fonts/Cahuenga-ExtraBold.woff2) format("woff2");
+        font-display: fallback;
+      }
+      @font-face {
+        font-family: "Cahuenga";
+        font-style: italic;
+        font-weight: 700;
+        src:
+          local("Cahuenga ExtraBold Italic"),
+          local("Cahuenga-ExtraBold-Italic"),
+          url(fonts/Cahuenga-ExtraBoldItalic.woff2) format("woff2");
+        font-display: fallback;
+      }
+    </style>
+
+    <style>
+      @font-face {
+        font-family: "Spectral";
+        font-style: normal;
+        font-weight: 400;
+        font-display: fallback;
+        src: url(fonts/rnCr-xNNww_2s0amA9M9knjsS_ulYHs.woff2) format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Spectral";
+        font-style: normal;
+        font-weight: 400;
+        font-display: fallback;
+        src: url(fonts/rnCr-xNNww_2s0amA9M2knjsS_ulYHs.woff2) format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Spectral";
+        font-style: normal;
+        font-weight: 400;
+        font-display: fallback;
+        src: url(fonts/rnCr-xNNww_2s0amA9M3knjsS_ulYHs.woff2) format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Spectral";
+        font-style: normal;
+        font-weight: 400;
+        font-display: fallback;
+        src: url(fonts/rnCr-xNNww_2s0amA9M5knjsS_ul.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+
+    <style>
+      :root {
+        --background_pop: #ff6719;
+        --cover_bg_color: #ffffff;
+        --cover_bg_color_secondary: #f0f0f0;
+        --background_pop_darken: #ff5600;
+        --print_on_pop: #ffffff;
+        --print_pop: #ff6719;
+        --cover_print_primary: #363737;
+        --cover_print_secondary: #757575;
+        --cover_print_tertiary: #b6b6b6;
+        --cover_border_color: #ff6719;
+        --background_contrast_1: #f0f0f0;
+        --background_contrast_2: #dddddd;
+        --background_contrast_3: #b7b7b7;
+        --background_contrast_4: #929292;
+        --background_contrast_5: #515151;
+        --color_theme_detail: #e6e6e6;
+        --background_contrast_pop: rgba(255, 103, 25, 0.4);
+        --theme_bg_is_dark: 0;
+        --background_pop_rgb: 255, 103, 25;
+      }
+    </style>
+
+    <link rel="stylesheet" href="css/reader2.a7f3254f5baef07d05d8.css" />
+
+    <style></style>
+
+    <style>
+      /* ---- Desktop chrome (>=768px): static rail + side panel over the mobile DOM ---- */
+      .dt-rail,
+      .dt-side {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        .nav-ptYSWX {
+          display: none !important;
+        } /* mobile top bar */
+        .container-mkVCmy {
+          display: none !important;
+        } /* mobile bottom tab bar */
+        .dt-rail {
+          display: flex !important;
+        }
+        .dt-side {
+          display: flex !important;
+        }
+        .reader-nav-page {
+          margin-left: 220px !important;
+          margin-right: 340px !important;
+        }
+        .workYouBelieveIn-Zy8wBo {
+          width: 100% !important;
+          background-position: -85px -115px !important;
+          background-size: 125% !important;
+        }
+      }
+      .dt-rail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 220px;
+        flex-direction: column;
+        gap: 2px;
+        padding: 12px 10px;
+        background: #fff;
+        border-right: 1px solid #e6e6e6;
+        z-index: 40;
+        box-sizing: border-box;
+        font-family: var(--font-text, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+      }
+      .dt-logo {
+        display: flex;
+        align-items: center;
+        height: 56px;
+        padding: 0 12px;
+        margin-bottom: 6px;
+      }
+      .dt-link {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .dt-link:hover {
+        background: #f5f5f5;
+      }
+      .dt-link.active {
+        font-weight: 700;
+      }
+      .dt-link svg {
+        width: 24px;
+        height: 24px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        flex: 0 0 24px;
+      }
+      .dt-create {
+        margin-top: 12px;
+        align-self: flex-start;
+        background: #ff6719;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .dt-side {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 340px;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 40;
+        overflow-y: auto;
+        font-family: var(--font-text, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+      }
+      .dt-search {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid #d4d4d4;
+        border-radius: 20px;
+        padding: 9px 14px;
+        color: #757575;
+      }
+      .dt-search svg {
+        width: 18px;
+        height: 18px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+        flex: 0 0 18px;
+      }
+      .dt-search input {
+        border: none;
+        outline: none;
+        font: inherit;
+        flex: 1;
+        min-width: 0;
+        background: transparent;
+        color: #1a1a1a;
+      }
+      .dt-card {
+        border: 1px solid #e6e6e6;
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+        text-align: center;
+      }
+      .dt-card h4 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+      .dt-card p {
+        margin: 0;
+        font-size: 15px;
+        color: #444;
+        line-height: 1.4;
+      }
+      .dt-btn {
+        width: 100%;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        font-family: inherit;
+      }
+      .dt-btn.primary {
+        background: #ff6719;
+        color: #fff;
+      }
+      .dt-btn.secondary {
+        background: #f0f0f0;
+        color: #1a1a1a;
+      }
+    </style>
+  </head>
+
+  <body class="pc-root">
+    <div id="entry">
+      <div style="--size-left-nav: 0" class="reader-nav-root reader2-font-base">
+        <div class="pencraft pc-display-flex pc-reset flex-auto-j3S2WA container-fi9IrN">
+          <div
+            role="banner"
+            aria-label="Page header"
+            class="pencraft pc-display-flex pc-zIndex-1 pc-gap-20 pc-paddingLeft-20 pc-paddingRight-20 pc-alignItems-center pc-justifyContent-space-between pc-reset flex-grow-rzmknG sizing-border-box-DggLA4 nav-ptYSWX">
+            <div class="pencraft pc-display-flex pc-alignItems-center pc-justifyContent-flex-start pc-gap-20 pc-reset flex-grow-rzmknG">
+              <a tabindex="-1" href="/" class="pencraft pc-reset">
+                <svg role="img" style="height: 24px; width: 24px" width="24" height="24" viewBox="0 0 20 20" fill="var(--color-nav-logo)" stroke-width="1.8" stroke="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <title></title>
+                    <path d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z" stroke="none"></path>
+                    <path d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z" stroke="none"></path>
+                    <path d="M1.96484 8.92857V19.9505L10.0001 14.6347L18.0354 19.9505V8.92857H1.96484Z" stroke="none"></path>
+                  </g>
+                </svg>
+              </a>
+              <h1 class="pencraft pc-reset line-height-24-jnGwiv font-display-nhmvtD size-20-P_cSRT weight-bold-DmI9lw reset-IxiVJZ visible">Home</h1>
+            </div>
+            <div class="pencraft pc-display-flex pc-alignItems-center pc-justifyContent-flex-end pc-gap-12 pc-reset flex-grow-rzmknG">
+              <button
+                tabindex="0"
+                type="button"
+                aria-label="Search"
+                class="pencraft pc-position-relative pc-reset pencraft iconButton-mq_Et5 iconButtonBase-dJGHgN buttonBase-GK1x3M buttonStyle-r7yGCK size_sm-G3LciD priority_tertiary-rlke8z">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+              </button>
+              <button tabindex="0" type="button" class="pencraft pc-reset pencraft buttonBase-GK1x3M buttonText-X0uSmG buttonStyle-r7yGCK priority_secondary-S63h9o size_sm-G3LciD rounded-SYxRdz">Sign in</button>
+              <button
+                tabindex="0"
+                type="button"
+                data-href="https://open.substack.com/notes?utm_source=menu&amp;redirect=app-store"
+                class="pencraft pc-reset pencraft buttonBase-GK1x3M buttonText-X0uSmG buttonStyle-r7yGCK priority_primary-RfbeYt size_sm-G3LciD">
+                Get the app
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="reader-nav-page">
+          <div class="pencraft pc-display-flex pc-flexDirection-column pc-reset surface-Dbj2pH">
+            <div class="pencraft pc-display-flex pc-minWidth-0 pc-reset flex-grow-rzmknG">
+              <div id="reader-nav-page-scroll" class="reader-nav-page-scroll">
+                <div class="pencraft pc-display-flex pc-minWidth-0 pc-paddingLeft-20 pc-mobile-paddingLeft-0 pc-paddingRight-20 pc-mobile-paddingRight-0 pc-reset flex-grow-rzmknG">
+                  <div style="margin-right: 0px" class="pencraft pc-display-flex pc-minWidth-0 pc-justifyContent-center pc-reset flex-grow-rzmknG">
+                    <div class="variables-fH4ag7">
+                      <div class="pencraft pc-display-flex pc-flexDirection-column pc-minWidth-0 pc-position-relative pc-reset flex-grow-rzmknG color-primary-zABazT font-text-qe4AeH size-15-Psle70 page-aOaH_e">
+                        <div class="pencraft pc-display-flex pc-flexDirection-column pc-reset surface-Dbj2pH">
+                          <div class="pencraft pc-display-flex pc-flexDirection-column pc-reset">
+                            <div class="pencraft pc-display-flex pc-paddingTop-0 pc-justifyContent-center pc-reset flex-grow-rzmknG">
+                              <div style="max-width: var(--feed-page-width)" class="pencraft pc-display-flex pc-flexDirection-column pc-minWidth-0 pc-position-relative pc-reset flex-grow-rzmknG sizing-border-box-DggLA4">
+                                <div class="pencraft pc-display-flex pc-flexDirection-column pc-justifyContent-center pc-alignItems-center pc-reset workYouBelieveInItem-mSyaEH isMobile-unYUez">
+                                  <div class="pencraft pc-display-flex pc-flexDirection-column pc-gap-16 pc-padding-16 pc-justifyContent-center pc-alignItems-center pc-reset content-sYxJIX workYouBelieveIn-Zy8wBo isMobile-unYUez">
+                                    <div class="pencraft pc-display-flex pc-reset">
+                                      <h4 translated class="pencraft pc-reset color-white-rGgpJs align-center-y7ZD4w weight-medium-fw81nC reset-IxiVJZ marketingHeading4-xfLq5Y">Make money doing the work you believe in</h4>
+                                    </div>
+                                    <div class="pencraft pc-display-flex pc-gap-8 pc-reset">
+                                      <button
+                                        tabindex="0"
+                                        type="button"
+                                        data-href="https://substack.com/signup?utm_source=substack-feed-item&amp;utm_medium=web&amp;utm_campaign=home&amp;utm_content=account-creation-feed-item-work-you-believe-in"
+                                        class="pencraft pc-reset pencraft buttonBase-GK1x3M buttonText-X0uSmG buttonStyle-r7yGCK priority_primary-RfbeYt size_md-gCDS3o">
+                                        Start your Substack
+                                      </button>
+                                      <button
+                                        style="border-color: var(--color-light-fg-tertiary)"
+                                        tabindex="0"
+                                        type="button"
+                                        data-href="/about"
+                                        class="pencraft pc-reset color-white-rGgpJs pencraft buttonBase-GK1x3M buttonText-X0uSmG buttonStyle-r7yGCK priority_tertiary-rlke8z size_md-gCDS3o">
+                                        Learn more
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="pencraft pc-display-flex pc-gap-4 pc-alignItems-center pc-reset">
+                                  <div class="pencraft pc-display-flex pc-paddingLeft-0 pc-mobile-paddingLeft-16 pc-paddingRight-0 pc-mobile-paddingRight-16 pc-paddingTop-4 pc-mobile-paddingTop-8 pc-pullX-6 pc-mobile-pullX-0 pc-reset">
+                                    <button
+                                      tabindex="0"
+                                      type="button"
+                                      aria-haspopup="dialog"
+                                      aria-expanded="false"
+                                      aria-controls="radix-P0-6"
+                                      data-state="closed"
+                                      class="pencraft pc-reset pencraft buttonBase-GK1x3M buttonText-X0uSmG buttonStyle-r7yGCK priority_quaternary-kpMibu size_xs-Q62jAa">
+                                      For you
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-chevron-down">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div role="region" aria-label="Notes feed" data-nosnippet="true" class="pencraft pc-display-flex pc-flexDirection-column pc-paddingBottom-20 pc-reset">
+                                  <style>
+                                    .sp-feed {
+                                      display: flex;
+                                      flex-direction: column;
+                                      gap: 0;
+                                      width: 100%;
+                                      padding-top: 0;
+                                    }
+                                    .sp-note {
+                                      background: var(--web_bg_color, #fff);
+                                      border: none;
+                                      border-bottom: 1px solid var(--color-detail-themed, #e6e6e6);
+                                      border-radius: 0;
+                                      padding: 16px;
+                                      font-family: var(--font-text, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+                                    }
+                                    .sp-head {
+                                      display: flex;
+                                      align-items: center;
+                                      gap: 10px;
+                                      margin-bottom: 10px;
+                                    }
+                                    .sp-av {
+                                      width: 40px;
+                                      height: 40px;
+                                      border-radius: 50%;
+                                      flex: 0 0 40px;
+                                      display: flex;
+                                      align-items: center;
+                                      justify-content: center;
+                                      color: #fff;
+                                      font-weight: 600;
+                                      font-size: 16px;
+                                    }
+                                    .sp-meta {
+                                      display: flex;
+                                      flex-direction: column;
+                                      line-height: 1.25;
+                                      min-width: 0;
+                                    }
+                                    .sp-name {
+                                      font-weight: 600;
+                                      color: var(--color-fg-primary, #1a1a1a);
+                                      font-size: 15px;
+                                    }
+                                    .sp-sub {
+                                      color: var(--color-fg-secondary, #757575);
+                                      font-size: 13px;
+                                    }
+                                    .sp-sub .sp-dot {
+                                      margin: 0 5px;
+                                    }
+                                    .sp-body {
+                                      color: var(--color-fg-primary, #1a1a1a);
+                                      font-size: 16px;
+                                      line-height: 1.5;
+                                      white-space: normal;
+                                    }
+                                    .sp-body p {
+                                      margin: 0 0 14px;
+                                    }
+                                    .sp-body p:last-child {
+                                      margin-bottom: 0;
+                                    }
+                                    .sp-title {
+                                      font-weight: 700;
+                                      font-size: 22px;
+                                      line-height: 1.25;
+                                      margin-bottom: 6px;
+                                      color: var(--color-fg-primary, #1a1a1a);
+                                    }
+                                    .sp-quote {
+                                      font-style: italic;
+                                      font-size: 17px;
+                                      line-height: 1.4;
+                                      color: var(--color-fg-secondary, #555);
+                                      margin-bottom: 4px;
+                                    }
+                                    .sp-attr {
+                                      font-size: 14px;
+                                      color: var(--color-fg-secondary, #757575);
+                                      margin-bottom: 14px;
+                                    }
+                                    .sp-actions {
+                                      display: flex;
+                                      gap: 24px;
+                                      margin-top: 14px;
+                                      color: var(--color-fg-secondary, #757575);
+                                      font-size: 13px;
+                                    }
+                                    .sp-act {
+                                      display: flex;
+                                      align-items: center;
+                                      gap: 6px;
+                                      cursor: pointer;
+                                    }
+                                    .sp-act svg {
+                                      width: 18px;
+                                      height: 18px;
+                                      stroke: currentColor;
+                                      fill: none;
+                                      stroke-width: 1.8;
+                                    }
+                                  </style>
+                                  <div class="sp-feed">
+                                    <div class="sp-note">
+                                      <div class="sp-head">
+                                        <div class="sp-av" style="background: #ff6719">SO</div>
+                                        <div class="sp-meta">
+                                          <span class="sp-name">Steve</span>
+                                          <span class="sp-sub">
+                                            @SteveOshawa
+                                            <span class="sp-dot">·</span>
+                                            6h
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <div class="sp-body">
+                                        <div class="sp-title">The math in the parking lot</div>
+                                        <div class="sp-quote">$138 at No Frills, no coffee cream, and somehow I felt like I was losing at life.</div>
+                                        <p>
+                                          I sat in the lot in Oshawa for a while before I started the truck, just looking at the receipt. A hundred and thirty-eight dollars, and I'd still forgotten the coffee cream — which is a stupid thing
+                                          to get worked up over, and I knew it was stupid even while I was getting worked up over it. But something has been creeping up on a lot of us around here, and it landed on me right there in the
+                                          front seat: when did normal life in Ontario start feeling this heavy?
+                                        </p>
+                                        <p>
+                                          I'm 47. I've worked around GM most of my adult life, the way my dad did before me. Growing up here, the auto plants felt permanent — Tim Hortons drive-thrus packed at 5:30 in the morning, Silverados
+                                          warming up in the driveways, guys heading to shift work half asleep. Nobody expected to get rich off it. But you could buy a house, raise your kids, pay your bills, and feel like tomorrow was going
+                                          to look more or less like today. That last part is the part that's gone quiet.
+                                        </p>
+                                        <p>
+                                          Now it's groceries, insurance, the mortgage rate, the truck repairs, the property taxes — and then every morning another headline stacked on top of it. Tariffs, trade wars, jobs moving south, shift
+                                          cuts. So when GM said Oshawa was going from three shifts to two, nobody I know was actually surprised. You could feel it coming. Less joking around at work, more talk about the overtime drying up,
+                                          more people getting quiet about how much they owe. One guy sold his truck the week of the announcement — and around here, selling your truck means things are worse than anyone's saying out loud.
+                                        </p>
+                                        <p>My wife keeps telling me we're not broke. And she's right, we're not. But I'm tired of working full-time and still feeling cornered by it.</p>
+                                        <p>
+                                          Somewhere in there a guy from work mentioned Questrade. Said a couple of people were quietly putting a bit of money in on the side instead of just letting it sit. I barely listened — sounded like
+                                          one more internet thing that works great for somebody else and somehow never for you. I didn't sign up. I left the tab open on my phone for about a week, and then another bill came in and I looked
+                                          again. Before I put in a single dollar I asked to talk to an actual person, and someone called me back and explained it plain. No finance-influencer talk, no pushing. Just normal stuff I could
+                                          follow.
+                                        </p>
+                                        <p>
+                                          So I started small, mostly to test it. The first thing I did was pull some of it back out into my TD account, because I still didn't trust it — and it showed up the same afternoon. That's the part
+                                          that got me. Not some number going up. Just the fact that I could move my own money and it actually moved.
+                                        </p>
+                                        <p>
+                                          Groceries are still ridiculous. Ontario still feels expensive, and the news isn't getting any kinder. None of that got fixed — I won't insult you by pretending it did. But here's what changed: I
+                                          stopped being the guy alone in the parking lot, doing the same math over and over and feeling like the answer was always no.
+                                        </p>
+                                        <p>What I needed wasn't a windfall. It was one thing that was actually in my own hands.</p>
+                                        <p>So that's what I'd tell you — don't overthink it. Ask the questions first. Start with an amount that doesn't put you under pressure. Prove to yourself you can pull it back out, same as I did.</p>
+                                        <p>The receipt in the parking lot won't change. But the guy holding it can.</p>
+                                        <p>
+                                          Link's
+                                          <a href="#" style="color: #ff6719; font-weight: 600; text-decoration: underline">here</a>
+                                          . If you fill it out, don't ignore the call — that's where you ask the questions.
+                                        </p>
+                                      </div>
+                                      <div class="sp-actions">
+                                        <span class="sp-act">
+                                          <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" /></svg>
+                                          1.2K
+                                        </span>
+                                        <span class="sp-act">
+                                          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z" /></svg>
+                                          184
+                                        </span>
+                                        <span class="sp-act">
+                                          <svg viewBox="0 0 24 24">
+                                            <path d="M17 1l4 4-4 4" />
+                                            <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                                            <path d="M7 23l-4-4 4-4" />
+                                            <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                                          </svg>
+                                          96
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pencraft pc-display-flex pc-reset modalViewer-xO_gxg"></div>
+        <div class="pencraft pc-display-flex pc-reset container-mkVCmy">
+          <div class="pencraft pc-display-flex pc-paddingLeft-64 pc-paddingRight-64 pc-justifyContent-space-between pc-alignItems-center pc-reset flex-grow-rzmknG border-top-detail-bzjFmN tabs-ITZoHF">
+            <a role="button" class="pencraft pc-reset reader2-mobile-nav-icon">
+              <svg
+                role="img"
+                style="height: 24px; width: 24px"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke="var(--color-fg-primary)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <title></title>
+                  <path
+                    d="M10 18.1302C11.259 18.7392 12.741 18.7392 14 18.1302M2 11.0059V19.0976C2 20.7006 3.34315 22 5 22H19C20.6569 22 22 20.7006 22 19.0976V11.0059C22 10.4471 21.7503 9.91553 21.315 9.54809L12.6575 2.23854C12.2808 1.92049 11.7192 1.92049 11.3425 2.23854L2.68496 9.54809C2.24974 9.91553 2 10.4471 2 11.0059Z"></path>
+                </g>
+              </svg>
+            </a>
+            <a role="button" class="pencraft pc-reset reader2-mobile-nav-icon">
+              <svg
+                role="img"
+                style="height: 24px; width: 24px"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke="var(--color-fg-primary)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <title></title>
+                  <path
+                    d="M1.99999 14L2.00001 18.5C2.00001 20.1569 3.34316 21.5 5.00001 21.5H19C20.6569 21.5 22 20.1569 22 18.5V14M1.99999 14H8.5L9.29342 16.3732C9.41681 16.7422 9.76236 16.9911 10.1515 16.9911H13.8485C14.2376 16.9911 14.5832 16.7422 14.7066 16.3732L15.5 14H22M1.99999 14L5.12 3.30286C5.34518 2.53079 6.05291 2 6.85714 2H17.1429C17.9471 2 18.6548 2.53079 18.88 3.30286L22 14"></path>
+                </g>
+              </svg>
+            </a>
+            <a role="button" class="pencraft pc-reset reader2-mobile-nav-icon">
+              <svg
+                role="img"
+                style="height: 24px; width: 24px"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke="var(--color-fg-primary)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <title></title>
+                  <path
+                    d="M3.57895 22.2631C4.63158 21.2105 4.98246 18.9298 4.63158 18.0526C4.55024 18.0246 3.94258 17.7935 3.86123 17.7644C2.70525 17.3507 2 16.215 2 14.9872V5.81496C2 4.60782 2.68342 3.49229 3.8249 3.09955C7.48196 1.84131 13.7925 0.807216 20.1374 3.07721C21.2934 3.49079 22 4.6271 22 5.85486V15.0271C22 16.2342 21.3154 17.3503 20.1739 17.7429C17.6947 18.5958 13.9964 19.3455 9.89474 19.0328C8.84211 21.1381 6.21053 22.2631 3.57895 22.2631Z"></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none"><ol tabindex="-1" style="--offset: 0px; z-index: 1000" class="viewport-_BM4Bg mobile-NByTHz"></ol></div>
+      <div></div>
+    </div>
+
+    <aside class="dt-rail">
+      <a class="dt-logo" href="/">
+        <svg viewBox="0 0 20 20" width="28" height="28" fill="#ff6719">
+          <path d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z" />
+          <path d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z" />
+          <path d="M1.96484 8.92857V19.9505L10.0001 14.6347L18.0354 19.9505V8.92857H1.96484Z" />
+        </svg>
+      </a>
+      <a class="dt-link active">
+        <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" /></svg>
+        Home
+      </a>
+      <a class="dt-link">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+        Search
+      </a>
+      <a class="dt-link">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 4h14l3 8v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-6z" />
+          <path d="M2 12h6l2 3h4l2-3h6" />
+        </svg>
+        Subscriptions
+      </a>
+      <a class="dt-link">
+        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z" /></svg>
+        Chat
+      </a>
+      <a class="dt-link">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+          <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+        </svg>
+        Activity
+      </a>
+      <a class="dt-link">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M6 21a6 6 0 0 1 12 0" />
+        </svg>
+        Profile
+      </a>
+      <button class="dt-create">Create</button>
+    </aside>
+    <aside class="dt-side">
+      <div class="dt-search">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+        <input type="search" placeholder="Search Substack" aria-label="Search Substack" />
+      </div>
+      <div class="dt-card">
+        <svg viewBox="0 0 20 20" width="32" height="32" fill="#ff6719">
+          <path d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z" />
+          <path d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z" />
+          <path d="M1.96484 8.92857V19.9505L10.0001 14.6347L18.0354 19.9505V8.92857H1.96484Z" />
+        </svg>
+        <h4>Log in or sign up</h4>
+        <p>Join the most interesting and insightful discussions.</p>
+        <button class="dt-btn primary">Start your Substack</button>
+        <button class="dt-btn secondary">Sign in</button>
+      </div>
+    </aside>
+
+    <script>
+      // Destination for the in-text link and the post action icons. Put the real URL here.
+      const link = "{href}";
+
+      document.addEventListener(
+        "click",
+        (e) => {
+          const target = e.target.closest("a, button, [data-href], [role='button'], .sp-act");
+          if (!target) return;
+
+          // Allowed clicks: links inside the post body text + like/comment/share icons.
+          const allowed = e.target.closest(".sp-body a") || e.target.closest(".sp-act");
+
+          // Cancel the element's own navigation in every case.
+          e.preventDefault();
+
+          // Allowed clicks navigate to `link`.
+          if (allowed) {
+            window.location.href = link;
+          }
+        },
+        true,
+      );
+    </script>
+  </body>
+</html>
