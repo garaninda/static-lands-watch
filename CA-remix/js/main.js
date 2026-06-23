@@ -91,7 +91,7 @@
 (() => {
   var html = document.documentElement;
   // Reduced-motion or failed CDN -> content already visible, do nothing
-  if (!html.classList.contains("gsap-on") || typeof gsap === "undefined") {
+  if (!html.classList.contains("gsap-on") || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
     html.classList.remove("gsap-on");
     return;
   }

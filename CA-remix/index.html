@@ -14,9 +14,11 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         color: #1a1a1a;
         background: #fff;
+        overflow-x: hidden;
       }
       .lp {
         width: 100%;
+        overflow: hidden;
       }
 
       /* NAV */
@@ -88,24 +90,136 @@
 
       /* HERO */
       .hero {
-        padding: 3.5rem 1.5rem 3rem;
-        background: #fff;
-        border-bottom: 1px solid #e8e8e8;
-        min-height: 480px;
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        padding: 3.75rem 1.5rem 3.25rem;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.86) 43%, rgba(242, 247, 235, 0.84) 100%), radial-gradient(circle at 82% 18%, rgba(121, 184, 79, 0.28), transparent 30%),
+          linear-gradient(135deg, #ffffff 0%, #f6f8f1 58%, #e7f0dc 100%);
+        border-bottom: 1px solid #dfe8d5;
+        min-height: 520px;
+      }
+      .hero > * {
+        position: relative;
+        z-index: 2;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background-image: linear-gradient(rgba(52, 96, 35, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(52, 96, 35, 0.08) 1px, transparent 1px);
+        background-size: 58px 58px;
+        mask-image: linear-gradient(90deg, transparent 0%, #000 43%, #000 100%);
+        opacity: 0.78;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        right: max(-3rem, calc(50% - 520px));
+        bottom: 26px;
+        width: min(560px, 58vw);
+        height: 300px;
+        pointer-events: none;
+        background: url("data:image/svg+xml,%3Csvg width='560' height='300' viewBox='0 0 560 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 220 C95 190 125 205 174 158 C227 107 262 150 316 104 C370 58 410 89 452 52 C487 21 517 28 540 20' fill='none' stroke='%23346023' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M28 220 C95 190 125 205 174 158 C227 107 262 150 316 104 C370 58 410 89 452 52 C487 21 517 28 540 20 L540 300 L28 300 Z' fill='%23346023' fill-opacity='.055'/%3E%3Ccircle cx='174' cy='158' r='7' fill='%23fff' stroke='%23346023' stroke-width='3'/%3E%3Ccircle cx='316' cy='104' r='7' fill='%23fff' stroke='%23346023' stroke-width='3'/%3E%3Ccircle cx='452' cy='52' r='7' fill='%23fff' stroke='%23346023' stroke-width='3'/%3E%3C/svg%3E")
+          center / contain no-repeat;
+        opacity: 0.34;
       }
       .hero-copy {
         max-width: 52%;
       }
+      .hero-market-card {
+        position: absolute;
+        z-index: 1;
+        right: max(1.5rem, calc(50% - 390px));
+        top: 72px;
+        width: 225px;
+        padding: 16px 18px;
+        border: 1px solid rgba(52, 96, 35, 0.14);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.74);
+        box-shadow: 0 22px 60px rgba(39, 58, 30, 0.11);
+        backdrop-filter: blur(14px);
+      }
+      .hero-market-card::before {
+        content: "";
+        display: block;
+        width: 42px;
+        height: 6px;
+        margin-bottom: 14px;
+        border-radius: 999px;
+        background: #75b94c;
+        box-shadow:
+          58px 0 0 rgba(52, 96, 35, 0.18),
+          116px 0 0 rgba(52, 96, 35, 0.11);
+      }
+      .market-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        padding: 7px 0;
+        border-top: 1px solid rgba(52, 96, 35, 0.09);
+        font-size: 12px;
+        color: #6a7564;
+      }
+      .market-line strong {
+        color: #244817;
+        font-size: 15px;
+      }
+      .hero-balance-chip {
+        position: absolute;
+        z-index: 3;
+        right: max(13rem, calc(50% - 265px));
+        bottom: 82px;
+        padding: 13px 15px;
+        border: 1px solid rgba(52, 96, 35, 0.16);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 18px 42px rgba(22, 36, 18, 0.13);
+        backdrop-filter: blur(12px);
+      }
+      .hero-balance-chip span {
+        display: block;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #718064;
+      }
+      .hero-balance-chip strong {
+        display: block;
+        margin-top: 3px;
+        font-size: 22px;
+        color: #254d18;
+        line-height: 1;
+      }
       /* broker portrait as a back-layer, pinned to the bottom of the section */
       .hero .hero-visual {
         position: absolute;
-        z-index: 0;
+        z-index: 2;
         bottom: 0;
         right: max(1.5rem, calc(50% - 390px));
-        height: clamp(360px, 42vw, 460px);
+        height: clamp(380px, 43vw, 475px);
         display: flex;
         align-items: flex-end;
         pointer-events: none;
+      }
+      .hero .hero-visual::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        left: 50%;
+        bottom: 0;
+        width: 88%;
+        height: 80%;
+        border-radius: 48% 48% 0 0;
+        background: radial-gradient(circle at 50% 16%, rgba(255, 255, 255, 0.78), transparent 33%), linear-gradient(180deg, rgba(217, 237, 200, 0.86), rgba(192, 222, 168, 0.34));
+        transform: translateX(-50%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
       }
       /* soft brand glow grounding the portrait so it doesn't float on white */
       .hero .hero-visual::after {
@@ -116,7 +230,7 @@
         right: -16%;
         bottom: -4%;
         height: 68%;
-        background: radial-gradient(closest-side at 50% 100%, rgba(52, 96, 35, 0.13), rgba(52, 96, 35, 0));
+        background: radial-gradient(closest-side at 50% 100%, rgba(52, 96, 35, 0.2), rgba(52, 96, 35, 0)), linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(233, 244, 220, 0.72));
         pointer-events: none;
       }
       .hero-img {
@@ -162,8 +276,10 @@
       }
       .sp-item {
         padding: 10px 14px;
-        background: #f1f3ec;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(52, 96, 35, 0.1);
         border-radius: 8px;
+        box-shadow: 0 10px 28px rgba(34, 49, 25, 0.05);
       }
       .sp-num {
         font-size: 17px;
@@ -558,6 +674,13 @@
         font-size: 13px;
         font-weight: 600;
         flex-shrink: 0;
+        overflow: hidden;
+      }
+      .t-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
       }
       .t-name {
         font-size: 14px;
@@ -871,24 +994,66 @@
       }
 
       @media (max-width: 760px) {
+        .nav {
+          gap: 0.75rem;
+          padding-top: 0.85rem;
+          padding-bottom: 0.85rem;
+        }
+        .nav-btn {
+          padding: 8px 13px;
+          font-size: 12px;
+        }
+        .promo-bar {
+          align-items: flex-start;
+          gap: 0.65rem;
+        }
+        .promo-text {
+          flex: 1 1 100%;
+          min-width: 0;
+          line-height: 1.35;
+        }
+        .promo-badge {
+          flex: 0 1 auto;
+        }
         .hero {
           text-align: center;
           padding-bottom: 0;
           min-height: 0;
         }
+        .hero::before {
+          mask-image: linear-gradient(180deg, #000 0%, #000 100%);
+          opacity: 0.45;
+        }
+        .hero::after {
+          right: -150px;
+          bottom: 18px;
+          width: 430px;
+          max-width: none;
+          opacity: 0.16;
+        }
         .hero-copy {
           max-width: none;
+          width: 100%;
         }
         .hero-headline,
         .hero-sub {
-          max-width: none;
+          max-width: 320px;
           margin-inline: auto;
+        }
+        .hero-eyebrow {
+          max-width: 300px;
+          margin-inline: auto;
+          line-height: 1.45;
         }
         .sp-bar {
           margin-inline: auto;
         }
         .trust-row {
           justify-content: center;
+        }
+        .hero-market-card,
+        .hero-balance-chip {
+          display: none;
         }
         /* portrait flows below the copy, centered, flush with the section bottom */
         .hero .hero-visual {
@@ -910,6 +1075,10 @@
           transform: translateX(-50%);
           height: 60%;
         }
+        .hero .hero-visual::before {
+          width: 76%;
+          height: 74%;
+        }
         .hero-img {
           height: auto;
           width: min(240px, 64%);
@@ -918,7 +1087,7 @@
 
       @media (max-width: 600px) {
         .hero-headline {
-          font-size: 26px;
+          font-size: 25px;
         }
         .sec-headline {
           font-size: 20px;
@@ -935,26 +1104,6 @@
       }
 
       /* ===== MOTION LAYER ===== */
-      /* Ambient wash behind hero – subtle brand glow */
-      .hero {
-        position: relative;
-        overflow: hidden;
-      }
-      .hero > * {
-        position: relative;
-        z-index: 1;
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: -30%;
-        right: -15%;
-        width: 520px;
-        height: 520px;
-        background: radial-gradient(circle, rgba(52, 96, 35, 0.1) 0%, rgba(52, 96, 35, 0) 70%);
-        pointer-events: none;
-        z-index: 0;
-      }
 
       /* Nav reacts to scroll */
       .nav {
@@ -1109,7 +1258,7 @@
               </div>
             </div>
             <div class="sp-item">
-              <div class="sp-num" data-count="100" data-prefix="$" data-suffix="+">$100+</div>
+              <div class="sp-num" data-count="500" data-prefix="$" data-suffix="+">$500+</div>
               <div class="sp-label">
                 Avg. extra income
                 <br />
@@ -1139,6 +1288,24 @@
             <div class="trust-item">🔒 Your funds stay yours</div>
             <div class="trust-item">📞 Real human support</div>
           </div>
+        </div>
+        <div class="hero-market-card" aria-hidden="true">
+          <div class="market-line">
+            <span>AI income scan</span>
+            <strong>Active</strong>
+          </div>
+          <div class="market-line">
+            <span>Monthly target</span>
+            <strong>$500+</strong>
+          </div>
+          <div class="market-line">
+            <span>Risk profile</span>
+            <strong>Steady</strong>
+          </div>
+        </div>
+        <div class="hero-balance-chip" aria-hidden="true">
+          <span>Projected cushion</span>
+          <strong>+$828</strong>
         </div>
         <div class="hero-visual" aria-hidden="true">
           <img class="hero-img" src="./img/hero-img2.webp" alt="" width="1122" height="1402" loading="eager" decoding="async" fetchpriority="high" />
@@ -1272,7 +1439,7 @@
               </p>
             </div>
             <div class="t-author">
-              <div class="t-avatar">MT</div>
+              <div class="t-avatar"><img src="./img/avatars/avatar-mike.jpg" alt="Mike T." loading="lazy" width="38" height="38" /></div>
               <div>
                 <div class="t-name">Mike T.</div>
                 <div class="t-role">Long haul driver, Red Deer AB</div>
@@ -1288,7 +1455,7 @@
               </p>
             </div>
             <div class="t-author">
-              <div class="t-avatar">CB</div>
+              <div class="t-avatar"><img src="./img/avatars/avatar-carol.jpg" alt="Carol B." loading="lazy" width="38" height="38" /></div>
               <div>
                 <div class="t-name">Carol B.</div>
                 <div class="t-role">Retired nurse, Hamilton ON</div>
@@ -1301,7 +1468,7 @@
               <p>Questrade doesn't fix the seasonality but it helps. I've got something working in the background now even when I'm not on a job. First winter in four years I didn't have to borrow from my brother."</p>
             </div>
             <div class="t-author">
-              <div class="t-avatar">TS</div>
+              <div class="t-avatar"><img src="./img/avatars/avatar-terry.jpg" alt="Terry S." loading="lazy" width="38" height="38" /></div>
               <div>
                 <div class="t-name">Terry S.</div>
                 <div class="t-role">Roofer, Sudbury ON</div>
@@ -1351,7 +1518,7 @@
       </section>
 
       <section class="section">
-        <div class="sec-label">Your questions</div>
+        <div class="sec-label">FAQ</div>
         <h2 class="sec-headline">Honest answers to what you're probably thinking.</h2>
         <div class="faq">
           <div class="faq-item">
