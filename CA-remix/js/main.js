@@ -16,16 +16,24 @@
 (() => {
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var nav = document.querySelector(".nav");
+  function scrollToTarget(selector) {
+    var target = document.querySelector(selector);
+    if (!target) return false;
+    var navH = nav ? nav.offsetHeight : 0;
+    var y = target.getBoundingClientRect().top + window.scrollY - navH;
+    window.scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
+    return true;
+  }
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     var id = a.getAttribute("href");
     if (id.length < 2) return; // skip bare "#"
     a.addEventListener("click", (e) => {
-      var target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      var navH = nav ? nav.offsetHeight : 0;
-      var y = target.getBoundingClientRect().top + window.scrollY - navH;
-      window.scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
+      if (scrollToTarget(id)) e.preventDefault();
+    });
+  });
+  document.querySelectorAll("[data-scroll-target]").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      if (scrollToTarget(button.dataset.scrollTarget)) e.preventDefault();
     });
   });
 })();
@@ -99,7 +107,7 @@
   var EASE = "power3.out";
 
   /* ---- Hero entrance ---- */
-  gsap.set([".hero-eyebrow", ".hero-headline", ".hero-sub", ".sp-item", ".hero-note", ".trust-row"], { opacity: 0, y: 22 });
+  gsap.set([".hero-eyebrow", ".hero-headline", ".hero-sub", ".hero-cta", ".sp-item", ".hero-note", ".trust-row"], { opacity: 0, y: 22 });
   gsap.set(".hero-visual", { opacity: 0, y: 24, transformOrigin: "50% 100%" });
   gsap
     .timeline({ defaults: { ease: EASE, duration: 0.7 } })
@@ -107,7 +115,8 @@
     .to(".hero-eyebrow", { opacity: 1, y: 0 }, 0.1)
     .to(".hero-headline", { opacity: 1, y: 0, duration: 0.85 }, "-=0.45")
     .to(".hero-sub", { opacity: 1, y: 0 }, "-=0.55")
-    .to(".sp-item", { opacity: 1, y: 0, stagger: 0.1 }, "-=0.4")
+    .to(".hero-cta", { opacity: 1, y: 0 }, "-=0.45")
+    .to(".sp-item", { opacity: 1, y: 0, stagger: 0.1 }, "-=0.35")
     .to([".hero-note", ".trust-row"], { opacity: 1, y: 0, stagger: 0.12 }, "-=0.35");
 
   /* ---- Scroll reveals (staggered as each batch enters) ---- */

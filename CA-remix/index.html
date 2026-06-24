@@ -274,6 +274,36 @@
         margin-bottom: 2rem;
         max-width: 380px;
       }
+      .hero-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 13px 24px;
+        margin: 0 0 1.5rem;
+        border: 0;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #346023 0%, #234916 100%);
+        color: #fff;
+        box-shadow: 0 14px 32px rgba(52, 96, 35, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+      .hero-cta:hover {
+        background: linear-gradient(135deg, #3f712a 0%, #264f18 100%);
+        box-shadow: 0 18px 38px rgba(52, 96, 35, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        transform: translateY(-1px);
+      }
+      .hero-cta:focus-visible {
+        outline: 3px solid rgba(52, 96, 35, 0.28);
+        outline-offset: 3px;
+      }
       .sp-item {
         padding: 10px 14px;
         background: rgba(255, 255, 255, 0.72);
@@ -1164,6 +1194,7 @@
       html.gsap-on .hero-eyebrow,
       html.gsap-on .hero-headline,
       html.gsap-on .hero-sub,
+      html.gsap-on .hero-cta,
       html.gsap-on .sp-item,
       html.gsap-on .hero-form,
       html.gsap-on .hero-note,
@@ -1248,6 +1279,7 @@
             <em>But for most Canadians, it does</em>
           </h1>
           <p class="hero-sub">Questrade helps everyday Canadians build extra income using AI – no financial experience needed, no second job.</p>
+          <button class="hero-cta" type="button" data-scroll-target="#form">Book a Free Call</button>
           <div class="sp-bar">
             <div class="sp-item">
               <div class="sp-num" data-count="10000" data-suffix="+" data-sep="1">10,000+</div>
