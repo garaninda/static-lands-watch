@@ -1,0 +1,22 @@
+# Архивы — не коммитим выкачки и сборки лендингов
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+
+# Служебный мусор ОС / редакторов
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Логи партнёрских api.php
+log/
+*.log
+
+# Зависимости
+node_modules/
