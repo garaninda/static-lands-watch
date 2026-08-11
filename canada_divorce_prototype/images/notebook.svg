@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 310" width="414" height="310"
+     preserveAspectRatio="xMidYMid slice" role="img"
+     aria-label="Notebook with a handwritten note">
+  <defs>
+    <linearGradient id="deskBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9cfc3"/>
+      <stop offset="1" stop-color="#a9b5bb"/>
+    </linearGradient>
+    <filter id="page-shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="414" height="310" fill="url(#deskBg)"/>
+  <g transform="rotate(-5 207 155)">
+    <rect x="132" y="60" width="150" height="190" rx="12" fill="#f8f2e8" filter="url(#page-shadow)"/>
+    <text x="207" y="148" text-anchor="middle"
+          font-family="'DM Serif Display', Georgia, 'Times New Roman', serif"
+          font-size="26" fill="#172236">One decision</text>
+    <text x="207" y="179" text-anchor="middle"
+          font-family="'DM Serif Display', Georgia, 'Times New Roman', serif"
+          font-size="26" fill="#172236">that belongs to you.</text>
+  </g>
+</svg>

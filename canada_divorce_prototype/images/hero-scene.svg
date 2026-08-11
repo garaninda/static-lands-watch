@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 620" width="480" height="620"
+     preserveAspectRatio="xMidYMid slice" role="img"
+     aria-label="Woman working at a table by a window">
+  <defs>
+    <radialGradient id="sun">
+      <stop offset="0" stop-color="#fff8e7" stop-opacity=".95"/>
+      <stop offset=".92" stop-color="#fff8e7" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#fff8e7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#aab6c4"/>
+      <stop offset=".6" stop-color="#dfe4e8"/>
+      <stop offset=".6" stop-color="#788b75"/>
+      <stop offset="1" stop-color="#788b75"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="14" flood-color="#000" flood-opacity=".22"/>
+    </filter>
+    <filter id="soft-sm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000" flood-opacity=".16"/>
+    </filter>
+  </defs>
+
+  <!-- Room -->
+  <rect width="480" height="620" fill="#d8c7b7"/>
+  <rect y="173.6" width="480" height="18.6" fill="#a78b78"/>
+  <rect y="192.2" width="480" height="6.2" fill="#6d584c"/>
+  <rect y="198.4" width="480" height="421.6" fill="#cab7a8"/>
+  <circle cx="355" cy="112" r="80" fill="url(#sun)"/>
+
+  <!-- Window -->
+  <g>
+    <rect x="254.4" y="43.4" width="192" height="204.6" fill="#e8ddd0"/>
+    <rect x="266.4" y="55.4" width="168" height="180.6" fill="url(#glass)"/>
+    <rect x="347" y="55.4" width="8" height="180.6" fill="#e8ddd0"/>
+    <rect x="266.4" y="145.7" width="168" height="8" fill="#e8ddd0"/>
+  </g>
+
+  <!-- Person -->
+  <g>
+    <!-- hair -->
+    <path d="M146.9,143.4
+             A38.3,30 0 0 1 185.2,113.4
+             A38.3,30 0 0 1 223.5,143.4
+             L223.5,152.5
+             A26.8,21 0 0 1 196.7,173.5
+             L181.4,173.5
+             A34.5,27 0 0 1 146.9,146.5 Z" fill="#6b4d3f"/>
+    <!-- head -->
+    <ellipse cx="186.1" cy="164.6" rx="31.2" ry="40.6" fill="#d6aa8c"/>
+    <!-- body -->
+    <path d="M126.7,329.8
+             A51.7,106.8 0 0 1 178.4,223
+             L198,223
+             A51.7,106.8 0 0 1 249.7,329.8
+             L249.7,441.8
+             A17.2,35.6 0 0 1 232.5,477.4
+             L143.9,477.4
+             A17.2,35.6 0 0 1 126.7,441.8 Z"
+          fill="#40556f" transform="rotate(-3 188.2 350.2)"/>
+    <!-- arm -->
+    <rect x="183.1" y="254.8" width="96.8" height="42.4" rx="21.2" fill="#40556f"
+          transform="rotate(24 183.1 276)"/>
+    <!-- hand -->
+    <ellipse cx="284" cy="320.1" rx="12.1" ry="15.9" fill="#d6aa8c"/>
+  </g>
+
+  <!-- Table -->
+  <path d="M52.4,390.6 H427.6 A14,14 0 0 1 441.6,404.6 V574.8
+           A8,8 0 0 1 433.6,582.8 H46.4 A8,8 0 0 1 38.4,574.8 V404.6
+           A14,14 0 0 1 52.4,390.6 Z" fill="#7e5f4d" filter="url(#soft)"/>
+
+  <!-- Laptop -->
+  <g transform="translate(350.4,406.1) skewX(-7) translate(-350.4,-406.1)">
+    <path d="M286.4,347.2 H414.4 A8,8 0 0 1 422.4,355.2 V463 A2,2 0 0 1 420.4,465
+             H280.4 A2,2 0 0 1 278.4,463 V355.2 A8,8 0 0 1 286.4,347.2 Z"
+          fill="#d8dde4" filter="url(#soft-sm)"/>
+  </g>
+
+  <!-- Papers -->
+  <rect x="76.8" y="440.2" width="105.6" height="68.2" rx="3" fill="#f4efe7"
+        filter="url(#soft-sm)" transform="rotate(-8 129.6 474.3)"/>
+  <rect x="187.2" y="483.6" width="86.4" height="55.8" rx="3" fill="#f4efe7"
+        filter="url(#soft-sm)" transform="rotate(7 230.4 511.5)"/>
+
+  <!-- Mug -->
+  <path d="M398.4,464.8 A6,6 0 0 1 404.4,458.8 H435.6 A6,6 0 0 1 441.6,464.8
+           V521.2 A12,12 0 0 1 429.6,533.2 H410.4 A12,12 0 0 1 398.4,521.2 Z"
+        fill="#b86f68"/>
+</svg>

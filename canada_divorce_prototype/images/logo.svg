@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34" role="img" aria-label="Rebuild mark">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b86f68"/>
+      <stop offset="1" stop-color="#172236"/>
+    </linearGradient>
+  </defs>
+  <rect width="34" height="34" rx="12" fill="url(#brand)"/>
+  <path d="M17 8
+           C22 8 26 11.6 26 16
+           C26 20.4 22.4 26 17 26
+           C11.9 26 8 21.4 8 16.9
+           C8 12.4 12 8 17 8 Z"
+        fill="none" stroke="rgba(255,255,255,.8)" stroke-width="1.5"/>
+</svg>

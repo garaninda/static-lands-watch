@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 680" width="510" height="680"
+     preserveAspectRatio="xMidYMid slice" role="img"
+     aria-label="Participant story photo placeholder">
+  <rect width="510" height="680" fill="#d5c8bc"/>
+  <rect y="170" width="510" height="210.8" fill="#8ba0a3"/>
+  <rect y="380.8" width="510" height="299.2" fill="#6d5d52"/>
+  <circle cx="255" cy="200.6" r="85" fill="#d7aa8d"/>
+  <path d="M85,450 A150,150 0 0 1 235,300 L275,300 A150,150 0 0 1 425,450
+           L425,650 A30,30 0 0 1 395,680 L115,680 A30,30 0 0 1 85,650 Z"
+        fill="#43566f"/>
+</svg>
