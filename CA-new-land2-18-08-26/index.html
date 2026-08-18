@@ -63,33 +63,113 @@
     </style>
 
     <style>
-      /* ===== article typography ===== */
-      .c-text h2 {
-        margin-top: 40px;
-        margin-bottom: 0;
+      /* ===== CTV Sans: чиним битые @font-face из оригинального бандла ===== */
+      @font-face {
+        font-family: "CTV sans";
+        src: url("./index/CTVSans_Medium.woff") format("woff"), local("Arial"), local("Helvetica");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
       }
-      .c-text h2:first-child {
+      @font-face {
+        font-family: "CTV sans black";
+        src: url("./index/CTVSans_Bold.woff") format("woff"), local("Arial"), local("Helvetica");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      :root {
+        --ctv-sans: "CTV Sans", "CTV sans", Helvetica, Arial, sans-serif;
+        --ctv-sans-bold: "CTV sans bold", "CTV Sans", Helvetica, Arial, sans-serif;
+      }
+      body,
+      .b-header-nav-chain,
+      .b-header-nav-chain a,
+      .c-breadcrumb,
+      .c-text,
+      .c-text p,
+      .c-text ul,
+      .c-text ol,
+      .c-text li,
+      .c-text blockquote,
+      .c-text .story-quote p,
+      .c-attribution,
+      .b-byline,
+      .c-date,
+      .b-date-custom__date-item,
+      .c-media-item__caption,
+      .reg,
+      .reg p,
+      .reg li,
+      .comment,
+      .bm-footer,
+      .bm-footer a,
+      .bm-footer p,
+      .bm-footer span,
+      #form_block,
+      #form_block input,
+      .form_block_reg_form,
+      label.error {
+        font-family: var(--ctv-sans);
+      }
+      h1,
+      h2,
+      h3,
+      .c-title__text,
+      .c-text h2,
+      .reg__title,
+      .form_block_title,
+      .comment-line,
+      .bazuka-btn {
+        font-family: var(--ctv-sans-bold);
+      }
+
+      /* ===== шапка статьи: тот же шаг, что и в тексте ===== */
+      .b-lead-art-custom {
+        padding-top: 20px;
+      }
+      .c-articlefragment .bodyText .text:first-child,
+      .bodyText .text:first-child {
         margin-top: 0;
       }
-      .c-text p {
+
+      /* ===== article typography: единый вертикальный ритм ===== */
+      .c-text > p,
+      .c-text > ul,
+      .c-text > ol,
+      .c-text > blockquote,
+      .c-text > .article-figure {
         margin-top: 18px;
+        margin-bottom: 0;
+      }
+      .c-text > *:first-child {
+        margin-top: 0;
+      }
+      .c-text h2,
+      .c-text p + h2,
+      .c-text ul + h2,
+      .c-text ol + h2,
+      .c-text blockquote + h2,
+      .c-text .article-figure + h2 {
+        margin-top: 32px;
+        margin-bottom: 12px;
       }
       .c-text h2 + p,
       .c-text h2 + ul,
+      .c-text h2 + ol,
       .c-text h2 + blockquote,
       .c-text h2 + .article-figure {
-        margin-top: 14px;
+        margin-top: 0;
       }
       .c-text p.article-lead {
         margin-top: 0;
-        margin-bottom: 22px;
-        font-size: 1.3rem;
-        line-height: 2rem;
+        margin-bottom: 18px;
+        font-size: 1.25rem;
+        line-height: 1.9rem;
         font-weight: 700;
         color: #1a1a1a;
       }
       .c-text ul {
-        margin: 18px 0 0;
         padding: 0 0 0 4px;
       }
       .c-text ul > li {
@@ -116,15 +196,72 @@
         left: 4px;
         font-size: 1rem;
       }
+      .c-text .article-figure {
+        text-align: center;
+      }
+      .c-text .article-figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 4px;
+      }
+      .c-text .story-quote {
+        padding: 16px 18px;
+        border-left: 3px solid #005fff;
+        border-radius: 0 6px 6px 0;
+        background-color: #f7faff;
+      }
+      .c-text .story-quote p {
+        margin-top: 12px;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-style: italic;
+        color: #333;
+      }
+      .c-text .story-quote p:first-child {
+        margin-top: 0;
+      }
+      .c-text p.article-cta {
+        margin-top: 18px;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+        color: #005fff;
+      }
+
+      /* ===== registration block ===== */
+      .c-text .reg {
+        display: block;
+        margin-top: 32px;
+      }
+      .reg .container-sm .reg__title {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 18px;
+        font-size: 1.25rem;
+        line-height: 1.7rem;
+      }
+      .reg .container-sm > p {
+        margin-top: 18px;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
       .c-text ol.reg__list {
         counter-reset: regstep;
         list-style: none;
+        width: 100% !important;
+        margin: 18px 0 0 !important;
+        padding: 0 !important;
       }
       .c-text ol.reg__list > li {
         counter-increment: regstep;
         position: relative;
-        margin-top: 0;
+        margin: 0 0 10px;
         padding: 10px 14px 10px 52px;
+      }
+      .c-text ol.reg__list > li:last-child {
+        margin-bottom: 0;
       }
       .c-text ol.reg__list > li:before {
         content: counter(regstep);
@@ -143,67 +280,116 @@
         font-weight: 700;
         text-align: center;
       }
-      .c-text .article-figure {
-        margin: 30px 0 0;
-        text-align: center;
+      #custom-regbox {
+        margin-top: 24px;
       }
-      .c-text .article-figure img {
-        display: block;
+      .c-text #form_block_title {
+        margin: 0 0 15px;
+        font-size: 30px;
+        line-height: 1.2;
+      }
+      #form_block .iti,
+      #form_block .iti--separate-dial-code {
+        margin-bottom: 16px;
+      }
+      .logos-section {
+        padding: 24px 0 0;
+      }
+
+      /* ===== футер: фон край-в-край без горизонтального выезда ===== */
+      footer.bm-footer {
+        width: 100%;
         max-width: 100%;
-        height: auto;
-        margin: 0 auto;
-        border-radius: 4px;
+        margin-left: 0;
+        margin-right: 0;
+        box-shadow: 0 0 0 100vmax #003662;
+        clip-path: inset(0 -100vmax);
       }
-      .c-text .story-quote {
-        margin: 18px 0 0;
-        padding: 16px 18px 18px;
-        border-left: 3px solid #005fff;
-        border-radius: 0 6px 6px 0;
-        background-color: #f7faff;
+
+      /* ===== comments ===== */
+      .c-text .comment {
+        margin: 32px 0 0;
       }
-      .c-text .story-quote p {
-        margin-top: 14px;
-        font-style: italic;
-        color: #333;
+      .comment-block-input__input,
+      .fb-comment__text-input,
+      .fb-comment__item-input .fb-comment__text {
+        min-width: 0;
       }
-      .c-text .story-quote p:first-child {
-        margin-top: 0;
+      .fb-comment__item-input .fb-comment__text,
+      .comment-block-input__input {
+        flex: 1 1 0;
       }
-      .c-text p.article-cta {
-        margin-top: 26px;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #005fff;
-      }
-      .c-text .reg {
-        display: block;
-        margin-top: 38px;
-      }
-      .reg .container-sm .reg__title {
-        margin-bottom: 18px;
-        line-height: 1.9rem;
-      }
-      .reg .container-sm > p {
-        margin-top: 18px;
-        line-height: 1.6rem;
+      .fb-comment__avatar,
+      .comment-block-input__button {
+        flex-shrink: 0;
       }
       .comment .comment-line {
-        margin-bottom: 18px;
+        margin: 0 0 18px;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
       }
+
       @media all and (max-width: 768px) {
+        /* одна левая/правая граница у заголовка, лид-арта и текста статьи */
+        .breadcrumb > .aem-GridColumn {
+          padding-left: 0;
+          padding-right: 0;
+        }
         .c-text h2 {
-          margin-top: 32px;
+          font-size: 1.25rem;
+          line-height: 1.6rem;
         }
         .c-text p.article-lead {
           font-size: 1.2rem;
           line-height: 1.85rem;
-          margin-bottom: 18px;
         }
-        .c-text .article-figure {
-          margin-top: 24px;
+        .c-text #form_block_title {
+          font-size: 24px;
         }
-        .c-text p.article-cta {
-          font-size: 1.1rem;
+        /* логотипы: ровные ряды вместо рыхлого столбика */
+        .logos-section .logos-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 18px;
+        }
+        .logos-section .logos-wrapper > div {
+          width: 100%;
+        }
+        .logos-section .flex-logos-wrapper {
+          flex-direction: row;
+          justify-content: center;
+          gap: 18px;
+        }
+        .logos-section .row-2-logos {
+          display: grid !important;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          justify-items: center;
+          gap: 18px;
+        }
+        .logos-section .row-2-logos > .logo {
+          grid-column: 1 / -1;
+          margin: 0 auto !important;
+        }
+        .logos-section .bid-ask-span {
+          font-size: 1.6em;
+        }
+        .logos-section .bid-wrapper,
+        .logos-section .ask-wrapper {
+          min-width: 0;
+        }
+      }
+      @media all and (max-width: 480px) {
+        .logos-section .row-2-logos {
+          gap: 12px;
+        }
+        .logos-section .bid-ask-span {
+          font-size: 1.3em;
+        }
+        .logos-section .logo {
+          max-width: 30% !important;
+          margin: 0 !important;
         }
       }
     </style>
@@ -947,6 +1133,11 @@
                                         <li>stop living paycheck to paycheck</li>
                                         <li>finally start building a real safety cushion</li>
                                       </ul>
+                                      <div class="article-figure">
+                                        <a href="" class="link">
+                                          <img src="./index/art-img.webp" alt="Paul Martin launches a new income tool for Canadians" width="800" height="450" loading="lazy" />
+                                        </a>
+                                      </div>
 
                                       <h2>"I Finally Felt Like I Was Moving Forward"</h2>
                                       <blockquote class="story-quote">
@@ -1206,7 +1397,7 @@
                                                   </div>
                                                 </div>
                                                 <div class="fb-comment__item">
-                                                  <img src="./index/6.webp" alt="" class="fb-comment__avatar flux_cta" />
+                                                  <img src="./index/11.webp" alt="" class="fb-comment__avatar flux_cta" />
                                                   <div class="fb-comment__content">
                                                     <div class="fb-comment__text">
                                                       <div class="fb-comment__author flux_cta">Jennifer K., 51 &middot; Manitoba</div>
@@ -1283,7 +1474,7 @@
           </div>
           <footer class="bm-footer" role="contentinfo">
             <div class="bm-footer__copyright" role="contentinfo">
-              <p class="c-quickArticle__footer__copyright">©&nbsp;2024 All rights reserved. Use of this Website assumes acceptance of Terms &amp; Conditions and Privacy Policy</p>
+              <p class="c-quickArticle__footer__copyright">©&nbsp;2026 All rights reserved. Use of this Website assumes acceptance of Terms &amp; Conditions and Privacy Policy</p>
             </div>
           </footer>
         </div>
