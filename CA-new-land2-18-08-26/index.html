@@ -128,6 +128,24 @@
       .b-lead-art-custom {
         padding-top: 20px;
       }
+      /* Safari: у обёртки лид-арта стоит aspect-ratio 16/9, а фото 4:3 —
+         в WebKit картинка вылезала из блока и наезжала на подпись и текст */
+      .b-lead-art-custom__image-wrapper {
+        aspect-ratio: auto;
+        display: block;
+        overflow: hidden;
+        line-height: 0;
+        box-shadow: -24px -24px 0 0 #eceff3;
+      }
+      .b-lead-art-custom__image-wrapper img,
+      .b-lead-art-custom__image-wrapper .c-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        aspect-ratio: auto;
+        object-fit: contain;
+      }
       .c-articlefragment .bodyText .text:first-child,
       .bodyText .text:first-child {
         margin-top: 0;
@@ -1024,6 +1042,8 @@
                                     class="c-image"
                                     loading="eager"
                                     src="./index/paul-martin.webp"
+                                    width="1200"
+                                    height="900"
                                     pinger-seen="true" />
                                 </div>
                                 <figcaption class="c-media-item__fig-caption">
