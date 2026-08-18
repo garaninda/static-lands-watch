@@ -1,0 +1,10 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24.7 166.9" style="enable-background:new 0 0 24.7 166.9;" xml:space="preserve">
+<g id="Layer_2_1_">
+		<linearGradient id="Ellipse_27220_1_" gradientUnits="userSpaceOnUse" x1="-122.551" y1="466.6164" x2="-122.551" y2="465.6164" gradientTransform="matrix(2.45 0 0 -140.794 311.75 65709.3906)">
+		<stop  offset="0" style="stop-color:#1E222E"/>
+		<stop  offset="1" style="stop-color:#2B37C4"/>
+	</linearGradient>
+	<ellipse id="Ellipse_27220" class="st0" fill="url(#Ellipse_27220_1_)" cx="11.5" cy="83" rx="1.2" ry="70.4"/>
+</g>
+</svg>

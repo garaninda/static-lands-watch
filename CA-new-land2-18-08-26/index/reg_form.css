@@ -1,0 +1,131 @@
+:root{
+    --mainColor: #152b0c;
+    --text: #fff;
+    --input-color: #000;
+    --valid-input-color: #000;
+}
+
+#form_block {
+    border: 2px solid var(--mainColor);
+    border-radius: 16px;
+    max-width: 560px;
+    margin: 0 auto;
+    font-family: Arial;
+    box-shadow: 3px 3px 6px #00000030;
+}
+
+.form_block_reg_form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+    box-sizing: border-box;
+}
+
+.form_block_title {
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 30px;
+    background: var(--mainColor);
+    color: var(--text);
+    text-transform: uppercase;
+    margin: 30px 0;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+@media(max-width: 767px){
+    .form_block_title {
+        font-size: 24px;
+    }
+}
+
+#form_block input {
+    font-size: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border: 1px solid var(--mainColor);
+    border-radius: 4px;
+    color: var(--input-color);
+    line-height: 1;
+    background: #f7f7f7;
+    box-shadow: 3px 3px 6px #00000030;
+    font-family: Arial;
+    background: #fff;
+}
+#form_block input:focus{
+    outline: 1px solid var(--mainColor);
+}
+
+.bazuka-btn {
+    background: var(--mainColor);
+    color: var(--text);
+    width: 100%;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-family: Arial;
+    letter-spacing: 1px;
+    box-shadow: 3px 3px 6px #00000030;
+}
+
+input.error {
+    margin-bottom: 5px!important;
+    background: #ff000020!important;
+    position: relative;
+    color: var(--valid-input-color)!important;
+}
+
+input.error::placeholder{
+    color: #000;
+}
+
+label.error {
+    font-family: Arial;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.phone + label.error{
+    margin: 5px 0 0!important;
+}
+
+input.valid {
+    background: #00ef0030!important;
+    color: var(--valid-input-color)!important;
+}
+
+.iti--separate-dial-code {
+    padding: 0!important;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.iti__selected-country{
+    padding-right: 13px;
+    background: #e1e1e1!important;
+    border-radius: 4px 0 0 3px;
+    height: 42px!important;
+}
+.iti__selected-dial-code{
+    color: #000;
+}
+
+.iti__country-container {
+    pointer-events: none;
+}
+.iti {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.iti__arrow {
+    display: none;
+}
