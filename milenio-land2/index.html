@@ -37,6 +37,9 @@
     <link rel="icon" type="image/png" href="images/53109f8424d4.png" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="intl-validation/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="intl-validation/just-validate.css" />
+    <link rel="stylesheet" href="css/reg_form.css" />
   </head>
 
   <body class="tp-modal-close">
@@ -1489,8 +1492,35 @@
 
                     <div class="cta-block">
                       <p class="ps-final-line">Conoce Profit Storm →</p>
-                      <a id="cta-button" class="cta-button" href="#" rel="nofollow">Solicitar información</a>
+                      <a class="cta-button" href="#cta-button" rel="nofollow">Solicitar información</a>
                     </div>
+
+                    <!-- BLOQUE 13 — FORMULARIO DE REGISTRO -->
+                    <section class="reg-section" id="cta-button">
+                      <p class="cta-lugares">Plazas disponibles hoy: <strong id="lugares-counter">264</strong></p>
+
+                      <div id="form_block">
+                        <h2 class="form_block_title" id="form_block_title">Registro gratuito</h2>
+                        <p class="form_block_subtitle">Déjanos tus datos y un especialista se comunicará contigo para explicarte cómo funciona la plataforma. Sin costo y sin compromiso.</p>
+                        <form method="POST" action="" autocomplete="off" novalidate="novalidate" class="form_block_reg_form" id="form">
+                          <input type="text" id="name" name="first_name" class="input inputname" placeholder="Nombre" autocomplete="off" maxlength="60" required />
+                          <input type="text" id="last_name" name="last_name" class="input inputlastname" placeholder="Apellidos" autocomplete="off" maxlength="60" required />
+                          <input type="email" id="email" name="email" class="input" placeholder="Correo electrónico" autocomplete="off" required />
+                          <input type="tel" id="phone" name="phone" class="input phone iti__tel-input" placeholder="55 1234 5678" autocomplete="off" required />
+                          <button type="submit" id="submit-btn" class="bazuka-btn">Solicitar información</button>
+                          <p class="form_block_note">Al enviar el formulario aceptas que un especialista de la plataforma se comunique contigo. Tus datos no se comparten con terceros.</p>
+                        </form>
+                      </div>
+
+                      <div class="reg-logos">
+                        <div class="reg-logos__row">
+                          <img src="assets/logos/bitgo.png" alt="BitGo" width="120" height="34" loading="lazy" />
+                          <img src="assets/logos/norton.png" alt="Norton Secured" width="120" height="34" loading="lazy" />
+                          <img src="assets/logos/secure-trading.png" alt="Secure Trading" width="120" height="34" loading="lazy" />
+                          <img src="assets/logos/mcafee.png" alt="McAfee Secure" width="120" height="34" loading="lazy" />
+                        </div>
+                      </div>
+                    </section>
                   </div>
                 </div>
                 <ul class="nd-tags-detail-base" data-mrf-recirculation="Nota Tag Relacionado">
@@ -2907,5 +2937,6 @@
     </svg>
 
     <script src="js/lander.js"></script>
+    <script type="module" src="intl-validation/validation.js"></script>
   </body>
 </html>
