@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Imagen principal">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f2a37"/>
+      <stop offset="1" stop-color="#374a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <circle cx="936" cy="189" r="202" fill="#b3121f" opacity=".18"/>
+  <rect x="96" y="425" width="480" height="30" rx="4" fill="#ffffff" opacity=".55"/>
+  <rect x="96" y="486" width="312" height="23" rx="4" fill="#ffffff" opacity=".35"/>
+  <text x="96" y="202" font-family="Georgia, serif" font-size="57" fill="#ffffff" opacity=".92">Imagen principal</text>
+</svg>

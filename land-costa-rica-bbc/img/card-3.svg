@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-label="Tecnologia">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a34"/>
+      <stop offset="1" stop-color="#2f5a50"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#g)"/>
+  <circle cx="499" cy="112" r="120" fill="#0f766e" opacity=".18"/>
+  <rect x="51" y="252" width="256" height="18" rx="4" fill="#ffffff" opacity=".55"/>
+  <rect x="51" y="288" width="166" height="14" rx="4" fill="#ffffff" opacity=".35"/>
+  <text x="51" y="120" font-family="Georgia, serif" font-size="34" fill="#ffffff" opacity=".92">Tecnologia</text>
+</svg>
