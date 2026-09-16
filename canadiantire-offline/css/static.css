@@ -1,0 +1,21 @@
+/* Статическая замена JS-поведения: варианты по ширине, карусели, аккордеоны футера, закрытие баннера */
+@media(min-width:1280px){.sv-v:not(.sv-d){display:none!important}}
+@media(min-width:768px) and (max-width:1279px){.sv-v:not(.sv-t){display:none!important}}
+@media(max-width:767px){.sv-v:not(.sv-m){display:none!important}}
+.sv-carousel{overflow-x:auto!important;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.sv-carousel::-webkit-scrollbar{display:none}
+.sv-carousel>.swiper-wrapper{display:flex;transform:none!important}
+.sv-carousel>.swiper-wrapper>*{flex:0 0 auto;scroll-snap-align:start;margin-right:0!important}
+@media(min-width:1280px){.sv-carousel--0>.swiper-wrapper{gap:24px}.sv-carousel--0>.swiper-wrapper>*{width:calc((100% - 5 * 24px) / 6)!important}}
+@media(min-width:768px) and (max-width:1279px){.sv-carousel--0>.swiper-wrapper{gap:24px}.sv-carousel--0>.swiper-wrapper>*{width:calc((100% - 2.5 * 24px) / 3.5)!important}}
+@media(max-width:767px){.sv-carousel--0>.swiper-wrapper{gap:24px}.sv-carousel--0>.swiper-wrapper>*{width:calc((100% - 1.5 * 24px) / 2.5)!important}}
+@media(min-width:1280px){.sv-carousel--1>.swiper-wrapper{gap:16px}.sv-carousel--1>.swiper-wrapper>*{width:calc((100% - 3 * 16px) / 4)!important}}
+@media(min-width:768px) and (max-width:1279px){.sv-carousel--1>.swiper-wrapper{gap:16px}.sv-carousel--1>.swiper-wrapper>*{width:calc((100% - 1.5 * 16px) / 2.5)!important}}
+@media(max-width:767px){.sv-carousel--1>.swiper-wrapper{gap:16px}.sv-carousel--1>.swiper-wrapper>*{width:calc((100% - 0.5 * 16px) / 1.5)!important}}
+@media(min-width:1280px){.sv-carousel--2>.swiper-wrapper{gap:16px}.sv-carousel--2>.swiper-wrapper>*{width:calc((100% - 3 * 16px) / 4)!important}}
+@media(min-width:768px) and (max-width:1279px){.sv-carousel--2>.swiper-wrapper{gap:16px}.sv-carousel--2>.swiper-wrapper>*{width:calc((100% - 1.5 * 16px) / 2.5)!important}}
+@media(max-width:767px){.sv-carousel--2>.swiper-wrapper{gap:16px}.sv-carousel--2>.swiper-wrapper>*{width:calc((100% - 0.5 * 16px) / 1.5)!important}}
+.sv-fl-toggle,.sv-sb-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+@media(max-width:1279px){.sv-fl-toggle+.footer-links__mobile-heading+.footer-links__dropdown-links{display:none!important}.sv-fl-toggle:checked+.footer-links__mobile-heading+.footer-links__dropdown-links{display:flex!important}.sv-fl-toggle+.footer-links__mobile-heading .footer-links__icon--minus{display:none}.sv-fl-toggle:checked+.footer-links__mobile-heading .footer-links__icon--plus{display:none}.sv-fl-toggle:checked+.footer-links__mobile-heading .footer-links__icon--minus{display:inline-block}}
+.sv-fl-toggle:focus-visible+.footer-links__mobile-heading{outline:2px solid #007ffc;outline-offset:2px}
+.sv-sb-toggle:checked+.nl-email-sticky-banner{display:none!important}
